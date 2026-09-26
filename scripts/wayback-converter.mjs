@@ -12,6 +12,7 @@ import * as cheerio from 'cheerio';
 import TurndownService from 'turndown';
 import { cacheFileName } from './lib/nome-cache.mjs';
 import { getScrubbedContentHtml, normalizeAutorId } from './lib/extrair-post.mjs';
+import { resolveSlug, slugFromUrl } from './lib/slug.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -145,24 +146,6 @@ function legacyPathFromUrl(urlNormalizada) {
 	} catch {
 		return urlNormalizada.startsWith('/') ? urlNormalizada : `/${urlNormalizada}`;
 	}
-}
-
-/**
- * @param {string} urlNormalizada
- * @returns {string}
- */
-function slugFromUrl(urlNormalizada) {
-	let path;
-	try {
-		path = new URL(urlNormalizada).pathname;
-	} catch {
-		path = urlNormalizada;
-	}
-	let slug = path.replace(/^\/+|\/+$/g, '').split('/').pop() || '';
-	slug = slug.replace(/-(critica|resenha|review)$/i, '');
-	slug = slug.replace(/-[23]$/, '');
-	slug = slug.replace(/^review-/i, '');
-	return slug;
 }
 
 /**
@@ -475,7 +458,10 @@ function resolveDestino(row) {
 	else if (tipoConteudo === 'artigo') isResenha = false;
 	else isResenha = (row.tipo_final || '').trim() === 'resenha';
 
-	const slug = slugFromUrl(row.url_normalizada || '');
+	const slug = resolveSlug({
+		titulo_limpo: row.titulo_limpo,
+		url_normalizada: row.url_normalizada,
+	});
 	if (!slug) return null;
 
 	const editoriaOverride = (row.editoria || '').trim();

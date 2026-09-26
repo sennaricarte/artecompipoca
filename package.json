@@ -14,7 +14,8 @@
     "wayback:inventario": "node scripts/wayback-inventario.mjs",
     "wayback:baixar": "node scripts/wayback-baixar.mjs",
     "wayback:extrair": "node scripts/wayback-extrair.mjs",
-    "wayback:converter": "node scripts/wayback-converter.mjs"
+    "wayback:converter": "node scripts/wayback-converter.mjs",
+    "wayback:promover": "node scripts/wayback-promover.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.2",
