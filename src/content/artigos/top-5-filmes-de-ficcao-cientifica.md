@@ -6,13 +6,11 @@ updatedDate: 2026-09-26
 autor: lexy-soares
 origem: arquivo
 legacyUrl: /top-5-filmes-de-ficcao-cientifica/
-draft: true
+draft: false
 editoria: cinema
 ---
 
-<!-- CONFERIR: referência datada no parágrafo 1 ("de hoje") -->
-
-Nossa Top Lista de hoje traz uma seleção com 5 grandes filmes do gênero Ficção Científica que marcaram época. Confira:
+Nossa Top Lista traz uma seleção com 5 grandes filmes do gênero Ficção Científica que marcaram época. Confira:
 
 ## Matrix
 

@@ -6,7 +6,7 @@ updatedDate: 2026-09-26
 autor: patricia-baleeira
 origem: arquivo
 legacyUrl: /nothing-personal-critica/
-draft: true
+draft: false
 obra: Nothing Personal
 tipo: filme
 ---

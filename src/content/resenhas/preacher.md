@@ -6,7 +6,7 @@ updatedDate: 2026-09-26
 autor: lexy-soares
 origem: arquivo
 legacyUrl: /preacher-critica/
-draft: true
+draft: false
 obra: Preacher
 tipo: hq
 ---

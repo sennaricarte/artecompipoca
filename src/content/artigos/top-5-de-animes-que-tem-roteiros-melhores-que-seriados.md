@@ -6,14 +6,11 @@ updatedDate: 2026-09-26
 autor: marcos-antonio
 origem: arquivo
 legacyUrl: /top-5-de-animes-que-tem-roteiros-melhores-que-seriados/
-draft: true
+draft: false
 editoria: series
 ---
 
-<!-- CONFERIR: referência datada no parágrafo 1 ("Hoje") -->
-<!-- CONFERIR: referência datada no parágrafo sobre Shingeki ("ano passado e nesse ano") -->
-
-Hoje o nosso Top Lista traz um Top 5 de animes que tem roteiros melhores que seriados, confira e fique à vontade para discordar.
+O nosso Top Lista traz um Top 5 de animes que tem roteiros melhores que seriados, confira e fique à vontade para discordar.
 
 Não podemos negar o sucesso que os animes fazem no mundo, existem milhões de fãs que adoram as animações japonesas. Muitas pessoas pensam que anime é coisa de criança e blá blá…, mas existem muitos animes com temática adulta, com roteiros super bem escritos e animações excelentes. E vamos ser sinceros existem muitos animes que tem roteiro melhor desenvolvidos do que muitas séries, então vamos lá ao nosso TOP 5, de animes com melhor roteiro que muitas séries:
 
@@ -45,7 +42,7 @@ Após a formatura em 1996, Ito Kaiji se muda para Tóquio em busca de um emprego
 
 Inspirado na obra de **Hajime Isayama**, a história se passa em um mundo onde a população humana vive sobre a ameaça dos Titãs, criaturas gigantescas que devoram humanos sem motivo aparente. Após 100 sem sinais desses seres, o resto da população vive dentro de uma cidade cercada por uma muralha. Entretanto, após o aparecimento de um titã colossal, Eren e sua irmã adotiva Mikasa são obrigados a ver a própria mãe sendo devorada. A partir daí começa a sede de vingança de Eren.
 
-Shingeki foi um sucesso no ano passado e nesse ano, não só pela animação bem feita, mas também pelo roteiro que  é muito bom e super diferente. Shingeki consegue ser um sucesso, mesmo sendo diferente dos animes comuns. É um anime que consegue agradar tanto os jovens como os adultos de hoje em dia.
+Shingeki foi um sucesso em 2013 e em 2014, não só pela animação bem feita, mas também pelo roteiro que  é muito bom e super diferente. Shingeki consegue ser um sucesso, mesmo sendo diferente dos animes comuns. É um anime que consegue agradar tanto os jovens como os adultos de hoje em dia.
 
 ## 1 – Steins Gate
 

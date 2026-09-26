@@ -6,12 +6,10 @@ updatedDate: 2026-09-26
 autor: lexy-soares
 origem: arquivo
 legacyUrl: /interestelar-critica/
-draft: true
+draft: false
 obra: Interestelar
 tipo: filme
 ---
-
-<!-- CONFERIR: referência datada no parágrafo 7 ("o filme do ano") -->
 
 Se parecia que trabalhar com os filmes do Batman iria fazer com que **Christopher Nolan** desse uma guinada em sua carreira, se tornando mais comercial, **Interestelar** é a prova de que ele não se rendeu ao caminho fácil. Seu mais recente filme, além de uma ótima incursão à Ficção Científica espacial, possui um dos roteiros mais inteligentes do gênero realizado nos últimos anos.
 

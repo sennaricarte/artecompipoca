@@ -6,7 +6,7 @@ updatedDate: 2026-09-26
 autor: senna-ricarte
 origem: arquivo
 legacyUrl: /o-abutre/
-draft: true
+draft: false
 obra: O Abutre
 tipo: filme
 ---

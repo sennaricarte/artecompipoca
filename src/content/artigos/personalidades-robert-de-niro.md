@@ -6,7 +6,7 @@ updatedDate: 2026-09-26
 autor: renato-brogiato
 origem: arquivo
 legacyUrl: /personalidades-robert-de-niro/
-draft: true
+draft: false
 editoria: cinema
 ---
 

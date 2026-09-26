@@ -6,7 +6,7 @@ updatedDate: 2026-09-26
 autor: patricia-baleeira
 origem: arquivo
 legacyUrl: /bicho-de-sete-cabecas-critica/
-draft: true
+draft: false
 obra: Bicho de Sete Cabeças
 tipo: filme
 ---
