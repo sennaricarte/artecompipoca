@@ -17,7 +17,6 @@ ficha:
     - "Neal Purvis e Robert Wade"
     - "John Logan"
     - "Jez Butterworth"
-    - "Neal Purvis"
   elenco:
     - "Daniel Craig"
     - "Christoph Waltz"

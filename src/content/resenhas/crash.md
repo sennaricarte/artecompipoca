@@ -24,8 +24,8 @@ ficha:
     - "Jennifer Esposito"
     - "Matt Dillon"
   generos:
-    - drama
-    - "filme sobre crimes"
+    - Drama
+    - Crime
   duracaoMin: 112
   paises:
     - Alemanha
