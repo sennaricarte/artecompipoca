@@ -129,6 +129,21 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/jogos-vorazes-em-chamas/",
+			"destination": "/resenhas/jogos-vorazes-em-chamas/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/jogos-vorazes-esperanca-parte-1/",
+			"destination": "/resenhas/jogos-vorazes-a-esperanca-parte-1/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/jogos-vorazes-final-critica/",
+			"destination": "/resenhas/jogos-vorazes-a-esperanca-o-final/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/kurt-cobain-montage-of-heck-critica/",
 			"destination": "/resenhas/kurt-cobain-montage-of-heck/",
 			"permanent": true
@@ -159,6 +174,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/o-concreto-ja-rachou-um-dos-melhores-discos-do-rock-brasileiro/",
+			"destination": "/resenhas/o-concreto-ja-rachou-plebe-rude/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/o-expresso-do-amanha-critica/",
 			"destination": "/resenhas/o-expresso-do-amanha/",
 			"permanent": true
@@ -166,6 +186,16 @@
 		{
 			"source": "/index.php/o-problema-com-os-herois-em-batman-vs-superman/",
 			"destination": "/cinema/o-problema-com-os-herois-em-batman-vs-superman/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/o-som-cinema-mudo/",
+			"destination": "/musica/o-som-do-cinema-mudo/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/o-som-doutor-jivago-1965/",
+			"destination": "/musica/o-som-do-doutor-jivago-1965/",
 			"permanent": true
 		},
 		{
@@ -199,6 +229,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/setimo/",
+			"destination": "/resenhas/setimo/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/sr-holmes-critica/",
 			"destination": "/resenhas/sr-holmes/",
 			"permanent": true
@@ -216,6 +251,11 @@
 		{
 			"source": "/index.php/top-5-filmes-de-ficcao-cientifica/",
 			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/top-5-melhores-musicas-da-legiao-urbana/",
+			"destination": "/musica/top-5-melhores-musicas-da-legiao-urbana/",
 			"permanent": true
 		},
 		{
@@ -249,6 +289,21 @@
 			"permanent": true
 		},
 		{
+			"source": "/jogos-vorazes-em-chamas/",
+			"destination": "/resenhas/jogos-vorazes-em-chamas/",
+			"permanent": true
+		},
+		{
+			"source": "/jogos-vorazes-esperanca-parte-1/",
+			"destination": "/resenhas/jogos-vorazes-a-esperanca-parte-1/",
+			"permanent": true
+		},
+		{
+			"source": "/jogos-vorazes-final-critica/",
+			"destination": "/resenhas/jogos-vorazes-a-esperanca-o-final/",
+			"permanent": true
+		},
+		{
 			"source": "/kurt-cobain-montage-of-heck-critica/",
 			"destination": "/resenhas/kurt-cobain-montage-of-heck/",
 			"permanent": true
@@ -279,6 +334,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/o-concreto-ja-rachou-um-dos-melhores-discos-do-rock-brasileiro/",
+			"destination": "/resenhas/o-concreto-ja-rachou-plebe-rude/",
+			"permanent": true
+		},
+		{
 			"source": "/o-expresso-do-amanha-critica/",
 			"destination": "/resenhas/o-expresso-do-amanha/",
 			"permanent": true
@@ -286,6 +346,16 @@
 		{
 			"source": "/o-problema-com-os-herois-em-batman-vs-superman/",
 			"destination": "/cinema/o-problema-com-os-herois-em-batman-vs-superman/",
+			"permanent": true
+		},
+		{
+			"source": "/o-som-cinema-mudo/",
+			"destination": "/musica/o-som-do-cinema-mudo/",
+			"permanent": true
+		},
+		{
+			"source": "/o-som-doutor-jivago-1965/",
+			"destination": "/musica/o-som-do-doutor-jivago-1965/",
 			"permanent": true
 		},
 		{
@@ -319,6 +389,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/setimo/",
+			"destination": "/resenhas/setimo/",
+			"permanent": true
+		},
+		{
 			"source": "/sr-holmes-critica/",
 			"destination": "/resenhas/sr-holmes/",
 			"permanent": true
@@ -336,6 +411,11 @@
 		{
 			"source": "/top-5-filmes-de-ficcao-cientifica/",
 			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/top-5-melhores-musicas-da-legiao-urbana/",
+			"destination": "/musica/top-5-melhores-musicas-da-legiao-urbana/",
 			"permanent": true
 		},
 		{

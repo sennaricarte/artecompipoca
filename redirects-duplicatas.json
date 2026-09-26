@@ -435,16 +435,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/index.php/jogos-vorazes-em-chamas/",
-		"destination": "/resenhas/jogos-vorazes-em-chamas/",
-		"permanent": true
-	},
-	{
-		"source": "/index.php/jogos-vorazes-final-critica/",
-		"destination": "/resenhas/jogos-vorazes-a-esperanca-o-final/",
-		"permanent": true
-	},
-	{
 		"source": "/index.php/kuroko-no-basquet-critica/",
 		"destination": "/resenhas/kuroko-no-basquet/",
 		"permanent": true
@@ -527,11 +517,6 @@
 	{
 		"source": "/index.php/o-show-da-mulher-do-fim-do-mundo/",
 		"destination": "/musica/o-show-da-mulher-do-fim-do-mundo-elza-soares/",
-		"permanent": true
-	},
-	{
-		"source": "/index.php/o-som-doutor-jivago-1965/",
-		"destination": "/musica/o-som-do-doutor-jivago-1965/",
 		"permanent": true
 	},
 	{
@@ -650,11 +635,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/index.php/top-5-melhores-musicas-da-legiao-urbana/",
-		"destination": "/musica/top-5-melhores-musicas-da-legiao-urbana/",
-		"permanent": true
-	},
-	{
 		"source": "/index.php/top-5-meus-melhores-filmes-de-2015/",
 		"destination": "/cinema/top-5-meus-melhores-filmes-de-2015/",
 		"permanent": true
@@ -745,16 +725,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/jogos-vorazes-em-chamas/",
-		"destination": "/resenhas/jogos-vorazes-em-chamas/",
-		"permanent": true
-	},
-	{
-		"source": "/jogos-vorazes-final-critica/",
-		"destination": "/resenhas/jogos-vorazes-a-esperanca-o-final/",
-		"permanent": true
-	},
-	{
 		"source": "/kuroko-no-basquet-critica/",
 		"destination": "/resenhas/kuroko-no-basquet/",
 		"permanent": true
@@ -837,11 +807,6 @@
 	{
 		"source": "/o-show-da-mulher-do-fim-do-mundo/",
 		"destination": "/musica/o-show-da-mulher-do-fim-do-mundo-elza-soares/",
-		"permanent": true
-	},
-	{
-		"source": "/o-som-doutor-jivago-1965/",
-		"destination": "/musica/o-som-do-doutor-jivago-1965/",
 		"permanent": true
 	},
 	{
@@ -957,11 +922,6 @@
 	{
 		"source": "/top-5-melhores-duplas-de-amigos-em-series/",
 		"destination": "/series/top-5-melhores-duplas-de-amigos-em-series/",
-		"permanent": true
-	},
-	{
-		"source": "/top-5-melhores-musicas-da-legiao-urbana/",
-		"destination": "/musica/top-5-melhores-musicas-da-legiao-urbana/",
 		"permanent": true
 	},
 	{

@@ -3,6 +3,9 @@
  * Copia Markdown de um lote em quarentena para as coleções do site.
  * Read-only por padrão. Com --apply: copia arquivos e atualiza autores.json.
  * Uso: pnpm wayback:promover --lote=N [--apply]
+ *      pnpm wayback:promover --arquivos=slug1,slug2 [--apply]
+ *      (--arquivos procura os slugs em todos os lotes; casa com o nome de
+ *      origem ou com o slug de destino)
  */
 
 import { access, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
@@ -23,7 +26,26 @@ const CONFERIR_PUBDATE =
 	'<!-- CONFERIR: pubDate aproximada pelo primeiro snapshot do Wayback -->';
 
 const APPLY = process.argv.includes('--apply');
-const LOTE = parseLote(process.argv);
+const ARQUIVOS = parseArquivos(process.argv);
+const LOTE = ARQUIVOS ? null : parseLote(process.argv);
+
+/**
+ * @param {string[]} argv
+ * @returns {string[] | null}
+ */
+function parseArquivos(argv) {
+	const arg = argv.find((a) => a.startsWith('--arquivos='));
+	if (!arg) return null;
+	const slugs = arg
+		.slice('--arquivos='.length)
+		.split(',')
+		.map((s) => s.trim().replace(/\.mdx?$/, ''))
+		.filter(Boolean);
+	if (!slugs.length) {
+		throw new Error(`Nenhum slug informado em ${arg}`);
+	}
+	return [...new Set(slugs)];
+}
 
 /**
  * @param {string[]} argv
@@ -33,7 +55,7 @@ function parseLote(argv) {
 	const arg = argv.find((a) => a.startsWith('--lote='));
 	if (!arg) {
 		throw new Error(
-			'Informe o lote: pnpm wayback:promover --lote=1 [--apply]',
+			'Informe o lote (--lote=1) ou os arquivos (--arquivos=slug1,slug2) [--apply]',
 		);
 	}
 	const n = Number.parseInt(arg.slice('--lote='.length), 10);
@@ -266,49 +288,98 @@ async function loadSnapshotByLegacy() {
 	return map;
 }
 
-async function main() {
-	const loteDir = join(RECUPERADOS, 'markdown', `lote-${LOTE}`);
-	const srcArtigos = join(loteDir, 'artigos');
-	const srcResenhas = join(loteDir, 'resenhas');
+/**
+ * @returns {Promise<string[]>}
+ */
+async function listLoteDirs() {
+	const base = join(RECUPERADOS, 'markdown');
+	if (!(await exists(base))) return [];
+	const names = await readdir(base);
+	return names
+		.filter((n) => /^lote-\d+$/.test(n))
+		.sort(
+			(a, b) =>
+				Number.parseInt(a.slice(5), 10) - Number.parseInt(b.slice(5), 10),
+		)
+		.map((n) => join(base, n));
+}
 
-	if (!(await exists(loteDir))) {
-		console.error(`Lote não encontrado: ${loteDir}`);
-		console.error('Rode antes: pnpm wayback:converter --apply');
-		process.exitCode = 1;
-		return;
+/**
+ * @param {string} loteDir
+ * @returns {Promise<{ collection: 'artigos' | 'resenhas', name: string, sourceName: string, src: string, dest: string }[]>}
+ */
+async function candidatosDoLote(loteDir) {
+	const out = [];
+	for (const collection of /** @type {const} */ (['artigos', 'resenhas'])) {
+		const srcDir = join(loteDir, collection);
+		const destDir = collection === 'artigos' ? DEST_ARTIGOS : DEST_RESENHAS;
+		for (const name of await listMarkdownFiles(srcDir)) {
+			const src = join(srcDir, name);
+			const raw = await readFile(src, 'utf8');
+			const destName = destFileName(raw, name);
+			out.push({
+				collection,
+				name: destName,
+				sourceName: name,
+				src,
+				dest: join(destDir, destName),
+			});
+		}
+	}
+	return out;
+}
+
+async function main() {
+	/** @type {Awaited<ReturnType<typeof candidatosDoLote>>} */
+	let candidatos = [];
+	const rotulo = ARQUIVOS ? `arquivos: ${ARQUIVOS.join(', ')}` : `lote-${LOTE}`;
+
+	if (ARQUIVOS) {
+		const lotes = await listLoteDirs();
+		if (!lotes.length) {
+			console.error('Nenhum lote encontrado em _recuperados/markdown/.');
+			process.exitCode = 1;
+			return;
+		}
+		/** @type {Map<string, (typeof candidatos)[0]>} */
+		const porSlug = new Map();
+		for (const loteDir of lotes) {
+			for (const c of await candidatosDoLote(loteDir)) {
+				const slugs = [c.name, c.sourceName].map((n) =>
+					n.replace(/\.mdx?$/, ''),
+				);
+				for (const s of slugs) {
+					if (ARQUIVOS.includes(s) && !porSlug.has(s)) porSlug.set(s, c);
+				}
+			}
+		}
+		const naoEncontrados = ARQUIVOS.filter((s) => !porSlug.has(s));
+		if (naoEncontrados.length) {
+			console.error(
+				`Slug(s) não encontrado(s) na quarentena: ${naoEncontrados.join(', ')}`,
+			);
+			process.exitCode = 1;
+			return;
+		}
+		const vistos = new Set();
+		for (const s of ARQUIVOS) {
+			const c = /** @type {(typeof candidatos)[0]} */ (porSlug.get(s));
+			if (vistos.has(c.src)) continue;
+			vistos.add(c.src);
+			candidatos.push(c);
+		}
+	} else {
+		const loteDir = join(RECUPERADOS, 'markdown', `lote-${LOTE}`);
+		if (!(await exists(loteDir))) {
+			console.error(`Lote não encontrado: ${loteDir}`);
+			console.error('Rode antes: pnpm wayback:converter --apply');
+			process.exitCode = 1;
+			return;
+		}
+		candidatos = await candidatosDoLote(loteDir);
 	}
 
 	const snapshotByLegacy = await loadSnapshotByLegacy();
-
-	const [artigosFiles, resenhasFiles] = await Promise.all([
-		listMarkdownFiles(srcArtigos),
-		listMarkdownFiles(srcResenhas),
-	]);
-
-	/** @type {{ collection: 'artigos' | 'resenhas', name: string, src: string, dest: string }[]} */
-	const candidatos = [];
-	for (const name of artigosFiles) {
-		const src = join(srcArtigos, name);
-		const raw = await readFile(src, 'utf8');
-		const destName = destFileName(raw, name);
-		candidatos.push({
-			collection: 'artigos',
-			name: destName,
-			src,
-			dest: join(DEST_ARTIGOS, destName),
-		});
-	}
-	for (const name of resenhasFiles) {
-		const src = join(srcResenhas, name);
-		const raw = await readFile(src, 'utf8');
-		const destName = destFileName(raw, name);
-		candidatos.push({
-			collection: 'resenhas',
-			name: destName,
-			src,
-			dest: join(DEST_RESENHAS, destName),
-		});
-	}
 
 	/** @type {typeof candidatos} */
 	const aCopiar = [];
@@ -395,8 +466,15 @@ async function main() {
 		},
 	};
 
-	console.log(`\n=== wayback:promover (lote-${LOTE}) ===`);
-	console.log(`Candidatos no lote: ${candidatos.length}`);
+	console.log(`\n=== wayback:promover (${rotulo}) ===`);
+	console.log(`Candidatos: ${candidatos.length}`);
+	if (ARQUIVOS) {
+		for (const c of candidatos) {
+			console.log(
+				`  ${c.src.slice(RECUPERADOS.length + 1)} -> ${c.collection}/${c.name}`,
+			);
+		}
+	}
 	console.log('\nPor coleção:');
 	for (const col of ['artigos', 'resenhas']) {
 		const c = porColecao[col];
@@ -422,7 +500,9 @@ async function main() {
 	if (!APPLY) {
 		console.log('\nModo read-only (sem --apply). Nada foi alterado.');
 		console.log(
-			`Para executar: pnpm wayback:promover --lote=${LOTE} --apply`,
+			`Para executar: pnpm wayback:promover ${
+				ARQUIVOS ? `--arquivos=${ARQUIVOS.join(',')}` : `--lote=${LOTE}`
+			} --apply`,
 		);
 		return;
 	}

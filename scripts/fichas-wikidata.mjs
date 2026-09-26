@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 /**
  * Busca candidatos no Wikidata para fichas de resenhas (filme/série).
- * Read-only por padrão. Com --apply: rebusca dados pelo wikidataId do CSV e grava.
+ * Read-only por padrão (nas resenhas): a varredura preserva as linhas do CSV e só
+ * acrescenta resenhas que ainda não estão nele.
+ * Com --apply: rebusca dados pelo wikidataId do CSV e grava.
  * Com --segunda-busca: reprocessa linhas do CSV com titulo_busca e aprovar vazio.
  * Uso: pnpm fichas:wikidata [--apply] [--limite=N] | [--segunda-busca]
  */
 
-import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { appendFile, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -1002,6 +1004,26 @@ async function runSearch() {
 	/** @type {any[]} */
 	const rows = [];
 
+	/** @type {string[] | null} */
+	let headersExistentes = null;
+	/** @type {Set<string>} */
+	const jaNoCsv = new Set();
+	/** @type {string} */
+	let textoExistente = '';
+	try {
+		textoExistente = await readFile(OUT_CSV, 'utf8');
+	} catch {
+		textoExistente = '';
+	}
+	if (textoExistente.trim()) {
+		const { headers, rows: existentes } = parseCsvWithHeaders(textoExistente);
+		headersExistentes = headers;
+		for (const r of existentes) {
+			if (r.arquivo) jaNoCsv.add(String(r.arquivo).trim());
+		}
+	}
+	let preservadas = 0;
+
 	let alta = 0;
 	let baixa = 0;
 	let sem = 0;
@@ -1021,6 +1043,11 @@ async function runSearch() {
 		const pubDate = getScalar(parts.fm, 'pubDate');
 		const pubYear = pubDate ? Number(pubDate.slice(0, 4)) : null;
 		const rel = relative(ROOT, file).replace(/\\/g, '/');
+
+		if (jaNoCsv.has(rel)) {
+			preservadas++;
+			continue;
+		}
 
 		console.log(`→ ${rel} (${obra})`);
 
@@ -1143,19 +1170,28 @@ async function runSearch() {
 		'emissora',
 	];
 
-	const csv =
-		headers.join(',') +
-		'\n' +
-		rows
-			.map((r) => headers.map((h) => csvEscape(r[h])).join(','))
-			.join('\n') +
-		'\n';
-
 	await mkdir(dirname(OUT_CSV), { recursive: true });
-	await writeFile(OUT_CSV, csv, 'utf8');
+	if (!headersExistentes) {
+		const csv =
+			headers.join(',') +
+			'\n' +
+			rows
+				.map((r) => headers.map((h) => csvEscape(r[h])).join(','))
+				.join('\n') +
+			(rows.length ? '\n' : '');
+		await writeFile(OUT_CSV, csv, { encoding: 'utf8', flag: 'wx' });
+	} else if (rows.length) {
+		const cols = headersExistentes;
+		const prefixo = textoExistente.endsWith('\n') ? '' : '\n';
+		const novas = rows
+			.map((r) => cols.map((h) => csvEscape(r[h] ?? '')).join(','))
+			.join('\n');
+		await appendFile(OUT_CSV, `${prefixo}${novas}\n`, 'utf8');
+	}
 
 	console.log('\n=== Resumo ===');
-	console.log(`total: ${rows.length}`);
+	console.log(`já no CSV (preservadas): ${preservadas}`);
+	console.log(`novas acrescentadas: ${rows.length}`);
 	console.log(`alta: ${alta}`);
 	console.log(`baixa: ${baixa}`);
 	console.log(`sem candidato: ${sem}`);
