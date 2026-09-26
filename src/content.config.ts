@@ -44,6 +44,7 @@ const artigos = defineCollection({
 				legacyUrl: z.string().optional(),
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
+				notaEditorial: z.string().optional(),
 			}),
 		),
 });
@@ -61,12 +62,14 @@ const resenhas = defineCollection({
 				anoObra: z.number().optional(),
 				nota: z.number().min(0).max(10).optional(),
 				pubDate: z.coerce.date(),
+				updatedDate: z.coerce.date().optional(),
 				autor: reference('autores'),
 				cover: image().optional(),
 				coverAlt: z.string().optional(),
 				legacyUrl: z.string().optional(),
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
+				notaEditorial: z.string().optional(),
 			}),
 		),
 });

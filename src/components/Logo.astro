@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-arte-com-pipoca.png';
+
+interface Props {
+	/** Largura em CSS (header menor, hero maior). */
+	width?: number;
+	class?: string;
+}
+
+const { width = 180, class: className } = Astro.props;
+---
+
+<Image
+	src={logo}
+	alt="Arte Com Pipoca"
+	width={width}
+	format="webp"
+	quality="mid"
+	class:list={['h-auto w-auto max-w-full', className]}
+	densities={[1, 2]}
+/>

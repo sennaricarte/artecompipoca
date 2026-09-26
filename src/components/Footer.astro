@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 const year = new Date().getFullYear();
 
 const links = [
@@ -12,9 +14,13 @@ const links = [
 <footer class="mt-auto border-t border-white/10 bg-surface">
 	<div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 md:px-6">
 		<div class="flex flex-col gap-2">
-			<p class="font-display text-xl tracking-wide text-text">
-				ARTE COM <span class="text-pipoca">PIPOCA</span>
-			</p>
+			<a
+				href="/"
+				class="inline-flex w-fit items-center rounded-sm transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+				aria-label="Arte Com Pipoca — início"
+			>
+				<Logo width={200} class="h-14 w-auto" />
+			</a>
 			<p class="max-w-md text-sm text-muted">
 				Cinema, séries, quadrinhos e música desde 2013
 			</p>

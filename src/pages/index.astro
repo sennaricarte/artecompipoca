@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Logo from '../components/Logo.astro';
 import { site } from '../data/site';
 
 const siteUrl = site.url.replace(/\/?$/, '/');
-const logoUrl = new URL('/favicon.svg', site.url).href;
+const logoUrl = new URL('/logo-arte-com-pipoca.png', site.url).href;
 
 const jsonLd = {
 	'@context': 'https://schema.org',
@@ -40,9 +41,8 @@ const jsonLd = {
 >
 	<script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-	<section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
-		<h1 class="font-display text-5xl tracking-wide text-text md:text-7xl">
-			ARTE COM <span class="text-pipoca">PIPOCA</span>
-		</h1>
+	<section class="mx-auto flex max-w-6xl flex-col items-start px-4 py-16 md:px-6">
+		<h1 class="sr-only">Arte Com Pipoca</h1>
+		<Logo width={420} class="h-auto w-full max-w-md md:max-w-lg" />
 	</section>
 </BaseLayout>

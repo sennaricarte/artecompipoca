@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 const navItems = [
 	{ href: '/cinema/', label: 'Cinema' },
 	{ href: '/series/', label: 'Séries' },
@@ -22,9 +24,10 @@ function isActive(href: string) {
 	<div class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
 		<a
 			href="/"
-			class="font-display text-2xl tracking-wide text-text transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+			class="inline-flex shrink-0 items-center rounded-sm transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+			aria-label="Arte Com Pipoca — início"
 		>
-			ARTE COM <span class="text-pipoca">PIPOCA</span>
+			<Logo width={168} class="h-11 w-auto md:h-12" />
 		</a>
 
 		<input

@@ -6,6 +6,7 @@ import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import MetaPost from '../../components/MetaPost.astro';
+import NotaEditorial from '../../components/NotaEditorial.astro';
 import {
 	formatarData,
 	getResenhas,
@@ -135,6 +136,10 @@ if (imageLd) {
 			texto={entry.body ?? ''}
 			origem={entry.data.origem}
 		/>
+
+		{entry.data.notaEditorial && (
+			<NotaEditorial texto={entry.data.notaEditorial} />
+		)}
 
 		<dl class="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-y border-white/10 py-4 text-sm">
 			<div>

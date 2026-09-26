@@ -1,0 +1,18 @@
+---
+interface Props {
+	texto: string;
+}
+
+const { texto } = Astro.props;
+---
+
+<aside
+	aria-label="Nota da redação"
+	class="mt-6 border-l-4 border-pipoca bg-surface px-4 py-3 text-sm text-muted"
+>
+	<p>
+		<strong class="font-semibold text-text">Nota da redação:</strong>
+		{' '}
+		{texto}
+	</p>
+</aside>
