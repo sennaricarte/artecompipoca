@@ -70,6 +70,25 @@ const resenhas = defineCollection({
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
 				notaEditorial: z.string().optional(),
+				ficha: z
+					.object({
+						tituloOriginal: z.string().optional(),
+						ano: z.number().optional(),
+						direcao: z.array(z.string()).optional(),
+						roteiro: z.array(z.string()).optional(),
+						elenco: z.array(z.string()).max(6).optional(),
+						generos: z.array(z.string()).optional(),
+						duracaoMin: z.number().optional(),
+						paises: z.array(z.string()).optional(),
+						criadores: z.array(z.string()).optional(),
+						temporadas: z.number().optional(),
+						emissora: z.string().optional(),
+						wikidataId: z
+							.string()
+							.regex(/^Q\d+$/, 'wikidataId deve ser Q seguido de dígitos')
+							.optional(),
+					})
+					.optional(),
 			}),
 		),
 });

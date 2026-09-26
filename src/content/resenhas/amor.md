@@ -8,6 +8,29 @@ legacyUrl: /especial-oscar-amor/
 draft: true
 obra: Amor
 tipo: filme
+ficha:
+  tituloOriginal: Amour
+  ano: 2012
+  direcao:
+    - "Michael Haneke"
+  roteiro:
+    - "Michael Haneke"
+  elenco:
+    - "Jean-Louis Trintignant"
+    - "Emmanuelle Riva"
+    - "Isabelle Huppert"
+    - "Alexandre Tharaud"
+    - "William Shimell"
+    - "Rita Blanco"
+  generos:
+    - Drama
+  duracaoMin: 127
+  paises:
+    - "França"
+    - Alemanha
+    - "Áustria"
+  wikidataId: Q637820
+anoObra: 2012
 ---
 
 E encerramos a temporada de prêmios 2014 com a grandiosa festa do Oscar no último dia 2. Pronto! Agora somente em 2015. Mas isso não significa que a nossa coluna deixará de existir! O propósito da mesma sempre foi trazer resenhas de filmes vencedores na estatueta em todas as suas edições, e não somente nas categorias principais, mas em qualquer categoria, trazendo sempre a tona clássicos, filmes mais atuais, escolhas acertadas, mas às vezes escolhas equivocadas também. Tudo até que tenhamos novamente a lista de indicados e todo razzle dazzle que a temporada trás.

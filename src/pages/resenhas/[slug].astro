@@ -7,6 +7,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import MetaPost from '../../components/MetaPost.astro';
 import NotaEditorial from '../../components/NotaEditorial.astro';
+import FichaTecnica from '../../components/FichaTecnica.astro';
 import {
 	formatarData,
 	getResenhas,
@@ -33,6 +34,27 @@ const itemReviewedType: Record<TipoResenha, string> = {
 	album: 'MusicAlbum',
 };
 
+/**
+ * @param {number} min
+ * @returns {string}
+ */
+function duracaoIso8601(min: number): string {
+	const h = Math.floor(min / 60);
+	const m = min % 60;
+	let out = 'PT';
+	if (h > 0) out += `${h}H`;
+	if (m > 0 || h === 0) out += `${m}M`;
+	return out;
+}
+
+/**
+ * @param {string[]} nomes
+ * @returns {{ '@type': string, name: string }[]}
+ */
+function pessoas(nomes: string[]) {
+	return nomes.map((name) => ({ '@type': 'Person', name }));
+}
+
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const autorEntry = await getEntry(entry.data.autor);
@@ -46,6 +68,22 @@ const pageUrl = new URL(`/resenhas/${entry.id}/`, site).href;
 const autorUrl = new URL(`/autores/${autor.id}/`, site).href;
 const seoTitle = entry.data.seoTitle ?? entry.data.title;
 const tipoLabel = nomeTipoResenha(entry.data.tipo);
+const ficha = entry.data.ficha;
+const temFicha = Boolean(
+	ficha &&
+		(ficha.tituloOriginal ||
+			ficha.ano != null ||
+			ficha.direcao?.length ||
+			ficha.roteiro?.length ||
+			ficha.elenco?.length ||
+			ficha.generos?.length ||
+			ficha.duracaoMin != null ||
+			ficha.paises?.length ||
+			ficha.criadores?.length ||
+			ficha.temporadas != null ||
+			ficha.emissora ||
+			ficha.wikidataId),
+);
 
 let ogImage: string | undefined;
 let imageLd: string | undefined;
@@ -69,6 +107,46 @@ const itemReviewed: Record<string, unknown> = {
 };
 if (entry.data.anoObra != null) {
 	itemReviewed.dateCreated = String(entry.data.anoObra);
+}
+
+if (ficha) {
+	if (ficha.tituloOriginal) {
+		itemReviewed.alternateName = ficha.tituloOriginal;
+	}
+	const ano = ficha.ano ?? entry.data.anoObra;
+	if (ano != null) {
+		itemReviewed.datePublished = String(ano);
+		itemReviewed.dateCreated = String(ano);
+	}
+	if (ficha.direcao?.length) {
+		itemReviewed.director = pessoas(ficha.direcao);
+	}
+	if (ficha.elenco?.length) {
+		itemReviewed.actor = pessoas(ficha.elenco);
+	}
+	if (ficha.generos?.length) {
+		itemReviewed.genre = ficha.generos;
+	}
+	if (ficha.duracaoMin != null) {
+		itemReviewed.duration = duracaoIso8601(ficha.duracaoMin);
+	}
+	if (ficha.paises?.length) {
+		itemReviewed.countryOfOrigin = ficha.paises.map((name) => ({
+			'@type': 'Country',
+			name,
+		}));
+	}
+	if (entry.data.tipo === 'serie') {
+		if (ficha.criadores?.length) {
+			itemReviewed.creator = pessoas(ficha.criadores);
+		}
+		if (ficha.temporadas != null) {
+			itemReviewed.numberOfSeasons = ficha.temporadas;
+		}
+	}
+	if (ficha.wikidataId) {
+		itemReviewed.sameAs = `https://www.wikidata.org/wiki/${ficha.wikidataId}`;
+	}
 }
 
 const reviewLd: Record<string, unknown> = {
@@ -137,38 +215,41 @@ if (imageLd) {
 			origem={entry.data.origem}
 		/>
 
+		{
+			entry.data.nota != null && (
+				<p
+					class="mt-6 border-l-4 border-pipoca bg-surface px-4 py-3 font-display text-2xl tracking-wide text-pipoca"
+					aria-label={`Nota ${entry.data.nota} de 10`}
+				>
+					Nota: {entry.data.nota}/10
+				</p>
+			)
+		}
+
 		{entry.data.notaEditorial && (
 			<NotaEditorial texto={entry.data.notaEditorial} />
 		)}
 
-		<dl class="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-y border-white/10 py-4 text-sm">
-			<div>
-				<dt class="text-muted">Obra</dt>
-				<dd class="font-medium text-text">{entry.data.obra}</dd>
-			</div>
-			<div>
-				<dt class="text-muted">Tipo</dt>
-				<dd class="font-medium text-text">{tipoLabel}</dd>
-			</div>
-			{
-				entry.data.anoObra != null && (
+		{
+			!temFicha && (
+				<dl class="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-y border-white/10 py-4 text-sm">
 					<div>
-						<dt class="text-muted">Ano</dt>
-						<dd class="font-medium text-text">{entry.data.anoObra}</dd>
+						<dt class="text-muted">Obra</dt>
+						<dd class="font-medium text-text">{entry.data.obra}</dd>
 					</div>
-				)
-			}
-			{
-				entry.data.nota != null && (
 					<div>
-						<dt class="text-muted">Nota</dt>
-						<dd class="font-medium text-pipoca">
-							Nota: {entry.data.nota}/10
-						</dd>
+						<dt class="text-muted">Tipo</dt>
+						<dd class="font-medium text-text">{tipoLabel}</dd>
 					</div>
-				)
-			}
-		</dl>
+					{entry.data.anoObra != null && (
+						<div>
+							<dt class="text-muted">Ano</dt>
+							<dd class="font-medium text-text">{entry.data.anoObra}</dd>
+						</div>
+					)}
+				</dl>
+			)
+		}
 
 		{
 			entry.data.cover && entry.data.coverAlt && (
@@ -191,6 +272,8 @@ if (imageLd) {
 		<div class="conteudo mt-10">
 			<Content />
 		</div>
+
+		{temFicha && ficha && <FichaTecnica ficha={ficha} />}
 
 		{
 			relacionados.length > 0 && (

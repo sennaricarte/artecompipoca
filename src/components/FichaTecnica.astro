@@ -1,0 +1,100 @@
+---
+interface Ficha {
+	tituloOriginal?: string;
+	ano?: number;
+	direcao?: string[];
+	roteiro?: string[];
+	elenco?: string[];
+	generos?: string[];
+	duracaoMin?: number;
+	paises?: string[];
+	criadores?: string[];
+	temporadas?: number;
+	emissora?: string;
+	wikidataId?: string;
+}
+
+interface Props {
+	ficha: Ficha;
+}
+
+const { ficha } = Astro.props;
+
+/**
+ * @param {number} min
+ * @returns {string}
+ */
+function formatarDuracao(min: number): string {
+	const h = Math.floor(min / 60);
+	const m = min % 60;
+	if (h <= 0) return `${m}min`;
+	if (m <= 0) return `${h}h`;
+	return `${h}h ${m}min`;
+}
+
+/** @param {string[] | undefined} list */
+function juntar(list: string[] | undefined): string | undefined {
+	if (!list?.length) return undefined;
+	return list.join(', ');
+}
+
+const campos: { rotulo: string; valor: string }[] = [];
+
+if (ficha.tituloOriginal) {
+	campos.push({ rotulo: 'Título original', valor: ficha.tituloOriginal });
+}
+if (ficha.ano != null) {
+	campos.push({ rotulo: 'Ano', valor: String(ficha.ano) });
+}
+if (juntar(ficha.direcao)) {
+	campos.push({ rotulo: 'Direção', valor: juntar(ficha.direcao)! });
+}
+if (juntar(ficha.criadores)) {
+	campos.push({ rotulo: 'Criação', valor: juntar(ficha.criadores)! });
+}
+if (juntar(ficha.roteiro)) {
+	campos.push({ rotulo: 'Roteiro', valor: juntar(ficha.roteiro)! });
+}
+if (juntar(ficha.elenco)) {
+	campos.push({ rotulo: 'Elenco', valor: juntar(ficha.elenco)! });
+}
+if (juntar(ficha.generos)) {
+	campos.push({ rotulo: 'Gênero', valor: juntar(ficha.generos)! });
+}
+if (ficha.duracaoMin != null) {
+	campos.push({ rotulo: 'Duração', valor: formatarDuracao(ficha.duracaoMin) });
+}
+if (ficha.temporadas != null) {
+	campos.push({ rotulo: 'Temporadas', valor: String(ficha.temporadas) });
+}
+if (ficha.emissora) {
+	campos.push({ rotulo: 'Emissora', valor: ficha.emissora });
+}
+if (juntar(ficha.paises)) {
+	campos.push({ rotulo: 'País', valor: juntar(ficha.paises)! });
+}
+---
+
+{
+	campos.length > 0 && (
+		<section
+			class="mt-12 rounded-sm border border-white/10 bg-surface px-4 py-6 md:px-6"
+			aria-labelledby="ficha-titulo"
+		>
+			<h2
+				id="ficha-titulo"
+				class="font-display text-2xl tracking-wide text-pipoca"
+			>
+				Ficha técnica
+			</h2>
+			<dl class="mt-4 grid grid-cols-1 gap-x-8 gap-y-3 text-sm md:grid-cols-2">
+				{campos.map((campo) => (
+					<div>
+						<dt class="text-muted">{campo.rotulo}</dt>
+						<dd class="font-medium text-text">{campo.valor}</dd>
+					</div>
+				))}
+			</dl>
+		</section>
+	)
+}

@@ -8,6 +8,30 @@ legacyUrl: /especial-oscar-crash/
 draft: true
 obra: Crash
 tipo: filme
+ficha:
+  tituloOriginal: Crash
+  ano: 2004
+  direcao:
+    - "Paul Haggis"
+  roteiro:
+    - "Robert Moresco"
+    - "Paul Haggis"
+  elenco:
+    - "Ryan Phillippe"
+    - "Sandra Bullock"
+    - "Brendan Fraser"
+    - "Don Cheadle"
+    - "Jennifer Esposito"
+    - "Matt Dillon"
+  generos:
+    - drama
+    - "filme sobre crimes"
+  duracaoMin: 112
+  paises:
+    - Alemanha
+    - "Estados Unidos"
+  wikidataId: Q188000
+anoObra: 2004
 ---
 
 E este foi o grande vencedor do Oscar de Melhor Filme em 2006. **Paul Higgins** deveria se sentir um homem de sorte por ter levado a estatueta por duas vezes consecutivas (ele é roteirista do também oscarizado como Melhor Filme com **Menina de Ouro**, de **Clint Eastwood**. Recentemente ele roteirizou os dois últimos filmes da série **James Bond**, trabalhou de novo com Eastwood em **Cartas de Iwo Jima** no mesmo ano em que ganhou esse Oscar e escreveu também roteiros para games). Não é exagero falar que foi a grande surpresa da premiação daquele ano, já que o favorito era o já citado aqui no Especial Oscar **O Segredo de Brokeback Mountain**. Nessa cerimônia aconteceu um fato que, até então, havia acontecido poucas vezes na história da premiação, onde o Melhor Diretor não levava para Melhor Filme. Vamos lembrar que o fato se repetiu no ano passado, mas de uma maneira ainda mais absurda! O diretor do filme vencedor do grande prêmio da noite, nem sequer havia sido indicado na categoria de diretor!  O que mostra que a Academia está, ou cada vez mais insana ou então cada vez querendo mais se diversificar. Na corrida desse ano por sinal o fato irá se repetir se as previsões para a vitória de **Alfonso Cuarón** se concretizarem na categoria de Direção. Se o seu **Gravidade** levar Melhor Filme, a zebra estará passeando a passos largos por Hollywood na noite do dia dois de março.

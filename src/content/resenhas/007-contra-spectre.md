@@ -8,6 +8,33 @@ legacyUrl: /007-contra-spectre-critica-ii/
 draft: true
 obra: 007 Contra Spectre
 tipo: filme
+ficha:
+  tituloOriginal: Spectre
+  ano: 2015
+  direcao:
+    - "Sam Mendes"
+  roteiro:
+    - "Neal Purvis e Robert Wade"
+    - "John Logan"
+    - "Jez Butterworth"
+    - "Neal Purvis"
+  elenco:
+    - "Daniel Craig"
+    - "Christoph Waltz"
+    - "Monica Bellucci"
+    - "Léa Seydoux"
+    - "Andrew Scott"
+    - "Dave Batista"
+  generos:
+    - Suspense
+    - Espionagem
+    - Aventura
+  duracaoMin: 148
+  paises:
+    - "Reino Unido"
+    - "Estados Unidos"
+  wikidataId: Q18602670
+anoObra: 2015
 ---
 
 Quando foi anunciado que **Sam Mendes** iria dirigir outro filme de 007 após o sucesso de "**Operação Skyfall**" (2012), criou-se muita expectativa sobre o que o diretor faria com o espião. Afinal, Skyfall é um excelente filme, onde ele nos brindou com um filme que resgatou vários elementos clássicos da franquia, modernizando-os. Pra onde ele levaria James Bond depois disso? Agora, temos a resposta à essa dúvida com "**007 Contra Spectre**", o quarto filme do **Daniel Craig** como o agente .
