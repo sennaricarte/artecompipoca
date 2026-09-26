@@ -4,6 +4,48 @@
  */
 import * as cheerio from 'cheerio';
 
+/** Contas genéricas do WordPress → autor_id "redacao". */
+const AUTORES_REDACAO = new Set([
+	'',
+	'pipoca',
+	'equipe pipocacast',
+	'da redacao',
+	'admin',
+]);
+
+/**
+ * @param {string} text
+ * @returns {string}
+ */
+export function stripAccents(text) {
+	return text.normalize('NFD').replace(/\p{M}/gu, '');
+}
+
+/**
+ * Slug ASCII a partir do nome do autor.
+ * @param {string} nome
+ * @returns {string}
+ */
+export function slugifyAutor(nome) {
+	return stripAccents(nome || '')
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-+|-+$/g, '');
+}
+
+/**
+ * Normaliza o autor original para a coluna autor_id.
+ * Contas genéricas → "redacao"; demais → slug do nome.
+ * @param {string} [nome]
+ * @returns {string}
+ */
+export function normalizeAutorId(nome) {
+	const raw = (nome || '').replace(/\s+/g, ' ').trim();
+	const key = stripAccents(raw).toLowerCase();
+	if (AUTORES_REDACAO.has(key)) return 'redacao';
+	return slugifyAutor(raw) || 'redacao';
+}
+
 /** Temas do site: #post-content (tema novo) e .post-entry (tema antigo). */
 export const CONTENT_SELECTORS = [
 	'#post-content',

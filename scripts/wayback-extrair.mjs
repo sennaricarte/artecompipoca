@@ -10,7 +10,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
 import { cacheFileName } from './lib/nome-cache.mjs';
-import { extractPalavras } from './lib/extrair-post.mjs';
+import { extractPalavras, normalizeAutorId, stripAccents } from './lib/extrair-post.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -115,17 +115,31 @@ function csvEscape(value) {
  * @param {string} text
  * @returns {string}
  */
-function stripAccents(text) {
-	return text.normalize('NFD').replace(/\p{M}/gu, '');
-}
-
-/**
- * @param {string} text
- * @returns {string}
- */
 function normalizeKey(text) {
 	return stripAccents(text).toLowerCase().trim();
 }
+
+/** Gêneros de filme (normalizados) que, com "Filmes" e texto longo, sugerem resenha. */
+const GENEROS_FILME = new Set(
+	[
+		'Drama',
+		'Comédia',
+		'Ação',
+		'Suspense',
+		'Terror',
+		'Romance',
+		'Aventura',
+		'Animação',
+		'Ficção Científica',
+		'Policial',
+		'Musical',
+		'Épico',
+		'Clássicos',
+		'Nacional',
+		'Cinebiografia',
+		'Comédia Dramática',
+	].map((g) => normalizeKey(g)),
+);
 
 /**
  * @param {string} raw
@@ -272,7 +286,7 @@ function extractCategorias($) {
 	const fromLinks = [];
 	$('a[rel="category tag"]').each((_, el) => {
 		const t = $(el).text().replace(/\s+/g, ' ').trim();
-		if (t) fromLinks.push(t);
+		if (t.length > 1) fromLinks.push(t);
 	});
 	if (fromLinks.length) return [...new Set(fromLinks)].join(' | ');
 
@@ -280,7 +294,9 @@ function extractCategorias($) {
 		$('article').first().attr('class') || '',
 		$('body').attr('class') || '',
 	].join(' ');
-	const fromClasses = classesWithPrefix(classSources, 'category-');
+	const fromClasses = classesWithPrefix(classSources, 'category-').filter(
+		(c) => c.length > 1,
+	);
 	return [...new Set(fromClasses)].join(' | ');
 }
 
@@ -317,11 +333,14 @@ function extractWpPostId($) {
 }
 
 /**
+ * Classes EXATAS do body (nunca por prefixo: category-noticias ≠ category).
  * @param {import('cheerio').CheerioAPI} $
  * @returns {string}
  */
 function extractTipoPagina($) {
-	const classes = (($('body').attr('class') || '').toLowerCase()).split(/\s+/);
+	const classes = (($('body').attr('class') || '').toLowerCase())
+		.split(/\s+/)
+		.filter(Boolean);
 	const has = (name) => classes.includes(name);
 
 	if (has('single') || has('single-post')) return 'post';
@@ -333,7 +352,9 @@ function extractTipoPagina($) {
 		has('category') ||
 		has('tag') ||
 		has('home') ||
-		has('blog')
+		has('blog') ||
+		has('search') ||
+		has('paged')
 	) {
 		return 'listagem';
 	}
@@ -341,27 +362,16 @@ function extractTipoPagina($) {
 }
 
 /**
- * @param {string} categorias
- * @param {string} tipoProvavel
- * @param {string} tipoPagina
- * @returns {string}
+ * Classificação pela categoria (ou null se nenhuma regra bater).
+ * @param {string[]} cats normalizadas
+ * @returns {string | null}
  */
-function computeTipoFinal(categorias, tipoProvavel, tipoPagina) {
-	if (tipoPagina !== 'post' && tipoPagina !== 'pagina') {
-		return 'listagem';
-	}
-
-	const cats = categorias
-		.split('|')
-		.map((c) => normalizeKey(c))
-		.filter(Boolean);
+function tipoFromCategorias(cats) {
 	const blob = cats.join(' ');
-
 	const hasAny = (terms) => terms.some((t) => blob.includes(t));
 
 	if (hasAny(['critica', 'resenha', 'review', 'oscar'])) return 'resenha';
 	if (hasAny(['top lista', 'top-lista', 'ranking'])) return 'lista';
-	// "top lista" as separate tokens: also match category literally "top lista"
 	if (cats.some((c) => c.includes('top') && c.includes('lista'))) return 'lista';
 
 	if (hasAny(['pipocacast', 'podcast', 'balde', 'sete reinos', 'na mesa'])) {
@@ -379,6 +389,114 @@ function computeTipoFinal(categorias, tipoProvavel, tipoPagina) {
 	) {
 		return 'noticia';
 	}
+
+	return null;
+}
+
+/**
+ * Classificação pelo título (sem acentos, minúsculo), quando categorias não definem o tipo.
+ * @param {string} titulo
+ * @returns {string | null}
+ */
+function tipoFromTitulo(titulo) {
+	const t = normalizeKey(titulo);
+	if (!t) return null;
+
+	if (
+		t.includes('critica') ||
+		t.includes('resenha') ||
+		t.includes('review') ||
+		t.endsWith('| analise')
+	) {
+		return 'resenha';
+	}
+	if (
+		t.startsWith('top ') ||
+		t.startsWith('top:') ||
+		t.includes('melhores') ||
+		t.includes('piores') ||
+		t.includes('motivos para')
+	) {
+		return 'lista';
+	}
+	if (
+		t.startsWith('confira') ||
+		t.startsWith('assista') ||
+		t.startsWith('veja') ||
+		t.startsWith('ouca') ||
+		t.includes('sera') ||
+		t.includes('estrela') ||
+		t.includes('entra para o elenco') ||
+		t.includes('renovada') ||
+		t.includes('cancelada') ||
+		t.includes('divulga') ||
+		t.includes('anuncia') ||
+		t.includes('estreia')
+	) {
+		return 'noticia';
+	}
+
+	return null;
+}
+
+/**
+ * Filmes + gênero + texto longo → resenha, se ainda sem tipo.
+ * @param {string[]} cats normalizadas
+ * @param {number} palavras
+ * @returns {boolean}
+ */
+function isResenhaFilmeGenero(cats, palavras) {
+	if (palavras < 400) return false;
+	if (!cats.includes('filmes')) return false;
+	return cats.some((c) => GENEROS_FILME.has(c));
+}
+
+/**
+ * Regra anterior (só categorias → tipo_provavel), para comparar tipo_final.
+ * @param {string} categorias
+ * @param {string} tipoProvavel
+ * @param {string} tipoPagina
+ * @returns {string}
+ */
+function computeTipoFinalLegado(categorias, tipoProvavel, tipoPagina) {
+	if (tipoPagina !== 'post' && tipoPagina !== 'pagina') {
+		return 'listagem';
+	}
+
+	const cats = categorias
+		.split('|')
+		.map((c) => normalizeKey(c))
+		.filter(Boolean);
+	const fromCats = tipoFromCategorias(cats);
+	if (fromCats) return fromCats;
+	return tipoProvavel || 'outro';
+}
+
+/**
+ * @param {string} categorias
+ * @param {string} tipoProvavel
+ * @param {string} tipoPagina
+ * @param {string} titulo
+ * @param {number} palavras
+ * @returns {string}
+ */
+function computeTipoFinal(categorias, tipoProvavel, tipoPagina, titulo, palavras) {
+	if (tipoPagina !== 'post' && tipoPagina !== 'pagina') {
+		return 'listagem';
+	}
+
+	const cats = categorias
+		.split('|')
+		.map((c) => normalizeKey(c))
+		.filter(Boolean);
+
+	const fromCats = tipoFromCategorias(cats);
+	if (fromCats) return fromCats;
+
+	const fromTitle = tipoFromTitulo(titulo);
+	if (fromTitle) return fromTitle;
+
+	if (isResenhaFilmeGenero(cats, palavras)) return 'resenha';
 
 	return tipoProvavel || 'outro';
 }
@@ -441,13 +559,25 @@ function extractFromHtml(html, invRow, arquivoCache) {
 	const titulo = extractTitulo($);
 	const data_publicacao = extractData($);
 	const autor = extractAutor($);
+	const autor_id = normalizeAutorId(autor);
 	const categorias = extractCategorias($);
 	const tags = extractTags($);
 	const wp_post_id = extractWpPostId($);
 	const tipo_pagina = extractTipoPagina($);
 	const { palavras, seletor_usado } = extractPalavras($);
 	const tipo_provavel = invRow.tipo_provavel || '';
-	const tipo_final = computeTipoFinal(categorias, tipo_provavel, tipo_pagina);
+	const tipo_final = computeTipoFinal(
+		categorias,
+		tipo_provavel,
+		tipo_pagina,
+		titulo,
+		palavras,
+	);
+	const tipo_final_legado = computeTipoFinalLegado(
+		categorias,
+		tipo_provavel,
+		tipo_pagina,
+	);
 	const tem_backlink = invRow.tem_backlink || 'nao';
 
 	const { sugestao, motivo } = suggestAprovacao({
@@ -463,9 +593,11 @@ function extractFromHtml(html, invRow, arquivoCache) {
 		tem_backlink,
 		tipo_provavel,
 		tipo_final,
+		tipo_final_legado,
 		titulo,
 		data_publicacao,
 		autor,
+		autor_id,
 		categorias,
 		tags,
 		palavras,
@@ -518,6 +650,7 @@ async function writeMetadadosCsv(rows) {
 		'titulo',
 		'data_publicacao',
 		'autor',
+		'autor_id',
 		'categorias',
 		'tags',
 		'palavras',
@@ -540,6 +673,7 @@ async function writeMetadadosCsv(rows) {
 				r.titulo,
 				r.data_publicacao,
 				r.autor,
+				r.autor_id,
 				r.categorias,
 				r.tags,
 				r.palavras,
@@ -609,7 +743,11 @@ async function main() {
 	/** @type {Record<string, number>} */
 	const porTipoFinal = {};
 	/** @type {Record<string, number>} */
+	const porTipoPagina = {};
+	/** @type {Record<string, number>} */
 	const porAutor = {};
+	/** @type {Record<string, number>} */
+	const porAutorId = {};
 	/** @type {Record<string, number>} */
 	const porCategoria = {};
 	/** @type {Record<string, number>} */
@@ -625,15 +763,19 @@ async function main() {
 	/** @type {Record<string, number>} */
 	const simPorAutor = {};
 	let mudaramTipo = 0;
+	let mudaramTipoVsLegado = 0;
 	/** @type {string[]} */
 	const semSeletor = [];
 
 	for (const r of resultados) {
 		porTipoFinal[r.tipo_final] = (porTipoFinal[r.tipo_final] ?? 0) + 1;
+		porTipoPagina[r.tipo_pagina] = (porTipoPagina[r.tipo_pagina] ?? 0) + 1;
 		if (r.tipo_final !== r.tipo_provavel) mudaramTipo += 1;
+		if (r.tipo_final !== r.tipo_final_legado) mudaramTipoVsLegado += 1;
 
 		const autor = r.autor || '(sem autor)';
 		porAutor[autor] = (porAutor[autor] ?? 0) + 1;
+		porAutorId[r.autor_id] = (porAutorId[r.autor_id] ?? 0) + 1;
 
 		for (const cat of r.categorias.split('|').map((c) => c.trim()).filter(Boolean)) {
 			porCategoria[cat] = (porCategoria[cat] ?? 0) + 1;
@@ -666,11 +808,17 @@ async function main() {
 	console.log('\n=== Resumo wayback:extrair ===');
 	console.log(`Arquivos processados:     ${resultados.length}`);
 	console.log(`Inventário sem cache:     ${semCache}`);
-	console.log(`Tipos que mudaram:        ${mudaramTipo}`);
+	console.log(`Tipos ≠ tipo_provavel:    ${mudaramTipo}`);
+	console.log(`tipo_final ≠ regra anterior: ${mudaramTipoVsLegado}`);
 
 	console.log('\nPor tipo_final:');
 	for (const tipo of Object.keys(porTipoFinal).sort((a, b) => a.localeCompare(b, 'pt-BR'))) {
 		console.log(`  ${tipo}: ${porTipoFinal[tipo]}`);
+	}
+
+	console.log('\nPor tipo_pagina:');
+	for (const tipo of Object.keys(porTipoPagina).sort((a, b) => a.localeCompare(b, 'pt-BR'))) {
+		console.log(`  ${tipo}: ${porTipoPagina[tipo]}`);
 	}
 
 	console.log('\nTop 40 categorias:');
@@ -688,6 +836,14 @@ async function main() {
 	);
 	for (const [autor, n] of autoresOrdenados) {
 		console.log(`  ${autor}: ${n}`);
+	}
+
+	console.log('\nPor autor_id:');
+	const autorIdsOrdenados = Object.entries(porAutorId).sort(
+		(a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'pt-BR'),
+	);
+	for (const [id, n] of autorIdsOrdenados) {
+		console.log(`  ${id}: ${n}`);
 	}
 
 	console.log('\nFaixas de palavras (geral):');

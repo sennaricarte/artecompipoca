@@ -11,15 +11,15 @@ import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
 import TurndownService from 'turndown';
 import { cacheFileName } from './lib/nome-cache.mjs';
-import { getScrubbedContentHtml } from './lib/extrair-post.mjs';
+import { getScrubbedContentHtml, normalizeAutorId } from './lib/extrair-post.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const RECUPERADOS = join(ROOT, '_recuperados');
 const METADADOS_CSV = join(RECUPERADOS, 'metadados.csv');
+const DECISOES_CSV = join(RECUPERADOS, 'decisoes-manuais.csv');
 const HTML_DIR = join(RECUPERADOS, 'html');
-const MD_RESENHAS = join(RECUPERADOS, 'markdown', 'resenhas');
-const MD_ARTIGOS = join(RECUPERADOS, 'markdown', 'artigos');
+const MARKDOWN_ROOT = join(RECUPERADOS, 'markdown');
 const AUTORES_JSON = join(RECUPERADOS, 'autores-sugeridos.json');
 const REDIRECTS_JSON = join(RECUPERADOS, 'redirects-sugeridos.json');
 
@@ -122,14 +122,15 @@ function normalizeKey(text) {
 }
 
 /**
- * @param {string} nome
+ * Nome de exibição para autores-sugeridos.json.
+ * @param {string} autorId
+ * @param {string} autorOriginal
  * @returns {string}
  */
-function autorIdFromNome(nome) {
-	return stripAccents(nome || '')
-		.toLowerCase()
-		.replace(/[^a-z0-9]+/g, '-')
-		.replace(/^-+|-+$/g, '');
+function nomeAutorSugerido(autorId, autorOriginal) {
+	if (autorId === 'redacao') return 'Redação Arte Com Pipoca';
+	const nome = (autorOriginal || '').trim();
+	return nome || autorId;
 }
 
 /**
@@ -401,9 +402,10 @@ function yamlQuote(value) {
 /**
  * @param {Record<string, string | number | boolean>} fields
  * @param {string} body
+ * @param {string} [conferir]
  * @returns {string}
  */
-function buildMarkdownFile(fields, body) {
+function buildMarkdownFile(fields, body, conferir = '') {
 	const lines = ['---'];
 	for (const [k, v] of Object.entries(fields)) {
 		if (typeof v === 'boolean' || typeof v === 'number') {
@@ -412,8 +414,105 @@ function buildMarkdownFile(fields, body) {
 			lines.push(`${k}: ${yamlQuote(v)}`);
 		}
 	}
-	lines.push('---', '', body.trim(), '');
+	lines.push('---', '');
+	const nota = (conferir || '').trim();
+	if (nota) {
+		lines.push(`<!-- CONFERIR: ${nota} -->`, '');
+	}
+	lines.push(body.trim(), '');
 	return lines.join('\n');
+}
+
+/**
+ * @param {Record<string, string>} metaRow
+ * @param {Record<string, string> | undefined} decisao
+ * @returns {Record<string, string>}
+ */
+function mergeDecisao(metaRow, decisao) {
+	const out = { ...metaRow };
+	if (!decisao) return out;
+
+	out.aprovar = (decisao.aprovar ?? '').trim();
+	if ((decisao.titulo_limpo || '').trim()) {
+		out.titulo_limpo = decisao.titulo_limpo.trim();
+	}
+	if ((decisao.tipo_conteudo || '').trim()) {
+		out.tipo_conteudo = decisao.tipo_conteudo.trim();
+	}
+	if ((decisao.editoria || '').trim()) {
+		out.editoria = decisao.editoria.trim();
+	}
+	if ((decisao.tipo_resenha || '').trim()) {
+		out.tipo_resenha = decisao.tipo_resenha.trim();
+	}
+	if ((decisao.lote || '').trim()) {
+		out.lote = String(decisao.lote).trim();
+	}
+	if ((decisao.conferir || '').trim()) {
+		out.conferir = decisao.conferir.trim();
+	}
+	if ((decisao.redirecionar_para || '').trim()) {
+		out.redirecionar_para = decisao.redirecionar_para.trim();
+	}
+	return out;
+}
+
+/**
+ * @param {Record<string, string>} row
+ * @returns {{
+ *   isResenha: boolean,
+ *   collection: 'resenhas' | 'artigos',
+ *   slug: string,
+ *   editoria?: string,
+ *   tipo?: string,
+ *   urlNova: string,
+ * } | null}
+ */
+function resolveDestino(row) {
+	const tipoConteudo = (row.tipo_conteudo || '').trim().toLowerCase();
+	let isResenha;
+	if (tipoConteudo === 'resenha') isResenha = true;
+	else if (tipoConteudo === 'artigo') isResenha = false;
+	else isResenha = (row.tipo_final || '').trim() === 'resenha';
+
+	const slug = slugFromUrl(row.url_normalizada || '');
+	if (!slug) return null;
+
+	const editoriaOverride = (row.editoria || '').trim();
+	const tipoResenhaOverride = (row.tipo_resenha || '').trim();
+
+	const editoria = isResenha
+		? undefined
+		: editoriaOverride || deriveEditoria(row.categorias || '');
+	const tipo = isResenha
+		? tipoResenhaOverride || deriveTipoResenha(row.categorias || '')
+		: undefined;
+
+	const urlNova = isResenha
+		? `/resenhas/${slug}/`
+		: `/${editoria}/${slug}/`;
+
+	return {
+		isResenha,
+		collection: isResenha ? 'resenhas' : 'artigos',
+		slug,
+		editoria,
+		tipo,
+		urlNova,
+	};
+}
+
+/**
+ * @param {string} path
+ * @returns {Promise<Record<string, string>[] | null>}
+ */
+async function readCsvIfExists(path) {
+	try {
+		const text = await readFile(path, 'utf8');
+		return parseCsv(text);
+	} catch {
+		return null;
+	}
 }
 
 async function main() {
@@ -427,10 +526,67 @@ async function main() {
 		return;
 	}
 
-	let rows = parseCsv(csvText).filter((r) => (r.aprovar || '').trim() === 'sim');
-	if (LIMITE != null) rows = rows.slice(0, LIMITE);
+	const metaRows = parseCsv(csvText);
+	/** @type {Map<string, Record<string, string>>} */
+	const metaByUrl = new Map();
+	for (const row of metaRows) {
+		const url = (row.url_normalizada || '').trim();
+		if (url) metaByUrl.set(url, row);
+	}
 
-	/** @type {{ row: Record<string, string>, collection: 'resenhas' | 'artigos' | null, slug: string, titleLimpo: string, titleOriginal: string, urlNova: string, editoria?: string, tipo?: string, autorId: string, autorNome: string, markdown?: string, filePath?: string }[]} */
+	const decisoesRows = await readCsvIfExists(DECISOES_CSV);
+	/** @type {Map<string, Record<string, string>>} */
+	const decisoesByUrl = new Map();
+	if (decisoesRows) {
+		for (const row of decisoesRows) {
+			const url = (row.url_normalizada || '').trim();
+			if (url) decisoesByUrl.set(url, row);
+		}
+		console.log(
+			`Decisões manuais: ${decisoesByUrl.size} URL(s) em ${DECISOES_CSV}`,
+		);
+	} else {
+		console.log('Decisões manuais: arquivo ausente (seguindo só metadados.csv).');
+	}
+
+	/** @type {Map<string, Record<string, string>>} */
+	const mergedByUrl = new Map();
+	for (const [url, meta] of metaByUrl) {
+		mergedByUrl.set(url, mergeDecisao(meta, decisoesByUrl.get(url)));
+	}
+	// URLs só nas decisões (sem metadados): ainda assim entram para override/redirect
+	for (const [url, decisao] of decisoesByUrl) {
+		if (mergedByUrl.has(url)) continue;
+		mergedByUrl.set(url, mergeDecisao({ url_normalizada: url }, decisao));
+	}
+
+	/**
+	 * @param {string} url
+	 * @returns {string}
+	 */
+	function urlNovaPara(url) {
+		const target = mergedByUrl.get(url);
+		if (!target) {
+			// Fallback: só pelo path da URL mantida
+			const slug = slugFromUrl(url);
+			return slug ? `/cinema/${slug}/` : '';
+		}
+		const dest = resolveDestino(target);
+		return dest?.urlNova || '';
+	}
+
+	let aprovados = [...mergedByUrl.values()].filter(
+		(r) => (r.aprovar || '').trim() === 'sim',
+	);
+	if (LIMITE != null) aprovados = aprovados.slice(0, LIMITE);
+
+	const redirecionamentosManuais = [...mergedByUrl.values()].filter(
+		(r) =>
+			(r.aprovar || '').trim() === 'nao' &&
+			(r.redirecionar_para || '').trim(),
+	);
+
+	/** @type {{ row: Record<string, string>, collection: 'resenhas' | 'artigos' | null, lote: string, slug: string, titleLimpo: string, titleOriginal: string, urlNova: string, editoria?: string, tipo?: string, autorId: string, autorNome: string, conferir: string, markdown?: string, filePath?: string }[]} */
 	const planned = [];
 	/** @type {{ source: string, destination: string, permanent: boolean }[]} */
 	const redirects = [];
@@ -438,56 +594,84 @@ async function main() {
 	const autores = new Map();
 	/** @type {Map<string, string[]>} */
 	const slugOwners = new Map();
+	/** @type {Record<string, Record<string, number>>} */
+	const porLoteColecao = {};
 
 	let resenhasCount = 0;
 	let artigosCount = 0;
 	let soRedirect = 0;
 	let falhasHtml = 0;
 
-	for (const row of rows) {
-		const titleOriginal = row.titulo || '';
-		const titleLimpo = cleanTitleFrontmatter(titleOriginal);
+	for (const row of redirecionamentosManuais) {
 		const legacyUrl = legacyPathFromUrl(row.url_normalizada || '');
-		const autorNome = (row.autor || '').trim() || 'sem-autor';
-		const autorId = autorIdFromNome(autorNome) || 'sem-autor';
+		const destinoUrl = (row.redirecionar_para || '').trim();
+		const urlNova = urlNovaPara(destinoUrl);
+		redirects.push(
+			{ source: legacyUrl, destination: urlNova, permanent: true },
+			{
+				source: `/index.php${legacyUrl}`,
+				destination: urlNova,
+				permanent: true,
+			},
+		);
+	}
+
+	for (const row of aprovados) {
+		const titleOriginal = row.titulo || row.titulo_original || '';
+		const titleLimpo =
+			(row.titulo_limpo || '').trim() ||
+			cleanTitleFrontmatter(titleOriginal);
+		const legacyUrl = legacyPathFromUrl(row.url_normalizada || '');
+		const autorOriginal = (row.autor || '').trim();
+		const autorId =
+			(row.autor_id || '').trim() || normalizeAutorId(autorOriginal);
+		const autorNome = nomeAutorSugerido(autorId, autorOriginal);
+		const conferir = (row.conferir || '').trim();
+		const lote = String(row.lote || '').trim() || '1';
 
 		if (!autores.has(autorId)) {
 			autores.set(autorId, { id: autorId, nome: autorNome, bio: '' });
 		}
 
 		const tipoPagina = (row.tipo_pagina || '').trim();
-		if (tipoPagina !== 'post') {
+		const decisao = decisoesByUrl.get((row.url_normalizada || '').trim());
+		const ignoraTipoPagina = Boolean(
+			decisao &&
+				(decisao.aprovar || '').trim() === 'sim' &&
+				(decisao.tipo_conteudo || '').trim(),
+		);
+		if (tipoPagina && tipoPagina !== 'post' && !ignoraTipoPagina) {
 			soRedirect += 1;
 			redirects.push(
 				{ source: legacyUrl, destination: '', permanent: true },
-				{ source: `/index.php${legacyUrl}`, destination: '', permanent: true },
+				{
+					source: `/index.php${legacyUrl}`,
+					destination: '',
+					permanent: true,
+				},
 			);
 			planned.push({
 				row,
 				collection: null,
+				lote,
 				slug: '',
 				titleLimpo,
 				titleOriginal,
 				urlNova: '',
 				autorId,
 				autorNome,
+				conferir,
 			});
 			continue;
 		}
 
-		const isResenha = (row.tipo_final || '').trim() === 'resenha';
-		const collection = isResenha ? 'resenhas' : 'artigos';
-		const slug = slugFromUrl(row.url_normalizada || '');
-		if (!slug) {
+		const dest = resolveDestino(row);
+		if (!dest) {
 			falhasHtml += 1;
 			continue;
 		}
 
-		const editoria = isResenha ? undefined : deriveEditoria(row.categorias || '');
-		const tipo = isResenha ? deriveTipoResenha(row.categorias || '') : undefined;
-		const urlNova = isResenha
-			? `/resenhas/${slug}/`
-			: `/${editoria}/${slug}/`;
+		const { isResenha, collection, slug, editoria, tipo, urlNova } = dest;
 
 		const key = `${collection}:${slug}`;
 		const owners = slugOwners.get(key) || [];
@@ -533,21 +717,35 @@ async function main() {
 			fm.editoria = /** @type {string} */ (editoria);
 		}
 
-		const body = buildMarkdownFile(fm, markdown);
-		const dir = isResenha ? MD_RESENHAS : MD_ARTIGOS;
-		const filePath = join(dir, `${slug}.md`);
+		const body = buildMarkdownFile(fm, markdown, conferir);
+		const filePath = join(
+			MARKDOWN_ROOT,
+			`lote-${lote}`,
+			collection,
+			`${slug}.md`,
+		);
 
 		if (isResenha) resenhasCount += 1;
 		else artigosCount += 1;
 
+		if (!porLoteColecao[lote]) {
+			porLoteColecao[lote] = { artigos: 0, resenhas: 0 };
+		}
+		porLoteColecao[lote][collection] += 1;
+
 		redirects.push(
 			{ source: legacyUrl, destination: urlNova, permanent: true },
-			{ source: `/index.php${legacyUrl}`, destination: urlNova, permanent: true },
+			{
+				source: `/index.php${legacyUrl}`,
+				destination: urlNova,
+				permanent: true,
+			},
 		);
 
 		planned.push({
 			row,
 			collection,
+			lote,
 			slug,
 			titleLimpo,
 			titleOriginal,
@@ -556,21 +754,38 @@ async function main() {
 			tipo,
 			autorId,
 			autorNome,
+			conferir,
 			markdown: body,
 			filePath,
 		});
 	}
 
 	const colisoes = [...slugOwners.entries()].filter(([, urls]) => urls.length > 1);
+	const comConferir = planned.filter((p) => p.collection && p.conferir);
 
 	console.log('\n=== Resumo wayback:converter ===');
-	console.log(`Linhas aprovar=sim (processadas): ${rows.length}`);
+	console.log(`Linhas aprovar=sim (processadas): ${aprovados.length}`);
 	console.log(`Markdown resenhas:  ${resenhasCount}`);
 	console.log(`Markdown artigos:   ${artigosCount}`);
 	console.log(`Só redirect (não-post): ${soRedirect}`);
 	console.log(`Falhas HTML/conteúdo: ${falhasHtml}`);
 	console.log(`Autores sugeridos:  ${autores.size}`);
 	console.log(`Redirects:          ${redirects.length}`);
+	console.log(
+		`Redirects manuais (aprovar=nao): ${redirecionamentosManuais.length * 2}`,
+	);
+
+	console.log('\nPor lote e coleção:');
+	const lotes = Object.keys(porLoteColecao).sort((a, b) =>
+		a.localeCompare(b, 'pt-BR', { numeric: true }),
+	);
+	if (lotes.length === 0) console.log('  (nenhum)');
+	for (const lote of lotes) {
+		const c = porLoteColecao[lote];
+		console.log(
+			`  lote-${lote}: artigos=${c.artigos} | resenhas=${c.resenhas} | total=${c.artigos + c.resenhas}`,
+		);
+	}
 
 	console.log('\nColisões de slug:');
 	if (colisoes.length === 0) console.log('  (nenhuma)');
@@ -579,12 +794,20 @@ async function main() {
 		for (const u of urls) console.log(`    - ${u}`);
 	}
 
-	const exemplos = planned
-		.filter((p) => p.collection)
-		.slice(0, 5);
+	console.log(`\nItens com CONFERIR (${comConferir.length}):`);
+	if (comConferir.length === 0) console.log('  (nenhum)');
+	for (const item of comConferir) {
+		console.log(
+			`  [lote-${item.lote}/${item.collection}] ${item.titleLimpo} — ${item.conferir}`,
+		);
+	}
+
+	const exemplos = planned.filter((p) => p.collection).slice(0, 5);
 	console.log('\nExemplos title → limpo → slug:');
 	for (const ex of exemplos) {
-		console.log(`  "${ex.titleOriginal}" → "${ex.titleLimpo}" → ${ex.slug}`);
+		console.log(
+			`  [lote-${ex.lote}] "${ex.titleOriginal}" → "${ex.titleLimpo}" → ${ex.slug}`,
+		);
 	}
 
 	if (!APPLY) {
@@ -594,11 +817,9 @@ async function main() {
 		return;
 	}
 
-	await mkdir(MD_RESENHAS, { recursive: true });
-	await mkdir(MD_ARTIGOS, { recursive: true });
-
 	for (const item of planned) {
 		if (!item.markdown || !item.filePath) continue;
+		await mkdir(dirname(item.filePath), { recursive: true });
 		await writeFile(item.filePath, item.markdown, 'utf8');
 	}
 
