@@ -2,7 +2,8 @@
 /**
  * Busca candidatos no Wikidata para fichas de resenhas (filme/série).
  * Read-only por padrão. Com --apply: rebusca dados pelo wikidataId do CSV e grava.
- * Uso: pnpm fichas:wikidata [--apply] [--limite=N]
+ * Com --segunda-busca: reprocessa linhas do CSV com titulo_busca e aprovar vazio.
+ * Uso: pnpm fichas:wikidata [--apply] [--limite=N] | [--segunda-busca]
  */
 
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
@@ -14,6 +15,7 @@ const ROOT = join(__dirname, '..');
 const RESENHAS = join(ROOT, 'src', 'content', 'resenhas');
 const OUT_CSV = join(ROOT, '_recuperados', 'fichas-candidatas.csv');
 const APPLY = process.argv.includes('--apply');
+const SEGUNDA_BUSCA = process.argv.includes('--segunda-busca');
 const LIMITE_ARG = process.argv.find((a) => a.startsWith('--limite='));
 const LIMITE = LIMITE_ARG ? Number(LIMITE_ARG.slice('--limite='.length)) : null;
 
@@ -23,9 +25,13 @@ const SEARCH_URL = 'https://www.wikidata.org/w/api.php';
 const SPARQL_URL = 'https://query.wikidata.org/sparql';
 
 const CLASSE_FILME = 'Q11424';
+const CLASSE_FILME_ANIMACAO = 'Q202866';
+const CLASSE_LONGA_ANIMACAO = 'Q29168811';
 const CLASSE_SERIE = 'Q5398426';
 const CLASSE_MINISSERIE = 'Q1259759';
 const CLASSE_SERIE_ANIMADA = 'Q581714';
+const CLASSES_FILME = [CLASSE_FILME, CLASSE_FILME_ANIMACAO, CLASSE_LONGA_ANIMACAO];
+const CLASSES_SERIE = [CLASSE_SERIE, CLASSE_MINISSERIE, CLASSE_SERIE_ANIMADA];
 
 const DELAY_MS = 1000;
 
@@ -170,6 +176,28 @@ async function searchByClass(obra, classId) {
 }
 
 /**
+ * Busca textual em várias classes P31, preservando ordem e deduplicando.
+ * @param {string} obra
+ * @param {string[]} classIds
+ * @returns {Promise<string[]>}
+ */
+async function searchByClasses(obra, classIds) {
+	/** @type {string[]} */
+	const out = [];
+	/** @type {Set<string>} */
+	const seen = new Set();
+	for (const classId of classIds) {
+		const ids = await searchByClass(obra, classId);
+		for (const id of ids) {
+			if (seen.has(id)) continue;
+			seen.add(id);
+			out.push(id);
+		}
+	}
+	return out;
+}
+
+/**
  * @param {string} obra
  * @param {'filme' | 'serie'} tipo
  * @returns {Promise<string[]>}
@@ -178,13 +206,11 @@ async function searchIds(obra, tipo) {
 	/** @param {string} q */
 	async function once(q) {
 		if (tipo === 'filme') {
-			return searchByClass(q, CLASSE_FILME);
+			return searchByClasses(q, CLASSES_FILME);
 		}
 		let ids = await searchByClass(q, CLASSE_SERIE);
 		if (ids.length) return ids;
-		const mini = await searchByClass(q, CLASSE_MINISSERIE);
-		const anim = await searchByClass(q, CLASSE_SERIE_ANIMADA);
-		return [...new Set([...mini, ...anim])];
+		return searchByClasses(q, [CLASSE_MINISSERIE, CLASSE_SERIE_ANIMADA]);
 	}
 
 	let ids = await once(obra);
@@ -371,6 +397,7 @@ async function fetchCandidatesData(ids, tipo) {
 			tituloOriginal,
 			titulos,
 			ano: claimYear(ent, 'P577'),
+			anoInicio: claimYear(ent, 'P580'),
 			sitelinks: Object.keys(ent.sitelinks || {}).length,
 			direcao,
 			roteiro,
@@ -704,12 +731,13 @@ async function applyFicha(filePath, ficha, anoObraExistente) {
 /**
  * Parse CSV simples com aspas.
  * @param {string} text
+ * @returns {{ headers: string[], rows: Record<string, string>[] }}
  */
-function parseCsv(text) {
+function parseCsvWithHeaders(text) {
 	const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/).filter((l) => l.trim());
-	if (!lines.length) return [];
+	if (!lines.length) return { headers: [], rows: [] };
 	const headers = splitCsvLine(lines[0]);
-	return lines.slice(1).map((line) => {
+	const rows = lines.slice(1).map((line) => {
 		const cols = splitCsvLine(line);
 		/** @type {Record<string, string>} */
 		const row = {};
@@ -718,6 +746,51 @@ function parseCsv(text) {
 		});
 		return row;
 	});
+	return { headers, rows };
+}
+
+/**
+ * @param {string} text
+ */
+function parseCsv(text) {
+	return parseCsvWithHeaders(text).rows;
+}
+
+/**
+ * @param {string[]} headers
+ * @param {Record<string, string>[]} rows
+ */
+function serializeCsv(headers, rows) {
+	return (
+		headers.join(',') +
+		'\n' +
+		rows.map((r) => headers.map((h) => csvEscape(r[h] ?? '')).join(',')).join('\n') +
+		'\n'
+	);
+}
+
+/**
+ * Busca por termo e classes do tipo (sem simplificar o título).
+ * @param {string} term
+ * @param {'filme' | 'serie'} tipo
+ */
+async function searchByTipo(term, tipo) {
+	if (tipo === 'filme') return searchByClasses(term, CLASSES_FILME);
+	let ids = await searchByClass(term, CLASSE_SERIE);
+	if (ids.length) return ids;
+	return searchByClasses(term, [CLASSE_MINISSERIE, CLASSE_SERIE_ANIMADA]);
+}
+
+/**
+ * Ano do item para segunda busca: P577 (filme); P580 ou P577 (série).
+ * @param {any} cand
+ * @param {'filme' | 'serie'} tipo
+ */
+function anoParaSegundaBusca(cand, tipo) {
+	if (tipo === 'serie') {
+		return cand.anoInicio ?? cand.ano ?? null;
+	}
+	return cand.ano ?? null;
 }
 
 /**
@@ -882,10 +955,7 @@ async function runApply() {
  * @param {'filme' | 'serie'} tipo
  */
 async function entityMatchesTipo(id, tipo) {
-	const classes =
-		tipo === 'filme'
-			? [CLASSE_FILME]
-			: [CLASSE_SERIE, CLASSE_MINISSERIE, CLASSE_SERIE_ANIMADA];
+	const classes = tipo === 'filme' ? CLASSES_FILME : CLASSES_SERIE;
 	const values = classes.map((c) => `wd:${c}`).join(' ');
 	const query = `ASK { VALUES ?class { ${values} } wd:${id} wdt:P31/wdt:P279* ?class . }`;
 	const params = new URLSearchParams({ query, format: 'json' });
@@ -1092,7 +1162,124 @@ async function runSearch() {
 	console.log(`CSV: ${relative(ROOT, OUT_CSV)}`);
 }
 
+/**
+ * Segunda busca: só CSV, linhas com titulo_busca e aprovar vazio.
+ */
+async function runSegundaBusca() {
+	const text = await readFile(OUT_CSV, 'utf8');
+	const { headers, rows } = parseCsvWithHeaders(text);
+	for (const col of ['titulo_busca', 'ano_busca', 'observacao']) {
+		if (!headers.includes(col)) headers.push(col);
+	}
+
+	let resolvidas = 0;
+	/** @type {{ arquivo: string, motivo: string }[]} */
+	const naoResolvidas = [];
+
+	for (const row of rows) {
+		const tituloBusca = String(row.titulo_busca || '').trim();
+		const aprovar = String(row.aprovar || '').trim();
+		if (!tituloBusca || aprovar) continue;
+
+		const tipo = row.tipo === 'serie' ? 'serie' : 'filme';
+		const anoBusca = Number(String(row.ano_busca || '').trim());
+		const rel = row.arquivo || '';
+
+		console.log(`→ ${rel} (“${tituloBusca}” ${row.ano_busca || '?'})`);
+
+		if (!Number.isFinite(anoBusca)) {
+			row.observacao = 'ano_busca ausente ou inválido';
+			naoResolvidas.push({ arquivo: rel, motivo: row.observacao });
+			console.log(`  ${row.observacao}`);
+			continue;
+		}
+
+		/** @type {string[]} */
+		let ids = [];
+		try {
+			ids = await searchByTipo(tituloBusca, tipo);
+		} catch (err) {
+			row.observacao = `busca falhou: ${err.message || err}`;
+			naoResolvidas.push({ arquivo: rel, motivo: row.observacao });
+			console.log(`  ${row.observacao}`);
+			continue;
+		}
+
+		if (!ids.length) {
+			row.observacao = 'nenhum resultado na busca textual';
+			naoResolvidas.push({ arquivo: rel, motivo: row.observacao });
+			console.log(`  ${row.observacao}`);
+			continue;
+		}
+
+		/** @type {any[]} */
+		let candidates = [];
+		try {
+			candidates = await fetchCandidatesData(ids, tipo);
+		} catch (err) {
+			row.observacao = `fetch falhou: ${err.message || err}`;
+			naoResolvidas.push({ arquivo: rel, motivo: row.observacao });
+			console.log(`  ${row.observacao}`);
+			continue;
+		}
+
+		const nBusca = normalize(tituloBusca);
+		const passed = candidates.filter((c) => {
+			const tituloOk = (c.titulos || []).some(
+				(t) => normalize(t) === nBusca,
+			);
+			if (!tituloOk) return false;
+			const anoItem = anoParaSegundaBusca(c, tipo);
+			if (anoItem == null) return false;
+			return anoItem >= anoBusca - 1 && anoItem <= anoBusca;
+		});
+
+		if (passed.length === 1) {
+			const best = passed[0];
+			const anoItem = anoParaSegundaBusca(best, tipo);
+			row.wikidataId = best.id;
+			row.rotulo = best.rotulo || '';
+			row.ano_item = anoItem != null ? String(anoItem) : '';
+			row.ano = row.ano_item;
+			row.aprovar = 'sim';
+			row.confianca = 'manual';
+			row.url = `https://www.wikidata.org/wiki/${best.id}`;
+			row.observacao = '';
+			resolvidas++;
+			console.log(`  ok ${best.id} “${best.rotulo}” (${anoItem})`);
+			continue;
+		}
+
+		if (passed.length === 0) {
+			row.observacao =
+				'nenhum candidato com título exato e ano em [ano_busca-1, ano_busca]';
+		} else {
+			row.observacao = `múltiplos candidatos: ${passed
+				.map((c) => c.id)
+				.join(', ')}`;
+		}
+		naoResolvidas.push({ arquivo: rel, motivo: row.observacao });
+		console.log(`  ${row.observacao}`);
+	}
+
+	await writeFile(OUT_CSV, serializeCsv(headers, rows), 'utf8');
+
+	console.log('\n=== Resumo segunda-busca ===');
+	console.log(`resolvidas: ${resolvidas}`);
+	console.log(`não resolvidas: ${naoResolvidas.length}`);
+	if (naoResolvidas.length) {
+		console.log('lista:');
+		for (const item of naoResolvidas) {
+			console.log(`  - ${item.arquivo}: ${item.motivo}`);
+		}
+	}
+}
+
 async function main() {
+	if (SEGUNDA_BUSCA) {
+		await runSegundaBusca();
+		return;
+	}
 	if (APPLY) {
 		await runApply();
 		return;
