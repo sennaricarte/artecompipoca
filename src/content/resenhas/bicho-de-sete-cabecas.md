@@ -31,6 +31,26 @@ ficha:
     - Brasil
     - "Itália"
   wikidataId: Q3281991
+  sinopse: "Neto é um adolescente paulistano com as rebeldias comuns da idade, até que o pai encontra um cigarro de maconha no bolso do seu casaco. Sem entender o filho, a família decide interná-lo num hospital psiquiátrico, onde Neto passa a conviver com uma realidade de abandono, violência e tratamentos desumanos."
+  curiosidades:
+    - "O filme é baseado no livro autobiográfico \"Canto dos Malditos\", em que Austregésilo Carrano Bueno relata suas internações psiquiátricas nos anos 1970; ele se tornou um nome importante da luta antimanicomial."
+    - "Foi o primeiro longa-metragem da diretora Laís Bodanzky."
+    - "Rodrigo Santoro, então conhecido como galã de novela, protagonizava seu primeiro longa e chegou a ser vaiado antes da exibição no Festival de Brasília, onde acabou premiado como melhor ator."
+    - "A trilha sonora, assinada por André Abujamra, mistura Arnaldo Antunes, rap e punk rock nacional."
+  premios:
+    - "Festival de Brasília 2000: Melhor Filme, Direção, Ator (Rodrigo Santoro), Ator Coadjuvante (Gero Camilo), Fotografia, Prêmio da Crítica e Júri Popular"
+    - "Grande Prêmio do Cinema Brasileiro 2002: Melhor Filme, Direção, Ator, Ator Coadjuvante (Othon Bastos), Roteiro, Trilha Sonora e Montagem"
+  fontes:
+    - nome: "Wikipédia"
+      url: "https://pt.wikipedia.org/wiki/Bicho_de_Sete_Cabe%C3%A7as"
+    - nome: "Papo de Cinema"
+      url: "https://www.papodecinema.com.br/filmes/bicho-de-sete-cabecas/curiosidades/"
+    - nome: Omelete
+      url: "https://www.omelete.com.br/filmes/criticas/critica-bicho-de-7-cabecas"
+    - nome: "Enciclopédia Itaú Cultural"
+      url: "https://enciclopedia.itaucultural.org.br/obras/123406-bicho-de-sete-cabecas"
+    - nome: "Buriti Filmes"
+      url: "http://www.buritifilmes.com.br/filmes.php?cat=filme&mostra_filme=1"
 anoObra: 2000
 ---
 

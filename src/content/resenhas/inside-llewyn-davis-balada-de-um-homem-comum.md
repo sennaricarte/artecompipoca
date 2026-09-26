@@ -33,6 +33,23 @@ ficha:
     - "Estados Unidos"
     - "França"
   wikidataId: Q2340655
+  sinopse: "Nova York, 1961. Llewyn Davis é um cantor de folk talentoso e sem sorte, que passa as noites de sofá em sofá na casa de amigos, carregando o violão e, por acidente, o gato de um conhecido. Ao longo de uma semana de inverno, ele tenta de todo jeito dar um rumo à carreira, enquanto parece sabotar cada oportunidade que aparece."
+  curiosidades:
+    - "O personagem é livremente inspirado no cantor folk Dave Van Ronk e em suas memórias; o título ecoa o disco \"Inside Dave Van Ronk\", lançado por ele em 1963."
+    - "Oscar Isaac e o elenco cantaram as músicas ao vivo durante as filmagens, com supervisão musical de T-Bone Burnett, parceiro dos Coen em \"E Aí, Meu Irmão, Cadê Você?\"."
+    - "Em Cannes, Joel Coen brincou que o filme não tinha exatamente uma trama e que por isso os irmãos \"colocaram o gato\" na história. O bichano se chama Ulisses."
+  premios:
+    - "Grande Prêmio do Júri no Festival de Cannes 2013"
+    - "2 indicações ao Oscar (Fotografia e Mixagem de Som)"
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-195051/"
+    - nome: "CBS News"
+      url: "https://www.cbsnews.com/news/coen-brothers-latest-inside-llewyn-davis-premieres-at-cannes"
+    - nome: "Papo de Cinema"
+      url: "https://www.papodecinema.com.br/filmes/mostra-inside-llewyn-davis/"
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/List_of_accolades_received_by_Inside_Llewyn_Davis"
 anoObra: 2013
 ---
 

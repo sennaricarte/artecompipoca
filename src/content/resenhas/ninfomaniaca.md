@@ -33,6 +33,19 @@ ficha:
     - "Bélgica"
     - "Reino Unido"
   wikidataId: Q3346699
+  sinopse: "Numa noite de inverno, o solitário Seligman encontra Joe caída e ferida num beco e a leva para casa. Enquanto se recupera, ela conta a ele a história da própria vida, da infância à idade adulta, marcada por uma busca compulsiva pelo prazer e pelas consequências que essa busca trouxe."
+  curiosidades:
+    - "O projeto foi concebido como um único filme de cerca de cinco horas e meia e acabou dividido em dois volumes; a versão sem cortes do Volume 1 estreou no Festival de Berlim em fevereiro de 2014."
+    - "Nas cenas de sexo explícito, os atores simulavam as situações e dublês de corpo gravavam as mesmas posições no mesmo cenário; as imagens foram depois sobrepostas digitalmente."
+    - "Lars von Trier considera o filme o fecho da sua \"trilogia da depressão\", depois de \"Anticristo\" e \"Melancolia\", todos com Charlotte Gainsbourg."
+    - "No tapete vermelho de Berlim, o diretor usou uma camiseta com a frase \"persona non grata\", referência ao seu banimento do Festival de Cannes."
+  fontes:
+    - nome: "Wikipédia"
+      url: "https://pt.wikipedia.org/wiki/Ninfoman%C3%ADaca_(filme)"
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/noticias/filmes/noticia-105426/"
+    - nome: "Manual do Homem Moderno"
+      url: "https://manualdohomemmoderno.com.br/sexo/como-as-cenas-de-sexo-mais-realistas-do-cinema-foram-gravadas"
 anoObra: 2013
 ---
 

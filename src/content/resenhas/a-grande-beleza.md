@@ -31,6 +31,25 @@ ficha:
     - "Itália"
     - "França"
   wikidataId: Q6379279
+  sinopse: "Jep Gambardella escreveu um único romance de sucesso na juventude e, desde então, reina sobre as festas e os salões da alta sociedade romana. No verão em que completa 65 anos, ele começa a olhar para a própria vida e para a cidade com outros olhos, em busca de uma beleza que talvez nunca tenha encontrado."
+  curiosidades:
+    - "O filme disputou a Palma de Ouro em Cannes em 2013; foi o quinto longa de Paolo Sorrentino selecionado para o festival."
+    - "Toni Servillo e Sorrentino trabalham juntos desde o primeiro longa do diretor, \"L'uomo in più\" (2001). Servillo tem carreira ainda mais longa no teatro do que no cinema."
+    - "Além da versão de cinema, com cerca de 2h20, existe uma versão estendida do diretor com quase três horas."
+  premios:
+    - "Oscar de Melhor Filme Estrangeiro"
+    - "Globo de Ouro de Melhor Filme Estrangeiro"
+    - "BAFTA de Melhor Filme em Língua Não Inglesa"
+    - "European Film Awards 2013: Melhor Filme, Direção, Ator (Toni Servillo), Roteiro e Montagem"
+  fontes:
+    - nome: "Wikipédia"
+      url: "https://pt.wikipedia.org/wiki/A_Grande_Beleza"
+    - nome: "Papo de Cinema"
+      url: "https://www.papodecinema.com.br/filmes/a-grande-beleza/curiosidades/"
+    - nome: SAPO
+      url: "https://sapo.pt/artigo/toni-servillo-em-entrevista-nunca-imaginamos-que-a-grande-beleza-teria-a-dimensao-que-teve-b195-68acf9ba4db0a1bfc2d89de8"
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/The_Great_Beauty"
 anoObra: 2013
 ---
 *"Como expressão artística, que integra outras expressões, físicas ou extrassensoriais, **"A GRANDE BELEZA"** surge como um desabafo, um recorte da sociedade e um choque de culturas. Emocional, por vezes idílico e estilizado, propõe a reflexão e nunca se sobrepõe a Roma, o grande interesse da obra. E não se sobrepõe a ***" A* DOCE VIDA *"***, ***" R*OMA*"*** ou ***" A* NOITE *"***, clássicos onde encontra referências."*

@@ -29,6 +29,21 @@ ficha:
   paises:
     - "Estados Unidos"
   wikidataId: Q18603034
+  sinopse: "Documentário que reconstrói a vida de Kurt Cobain, da infância em Aberdeen aos últimos meses, a partir do acervo pessoal guardado pela família: vídeos caseiros, fitas cassete, diários e desenhos nunca antes exibidos, combinados com depoimentos de parentes, amigos e companheiros de banda."
+  curiosidades:
+    - "O diretor Brett Morgen teve acesso irrestrito ao arquivo da família: cerca de 200 horas de gravações inéditas e mais de 4 mil páginas de anotações e desenhos."
+    - "Courtney Love chegou a ser anunciada como produtora, mas se afastou: segundo Morgen, como ela seria um dos temas do filme, todos concordaram que não deveria ter controle editorial. A filha, Frances Bean Cobain, ficou como produtora executiva."
+    - "Depois da estreia em Sundance, Frances abraçou o diretor e disse que ele tinha feito o filme que ela queria ver."
+    - "Dave Grohl ficou de fora: estava ocupado com a série Sonic Highways, e quando ficou disponível Morgen já estava satisfeito com a montagem."
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-234282/curiosidades/"
+    - nome: Omelete
+      url: "https://www.omelete.com.br/filmes/criticas/kurt-cobain-montage-of-heck-critica"
+    - nome: "Pipoca Musical"
+      url: "http://pipocamusical.com.br/2015/05/15/montage-of-heck-o-outro-lado-de-kurt-cobain/"
+    - nome: "Los Angeles Times (via PressReader)"
+      url: "https://www.pressreader.com/usa/los-angeles-times/20150423/282492887238849"
 anoObra: 2015
 ---
 **NIRVANA**. Para muitos fãs de rock, a banda foi a maior e mais significativa dos anos 90. Quase os **Beatles** para a época. A banda que melhor soube cantar as ansiedades e emoções dos jovens da época. E, com o suicídio do vocalista **Kurt Cobain** em 1994, criou-se o mito. Mito que não deixa de fazer parte da vida dos admiradores, mesmo aqueles que nem eram vivos na época em que o grupo gravou seus discos.

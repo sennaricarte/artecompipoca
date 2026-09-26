@@ -30,6 +30,21 @@ ficha:
   paises:
     - "Estados Unidos"
   wikidataId: Q15154975
+  sinopse: "Sem conseguir emprego e disposto a qualquer coisa para subir na vida, Louis Bloom descobre o mundo dos cinegrafistas independentes que rodam Los Angeles de madrugada atrás de crimes e acidentes para vender as imagens aos telejornais. Metódico e sem nenhum limite ético, ele logo passa de observador a manipulador das próprias notícias."
+  curiosidades:
+    - "Jake Gyllenhaal emagreceu bastante para o papel, por ideia própria: ele imaginava Lou Bloom como um coiote faminto. As fontes divergem sobre quantos quilos foram."
+    - "Na cena em que Lou perde o controle diante do espelho do banheiro, Gyllenhaal quebrou o espelho de verdade com um soco, cortou a mão e precisou levar pontos."
+    - "O filme marca a estreia de Dan Gilroy na direção, e Rene Russo, que vive a produtora de telejornal Nina, é casada com ele."
+    - "Para se preparar, Riz Ahmed passou noites acompanhando cinegrafistas reais que perseguem acidentes pelas ruas de Los Angeles."
+  premios:
+    - "Indicação ao Oscar de Melhor Roteiro Original"
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-222858/curiosidades/"
+    - nome: Cinema10
+      url: "https://cinema10.com.br/filme/nightcrawler"
+    - nome: "Movie Nonsense"
+      url: "https://movienonsense.com/2014/12/21/nightcrawler-o-abutre/"
 anoObra: 2014
 ---
 Confira a ficha técnica completa do filme O Abutre**:**

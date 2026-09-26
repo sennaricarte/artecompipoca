@@ -30,6 +30,22 @@ ficha:
     - "República da Irlanda"
     - "Países Baixos"
   wikidataId: Q1838622
+  sinopse: "Depois do fim do casamento, uma jovem holandesa larga tudo e passa a vagar sozinha pelas paisagens isoladas do oeste da Irlanda. Ela aceita trabalhar em troca de comida para Martin, um viúvo que vive recluso, com uma única condição: nada de perguntas pessoais. Com o tempo, o acordo fica cada vez mais difícil de cumprir."
+  curiosidades:
+    - "A protagonista nunca revela o nome a Martin: pede que ele a chame simplesmente de \"You\" (você), e o pacto entre os dois proíbe qualquer troca de informação pessoal."
+    - "O filme foi rodado em Connemara, região de paisagens ásperas e isoladas no oeste da Irlanda."
+    - "É o longa de estreia de Urszula Antoniak, diretora nascida na Polônia e radicada na Holanda, que descreveu o projeto como um trabalho muito pessoal."
+  premios:
+    - "Leopardo de Ouro de melhor filme de estreia no Festival de Locarno"
+    - "Prêmio de melhor atriz em Locarno (Lotte Verbeek)"
+    - "Quatro Bezerros de Ouro no Festival de Cinema Holandês, incluindo Melhor Filme"
+  fontes:
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/Nothing_Personal_(2009_film)"
+    - nome: "The Hollywood Reporter"
+      url: "https://www.hollywoodreporter.com/movies/movie-reviews/nothing-personal-film-review-93426/"
+    - nome: Metacritic
+      url: "https://www.metacritic.com/movie/nothing-personal/"
 anoObra: 2009
 ---
 
