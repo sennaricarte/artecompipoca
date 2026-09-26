@@ -6,8 +6,10 @@
  *  - redirects-manuais.json (mantidos à mão, entram primeiro e têm prioridade);
  *  - frontmatter de src/content/{artigos,resenhas}: posts com draft: false e legacyUrl
  *    geram legacyUrl e /index.php{legacyUrl} → URL nova;
- *  - _recuperados/redirects-sugeridos.json: redirects de duplicatas (origem que não é
- *    legacyUrl de nenhum post), só quando o destino é um post publicado.
+ *  - redirects-duplicatas.json: redirects de duplicatas (origem que não é legacyUrl de
+ *    nenhum post), só quando o destino é um post publicado. Fica versionado porque
+ *    _recuperados/ não vai para o repositório; sem --check, é atualizado a partir de
+ *    _recuperados/redirects-sugeridos.json quando essa pasta existe.
  *
  * Uso:
  *   node scripts/gerar-redirects.mjs          grava o vercel.json
@@ -22,6 +24,7 @@ const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const VERCEL_JSON = join(ROOT, 'vercel.json');
 const MANUAIS_JSON = join(ROOT, 'redirects-manuais.json');
 const SUGERIDOS_JSON = join(ROOT, '_recuperados', 'redirects-sugeridos.json');
+const DUPLICATAS_JSON = join(ROOT, 'redirects-duplicatas.json');
 const COLECOES = ['artigos', 'resenhas'];
 const CHECK = process.argv.includes('--check');
 const ON_VERCEL = process.env.VERCEL === '1';
@@ -101,11 +104,20 @@ async function calcular() {
 		}
 	}
 
-	const sugeridos = /** @type {Redirect[]} */ (await lerJson(SUGERIDOS_JSON, []));
+	let duplicatas = /** @type {Redirect[]} */ (await lerJson(DUPLICATAS_JSON, []));
+	const sugeridos = CHECK ? null : /** @type {Redirect[] | null} */ (await lerJson(SUGERIDOS_JSON, null));
+	if (sugeridos) {
+		duplicatas = sugeridos
+			.filter((r) => !legaciesDePosts.has(chaveLegacy(r.source)))
+			.map((r) => ({ source: r.source, destination: r.destination, permanent: true }))
+			.sort((a, b) => a.source.localeCompare(b.source));
+		await writeFile(DUPLICATAS_JSON, `${JSON.stringify(duplicatas, null, '\t')}\n`);
+	}
+
 	/** @type {Redirect[]} */
 	const deDuplicatas = [];
 	let duplicatasIgnoradas = 0;
-	for (const r of sugeridos) {
+	for (const r of duplicatas) {
 		if (legaciesDePosts.has(chaveLegacy(r.source))) continue;
 		if (!urlsPublicadas.has(r.destination)) {
 			duplicatasIgnoradas++;

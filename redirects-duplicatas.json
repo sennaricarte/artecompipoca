@@ -1,0 +1,1032 @@
+[
+	{
+		"source": "/5-bons-filmes-de-natal/",
+		"destination": "/cinema/5-bons-filmes-de-natal/",
+		"permanent": true
+	},
+	{
+		"source": "/5-melhores-filmes-de-2013-na-opiniao-de-dhebora-ricarte/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-dhebora-ricarte/",
+		"permanent": true
+	},
+	{
+		"source": "/5-melhores-filmes-de-2013-na-opiniao-de-paulo-rogerio-dos-santos/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-paulo-r-dos-santos/",
+		"permanent": true
+	},
+	{
+		"source": "/5-melhores-filmes-de-2013-na-opiniao-de-regis-rocha/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-regis-rocha/",
+		"permanent": true
+	},
+	{
+		"source": "/5-melhores-filmes-de-2013-na-opiniao-de-sulamita-assuncao/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-sulamita-assuncao/",
+		"permanent": true
+	},
+	{
+		"source": "/5-melhores-series-de-2013/",
+		"destination": "/series/as-5-melhores-series-de-2013/",
+		"permanent": true
+	},
+	{
+		"source": "/5-pessimos-filmes-com-grandes-atores/",
+		"destination": "/cinema/5-pessimos-filmes-com-grandes-atores/",
+		"permanent": true
+	},
+	{
+		"source": "/a-ultima-bailarina-critica/",
+		"destination": "/resenhas/a-ultima-bailarina/",
+		"permanent": true
+	},
+	{
+		"source": "/american-horror-story-asylum-resenha/",
+		"destination": "/resenhas/american-horror-story-asylum/",
+		"permanent": true
+	},
+	{
+		"source": "/as-cinco-melhores-series-estreantes-de-2015/",
+		"destination": "/series/as-cinco-melhores-series-estreantes-de-2015/",
+		"permanent": true
+	},
+	{
+		"source": "/ate-que-sbornia-nos-separe/",
+		"destination": "/resenhas/ate-que-a-sbornia-nos-separe/",
+		"permanent": true
+	},
+	{
+		"source": "/avanti-popolo-critica/",
+		"destination": "/resenhas/avanti-popolo/",
+		"permanent": true
+	},
+	{
+		"source": "/batman-vs-superman-origem-da-justica/",
+		"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
+		"permanent": true
+	},
+	{
+		"source": "/bidu-caminhos-resenha/",
+		"destination": "/resenhas/bidu-caminhos/",
+		"permanent": true
+	},
+	{
+		"source": "/birdman-critica/",
+		"destination": "/resenhas/birdman-ou-a-inesperada-virtude-da-ignorancia/",
+		"permanent": true
+	},
+	{
+		"source": "/birdman-ou-a-inesperada-virtude-da-ignorancia-critica/",
+		"destination": "/resenhas/birdman-ou-a-inesperada-virtude-da-ignorancia/",
+		"permanent": true
+	},
+	{
+		"source": "/boneco-do-mal-critica/",
+		"destination": "/resenhas/boneco-do-mal/",
+		"permanent": true
+	},
+	{
+		"source": "/brincante-critica/",
+		"destination": "/resenhas/brincante/",
+		"permanent": true
+	},
+	{
+		"source": "/caes-errantes-critica/",
+		"destination": "/resenhas/caes-errantes/",
+		"permanent": true
+	},
+	{
+		"source": "/chance-critica/",
+		"destination": "/resenhas/chance/",
+		"permanent": true
+	},
+	{
+		"source": "/clube-de-compras-dallas-critica/",
+		"destination": "/resenhas/clube-de-compras-dallas/",
+		"permanent": true
+	},
+	{
+		"source": "/confissoes-de-adolescente-o-filme/",
+		"destination": "/resenhas/confissoes-de-adolescente-o-filme/",
+		"permanent": true
+	},
+	{
+		"source": "/critica-godzilla-2014/",
+		"destination": "/resenhas/godzilla-2014/",
+		"permanent": true
+	},
+	{
+		"source": "/critica-inatividade-parnormal-2/",
+		"destination": "/resenhas/inatividade-paranormal-2/",
+		"permanent": true
+	},
+	{
+		"source": "/cumbe-critica/",
+		"destination": "/resenhas/cumbe/",
+		"permanent": true
+	},
+	{
+		"source": "/daniel-craig-em-007-operacao-fica-ou-nao-fica/",
+		"destination": "/cinema/daniel-craig-em-007-operacao-fica-ou-nao-fica/",
+		"permanent": true
+	},
+	{
+		"source": "/de-embrulhar-o-estomago-piores-refeicoes-cinema/",
+		"destination": "/cinema/de-embrulhar-o-estomago-as-piores-refeicoes-do-cinema/",
+		"permanent": true
+	},
+	{
+		"source": "/deadpool-critica-2/",
+		"destination": "/resenhas/deadpool/",
+		"permanent": true
+	},
+	{
+		"source": "/deadpool-critica/",
+		"destination": "/resenhas/deadpool/",
+		"permanent": true
+	},
+	{
+		"source": "/dedos-magicos-critica/",
+		"destination": "/resenhas/dedos-magicos/",
+		"permanent": true
+	},
+	{
+		"source": "/divergente-critica/",
+		"destination": "/resenhas/divergente/",
+		"permanent": true
+	},
+	{
+		"source": "/dois-dias-uma-noite-critica/",
+		"destination": "/resenhas/dois-dias-uma-noite/",
+		"permanent": true
+	},
+	{
+		"source": "/e-se-vivessemos-todos-juntos-critica/",
+		"destination": "/resenhas/e-se-vivessemos-todos-juntos/",
+		"permanent": true
+	},
+	{
+		"source": "/elenco-de-conta-comigo-30-anos-depois/",
+		"destination": "/cinema/elenco-de-conta-comigo-30-anos-depois/",
+		"permanent": true
+	},
+	{
+		"source": "/entre-nos-2014/",
+		"destination": "/resenhas/entre-nos/",
+		"permanent": true
+	},
+	{
+		"source": "/estudo-de-caso-nicolas-cage-parte-1/",
+		"destination": "/cinema/estudo-de-caso-nicolas-cage-parte-1/",
+		"permanent": true
+	},
+	{
+		"source": "/fuller-house-resenha-1a-temporada/",
+		"destination": "/resenhas/fuller-house-1-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/game-of-thrones-resenha-terceira-temporada/",
+		"destination": "/resenhas/game-of-thrones-3-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/hagar-o-horrivel-critica/",
+		"destination": "/resenhas/hagar-o-horrivel/",
+		"permanent": true
+	},
+	{
+		"source": "/haikyu-critica/",
+		"destination": "/resenhas/haikyu/",
+		"permanent": true
+	},
+	{
+		"source": "/hemlock-grove-primeira-temporada/",
+		"destination": "/resenhas/hemlock-grove-1-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-bons-filmes-de-natal/",
+		"destination": "/cinema/5-bons-filmes-de-natal/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-melhores-filmes-de-2013-na-opiniao-de-dhebora-ricarte/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-dhebora-ricarte/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-melhores-filmes-de-2013-na-opiniao-de-paulo-rogerio-dos-santos/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-paulo-r-dos-santos/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-melhores-filmes-de-2013-na-opiniao-de-regis-rocha/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-regis-rocha/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-melhores-filmes-de-2013-na-opiniao-de-sulamita-assuncao/",
+		"destination": "/cinema/5-melhores-filmes-de-2013-na-opiniao-de-sulamita-assuncao/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-melhores-series-de-2013/",
+		"destination": "/series/as-5-melhores-series-de-2013/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/5-pessimos-filmes-com-grandes-atores/",
+		"destination": "/cinema/5-pessimos-filmes-com-grandes-atores/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/a-ultima-bailarina-critica/",
+		"destination": "/resenhas/a-ultima-bailarina/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/american-horror-story-asylum-resenha/",
+		"destination": "/resenhas/american-horror-story-asylum/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/as-cinco-melhores-series-estreantes-de-2015/",
+		"destination": "/series/as-cinco-melhores-series-estreantes-de-2015/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/ate-que-sbornia-nos-separe/",
+		"destination": "/resenhas/ate-que-a-sbornia-nos-separe/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/avanti-popolo-critica/",
+		"destination": "/resenhas/avanti-popolo/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/batman-vs-superman-origem-da-justica/",
+		"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/bidu-caminhos-resenha/",
+		"destination": "/resenhas/bidu-caminhos/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/birdman-critica/",
+		"destination": "/resenhas/birdman-ou-a-inesperada-virtude-da-ignorancia/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/birdman-ou-a-inesperada-virtude-da-ignorancia-critica/",
+		"destination": "/resenhas/birdman-ou-a-inesperada-virtude-da-ignorancia/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/boneco-do-mal-critica/",
+		"destination": "/resenhas/boneco-do-mal/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/brincante-critica/",
+		"destination": "/resenhas/brincante/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/caes-errantes-critica/",
+		"destination": "/resenhas/caes-errantes/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/chance-critica/",
+		"destination": "/resenhas/chance/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/clube-de-compras-dallas-critica/",
+		"destination": "/resenhas/clube-de-compras-dallas/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/confissoes-de-adolescente-o-filme/",
+		"destination": "/resenhas/confissoes-de-adolescente-o-filme/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/critica-godzilla-2014/",
+		"destination": "/resenhas/godzilla-2014/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/critica-inatividade-parnormal-2/",
+		"destination": "/resenhas/inatividade-paranormal-2/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/cumbe-critica/",
+		"destination": "/resenhas/cumbe/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/daniel-craig-em-007-operacao-fica-ou-nao-fica/",
+		"destination": "/cinema/daniel-craig-em-007-operacao-fica-ou-nao-fica/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/de-embrulhar-o-estomago-piores-refeicoes-cinema/",
+		"destination": "/cinema/de-embrulhar-o-estomago-as-piores-refeicoes-do-cinema/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/deadpool-critica-2/",
+		"destination": "/resenhas/deadpool/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/deadpool-critica/",
+		"destination": "/resenhas/deadpool/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/dedos-magicos-critica/",
+		"destination": "/resenhas/dedos-magicos/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/divergente-critica/",
+		"destination": "/resenhas/divergente/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/dois-dias-uma-noite-critica/",
+		"destination": "/resenhas/dois-dias-uma-noite/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/e-se-vivessemos-todos-juntos-critica/",
+		"destination": "/resenhas/e-se-vivessemos-todos-juntos/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/elenco-de-conta-comigo-30-anos-depois/",
+		"destination": "/cinema/elenco-de-conta-comigo-30-anos-depois/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/entre-nos-2014/",
+		"destination": "/resenhas/entre-nos/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/estudo-de-caso-nicolas-cage-parte-1/",
+		"destination": "/cinema/estudo-de-caso-nicolas-cage-parte-1/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/fuller-house-resenha-1a-temporada/",
+		"destination": "/resenhas/fuller-house-1-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/game-of-thrones-resenha-terceira-temporada/",
+		"destination": "/resenhas/game-of-thrones-3-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/hagar-o-horrivel-critica/",
+		"destination": "/resenhas/hagar-o-horrivel/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/haikyu-critica/",
+		"destination": "/resenhas/haikyu/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/hemlock-grove-primeira-temporada/",
+		"destination": "/resenhas/hemlock-grove-1-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/indicacoes-e-vitorias-questionaveis-na-historia-oscar/",
+		"destination": "/cinema/indicacoes-e-vitorias-questionaveis-na-historia-do-oscar/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/interestelar/",
+		"destination": "/resenhas/interestelar/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/j-k-rowling-explica-por-que-harry-potter-perdoou-snape/",
+		"destination": "/cinema/j-k-rowling-explica-por-que-harry-potter-perdoou-snape/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/james-brown-get-on-up-critica/",
+		"destination": "/resenhas/james-brown-get-on-up/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/jessica-jones-resenha-1a-temporada/",
+		"destination": "/resenhas/jessica-jones-1-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/jogos-vorazes-em-chamas/",
+		"destination": "/resenhas/jogos-vorazes-em-chamas/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/jogos-vorazes-final-critica/",
+		"destination": "/resenhas/jogos-vorazes-a-esperanca-o-final/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/kuroko-no-basquet-critica/",
+		"destination": "/resenhas/kuroko-no-basquet/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/laurence-para-sempre-critica/",
+		"destination": "/resenhas/laurence-para-sempre/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/leonardo-dicaprio-sindrome-de-rosto-bonito/",
+		"destination": "/cinema/leonardo-dicaprio-sindrome-de-rosto-bonito/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/leviata/",
+		"destination": "/resenhas/leviata/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/mayara-annabelle-critica/",
+		"destination": "/resenhas/mayara-annabelle/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/melhores-beijos-cinema/",
+		"destination": "/cinema/melhores-beijos-do-cinema/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/memorias-de-minhas-pautas-tristes-critica/",
+		"destination": "/resenhas/memorias-de-minhas-putas-tristes/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/metropolis-1927/",
+		"destination": "/resenhas/metropolis/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/motivos-para-voce-se-apaixonar-por-anos-incriveis/",
+		"destination": "/series/motivos-para-voce-se-apaixonar-por-anos-incriveis/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/nerds/",
+		"destination": "/cinema/nerds-mais-do-que-apenas-uma-forma-de-vida/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/noites-brancas-carteiro/",
+		"destination": "/resenhas/as-noites-brancas-do-carteiro/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-congresso-futurista-critica/",
+		"destination": "/resenhas/o-congresso-futurista/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-homem-duplicado-critica/",
+		"destination": "/resenhas/o-homem-duplicado/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-impacto-de-deadpool-em-2016-o-ano-dos-filmes-de-super-herois/",
+		"destination": "/cinema/o-impacto-de-deadpool-em-2016-o-ano-dos-filmes-de-super-herois/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-passado-critica/",
+		"destination": "/resenhas/o-passado/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-prisioneiro/",
+		"destination": "/resenhas/o-prisioneiro/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-show-da-mulher-do-fim-do-mundo/",
+		"destination": "/musica/o-show-da-mulher-do-fim-do-mundo-elza-soares/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-som-doutor-jivago-1965/",
+		"destination": "/musica/o-som-do-doutor-jivago-1965/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/o-turista/",
+		"destination": "/resenhas/o-turista/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/os-5-melhores-inicios-de-filmes-de-todos-os-tempos/",
+		"destination": "/cinema/os-5-melhores-inicios-de-filmes-de-todos-os-tempos/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/os-bons-companheiros/",
+		"destination": "/resenhas/os-bons-companheiros/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/pais-filhos-um-roteiro-do-barulho/",
+		"destination": "/resenhas/pais-filhos-um-roteiro-do-barulho/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/peter-pan-resenha/",
+		"destination": "/resenhas/peter-pan/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/profissao-critico-de-cinema/",
+		"destination": "/cinema/profissao-critico-de-cinema/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/que-horas-ela-volta-critica/",
+		"destination": "/resenhas/que-horas-ela-volta/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/racismo-no-oscar-e-as-mentes-fechadas-da-academia/",
+		"destination": "/cinema/racismo-no-oscar-e-as-mentes-fechadas-da-academia/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/sandman-teatro-misterio-critica/",
+		"destination": "/resenhas/sandman-teatro-do-misterio/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/sangue-azul/",
+		"destination": "/resenhas/sangue-azul/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/spotlight-segredos-revelados-critica/",
+		"destination": "/resenhas/spotlight-segredos-revelados/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/star-wars-critica/",
+		"destination": "/resenhas/star-wars/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/star-wars-o-despertar-da-forca-critica-ii/",
+		"destination": "/resenhas/star-wars-o-despertar-da-forca/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/star-wars-o-despertar-da-forca/",
+		"destination": "/resenhas/star-wars-o-despertar-da-forca/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/ta-chovendo-hamburguer-2/",
+		"destination": "/resenhas/ta-chovendo-hamburguer-2/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/tentando-entender-os-doramas/",
+		"destination": "/series/tentando-entender-os-doramas/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/tirinhas-assistindo-mad-max/",
+		"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-10-cinema-nacional-2014/",
+		"destination": "/cinema/top-10-cinema-nacional-2014/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-10-melhores-series-de-2014/",
+		"destination": "/series/top-10-as-melhores-series-de-2014/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-do-poder-feminino-das-brasileiras/",
+		"destination": "/cinema/top-5-do-poder-feminino-das-brasileiras/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-irmaos-inesqueciveis/",
+		"destination": "/cinema/top-5-irmaos-inesqueciveis/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-macaulay-culkin/",
+		"destination": "/series/top-5-macaulay-culkin/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-melhores-duplas-de-amigos-em-series/",
+		"destination": "/series/top-5-melhores-duplas-de-amigos-em-series/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-melhores-musicas-da-legiao-urbana/",
+		"destination": "/musica/top-5-melhores-musicas-da-legiao-urbana/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-meus-melhores-filmes-de-2015/",
+		"destination": "/cinema/top-5-meus-melhores-filmes-de-2015/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-meus-piores-filmes-de-2015/",
+		"destination": "/cinema/top-5-meus-piores-filmes-de-2015/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-os-melhores-faroestes/",
+		"destination": "/cinema/top-5-os-melhores-faroestes/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-serie-com-episodios-curtos-para-o-fim-de-semana/",
+		"destination": "/series/top-5-series-com-episodios-curtos-para-o-fim-de-semana/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-5-trailers-que-venderam-mau-seus-filmes/",
+		"destination": "/cinema/top-5-trailers-que-venderam-mal-seus-filmes/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/top-lista-series-que-viraram-filmes/",
+		"destination": "/series/top-lista-series-que-viram-filmes/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/tudo-que-amamos-profundamente/",
+		"destination": "/resenhas/tudo-que-amamos-profundamente/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/turma-da-monica-licoes-resenha/",
+		"destination": "/resenhas/turma-da-monica-licoes/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/vai-que-da-certo-critica/",
+		"destination": "/resenhas/vai-que-da-certo/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/ventos-de-agosto-critica/",
+		"destination": "/resenhas/ventos-de-agosto/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/vincent-hq-critica/",
+		"destination": "/resenhas/vincent/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/viver-e-mais-facil-com-os-olhos-fechados-critica/",
+		"destination": "/resenhas/viver-e-mais-facil-com-os-olhos-fechados/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/youre-worst-resenha/",
+		"destination": "/resenhas/you-re-the-worst/",
+		"permanent": true
+	},
+	{
+		"source": "/indicacoes-e-vitorias-questionaveis-na-historia-oscar/",
+		"destination": "/cinema/indicacoes-e-vitorias-questionaveis-na-historia-do-oscar/",
+		"permanent": true
+	},
+	{
+		"source": "/interestelar/",
+		"destination": "/resenhas/interestelar/",
+		"permanent": true
+	},
+	{
+		"source": "/j-k-rowling-explica-por-que-harry-potter-perdoou-snape/",
+		"destination": "/cinema/j-k-rowling-explica-por-que-harry-potter-perdoou-snape/",
+		"permanent": true
+	},
+	{
+		"source": "/james-brown-get-on-up-critica/",
+		"destination": "/resenhas/james-brown-get-on-up/",
+		"permanent": true
+	},
+	{
+		"source": "/jessica-jones-resenha-1a-temporada/",
+		"destination": "/resenhas/jessica-jones-1-temporada/",
+		"permanent": true
+	},
+	{
+		"source": "/jogos-vorazes-em-chamas/",
+		"destination": "/resenhas/jogos-vorazes-em-chamas/",
+		"permanent": true
+	},
+	{
+		"source": "/jogos-vorazes-final-critica/",
+		"destination": "/resenhas/jogos-vorazes-a-esperanca-o-final/",
+		"permanent": true
+	},
+	{
+		"source": "/kuroko-no-basquet-critica/",
+		"destination": "/resenhas/kuroko-no-basquet/",
+		"permanent": true
+	},
+	{
+		"source": "/laurence-para-sempre-critica/",
+		"destination": "/resenhas/laurence-para-sempre/",
+		"permanent": true
+	},
+	{
+		"source": "/leonardo-dicaprio-sindrome-de-rosto-bonito/",
+		"destination": "/cinema/leonardo-dicaprio-sindrome-de-rosto-bonito/",
+		"permanent": true
+	},
+	{
+		"source": "/leviata/",
+		"destination": "/resenhas/leviata/",
+		"permanent": true
+	},
+	{
+		"source": "/mayara-annabelle-critica/",
+		"destination": "/resenhas/mayara-annabelle/",
+		"permanent": true
+	},
+	{
+		"source": "/melhores-beijos-cinema/",
+		"destination": "/cinema/melhores-beijos-do-cinema/",
+		"permanent": true
+	},
+	{
+		"source": "/memorias-de-minhas-pautas-tristes-critica/",
+		"destination": "/resenhas/memorias-de-minhas-putas-tristes/",
+		"permanent": true
+	},
+	{
+		"source": "/metropolis-1927/",
+		"destination": "/resenhas/metropolis/",
+		"permanent": true
+	},
+	{
+		"source": "/motivos-para-voce-se-apaixonar-por-anos-incriveis/",
+		"destination": "/series/motivos-para-voce-se-apaixonar-por-anos-incriveis/",
+		"permanent": true
+	},
+	{
+		"source": "/nerds/",
+		"destination": "/cinema/nerds-mais-do-que-apenas-uma-forma-de-vida/",
+		"permanent": true
+	},
+	{
+		"source": "/noites-brancas-carteiro/",
+		"destination": "/resenhas/as-noites-brancas-do-carteiro/",
+		"permanent": true
+	},
+	{
+		"source": "/o-congresso-futurista-critica/",
+		"destination": "/resenhas/o-congresso-futurista/",
+		"permanent": true
+	},
+	{
+		"source": "/o-homem-duplicado-critica/",
+		"destination": "/resenhas/o-homem-duplicado/",
+		"permanent": true
+	},
+	{
+		"source": "/o-impacto-de-deadpool-em-2016-o-ano-dos-filmes-de-super-herois/",
+		"destination": "/cinema/o-impacto-de-deadpool-em-2016-o-ano-dos-filmes-de-super-herois/",
+		"permanent": true
+	},
+	{
+		"source": "/o-passado-critica/",
+		"destination": "/resenhas/o-passado/",
+		"permanent": true
+	},
+	{
+		"source": "/o-prisioneiro/",
+		"destination": "/resenhas/o-prisioneiro/",
+		"permanent": true
+	},
+	{
+		"source": "/o-show-da-mulher-do-fim-do-mundo/",
+		"destination": "/musica/o-show-da-mulher-do-fim-do-mundo-elza-soares/",
+		"permanent": true
+	},
+	{
+		"source": "/o-som-doutor-jivago-1965/",
+		"destination": "/musica/o-som-do-doutor-jivago-1965/",
+		"permanent": true
+	},
+	{
+		"source": "/o-turista/",
+		"destination": "/resenhas/o-turista/",
+		"permanent": true
+	},
+	{
+		"source": "/os-5-melhores-inicios-de-filmes-de-todos-os-tempos/",
+		"destination": "/cinema/os-5-melhores-inicios-de-filmes-de-todos-os-tempos/",
+		"permanent": true
+	},
+	{
+		"source": "/os-bons-companheiros/",
+		"destination": "/resenhas/os-bons-companheiros/",
+		"permanent": true
+	},
+	{
+		"source": "/pais-filhos-um-roteiro-do-barulho/",
+		"destination": "/resenhas/pais-filhos-um-roteiro-do-barulho/",
+		"permanent": true
+	},
+	{
+		"source": "/peter-pan-resenha/",
+		"destination": "/resenhas/peter-pan/",
+		"permanent": true
+	},
+	{
+		"source": "/profissao-critico-de-cinema/",
+		"destination": "/cinema/profissao-critico-de-cinema/",
+		"permanent": true
+	},
+	{
+		"source": "/que-horas-ela-volta-critica/",
+		"destination": "/resenhas/que-horas-ela-volta/",
+		"permanent": true
+	},
+	{
+		"source": "/racismo-no-oscar-e-as-mentes-fechadas-da-academia/",
+		"destination": "/cinema/racismo-no-oscar-e-as-mentes-fechadas-da-academia/",
+		"permanent": true
+	},
+	{
+		"source": "/sandman-teatro-misterio-critica/",
+		"destination": "/resenhas/sandman-teatro-do-misterio/",
+		"permanent": true
+	},
+	{
+		"source": "/sangue-azul/",
+		"destination": "/resenhas/sangue-azul/",
+		"permanent": true
+	},
+	{
+		"source": "/spotlight-segredos-revelados-critica/",
+		"destination": "/resenhas/spotlight-segredos-revelados/",
+		"permanent": true
+	},
+	{
+		"source": "/star-wars-critica/",
+		"destination": "/resenhas/star-wars/",
+		"permanent": true
+	},
+	{
+		"source": "/star-wars-o-despertar-da-forca-critica-ii/",
+		"destination": "/resenhas/star-wars-o-despertar-da-forca/",
+		"permanent": true
+	},
+	{
+		"source": "/star-wars-o-despertar-da-forca/",
+		"destination": "/resenhas/star-wars-o-despertar-da-forca/",
+		"permanent": true
+	},
+	{
+		"source": "/ta-chovendo-hamburguer-2/",
+		"destination": "/resenhas/ta-chovendo-hamburguer-2/",
+		"permanent": true
+	},
+	{
+		"source": "/tentando-entender-os-doramas/",
+		"destination": "/series/tentando-entender-os-doramas/",
+		"permanent": true
+	},
+	{
+		"source": "/tirinhas-assistindo-mad-max/",
+		"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+		"permanent": true
+	},
+	{
+		"source": "/top-10-cinema-nacional-2014/",
+		"destination": "/cinema/top-10-cinema-nacional-2014/",
+		"permanent": true
+	},
+	{
+		"source": "/top-10-melhores-series-de-2014/",
+		"destination": "/series/top-10-as-melhores-series-de-2014/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-do-poder-feminino-das-brasileiras/",
+		"destination": "/cinema/top-5-do-poder-feminino-das-brasileiras/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-irmaos-inesqueciveis/",
+		"destination": "/cinema/top-5-irmaos-inesqueciveis/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-macaulay-culkin/",
+		"destination": "/series/top-5-macaulay-culkin/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-melhores-duplas-de-amigos-em-series/",
+		"destination": "/series/top-5-melhores-duplas-de-amigos-em-series/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-melhores-musicas-da-legiao-urbana/",
+		"destination": "/musica/top-5-melhores-musicas-da-legiao-urbana/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-meus-melhores-filmes-de-2015/",
+		"destination": "/cinema/top-5-meus-melhores-filmes-de-2015/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-meus-piores-filmes-de-2015/",
+		"destination": "/cinema/top-5-meus-piores-filmes-de-2015/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-os-melhores-faroestes/",
+		"destination": "/cinema/top-5-os-melhores-faroestes/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-serie-com-episodios-curtos-para-o-fim-de-semana/",
+		"destination": "/series/top-5-series-com-episodios-curtos-para-o-fim-de-semana/",
+		"permanent": true
+	},
+	{
+		"source": "/top-5-trailers-que-venderam-mau-seus-filmes/",
+		"destination": "/cinema/top-5-trailers-que-venderam-mal-seus-filmes/",
+		"permanent": true
+	},
+	{
+		"source": "/top-lista-series-que-viraram-filmes/",
+		"destination": "/series/top-lista-series-que-viram-filmes/",
+		"permanent": true
+	},
+	{
+		"source": "/tudo-que-amamos-profundamente/",
+		"destination": "/resenhas/tudo-que-amamos-profundamente/",
+		"permanent": true
+	},
+	{
+		"source": "/turma-da-monica-licoes-resenha/",
+		"destination": "/resenhas/turma-da-monica-licoes/",
+		"permanent": true
+	},
+	{
+		"source": "/vai-que-da-certo-critica/",
+		"destination": "/resenhas/vai-que-da-certo/",
+		"permanent": true
+	},
+	{
+		"source": "/ventos-de-agosto-critica/",
+		"destination": "/resenhas/ventos-de-agosto/",
+		"permanent": true
+	},
+	{
+		"source": "/vincent-hq-critica/",
+		"destination": "/resenhas/vincent/",
+		"permanent": true
+	},
+	{
+		"source": "/viver-e-mais-facil-com-os-olhos-fechados-critica/",
+		"destination": "/resenhas/viver-e-mais-facil-com-os-olhos-fechados/",
+		"permanent": true
+	},
+	{
+		"source": "/youre-worst-resenha/",
+		"destination": "/resenhas/you-re-the-worst/",
+		"permanent": true
+	}
+]
