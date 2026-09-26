@@ -699,6 +699,53 @@ function yamlScalar(v) {
 	return JSON.stringify(s);
 }
 
+const CHAVES_TECNICAS = new Set([
+	'tituloOriginal',
+	'ano',
+	'direcao',
+	'roteiro',
+	'elenco',
+	'generos',
+	'duracaoMin',
+	'paises',
+	'criadores',
+	'temporadas',
+	'emissora',
+	'wikidataId',
+]);
+
+/**
+ * Ficha já existente sem wikidataId (ex.: criada por fichas:importar): troca os
+ * campos técnicos pelos do Wikidata e preserva as chaves editoriais.
+ * @param {string} fm
+ * @param {any} ficha
+ */
+function mesclarFichaTecnica(fm, ficha) {
+	const lines = fm.replace(/\r\n/g, '\n').split('\n');
+	const inicio = lines.findIndex((l) => /^ficha:\s*$/.test(l));
+	let fim = inicio + 1;
+	while (fim < lines.length && (/^  /.test(lines[fim]) || lines[fim] === '')) {
+		fim += 1;
+	}
+	/** @type {string[]} */
+	const editoriais = [];
+	let pulando = false;
+	for (const line of lines.slice(inicio + 1, fim)) {
+		const chave = line.match(/^  ([A-Za-z_]\w*)\s*:/)?.[1];
+		if (chave) pulando = CHAVES_TECNICAS.has(chave);
+		if (!pulando && line !== '') editoriais.push(line);
+	}
+	const tecnicas = fichaToYaml(ficha).split('\n');
+	return [
+		...lines.slice(0, inicio),
+		...tecnicas,
+		...editoriais,
+		...lines.slice(fim),
+	]
+		.join('\n')
+		.replace(/\s+$/, '');
+}
+
 /**
  * @param {string} filePath
  * @param {any} ficha
@@ -708,13 +755,14 @@ async function applyFicha(filePath, ficha, anoObraExistente) {
 	const raw = await readFile(filePath, 'utf8');
 	const parts = splitFrontmatter(raw);
 	if (!parts) throw new Error(`Sem frontmatter: ${filePath}`);
-	if (/^ficha:/m.test(parts.fm) || /wikidataId:/m.test(parts.fm)) {
+	if (/wikidataId:/m.test(parts.fm)) {
 		console.log(`  skip (ficha existente): ${relative(ROOT, filePath)}`);
 		return false;
 	}
 
-	let fm = parts.fm.replace(/\s+$/, '');
-	fm += '\n' + fichaToYaml(ficha);
+	let fm = /^ficha:\s*$/m.test(parts.fm)
+		? mesclarFichaTecnica(parts.fm, ficha)
+		: `${parts.fm.replace(/\s+$/, '')}\n${fichaToYaml(ficha)}`;
 
 	if (
 		(anoObraExistente == null || anoObraExistente === '') &&
@@ -862,7 +910,7 @@ async function runApply() {
 			skipped++;
 			continue;
 		}
-		if (/^ficha:/m.test(parts.fm) || /wikidataId:/m.test(parts.fm)) {
+		if (/wikidataId:/m.test(parts.fm)) {
 			console.log(`  skip (ficha existente): ${arquivo}`);
 			skipped++;
 			continue;

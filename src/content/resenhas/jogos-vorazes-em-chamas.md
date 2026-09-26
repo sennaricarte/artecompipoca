@@ -11,6 +11,28 @@ notaEditorial: "Ficha publicada em novembro de 2013, antes da estreia; as curios
 obra: Jogos Vorazes – Em Chamas
 tipo: filme
 ficha:
+  tituloOriginal: "The Hunger Games: Catching Fire"
+  ano: 2013
+  direcao:
+    - "Francis Lawrence"
+  roteiro:
+    - "Michael Arndt"
+    - "Simon Beaufoy"
+  elenco:
+    - "Josh Hutcherson"
+    - "Elizabeth Banks"
+    - "Alan Ritchson"
+    - "Liam Hemsworth"
+    - "Sam Claflin"
+    - "Jena Malone"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - Drama
+  duracaoMin: 146
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q574583
   sinopse: "Depois de vencer os Jogos Vorazes, Katniss e Peeta voltam para casa, mas o gesto de desafio que os salvou virou símbolo de revolta nos distritos. Para conter a ameaça, o presidente Snow anuncia uma edição especial dos Jogos, e os dois são obrigados a voltar à arena ao lado de antigos vencedores."
   curiosidades:
     - "Gary Ross, diretor do primeiro filme, deixou a franquia porque o estúdio queria lançar a continuação já em 2013 e ele pedia mais tempo de preparação. Francis Lawrence assumiu e acabou dirigindo todos os filmes seguintes da saga de Katniss."
@@ -26,6 +48,7 @@ ficha:
       url: "https://cinemaeargumento.com/2013/12/10/jogos-vorazes-em-chamas/"
     - nome: "Jogos Vorazes Wiki"
       url: "https://jogosvorazes.fandom.com/wiki/Em_Chamas_(filme)"
+anoObra: 2013
 ---
 
 Confira a ficha técnica completa do filme **Jogos Vorazes – Em Chamas:**

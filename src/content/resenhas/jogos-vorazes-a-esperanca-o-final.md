@@ -10,6 +10,29 @@ draft: false
 obra: "Jogos Vorazes: A Esperança – O Final"
 tipo: filme
 ficha:
+  tituloOriginal: "The Hunger Games: Mockingjay – Part 2"
+  ano: 2015
+  direcao:
+    - "Francis Lawrence"
+  roteiro:
+    - "Peter Craig"
+    - "Danny Strong"
+  elenco:
+    - "Jennifer Lawrence"
+    - "Josh Hutcherson"
+    - "Liam Hemsworth"
+    - "Woody Harrelson"
+    - "Elizabeth Banks"
+    - "Julianne Moore"
+  generos:
+    - "Ficção científica"
+    - "Ação"
+    - "Filme distópico"
+  duracaoMin: 137
+  paises:
+    - "Estados Unidos"
+    - Alemanha
+  wikidataId: Q10307713
   sinopse: "Com Panem mergulhada na guerra, Katniss se junta a um esquadrão rebelde que avança rumo à Capital, uma cidade transformada em armadilha. Seu objetivo é chegar até o presidente Snow, mas quanto mais perto da vitória, mais ela percebe que os dois lados da guerra têm muito a esconder."
   curiosidades:
     - "Philip Seymour Hoffman morreu antes de gravar todas as suas cenas. Francis Lawrence decidiu não recriá-lo digitalmente: usou imagens já filmadas e passou algumas de suas falas para outros personagens."
@@ -20,6 +43,7 @@ ficha:
       url: "https://www.estrelando.com.br/foto/2023/10/12/confira-as-curiosidades-de-jogos-vorazes-248989"
     - nome: AdoroCinema
       url: "https://www.adorocinema.com/filmes/filme-196666/"
+anoObra: 2015
 ---
 
 A palavra voraz só ficou mesmo no nome. Acompanhei a franquia de perto desde a escolha do elenco e assistindo a todos os filmes, e a princípio fiquei extasiada com o primeiro, mas no decorrer da sequência acabei por sentir que tudo terminou de modo um tanto quanto morno. Não digo que o filme é ruim, pois não é, mas a verdade é que você vai acreditando que verá algo diferente e explosivo o qual fez você se apaixonar pelos anteriores e, ao sair da sala, o que resta é uma grande sensação de que faltou algo mais.
