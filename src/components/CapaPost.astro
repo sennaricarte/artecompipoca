@@ -1,14 +1,15 @@
 ---
 import { Picture } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import { TEMAS_CAPA } from '../lib/capas';
+import { capaDoPost } from '../lib/capas';
 import type { EditoriaId } from '../lib/conteudo';
 import CapaTipografica from './CapaTipografica.astro';
 
 interface Props {
-	titulo: string;
-	rotulo: string;
 	editoria: EditoriaId;
+	/** Id do post: variante de cor da capa tipográfica e do fundo do cartaz vertical. */
+	idPost: string;
+	rotulo: string;
 	nota?: number;
 	cover?: ImageMetadata;
 	coverAlt?: string;
@@ -16,21 +17,29 @@ interface Props {
 	/** Eager + fetchpriority high (LCP). Só faz diferença com cover real. */
 	prioridade?: boolean;
 	sizes?: string;
-	/** Classes extras da moldura 16:9 (ex.: altura máxima na página interna). */
+	widths?: number[];
+	/** Proporção da moldura da imagem. */
+	proporcaoClass?: string;
+	/** Proporção da faixa tipográfica quando não há cover (título fica no h1). */
+	proporcaoSemCoverClass?: string;
+	/** Classes extras da moldura (ex.: altura máxima na página interna). */
 	molduraClass?: string;
 	class?: string;
 }
 
 const {
-	titulo,
-	rotulo,
 	editoria,
+	idPost,
+	rotulo,
 	nota,
 	cover,
 	coverAlt,
 	coverCredito,
 	prioridade = false,
 	sizes = '(max-width: 768px) 100vw, 800px',
+	widths = [400, 800],
+	proporcaoClass = 'aspect-video',
+	proporcaoSemCoverClass = 'aspect-[4/1]',
 	molduraClass,
 	class: className,
 } = Astro.props;
@@ -38,9 +47,11 @@ const {
 const temCover = Boolean(cover && coverAlt);
 const vertical = cover ? cover.height > cover.width : false;
 // Com width e height juntos o sharp recorta (fit cover); no vertical manter a proporção natural.
-const larguraImg = 800;
+const larguraImg = Math.max(...widths);
 const alturaImg =
-	cover && vertical ? Math.round((larguraImg * cover.height) / cover.width) : 450;
+	cover && vertical
+		? Math.round((larguraImg * cover.height) / cover.width)
+		: Math.round((larguraImg * 9) / 16);
 ---
 
 {
@@ -50,16 +61,17 @@ const alturaImg =
 		>
 			<div
 				class:list={[
-					'aspect-video w-full overflow-hidden',
+					'w-full overflow-hidden',
+					proporcaoClass,
 					vertical ? null : 'bg-surface',
 					molduraClass,
 				]}
-				style={vertical ? `background: ${TEMAS_CAPA[editoria].fundo};` : undefined}
+				style={vertical ? `background: ${capaDoPost(editoria, idPost).fundo};` : undefined}
 			>
 				<Picture
 					src={cover}
 					formats={['avif', 'webp']}
-					widths={[400, 800]}
+					widths={widths}
 					sizes={sizes}
 					width={larguraImg}
 					height={alturaImg}
@@ -82,10 +94,11 @@ const alturaImg =
 		</figure>
 	) : (
 		<CapaTipografica
-			titulo={titulo}
-			rotulo={rotulo}
 			editoria={editoria}
+			idPost={idPost}
+			rotulo={rotulo}
 			nota={nota}
+			proporcaoClass={proporcaoSemCoverClass}
 			class={className}
 		/>
 	)

@@ -1,83 +1,129 @@
 ---
-import { TEMAS_CAPA } from '../lib/capas';
+import { capaDoPost } from '../lib/capas';
 import type { EditoriaId } from '../lib/conteudo';
 
 interface Props {
-	titulo: string;
-	rotulo: string;
 	editoria: EditoriaId;
+	/** Id do post: define a variante de cor e o ângulo do degradê. */
+	idPost: string;
+	rotulo: string;
 	nota?: number;
+	/** Classes de proporção (ex.: "aspect-video lg:aspect-[21/9]"). */
+	proporcaoClass?: string;
+	/**
+	 * Sem conteúdo no slot a capa é puramente decorativa (aria-hidden).
+	 * Com heading no slot (cards), rótulo e nota ficam acessíveis.
+	 */
+	decorativa?: boolean;
 	class?: string;
 }
 
-const { titulo, rotulo, editoria, nota, class: className } = Astro.props;
+const {
+	editoria,
+	idPost,
+	rotulo,
+	nota,
+	proporcaoClass = 'aspect-video',
+	decorativa = !Astro.slots.has('default'),
+	class: className,
+} = Astro.props;
 
-const tema = TEMAS_CAPA[editoria];
-const notaLabel =
-	nota != null
-		? Number.isInteger(nota)
-			? `${nota}/10`
-			: `${nota}/10`
-		: null;
+const tema = capaDoPost(editoria, idPost);
 ---
 
-{/* aria-hidden: o título já está no card / h1 da página */}
 <div
-	class:list={['capa-tipografica relative w-full overflow-hidden', className]}
-	style={`aspect-ratio: 16 / 9; background: ${tema.fundo}; color: ${tema.texto};`}
-	aria-hidden="true"
+	class:list={[
+		'capa-tipografica relative isolate grid w-full',
+		`capa-tipografica--${editoria}`,
+		proporcaoClass,
+		className,
+	]}
+	style={`color: ${tema.texto};`}
+	aria-hidden={decorativa ? 'true' : undefined}
+	data-variante={tema.variante}
 >
-	{/* Textura sutil só com CSS */}
 	<div
-		class="capa-tipografica__textura pointer-events-none absolute inset-0"
+		class="capa-tipografica__fundo pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-[inherit]"
+		style={`background: ${tema.fundo};`}
 		aria-hidden="true"
-	></div>
-
-	<div class="relative z-10 flex h-full flex-col justify-end p-4 md:p-6">
-		<p
-			class="text-[0.65rem] font-semibold uppercase tracking-[0.18em] md:text-xs"
-			style={`color: ${tema.rotulo};`}
-		>
-			{rotulo}
-		</p>
-		<p
-			class="mt-2 font-display text-2xl leading-none tracking-wide md:text-4xl lg:text-5xl"
-			style={`color: ${tema.texto};`}
-		>
-			{titulo}
-		</p>
+	>
+		<div class="capa-tipografica__textura absolute inset-0"></div>
 	</div>
 
-	{
-		notaLabel != null && (
-			<span
-				class="absolute right-3 top-3 z-10 flex h-12 w-12 items-center justify-center rounded-full font-display text-sm tracking-wide md:right-4 md:top-4 md:h-14 md:w-14 md:text-base"
-				style={`background: ${tema.seloBg}; color: ${tema.seloTexto};`}
+	<div class="flex flex-col justify-between gap-4 p-5 md:p-6">
+		<div class="flex items-start justify-between gap-3">
+			<p
+				class="pt-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] md:text-xs"
+				style={`color: ${tema.rotulo};`}
 			>
-				{notaLabel}
-			</span>
-		)
-	}
+				{rotulo}
+			</p>
+			{
+				nota != null && (
+					<p
+						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-display text-sm tracking-wide md:h-14 md:w-14 md:text-base"
+						style={`background: ${tema.seloBg}; color: ${tema.seloTexto};`}
+					>
+						<span class="sr-only">Nota: </span>
+						{nota}/10
+					</p>
+				)
+			}
+		</div>
+		<slot />
+	</div>
 </div>
 
 <style>
 	.capa-tipografica__textura {
-		opacity: 0.35;
+		opacity: 0.9;
+	}
+
+	/* Cinema: perfurações de película nas bordas superior e inferior. */
+	.capa-tipografica--cinema .capa-tipografica__textura {
 		background-image:
-			repeating-linear-gradient(
-				-18deg,
-				transparent,
-				transparent 11px,
-				rgba(255, 255, 255, 0.04) 11px,
-				rgba(255, 255, 255, 0.04) 12px
-			),
-			radial-gradient(
-				circle at 1px 1px,
-				rgba(0, 0, 0, 0.12) 1px,
-				transparent 0
+			linear-gradient(90deg, rgb(255 255 255 / 0.14) 0 9px, transparent 9px),
+			linear-gradient(90deg, rgb(255 255 255 / 0.14) 0 9px, transparent 9px),
+			linear-gradient(
+				to bottom,
+				rgb(0 0 0 / 0.22) 0 20px,
+				transparent 20px calc(100% - 20px),
+				rgb(0 0 0 / 0.22) calc(100% - 20px)
 			);
 		background-size:
-			auto,
-			10px 10px;
+			20px 6px,
+			20px 6px,
+			100% 100%;
+		background-position:
+			5px 7px,
+			5px calc(100% - 7px),
+			0 0;
+		background-repeat: repeat-x, repeat-x, no-repeat;
+	}
+
+	/* Quadrinhos: retícula de pontos, mais forte no canto superior direito. */
+	.capa-tipografica--quadrinhos .capa-tipografica__textura {
+		background-image: radial-gradient(circle, rgb(0 0 0 / 0.13) 1.3px, transparent 1.8px);
+		background-size: 9px 9px;
+		mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 70%);
+	}
+
+	/* Séries: linhas horizontais finas de tela. */
+	.capa-tipografica--series .capa-tipografica__textura {
+		background-image: repeating-linear-gradient(
+			to bottom,
+			rgb(255 255 255 / 0.05) 0 1px,
+			transparent 1px 4px
+		);
+	}
+
+	/* Música: ondas sonoras concêntricas a partir do canto inferior direito. */
+	.capa-tipografica--musica .capa-tipografica__textura {
+		background-image: repeating-radial-gradient(
+			circle at 100% 100%,
+			rgb(255 255 255 / 0.07) 0 1.5px,
+			transparent 1.5px 16px
+		);
+		mask-image: linear-gradient(to left, #000 0%, transparent 75%);
 	}
 </style>

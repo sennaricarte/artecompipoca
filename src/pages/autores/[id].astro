@@ -113,12 +113,13 @@ const descricao =
 			vazio ? (
 				<p class="mt-10 text-muted">Nenhum texto publicado por enquanto.</p>
 			) : (
-				<div class="mt-10">
+				<div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
 					{combinados.map((item) =>
 						item.tipo === 'artigo' ? (
 							<CardPost
 								titulo={item.entry.data.title}
 								href={`/${item.entry.data.editoria}/${item.entry.id}/`}
+								idPost={item.entry.id}
 								description={item.entry.data.description}
 								autorNome={autor.data.nome}
 								pubDate={item.entry.data.pubDate}
@@ -134,6 +135,7 @@ const descricao =
 							<CardPost
 								titulo={item.entry.data.title}
 								href={`/resenhas/${item.entry.id}/`}
+								idPost={item.entry.id}
 								description={item.entry.data.description}
 								autorNome={autor.data.nome}
 								pubDate={item.entry.data.pubDate}

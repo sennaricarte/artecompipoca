@@ -56,6 +56,7 @@ function propsCard(item: PostPorEditoria) {
 	const base = {
 		titulo: item.entry.data.title,
 		href: hrefPost(item),
+		idPost: item.entry.id,
 		description: item.entry.data.description,
 		autorNome: autorPorKey[key] ?? 'Autor',
 		pubDate: item.entry.data.pubDate,
@@ -104,7 +105,7 @@ function propsCard(item: PostPorEditoria) {
 				</p>
 			) : (
 				<>
-					<div class="mt-10">
+					<div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
 						{paginaItens.map((item) => (
 							<CardPost {...propsCard(item)} />
 						))}

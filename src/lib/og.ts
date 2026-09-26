@@ -3,7 +3,7 @@ import { dirname, join, resolve } from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
 import satori from 'satori';
 import sharp from 'sharp';
-import { COR_FUNDO_SITE, COR_PIPOCA, TEMAS_CAPA, type TemaCapa } from './capas';
+import { capaDoPost, COR_FUNDO_SITE, COR_PIPOCA, temaEditoria, type TemaCapa } from './capas';
 import type { EditoriaId } from './conteudo';
 
 export const OG_LARGURA = 1200;
@@ -85,6 +85,8 @@ export interface DadosOgPost {
 	titulo: string;
 	rotulo: string;
 	editoria: EditoriaId;
+	/** Id do post: mesma variante de cor da capa no site. */
+	idPost: string;
 	nota?: number;
 	/** Caminho absoluto do arquivo original da capa. */
 	coverPath?: string;
@@ -186,7 +188,7 @@ function colunaTexto(
 }
 
 export async function gerarOgPost(dados: DadosOgPost): Promise<Buffer> {
-	const tema = TEMAS_CAPA[dados.editoria];
+	const tema = capaDoPost(dados.editoria, dados.idPost);
 	const cartaz = dados.coverPath ? await prepararCartaz(dados.coverPath) : undefined;
 
 	if (cartaz?.vertical) {
@@ -232,7 +234,7 @@ export async function gerarOgPost(dados: DadosOgPost): Promise<Buffer> {
 }
 
 export async function gerarOgPadrao(): Promise<Buffer> {
-	const tema = TEMAS_CAPA.cinema;
+	const tema = temaEditoria('cinema');
 	return renderizar(
 		el(
 			'div',

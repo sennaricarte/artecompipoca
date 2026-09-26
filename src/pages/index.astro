@@ -24,6 +24,7 @@ const logoUrl = new URL('/logo-arte-com-pipoca.png', site.url).href;
 
 type DestaqueResolvido = {
 	chave: string;
+	id: string;
 	kind: 'artigo' | 'resenha';
 	titulo: string;
 	href: string;
@@ -62,6 +63,7 @@ async function resolverDestaque(
 		const autor = await getEntry(entry.data.autor);
 		return {
 			chave: `artigos/${entry.id}`,
+			id: entry.id,
 			kind: 'artigo',
 			titulo: entry.data.title,
 			href: `/${entry.data.editoria}/${entry.id}/`,
@@ -88,6 +90,7 @@ async function resolverDestaque(
 		const editoria = TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo];
 		return {
 			chave: `resenhas/${entry.id}`,
+			id: entry.id,
 			kind: 'resenha',
 			titulo: entry.data.title,
 			href: `/resenhas/${entry.id}/`,
@@ -123,7 +126,7 @@ const indiceLcp = destaques.findIndex((d) => d.temCoverReal);
 const resenhas = await getResenhas();
 const criticasRecentes = resenhas
 	.filter((r) => !usados.has(`resenhas/${r.id}`))
-	.slice(0, 6);
+	.slice(0, 3);
 
 const autoresCriticas = await Promise.all(
 	criticasRecentes.map(async (entry) => {
@@ -184,6 +187,39 @@ for (const ed of editoriasHome) {
 		nome: nomeEditoria(ed),
 		itens: comAutor,
 	});
+}
+
+function propsCardEditoria(
+	item: PostPorEditoria,
+	autorNome: string,
+	bloco: BlocoEditoria,
+) {
+	const base = {
+		titulo: item.entry.data.title,
+		href: hrefPost(item),
+		idPost: item.entry.id,
+		description: item.entry.data.description,
+		autorNome,
+		pubDate: item.entry.data.pubDate,
+		editoria: bloco.id,
+		cover: item.entry.data.cover,
+		coverAlt: item.entry.data.coverAlt,
+		coverCredito: item.entry.data.coverCredito,
+		nivelTitulo: 'h3' as const,
+	};
+	if (item.kind === 'resenha') {
+		return {
+			...base,
+			rotulo: 'Crítica',
+			rotuloCapa: rotuloCapaResenha(item.entry.data),
+			nota: item.entry.data.nota,
+		};
+	}
+	return {
+		...base,
+		rotulo: bloco.nome,
+		rotuloCapa: rotuloCapaArtigo(item.entry.data.editoria),
+	};
 }
 
 const introducao = home.introducao;
@@ -266,18 +302,19 @@ const linkSection =
 
 		{
 			destaques.length > 0 && (
-				<section class="mt-14 md:mt-16" aria-labelledby="destaques-titulo">
+				<section class="mt-10 md:mt-12" aria-labelledby="destaques-titulo">
 					<h2
 						id="destaques-titulo"
 						class="font-display text-3xl tracking-wide text-pipoca md:text-4xl"
 					>
 						Destaques
 					</h2>
-					<div class="mt-6 grid grid-cols-1 gap-x-10 md:grid-cols-2">
+					<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
 						{destaques.map((d, i) => (
 							<CardPost
 								titulo={d.titulo}
 								href={d.href}
+								idPost={d.id}
 								description={d.description}
 								autorNome={d.autorNome}
 								pubDate={d.pubDate}
@@ -290,8 +327,9 @@ const linkSection =
 								coverCredito={d.coverCredito}
 								capaPrioridade={i === indiceLcp}
 								destaque
+								largo={i === 0}
+								class={i === 0 ? 'lg:col-span-3' : undefined}
 								nivelTitulo="h3"
-								capaSizes="(max-width: 768px) 100vw, 50vw"
 							/>
 						))}
 					</div>
@@ -301,7 +339,7 @@ const linkSection =
 
 		{
 			criticasRecentes.length > 0 && (
-				<section class="mt-14 md:mt-16" aria-labelledby="criticas-titulo">
+				<section class="mt-12 md:mt-14" aria-labelledby="criticas-titulo">
 					<div class="flex flex-wrap items-baseline justify-between gap-3">
 						<h2
 							id="criticas-titulo"
@@ -313,11 +351,12 @@ const linkSection =
 							Ver todas as críticas
 						</a>
 					</div>
-					<div class="mt-6">
+					<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
 						{criticasRecentes.map((entry) => (
 							<CardPost
 								titulo={entry.data.title}
 								href={`/resenhas/${entry.id}/`}
+								idPost={entry.id}
 								description={entry.data.description}
 								autorNome={autorCriticaPorId[entry.id] ?? 'Autor'}
 								pubDate={entry.data.pubDate}
@@ -339,7 +378,7 @@ const linkSection =
 		{
 			blocosEditoria.map((bloco) => (
 				<section
-					class="mt-14 md:mt-16"
+					class="mt-12 md:mt-14"
 					aria-labelledby={`editoria-${bloco.id}`}
 				>
 					<div class="flex flex-wrap items-baseline justify-between gap-3">
@@ -358,48 +397,17 @@ const linkSection =
 							Mais de {bloco.nome}
 						</a>
 					</div>
-					<div class="mt-6">
-						{bloco.itens.map(({ item, autorNome }) =>
-							item.kind === 'resenha' ? (
-								<CardPost
-									titulo={item.entry.data.title}
-									href={hrefPost(item)}
-									description={item.entry.data.description}
-									autorNome={autorNome}
-									pubDate={item.entry.data.pubDate}
-									rotulo="Crítica"
-									rotuloCapa={rotuloCapaResenha(item.entry.data)}
-									editoria={bloco.id}
-									nota={item.entry.data.nota}
-									cover={item.entry.data.cover}
-									coverAlt={item.entry.data.coverAlt}
-									coverCredito={item.entry.data.coverCredito}
-									nivelTitulo="h3"
-								/>
-							) : (
-								<CardPost
-									titulo={item.entry.data.title}
-									href={hrefPost(item)}
-									description={item.entry.data.description}
-									autorNome={autorNome}
-									pubDate={item.entry.data.pubDate}
-									rotulo={bloco.nome}
-									rotuloCapa={rotuloCapaArtigo(item.entry.data.editoria)}
-									editoria={bloco.id}
-									cover={item.entry.data.cover}
-									coverAlt={item.entry.data.coverAlt}
-									coverCredito={item.entry.data.coverCredito}
-									nivelTitulo="h3"
-								/>
-							),
-						)}
+					<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+						{bloco.itens.map(({ item, autorNome }) => (
+							<CardPost {...propsCardEditoria(item, autorNome, bloco)} />
+						))}
 					</div>
 				</section>
 			))
 		}
 
 		<section
-			class="mt-16 border-t border-white/10 pt-10 md:mt-20"
+			class="mt-14 border-t border-white/10 pt-8 md:mt-16"
 			aria-label="Quem escreve e contato"
 		>
 			<p class="flex flex-wrap gap-x-8 gap-y-3 text-base text-muted">
