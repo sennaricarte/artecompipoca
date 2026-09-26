@@ -1,0 +1,92 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { TEMAS_CAPA } from '../lib/capas';
+import type { EditoriaId } from '../lib/conteudo';
+import CapaTipografica from './CapaTipografica.astro';
+
+interface Props {
+	titulo: string;
+	rotulo: string;
+	editoria: EditoriaId;
+	nota?: number;
+	cover?: ImageMetadata;
+	coverAlt?: string;
+	coverCredito?: string;
+	/** Eager + fetchpriority high (LCP). Só faz diferença com cover real. */
+	prioridade?: boolean;
+	sizes?: string;
+	/** Classes extras da moldura 16:9 (ex.: altura máxima na página interna). */
+	molduraClass?: string;
+	class?: string;
+}
+
+const {
+	titulo,
+	rotulo,
+	editoria,
+	nota,
+	cover,
+	coverAlt,
+	coverCredito,
+	prioridade = false,
+	sizes = '(max-width: 768px) 100vw, 800px',
+	molduraClass,
+	class: className,
+} = Astro.props;
+
+const temCover = Boolean(cover && coverAlt);
+const vertical = cover ? cover.height > cover.width : false;
+// Com width e height juntos o sharp recorta (fit cover); no vertical manter a proporção natural.
+const larguraImg = 800;
+const alturaImg =
+	cover && vertical ? Math.round((larguraImg * cover.height) / cover.width) : 450;
+---
+
+{
+	temCover && cover && coverAlt ? (
+		<figure
+			class:list={['capa-post relative m-0 w-full overflow-hidden', className]}
+		>
+			<div
+				class:list={[
+					'aspect-video w-full overflow-hidden',
+					vertical ? null : 'bg-surface',
+					molduraClass,
+				]}
+				style={vertical ? `background: ${TEMAS_CAPA[editoria].fundo};` : undefined}
+			>
+				<Picture
+					src={cover}
+					formats={['avif', 'webp']}
+					widths={[400, 800]}
+					sizes={sizes}
+					width={larguraImg}
+					height={alturaImg}
+					alt={coverAlt}
+					loading={prioridade ? 'eager' : 'lazy'}
+					fetchpriority={prioridade ? 'high' : undefined}
+					quality="mid"
+					pictureAttributes={{ class: 'block h-full w-full' }}
+					class:list={[
+						'h-full w-full',
+						vertical ? 'object-contain' : 'object-cover',
+					]}
+				/>
+			</div>
+			{coverCredito && (
+				<small class="pointer-events-none absolute bottom-2 right-2 z-10 max-w-[85%] rounded-sm bg-black/70 px-2 py-1 text-[0.65rem] leading-tight text-white/90 md:text-xs">
+					{coverCredito}
+				</small>
+			)}
+		</figure>
+	) : (
+		<CapaTipografica
+			titulo={titulo}
+			rotulo={rotulo}
+			editoria={editoria}
+			nota={nota}
+			class={className}
+		/>
+	)
+}

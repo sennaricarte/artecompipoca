@@ -1,10 +1,9 @@
 ---
-import { Picture } from 'astro:assets';
-import { getImage } from 'astro:assets';
 import { getEntry, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import CapaPost from '../../components/CapaPost.astro';
 import MetaPost from '../../components/MetaPost.astro';
 import NotaEditorial from '../../components/NotaEditorial.astro';
 import FichaTecnica from '../../components/FichaTecnica.astro';
@@ -12,6 +11,8 @@ import {
 	formatarData,
 	getResenhas,
 	nomeTipoResenha,
+	rotuloCapaResenha,
+	TIPO_RESENHA_PARA_EDITORIA,
 	type TipoResenha,
 } from '../../lib/conteudo';
 
@@ -68,6 +69,7 @@ const pageUrl = new URL(`/resenhas/${entry.id}/`, site).href;
 const autorUrl = new URL(`/autores/${autor.id}/`, site).href;
 const seoTitle = entry.data.seoTitle ?? entry.data.title;
 const tipoLabel = nomeTipoResenha(entry.data.tipo);
+const editoriaCapa = TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo];
 const ficha = entry.data.ficha;
 const temFichaFactual = Boolean(
 	ficha &&
@@ -95,17 +97,8 @@ const mostrarFichaFim =
 	entry.data.tipo === 'filme' ||
 	entry.data.tipo === 'serie';
 
-let ogImage: string | undefined;
-let imageLd: string | undefined;
-if (entry.data.cover) {
-	const optimized = await getImage({
-		src: entry.data.cover,
-		format: 'jpg',
-		width: 1200,
-	});
-	ogImage = new URL(optimized.src, site).href;
-	imageLd = ogImage;
-}
+const ogImage = new URL(`/og/resenhas/${entry.id}.png`, site).href;
+const imageLd = ogImage;
 
 const relacionados = (await getResenhas())
 	.filter((r) => r.data.tipo === entry.data.tipo && r.id !== entry.id)
@@ -196,9 +189,7 @@ if (entry.data.nota != null) {
 		worstRating: 0,
 	};
 }
-if (imageLd) {
-	reviewLd.image = imageLd;
-}
+reviewLd.image = imageLd;
 ---
 
 <BaseLayout
@@ -206,6 +197,7 @@ if (imageLd) {
 	description={entry.data.description}
 	ogType="article"
 	ogImage={ogImage}
+	ogImageAlt={entry.data.title}
 	publishedTime={entry.data.pubDate.toISOString()}
 	modifiedTime={(entry.data.updatedDate ?? entry.data.pubDate).toISOString()}
 	noindex={entry.data.draft}
@@ -225,7 +217,21 @@ if (imageLd) {
 			]}
 		/>
 
-		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+		<CapaPost
+			titulo={entry.data.title}
+			rotulo={rotuloCapaResenha(entry.data)}
+			editoria={editoriaCapa}
+			cover={entry.data.cover}
+			coverAlt={entry.data.coverAlt}
+			coverCredito={entry.data.coverCredito}
+			nota={entry.data.nota}
+			prioridade={Boolean(entry.data.cover && entry.data.coverAlt)}
+			sizes="(min-width: 1024px) 720px, 100vw"
+			molduraClass="max-h-[480px]"
+			class="mt-6"
+		/>
+
+		<h1 class="mt-8 font-display text-4xl tracking-wide text-text md:text-5xl">
 			{entry.data.title}
 		</h1>
 
@@ -281,24 +287,6 @@ if (imageLd) {
 						</div>
 					)}
 				</dl>
-			)
-		}
-
-		{
-			entry.data.cover && entry.data.coverAlt && (
-				<figure class="mt-8">
-					<Picture
-						src={entry.data.cover}
-						formats={['avif', 'webp']}
-						alt={entry.data.coverAlt}
-						width={entry.data.cover.width}
-						height={entry.data.cover.height}
-						loading="eager"
-						fetchpriority="high"
-						quality="mid"
-						class="h-auto w-full max-w-3xl"
-					/>
-				</figure>
 			)
 		}
 

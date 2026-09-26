@@ -8,6 +8,8 @@ import {
 	fatiaPagina,
 	getResenhas,
 	nomeTipoResenha,
+	rotuloCapaResenha,
+	TIPO_RESENHA_PARA_EDITORIA,
 	totalPaginas,
 } from '../../lib/conteudo';
 
@@ -61,7 +63,12 @@ const autorPorId = Object.fromEntries(autores.map((a) => [a.id, a.nome]));
 								autorNome={autorPorId[entry.id] ?? 'Autor'}
 								pubDate={entry.data.pubDate}
 								rotulo={nomeTipoResenha(entry.data.tipo)}
+								rotuloCapa={rotuloCapaResenha(entry.data)}
+								editoria={TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo]}
 								nota={entry.data.nota}
+								cover={entry.data.cover}
+								coverAlt={entry.data.coverAlt}
+								coverCredito={entry.data.coverCredito}
 							/>
 						))}
 					</div>

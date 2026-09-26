@@ -5,6 +5,14 @@ import SearchForm from '../components/SearchForm.astro';
 
 const description =
 	'Busque resenhas e artigos de cinema, séries, quadrinhos e música no Arte Com Pipoca.';
+
+const hubs = [
+	{ href: '/cinema/', label: 'Cinema' },
+	{ href: '/series/', label: 'Séries' },
+	{ href: '/quadrinhos/', label: 'Quadrinhos' },
+	{ href: '/musica/', label: 'Música' },
+	{ href: '/resenhas/', label: 'Resenhas' },
+];
 ---
 
 <BaseLayout title="Busca" description={description} noindex={true}>
@@ -26,6 +34,27 @@ const description =
 		<div class="mt-8">
 			<SearchForm id="busca-pagina" inputClass="py-3 sm:text-base" />
 		</div>
+
+		<noscript>
+			<div class="mt-8 max-w-2xl border-l-4 border-pipoca bg-surface px-4 py-4 text-muted">
+				<p>
+					A busca do site precisa de JavaScript para funcionar. Você pode
+					navegar pelas seções:
+				</p>
+				<ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+					{hubs.map((hub) => (
+						<li>
+							<a
+								href={hub.href}
+								class="font-medium text-pipoca underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+							>
+								{hub.label}
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		</noscript>
 
 		<p
 			id="busca-status"

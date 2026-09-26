@@ -9,6 +9,9 @@ import {
 	getResenhas,
 	nomeEditoria,
 	nomeTipoResenha,
+	rotuloCapaArtigo,
+	rotuloCapaResenha,
+	TIPO_RESENHA_PARA_EDITORIA,
 } from '../../lib/conteudo';
 
 export async function getStaticPaths() {
@@ -120,6 +123,11 @@ const descricao =
 								autorNome={autor.data.nome}
 								pubDate={item.entry.data.pubDate}
 								rotulo={nomeEditoria(item.entry.data.editoria)}
+								rotuloCapa={rotuloCapaArtigo(item.entry.data.editoria)}
+								editoria={item.entry.data.editoria}
+								cover={item.entry.data.cover}
+								coverAlt={item.entry.data.coverAlt}
+								coverCredito={item.entry.data.coverCredito}
 								nivelTitulo="h2"
 							/>
 						) : (
@@ -130,7 +138,12 @@ const descricao =
 								autorNome={autor.data.nome}
 								pubDate={item.entry.data.pubDate}
 								rotulo={nomeTipoResenha(item.entry.data.tipo)}
+								rotuloCapa={rotuloCapaResenha(item.entry.data)}
+								editoria={TIPO_RESENHA_PARA_EDITORIA[item.entry.data.tipo]}
 								nota={item.entry.data.nota}
+								cover={item.entry.data.cover}
+								coverAlt={item.entry.data.coverAlt}
+								coverCredito={item.entry.data.coverCredito}
 								nivelTitulo="h2"
 							/>
 						),

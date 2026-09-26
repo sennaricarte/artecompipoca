@@ -9,6 +9,9 @@ legacyUrl: /oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd
 draft: false
 obra: Crepúsculo dos Deuses (1950)
 tipo: filme
+cover: "../../assets/capas/crepusculo-dos-deuses-1950.jpg"
+coverAlt: "Cartaz de Crepúsculo dos Deuses: rosto feminino sobre fundo vermelho, casal abraçado e uma fita de filme com o título"
+coverCredito: "Cartaz original (1950), domínio público. Fonte: Wikimedia Commons"
 ficha:
   tituloOriginal: "Sunset Boulevard"
   ano: 1950

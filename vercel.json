@@ -1,4 +1,362 @@
 {
 	"trailingSlash": true,
-	"redirects": []
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "X-Content-Type-Options",
+					"value": "nosniff"
+				},
+				{
+					"key": "Referrer-Policy",
+					"value": "strict-origin-when-cross-origin"
+				},
+				{
+					"key": "Permissions-Policy",
+					"value": "camera=(), microphone=(), geolocation=()"
+				}
+			]
+		},
+		{
+			"source": "/_astro/(.*)",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=31536000, immutable"
+				}
+			]
+		},
+		{
+			"source": "/og/(.*)",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=86400"
+				}
+			]
+		}
+	],
+	"redirects": [
+		{
+			"source": "/20-maiores-atuacoes-femininas-da-historia-cinema/",
+			"destination": "/cinema/as-20-maiores-atuacoes-femininas-da-historia-do-cinema/",
+			"permanent": true
+		},
+		{
+			"source": "/a-critica-definitiva-12-anos-de-escravidao/",
+			"destination": "/resenhas/12-anos-de-escravidao/",
+			"permanent": true
+		},
+		{
+			"source": "/bicho-de-sete-cabecas-critica/",
+			"destination": "/resenhas/bicho-de-sete-cabecas/",
+			"permanent": true
+		},
+		{
+			"source": "/critica-definitiva-inside-llewyn-davis-balada-de-um-homem-comum/",
+			"destination": "/resenhas/inside-llewyn-davis-balada-de-um-homem-comum/",
+			"permanent": true
+		},
+		{
+			"source": "/critica-definitiva-ninfomaniaca/",
+			"destination": "/resenhas/ninfomaniaca/",
+			"permanent": true
+		},
+		{
+			"source": "/critica-definitiva-noe/",
+			"destination": "/resenhas/noe/",
+			"permanent": true
+		},
+		{
+			"source": "/grande-beleza-critica/",
+			"destination": "/resenhas/a-grande-beleza/",
+			"permanent": true
+		},
+		{
+			"source": "/hayden-christensen-e-a-maldicao-do-ator-pop/",
+			"destination": "/cinema/hayden-christensen-e-a-maldicao-do-ator-pop/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/20-maiores-atuacoes-femininas-da-historia-cinema/",
+			"destination": "/cinema/as-20-maiores-atuacoes-femininas-da-historia-do-cinema/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/a-critica-definitiva-12-anos-de-escravidao/",
+			"destination": "/resenhas/12-anos-de-escravidao/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/bicho-de-sete-cabecas-critica/",
+			"destination": "/resenhas/bicho-de-sete-cabecas/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/critica-definitiva-inside-llewyn-davis-balada-de-um-homem-comum/",
+			"destination": "/resenhas/inside-llewyn-davis-balada-de-um-homem-comum/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/critica-definitiva-ninfomaniaca/",
+			"destination": "/resenhas/ninfomaniaca/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/critica-definitiva-noe/",
+			"destination": "/resenhas/noe/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/grande-beleza-critica/",
+			"destination": "/resenhas/a-grande-beleza/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/hayden-christensen-e-a-maldicao-do-ator-pop/",
+			"destination": "/cinema/hayden-christensen-e-a-maldicao-do-ator-pop/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/interestelar-critica/",
+			"destination": "/resenhas/interestelar/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/interestelar/",
+			"destination": "/resenhas/interestelar/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/kurt-cobain-montage-of-heck-critica/",
+			"destination": "/resenhas/kurt-cobain-montage-of-heck/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/leitmotiv-resenha/",
+			"destination": "/resenhas/leitmotiv/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/monsieur-verdoux-critica/",
+			"destination": "/resenhas/monsieur-verdoux/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/nothing-personal-critica/",
+			"destination": "/resenhas/nothing-personal/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/o-abutre/",
+			"destination": "/resenhas/o-abutre/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/o-expresso-do-amanha-critica/",
+			"destination": "/resenhas/o-expresso-do-amanha/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/o-problema-com-os-herois-em-batman-vs-superman/",
+			"destination": "/cinema/o-problema-com-os-herois-em-batman-vs-superman/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/filmes-do-outro-mundo-o-massacre-da-serra-eletrica-the-texas-chain-saw-massacre-1974/",
+			"destination": "/resenhas/o-massacre-da-serra-eletrica-1974/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/grandes-filmes-chinatown-1974/",
+			"destination": "/resenhas/chinatown-1974/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd-1950/",
+			"destination": "/resenhas/crepusculo-dos-deuses-1950/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/nos-cinemas-transformers-a-era-da-extincao-transformers-age-of-extinction-2014/",
+			"destination": "/resenhas/transformers-a-era-da-extincao/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/personalidades-robert-de-niro/",
+			"destination": "/cinema/personalidades-robert-de-niro/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/preacher-critica/",
+			"destination": "/resenhas/preacher/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/sr-holmes-critica/",
+			"destination": "/resenhas/sr-holmes/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/tirinhas-assistindo-mad-max/",
+			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/top-5-de-animes-que-tem-roteiros-melhores-que-seriados/",
+			"destination": "/series/top-5-de-animes-que-tem-roteiros-melhores-que-seriados/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/top-5-filmes-de-ficcao-cientifica/",
+			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/top-5-viagem-no-tempo/",
+			"destination": "/cinema/top-5-viagem-no-tempo/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/top-lista-melhores-series-de-todos-os-tempos/",
+			"destination": "/series/as-melhores-series-de-todos-os-tempos/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/trumbo-critica/",
+			"destination": "/resenhas/trumbo/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/whiplash-em-busca-da-perfeicao-critica/",
+			"destination": "/resenhas/whiplash-em-busca-da-perfeicao/",
+			"permanent": true
+		},
+		{
+			"source": "/interestelar-critica/",
+			"destination": "/resenhas/interestelar/",
+			"permanent": true
+		},
+		{
+			"source": "/interestelar/",
+			"destination": "/resenhas/interestelar/",
+			"permanent": true
+		},
+		{
+			"source": "/kurt-cobain-montage-of-heck-critica/",
+			"destination": "/resenhas/kurt-cobain-montage-of-heck/",
+			"permanent": true
+		},
+		{
+			"source": "/leitmotiv-resenha/",
+			"destination": "/resenhas/leitmotiv/",
+			"permanent": true
+		},
+		{
+			"source": "/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/monsieur-verdoux-critica/",
+			"destination": "/resenhas/monsieur-verdoux/",
+			"permanent": true
+		},
+		{
+			"source": "/nothing-personal-critica/",
+			"destination": "/resenhas/nothing-personal/",
+			"permanent": true
+		},
+		{
+			"source": "/o-abutre/",
+			"destination": "/resenhas/o-abutre/",
+			"permanent": true
+		},
+		{
+			"source": "/o-expresso-do-amanha-critica/",
+			"destination": "/resenhas/o-expresso-do-amanha/",
+			"permanent": true
+		},
+		{
+			"source": "/o-problema-com-os-herois-em-batman-vs-superman/",
+			"destination": "/cinema/o-problema-com-os-herois-em-batman-vs-superman/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/filmes-do-outro-mundo-o-massacre-da-serra-eletrica-the-texas-chain-saw-massacre-1974/",
+			"destination": "/resenhas/o-massacre-da-serra-eletrica-1974/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/grandes-filmes-chinatown-1974/",
+			"destination": "/resenhas/chinatown-1974/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd-1950/",
+			"destination": "/resenhas/crepusculo-dos-deuses-1950/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/nos-cinemas-transformers-a-era-da-extincao-transformers-age-of-extinction-2014/",
+			"destination": "/resenhas/transformers-a-era-da-extincao/",
+			"permanent": true
+		},
+		{
+			"source": "/personalidades-robert-de-niro/",
+			"destination": "/cinema/personalidades-robert-de-niro/",
+			"permanent": true
+		},
+		{
+			"source": "/preacher-critica/",
+			"destination": "/resenhas/preacher/",
+			"permanent": true
+		},
+		{
+			"source": "/sr-holmes-critica/",
+			"destination": "/resenhas/sr-holmes/",
+			"permanent": true
+		},
+		{
+			"source": "/tirinhas-assistindo-mad-max/",
+			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/top-5-de-animes-que-tem-roteiros-melhores-que-seriados/",
+			"destination": "/series/top-5-de-animes-que-tem-roteiros-melhores-que-seriados/",
+			"permanent": true
+		},
+		{
+			"source": "/top-5-filmes-de-ficcao-cientifica/",
+			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/top-5-viagem-no-tempo/",
+			"destination": "/cinema/top-5-viagem-no-tempo/",
+			"permanent": true
+		},
+		{
+			"source": "/top-lista-melhores-series-de-todos-os-tempos/",
+			"destination": "/series/as-melhores-series-de-todos-os-tempos/",
+			"permanent": true
+		},
+		{
+			"source": "/trumbo-critica/",
+			"destination": "/resenhas/trumbo/",
+			"permanent": true
+		},
+		{
+			"source": "/whiplash-em-busca-da-perfeicao-critica/",
+			"destination": "/resenhas/whiplash-em-busca-da-perfeicao/",
+			"permanent": true
+		}
+	]
 }

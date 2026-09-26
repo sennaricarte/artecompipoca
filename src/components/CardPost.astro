@@ -1,5 +1,7 @@
 ---
-import { formatarData } from '../lib/conteudo';
+import type { ImageMetadata } from 'astro';
+import { formatarData, type EditoriaId } from '../lib/conteudo';
+import CapaPost from './CapaPost.astro';
 
 interface Props {
 	titulo: string;
@@ -8,8 +10,19 @@ interface Props {
 	autorNome: string;
 	pubDate: Date;
 	rotulo: string;
+	/** Editoria visual da capa tipográfica / contexto. */
+	editoria: EditoriaId;
+	/** Rótulo decorativo da capa (ex.: "Crítica · Filme · 1974"). */
+	rotuloCapa?: string;
 	nota?: number;
+	cover?: ImageMetadata;
+	coverAlt?: string;
+	coverCredito?: string;
+	capaPrioridade?: boolean;
 	nivelTitulo?: 'h2' | 'h3';
+	/** Cards um pouco maiores (home / destaques). */
+	destaque?: boolean;
+	capaSizes?: string;
 }
 
 const {
@@ -19,17 +32,55 @@ const {
 	autorNome,
 	pubDate,
 	rotulo,
+	editoria,
+	rotuloCapa,
 	nota,
+	cover,
+	coverAlt,
+	coverCredito,
+	capaPrioridade = false,
 	nivelTitulo = 'h2',
+	destaque = false,
+	capaSizes,
 } = Astro.props;
 
-const tituloClass =
-	'font-display text-2xl tracking-wide text-text md:text-3xl';
+const tituloClass = destaque
+	? 'font-display text-3xl tracking-wide text-text md:text-4xl'
+	: 'font-display text-2xl tracking-wide text-text md:text-3xl';
 const linkClass =
 	'transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca';
+const descClass = destaque
+	? 'mt-3 max-w-3xl text-base leading-relaxed text-muted md:text-lg'
+	: 'mt-2 max-w-3xl text-base text-muted';
+const sizesPadrao = destaque
+	? '(max-width: 768px) 100vw, 50vw'
+	: '(max-width: 768px) 100vw, 800px';
 ---
 
-<article class="border-b border-white/10 py-6 last:border-b-0">
+<article
+	class:list={[
+		'border-b border-white/10 last:border-b-0',
+		destaque ? 'py-8' : 'py-6',
+	]}
+>
+	<a
+		href={href}
+		class="mb-4 block overflow-hidden rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+		tabindex="-1"
+		aria-hidden="true"
+	>
+		<CapaPost
+			titulo={titulo}
+			rotulo={rotuloCapa ?? rotulo}
+			editoria={editoria}
+			nota={nota}
+			cover={cover}
+			coverAlt={coverAlt}
+			coverCredito={coverCredito}
+			prioridade={capaPrioridade}
+			sizes={capaSizes ?? sizesPadrao}
+		/>
+	</a>
 	{
 		nivelTitulo === 'h3' ? (
 			<h3 class={tituloClass}>
@@ -45,7 +96,7 @@ const linkClass =
 			</h2>
 		)
 	}
-	<p class="mt-2 max-w-3xl text-base text-muted">{description}</p>
+	<p class={descClass}>{description}</p>
 	<p class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
 		<span>{autorNome}</span>
 		<span aria-hidden="true">·</span>

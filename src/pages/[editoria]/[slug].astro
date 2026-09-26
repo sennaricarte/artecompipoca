@@ -1,16 +1,16 @@
 ---
-import { Picture } from 'astro:assets';
-import { getImage } from 'astro:assets';
 import { getEntry, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import CapaPost from '../../components/CapaPost.astro';
 import MetaPost from '../../components/MetaPost.astro';
 import NotaEditorial from '../../components/NotaEditorial.astro';
 import {
 	formatarData,
 	getArtigos,
 	nomeEditoria,
+	rotuloCapaArtigo,
 } from '../../lib/conteudo';
 
 export async function getStaticPaths() {
@@ -46,17 +46,8 @@ const editoriaNome = nomeEditoria(entry.data.editoria);
 const seoTitle = entry.data.seoTitle ?? entry.data.title;
 const dateModified = entry.data.updatedDate ?? entry.data.pubDate;
 
-let ogImage: string | undefined;
-let imageLd: string | undefined;
-if (entry.data.cover) {
-	const optimized = await getImage({
-		src: entry.data.cover,
-		format: 'jpg',
-		width: 1200,
-	});
-	ogImage = new URL(optimized.src, site).href;
-	imageLd = ogImage;
-}
+const ogImage = new URL(`/og/artigos/${entry.id}.png`, site).href;
+const imageLd = ogImage;
 
 const relacionados = (await getArtigos())
 	.filter(
@@ -87,9 +78,7 @@ const blogPosting: Record<string, unknown> = {
 		'@id': pageUrl,
 	},
 };
-if (imageLd) {
-	blogPosting.image = imageLd;
-}
+blogPosting.image = imageLd;
 ---
 
 <BaseLayout
@@ -97,6 +86,7 @@ if (imageLd) {
 	description={entry.data.description}
 	ogType="article"
 	ogImage={ogImage}
+	ogImageAlt={entry.data.title}
 	publishedTime={entry.data.pubDate.toISOString()}
 	modifiedTime={dateModified.toISOString()}
 	noindex={entry.data.draft}
@@ -119,7 +109,19 @@ if (imageLd) {
 			]}
 		/>
 
-		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+		<CapaPost
+			titulo={entry.data.title}
+			rotulo={rotuloCapaArtigo(entry.data.editoria)}
+			editoria={entry.data.editoria}
+			cover={entry.data.cover}
+			coverAlt={entry.data.coverAlt}
+			coverCredito={entry.data.coverCredito}
+			prioridade={Boolean(entry.data.cover && entry.data.coverAlt)}
+			sizes="(min-width: 1024px) 720px, 100vw"
+			class="mt-6"
+		/>
+
+		<h1 class="mt-8 font-display text-4xl tracking-wide text-text md:text-5xl">
 			{entry.data.title}
 		</h1>
 
@@ -134,24 +136,6 @@ if (imageLd) {
 		{entry.data.notaEditorial && (
 			<NotaEditorial texto={entry.data.notaEditorial} />
 		)}
-
-		{
-			entry.data.cover && entry.data.coverAlt && (
-				<figure class="mt-8">
-					<Picture
-						src={entry.data.cover}
-						formats={['avif', 'webp']}
-						alt={entry.data.coverAlt}
-						width={entry.data.cover.width}
-						height={entry.data.cover.height}
-						loading="eager"
-						fetchpriority="high"
-						quality="mid"
-						class="h-auto w-full max-w-3xl"
-					/>
-				</figure>
-			)
-		}
 
 		<div class="conteudo mt-10">
 			<Content />

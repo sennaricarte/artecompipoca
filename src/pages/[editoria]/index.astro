@@ -7,10 +7,15 @@ import CardPost from '../../components/CardPost.astro';
 import Paginacao from '../../components/Paginacao.astro';
 import {
 	fatiaPagina,
-	getArtigos,
+	getPorEditoria,
+	hrefPost,
 	nomeEditoria,
+	rotuloCapaArtigo,
+	rotuloCapaResenha,
+	editoriaDePost,
 	totalPaginas,
 	type EditoriaId,
+	type PostPorEditoria,
 } from '../../lib/conteudo';
 
 export async function getStaticPaths() {
@@ -27,26 +32,52 @@ interface Props {
 
 const { editoria } = Astro.props;
 const editoriaId = editoria.id as EditoriaId;
-const artigos = (await getArtigos()).filter(
-	(a) => a.data.editoria === editoriaId,
-);
+const posts = await getPorEditoria(editoriaId);
 const paginaAtual = 1;
-const total = totalPaginas(artigos.length);
-const paginaItens = fatiaPagina(artigos, paginaAtual);
-const vazio = artigos.length === 0;
+const total = totalPaginas(posts.length);
+const paginaItens = fatiaPagina(posts, paginaAtual);
+const vazio = posts.length === 0;
 const nome = editoria.data.nome || nomeEditoria(editoriaId);
 const baseUrl = `/${editoriaId}/`;
 
 const autores = await Promise.all(
-	paginaItens.map(async (entry) => {
-		const autor = await getEntry(entry.data.autor);
+	paginaItens.map(async (item) => {
+		const autor = await getEntry(item.entry.data.autor);
 		return {
-			id: entry.id,
+			key: `${item.kind}:${item.entry.id}`,
 			nome: autor?.data.nome ?? 'Autor',
 		};
 	}),
 );
-const autorPorId = Object.fromEntries(autores.map((a) => [a.id, a.nome]));
+const autorPorKey = Object.fromEntries(autores.map((a) => [a.key, a.nome]));
+
+function propsCard(item: PostPorEditoria) {
+	const key = `${item.kind}:${item.entry.id}`;
+	const base = {
+		titulo: item.entry.data.title,
+		href: hrefPost(item),
+		description: item.entry.data.description,
+		autorNome: autorPorKey[key] ?? 'Autor',
+		pubDate: item.entry.data.pubDate,
+		editoria: editoriaDePost(item),
+		cover: item.entry.data.cover,
+		coverAlt: item.entry.data.coverAlt,
+		coverCredito: item.entry.data.coverCredito,
+	};
+	if (item.kind === 'resenha') {
+		return {
+			...base,
+			rotulo: 'Crítica',
+			rotuloCapa: rotuloCapaResenha(item.entry.data),
+			nota: item.entry.data.nota,
+		};
+	}
+	return {
+		...base,
+		rotulo: nome,
+		rotuloCapa: rotuloCapaArtigo(item.entry.data.editoria),
+	};
+}
 ---
 
 <BaseLayout
@@ -74,15 +105,8 @@ const autorPorId = Object.fromEntries(autores.map((a) => [a.id, a.nome]));
 			) : (
 				<>
 					<div class="mt-10">
-						{paginaItens.map((entry) => (
-							<CardPost
-								titulo={entry.data.title}
-								href={`/${entry.data.editoria}/${entry.id}/`}
-								description={entry.data.description}
-								autorNome={autorPorId[entry.id] ?? 'Autor'}
-								pubDate={entry.data.pubDate}
-								rotulo={nome}
-							/>
+						{paginaItens.map((item) => (
+							<CardPost {...propsCard(item)} />
 						))}
 					</div>
 					<Paginacao

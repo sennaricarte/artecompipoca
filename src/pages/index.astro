@@ -1,10 +1,200 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Logo from '../components/Logo.astro';
+import CardPost from '../components/CardPost.astro';
+import home from '../data/home.json';
 import { site } from '../data/site';
+import {
+	chavePost,
+	getPorEditoria,
+	getResenhas,
+	hrefPost,
+	nomeEditoria,
+	nomeTipoResenha,
+	rotuloCapaArtigo,
+	rotuloCapaResenha,
+	TIPO_RESENHA_PARA_EDITORIA,
+	type EditoriaId,
+	type PostPorEditoria,
+} from '../lib/conteudo';
 
 const siteUrl = site.url.replace(/\/?$/, '/');
 const logoUrl = new URL('/logo-arte-com-pipoca.png', site.url).href;
+
+type DestaqueResolvido = {
+	chave: string;
+	kind: 'artigo' | 'resenha';
+	titulo: string;
+	href: string;
+	description: string;
+	autorNome: string;
+	pubDate: Date;
+	rotulo: string;
+	rotuloCapa: string;
+	editoria: EditoriaId;
+	nota?: number;
+	cover?: ImageMetadata;
+	coverAlt?: string;
+	coverCredito?: string;
+	temCoverReal: boolean;
+};
+
+const usados = new Set<string>();
+
+/** Resolve um slug "colecao/id" do home.json; ignora draft/inexistente. */
+async function resolverDestaque(
+	slug: string,
+): Promise<DestaqueResolvido | null> {
+	const [colecao, ...rest] = slug.split('/');
+	const id = rest.join('/');
+	if (!colecao || !id) {
+		console.warn(`[home] destaque inválido: ${slug}`);
+		return null;
+	}
+
+	if (colecao === 'artigos') {
+		const entry = await getEntry('artigos', id);
+		if (!entry || entry.data.draft) {
+			console.warn(`[home] destaque ignorado (ausente ou draft): ${slug}`);
+			return null;
+		}
+		const autor = await getEntry(entry.data.autor);
+		return {
+			chave: `artigos/${entry.id}`,
+			kind: 'artigo',
+			titulo: entry.data.title,
+			href: `/${entry.data.editoria}/${entry.id}/`,
+			description: entry.data.description,
+			autorNome: autor?.data.nome ?? 'Autor',
+			pubDate: entry.data.pubDate,
+			rotulo: nomeEditoria(entry.data.editoria),
+			rotuloCapa: rotuloCapaArtigo(entry.data.editoria),
+			editoria: entry.data.editoria,
+			cover: entry.data.cover,
+			coverAlt: entry.data.coverAlt,
+			coverCredito: entry.data.coverCredito,
+			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
+		};
+	}
+
+	if (colecao === 'resenhas') {
+		const entry = await getEntry('resenhas', id);
+		if (!entry || entry.data.draft) {
+			console.warn(`[home] destaque ignorado (ausente ou draft): ${slug}`);
+			return null;
+		}
+		const autor = await getEntry(entry.data.autor);
+		const editoria = TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo];
+		return {
+			chave: `resenhas/${entry.id}`,
+			kind: 'resenha',
+			titulo: entry.data.title,
+			href: `/resenhas/${entry.id}/`,
+			description: entry.data.description,
+			autorNome: autor?.data.nome ?? 'Autor',
+			pubDate: entry.data.pubDate,
+			rotulo: nomeTipoResenha(entry.data.tipo),
+			rotuloCapa: rotuloCapaResenha(entry.data),
+			editoria,
+			nota: entry.data.nota,
+			cover: entry.data.cover,
+			coverAlt: entry.data.coverAlt,
+			coverCredito: entry.data.coverCredito,
+			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
+		};
+	}
+
+	console.warn(`[home] destaque com coleção desconhecida: ${slug}`);
+	return null;
+}
+
+const destaques: DestaqueResolvido[] = [];
+for (const slug of home.destaques) {
+	const item = await resolverDestaque(slug);
+	if (!item) continue;
+	destaques.push(item);
+	usados.add(item.chave);
+}
+
+/** Índice do primeiro destaque com cover real (candidato a LCP). */
+const indiceLcp = destaques.findIndex((d) => d.temCoverReal);
+
+const resenhas = await getResenhas();
+const criticasRecentes = resenhas
+	.filter((r) => !usados.has(`resenhas/${r.id}`))
+	.slice(0, 6);
+
+const autoresCriticas = await Promise.all(
+	criticasRecentes.map(async (entry) => {
+		const autor = await getEntry(entry.data.autor);
+		usados.add(`resenhas/${entry.id}`);
+		return {
+			id: entry.id,
+			nome: autor?.data.nome ?? 'Autor',
+		};
+	}),
+);
+const autorCriticaPorId = Object.fromEntries(
+	autoresCriticas.map((a) => [a.id, a.nome]),
+);
+
+const editoriasHome: EditoriaId[] = [
+	'cinema',
+	'series',
+	'quadrinhos',
+	'musica',
+];
+
+type BlocoEditoria = {
+	id: EditoriaId;
+	nome: string;
+	itens: {
+		item: PostPorEditoria;
+		autorNome: string;
+	}[];
+};
+
+const blocosEditoria: BlocoEditoria[] = [];
+
+for (const ed of editoriasHome) {
+	const lista = await getPorEditoria(ed);
+	const escolhidos: PostPorEditoria[] = [];
+	for (const post of lista) {
+		const chave = chavePost(post);
+		if (usados.has(chave)) continue;
+		escolhidos.push(post);
+		if (escolhidos.length >= 3) break;
+	}
+	if (escolhidos.length === 0) continue;
+
+	const comAutor = await Promise.all(
+		escolhidos.map(async (item) => {
+			usados.add(chavePost(item));
+			const autor = await getEntry(item.entry.data.autor);
+			return {
+				item,
+				autorNome: autor?.data.nome ?? 'Autor',
+			};
+		}),
+	);
+
+	blocosEditoria.push({
+		id: ed,
+		nome: nomeEditoria(ed),
+		itens: comAutor,
+	});
+}
+
+const introducao = home.introducao;
+const seoDescription =
+	'Cinema, séries, quadrinhos e música com olhar de fã e rigor de crítica. Arte Com Pipoca: no ar desde 2013, com acervo revisado e novidades pela frente.';
+const seoLen = [...seoDescription].length;
+if (seoLen < 140 || seoLen > 160) {
+	console.warn(
+		`[home] description SEO fora de 140–160 (${seoLen}): ${seoDescription}`,
+	);
+}
 
 const jsonLd = {
 	'@context': 'https://schema.org',
@@ -13,6 +203,14 @@ const jsonLd = {
 			'@type': 'WebSite',
 			name: site.nome,
 			url: siteUrl,
+			potentialAction: {
+				'@type': 'SearchAction',
+				target: {
+					'@type': 'EntryPoint',
+					urlTemplate: `${siteUrl}busca/?q={search_term_string}`,
+				},
+				'query-input': 'required name=search_term_string',
+			},
 		},
 		{
 			'@type': 'Organization',
@@ -33,16 +231,181 @@ const jsonLd = {
 		},
 	],
 };
+
+const linkSection =
+	'font-medium text-pipoca underline-offset-2 transition-colors hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca';
 ---
 
 <BaseLayout
-	title="Arte Com Pipoca"
-	description="Resenhas, listas e análises de cinema, séries, quadrinhos e música."
+	title="Arte Com Pipoca | Cinema, séries, quadrinhos e música"
+	description={seoDescription}
 >
-	<script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	<script
+		slot="head"
+		type="application/ld+json"
+		set:html={JSON.stringify(jsonLd)}
+	/>
 
-	<section class="mx-auto flex max-w-6xl flex-col items-start px-4 py-16 md:px-6">
-		<h1 class="sr-only">Arte Com Pipoca</h1>
-		<Logo width={756} class="h-auto w-full max-w-[50.4rem] md:max-w-[57.6rem]" loading="eager" />
-	</section>
+	<div class="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
+		<section aria-labelledby="home-titulo">
+			<h1
+				id="home-titulo"
+				class="font-display text-4xl tracking-wide text-text md:text-5xl lg:text-6xl"
+			>
+				Cinema, séries, quadrinhos e música desde 2013
+			</h1>
+			<p class="mt-5 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+				{introducao}
+			</p>
+			<p class="mt-4">
+				<a href="/sobre/" class={`text-sm text-muted ${linkSection}`}>
+					Conheça nossa história
+				</a>
+			</p>
+		</section>
+
+		{
+			destaques.length > 0 && (
+				<section class="mt-14 md:mt-16" aria-labelledby="destaques-titulo">
+					<h2
+						id="destaques-titulo"
+						class="font-display text-3xl tracking-wide text-pipoca md:text-4xl"
+					>
+						Destaques
+					</h2>
+					<div class="mt-6 grid grid-cols-1 gap-x-10 md:grid-cols-2">
+						{destaques.map((d, i) => (
+							<CardPost
+								titulo={d.titulo}
+								href={d.href}
+								description={d.description}
+								autorNome={d.autorNome}
+								pubDate={d.pubDate}
+								rotulo={d.rotulo}
+								rotuloCapa={d.rotuloCapa}
+								editoria={d.editoria}
+								nota={d.nota}
+								cover={d.cover}
+								coverAlt={d.coverAlt}
+								coverCredito={d.coverCredito}
+								capaPrioridade={i === indiceLcp}
+								destaque
+								nivelTitulo="h3"
+								capaSizes="(max-width: 768px) 100vw, 50vw"
+							/>
+						))}
+					</div>
+				</section>
+			)
+		}
+
+		{
+			criticasRecentes.length > 0 && (
+				<section class="mt-14 md:mt-16" aria-labelledby="criticas-titulo">
+					<div class="flex flex-wrap items-baseline justify-between gap-3">
+						<h2
+							id="criticas-titulo"
+							class="font-display text-3xl tracking-wide text-pipoca md:text-4xl"
+						>
+							Críticas recentes
+						</h2>
+						<a href="/resenhas/" class={`text-sm ${linkSection}`}>
+							Ver todas as críticas
+						</a>
+					</div>
+					<div class="mt-6">
+						{criticasRecentes.map((entry) => (
+							<CardPost
+								titulo={entry.data.title}
+								href={`/resenhas/${entry.id}/`}
+								description={entry.data.description}
+								autorNome={autorCriticaPorId[entry.id] ?? 'Autor'}
+								pubDate={entry.data.pubDate}
+								rotulo={nomeTipoResenha(entry.data.tipo)}
+								rotuloCapa={rotuloCapaResenha(entry.data)}
+								editoria={TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo]}
+								nota={entry.data.nota}
+								cover={entry.data.cover}
+								coverAlt={entry.data.coverAlt}
+								coverCredito={entry.data.coverCredito}
+								nivelTitulo="h3"
+							/>
+						))}
+					</div>
+				</section>
+			)
+		}
+
+		{
+			blocosEditoria.map((bloco) => (
+				<section
+					class="mt-14 md:mt-16"
+					aria-labelledby={`editoria-${bloco.id}`}
+				>
+					<div class="flex flex-wrap items-baseline justify-between gap-3">
+						<h2
+							id={`editoria-${bloco.id}`}
+							class="font-display text-3xl tracking-wide text-pipoca md:text-4xl"
+						>
+							<a
+								href={`/${bloco.id}/`}
+								class="transition-colors hover:text-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+							>
+								{bloco.nome}
+							</a>
+						</h2>
+						<a href={`/${bloco.id}/`} class={`text-sm ${linkSection}`}>
+							Mais de {bloco.nome}
+						</a>
+					</div>
+					<div class="mt-6">
+						{bloco.itens.map(({ item, autorNome }) =>
+							item.kind === 'resenha' ? (
+								<CardPost
+									titulo={item.entry.data.title}
+									href={hrefPost(item)}
+									description={item.entry.data.description}
+									autorNome={autorNome}
+									pubDate={item.entry.data.pubDate}
+									rotulo="Crítica"
+									rotuloCapa={rotuloCapaResenha(item.entry.data)}
+									editoria={bloco.id}
+									nota={item.entry.data.nota}
+									cover={item.entry.data.cover}
+									coverAlt={item.entry.data.coverAlt}
+									coverCredito={item.entry.data.coverCredito}
+									nivelTitulo="h3"
+								/>
+							) : (
+								<CardPost
+									titulo={item.entry.data.title}
+									href={hrefPost(item)}
+									description={item.entry.data.description}
+									autorNome={autorNome}
+									pubDate={item.entry.data.pubDate}
+									rotulo={bloco.nome}
+									rotuloCapa={rotuloCapaArtigo(item.entry.data.editoria)}
+									editoria={bloco.id}
+									cover={item.entry.data.cover}
+									coverAlt={item.entry.data.coverAlt}
+									coverCredito={item.entry.data.coverCredito}
+									nivelTitulo="h3"
+								/>
+							),
+						)}
+					</div>
+				</section>
+			))
+		}
+
+		<section
+			class="mt-16 border-t border-white/10 pt-10 md:mt-20"
+			aria-label="Quem escreve e contato"
+		>
+			<p class="flex flex-wrap gap-x-8 gap-y-3 text-base text-muted">
+				<a href="/autores/" class={linkSection}>Quem escreve</a>
+				<a href="/contato/" class={linkSection}>Fale com a gente</a>
+			</p>
+		</section>
+	</div>
 </BaseLayout>

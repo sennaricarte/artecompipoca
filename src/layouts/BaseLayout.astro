@@ -13,6 +13,7 @@ interface Props {
 	description: string;
 	canonical?: string;
 	ogImage?: string;
+	ogImageAlt?: string;
 	ogType?: 'website' | 'article';
 	publishedTime?: string;
 	modifiedTime?: string;
@@ -24,6 +25,7 @@ const {
 	description,
 	canonical,
 	ogImage,
+	ogImageAlt,
 	ogType,
 	publishedTime,
 	modifiedTime,
@@ -52,6 +54,7 @@ const {
 			description={description}
 			canonical={canonical}
 			ogImage={ogImage}
+			ogImageAlt={ogImageAlt}
 			ogType={ogType}
 			publishedTime={publishedTime}
 			modifiedTime={modifiedTime}

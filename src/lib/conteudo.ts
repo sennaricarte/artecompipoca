@@ -67,6 +67,81 @@ export function nomeTipoResenha(tipo: TipoResenha): string {
 	return NOMES_TIPO_RESENHA[tipo];
 }
 
+/** Mapeia tipo de resenha → hub de editoria. */
+export const TIPO_RESENHA_PARA_EDITORIA: Record<TipoResenha, EditoriaId> = {
+	filme: 'cinema',
+	serie: 'series',
+	hq: 'quadrinhos',
+	album: 'musica',
+};
+
+export type PostPorEditoria =
+	| { kind: 'artigo'; entry: CollectionEntry<'artigos'> }
+	| { kind: 'resenha'; entry: CollectionEntry<'resenhas'> };
+
+/**
+ * Artigos da editoria + resenhas do tipo correspondente, por pubDate desc.
+ */
+export async function getPorEditoria(
+	editoria: EditoriaId,
+): Promise<PostPorEditoria[]> {
+	const [artigos, resenhas] = await Promise.all([getArtigos(), getResenhas()]);
+
+	const artigosEd: PostPorEditoria[] = artigos
+		.filter((a) => a.data.editoria === editoria)
+		.map((entry) => ({ kind: 'artigo', entry }));
+
+	const resenhasEd: PostPorEditoria[] = resenhas
+		.filter((r) => TIPO_RESENHA_PARA_EDITORIA[r.data.tipo] === editoria)
+		.map((entry) => ({ kind: 'resenha', entry }));
+
+	return [...artigosEd, ...resenhasEd].sort(
+		(a, b) => b.entry.data.pubDate.valueOf() - a.entry.data.pubDate.valueOf(),
+	);
+}
+
+export function chavePost(item: PostPorEditoria): string {
+	return item.kind === 'artigo'
+		? `artigos/${item.entry.id}`
+		: `resenhas/${item.entry.id}`;
+}
+
+export function hrefPost(item: PostPorEditoria): string {
+	return item.kind === 'artigo'
+		? `/${item.entry.data.editoria}/${item.entry.id}/`
+		: `/resenhas/${item.entry.id}/`;
+}
+
+/** Rótulo decorativo da capa tipográfica (artigos). */
+export function rotuloCapaArtigo(editoria: EditoriaId): string {
+	return nomeEditoria(editoria);
+}
+
+type DadosResenha = CollectionEntry<'resenhas'>['data'];
+
+/** Ano da obra: `anoObra` e, na falta, `ficha.ano`. */
+export function anoDaObra(
+	data: Pick<DadosResenha, 'anoObra' | 'ficha'>,
+): number | undefined {
+	return data.anoObra ?? data.ficha?.ano;
+}
+
+/** Rótulo decorativo da capa (cards, capa tipográfica e OG), ex.: "Crítica · Filme · 1974". */
+export function rotuloCapaResenha(
+	data: Pick<DadosResenha, 'tipo' | 'anoObra' | 'ficha'>,
+): string {
+	const partes = ['Crítica', nomeTipoResenha(data.tipo)];
+	const ano = anoDaObra(data);
+	if (ano != null) partes.push(String(ano));
+	return partes.join(' · ');
+}
+
+export function editoriaDePost(item: PostPorEditoria): EditoriaId {
+	return item.kind === 'artigo'
+		? item.entry.data.editoria
+		: TIPO_RESENHA_PARA_EDITORIA[item.entry.data.tipo];
+}
+
 export function totalPaginas(totalItens: number): number {
 	if (totalItens <= 0) return 1;
 	return Math.ceil(totalItens / POSTS_POR_PAGINA);

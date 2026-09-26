@@ -6,9 +6,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "prebuild": "node scripts/checar-preencher.mjs",
+    "prebuild": "node scripts/checar-preencher.mjs && node scripts/gerar-redirects.mjs --check",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/limpar-sitemap.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "wayback:inventario": "node scripts/wayback-inventario.mjs",
@@ -18,7 +18,9 @@
     "wayback:promover": "node scripts/wayback-promover.mjs",
     "limpar:artefatos": "node scripts/limpar-artefatos.mjs",
     "fichas:wikidata": "node scripts/fichas-wikidata.mjs",
-    "fichas:importar": "node scripts/importar-fichas-editoriais.mjs"
+    "fichas:importar": "node scripts/importar-fichas-editoriais.mjs",
+    "cartaz:commons": "node scripts/baixar-cartaz-commons.mjs",
+    "redirects:gerar": "node scripts/gerar-redirects.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.2",
@@ -34,7 +36,9 @@
     "esbuild": true
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "cheerio": "^1.2.0",
+    "satori": "^0.33.5",
     "turndown": "^7.2.4"
   }
 }
