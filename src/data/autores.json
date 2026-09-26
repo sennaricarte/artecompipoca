@@ -1,9 +1,59 @@
 [
 	{
+		"id": "andre-de-paula-eduardo",
+		"nome": "André de Paula Eduardo",
+		"bio": ""
+	},
+	{
+		"id": "beth-nieto",
+		"nome": "Beth Nieto",
+		"bio": ""
+	},
+	{
+		"id": "camila-land",
+		"nome": "Camila Land",
+		"bio": ""
+	},
+	{
+		"id": "daniel-serafim",
+		"nome": "Daniel Serafim",
+		"bio": ""
+	},
+	{
+		"id": "dhebora-ricarte",
+		"nome": "Dhebora Ricarte",
+		"bio": ""
+	},
+	{
+		"id": "donovan-mc-dulles",
+		"nome": "Donovan Mc Dulles",
+		"bio": ""
+	},
+	{
 		"id": "equipe-arte-com-pipoca",
 		"nome": "Equipe Arte com Pipoca",
 		"bio": "Redação colaborativa do Arte com Pipoca: cinema, séries, quadrinhos e música com opinião e curiosidade.",
 		"avatar": "/avatars/equipe.svg"
+	},
+	{
+		"id": "gustavo-espeschit",
+		"nome": "Gustavo Espeschit",
+		"bio": ""
+	},
+	{
+		"id": "ivanildo-pereira",
+		"nome": "Ivanildo Pereira",
+		"bio": ""
+	},
+	{
+		"id": "leticia-magalhaes",
+		"nome": "Letícia Magalhães",
+		"bio": ""
+	},
+	{
+		"id": "leticia-ribeiro",
+		"nome": "Leticia Ribeiro",
+		"bio": ""
 	},
 	{
 		"id": "lexy-soares",
@@ -11,8 +61,68 @@
 		"bio": ""
 	},
 	{
+		"id": "lu-guimaraes",
+		"nome": "Lu Guimarães",
+		"bio": ""
+	},
+	{
+		"id": "marco-magalhaes",
+		"nome": "Marco Magalhães",
+		"bio": ""
+	},
+	{
+		"id": "marcos-antonio",
+		"nome": "Marcos Antonio",
+		"bio": ""
+	},
+	{
+		"id": "patricia-baleeira",
+		"nome": "Patricia Baleeira",
+		"bio": ""
+	},
+	{
+		"id": "paulo-rogerio-dos-santos",
+		"nome": "Paulo Rogerio dos Santos",
+		"bio": ""
+	},
+	{
+		"id": "pedro-roma",
+		"nome": "Pedro Roma",
+		"bio": ""
+	},
+	{
+		"id": "redacao",
+		"nome": "Redação Arte Com Pipoca",
+		"bio": ""
+	},
+	{
+		"id": "regis-rocha",
+		"nome": "Regis Rocha",
+		"bio": ""
+	},
+	{
+		"id": "renato-brogiato",
+		"nome": "Renato Brogiato",
+		"bio": ""
+	},
+	{
 		"id": "senna-ricarte",
 		"nome": "Senna Ricarte",
 		"bio": "Fundador do Arte Com Pipoca. Nerd assumido e consumidor compulsivo de informação e cultura pop."
+	},
+	{
+		"id": "vivian-duarte",
+		"nome": "Vivian Duarte",
+		"bio": ""
+	},
+	{
+		"id": "welenson-castro",
+		"nome": "Welenson Castro",
+		"bio": ""
+	},
+	{
+		"id": "wellington-s-o",
+		"nome": "Wellington S.O",
+		"bio": ""
 	}
 ]
