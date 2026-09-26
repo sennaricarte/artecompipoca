@@ -20,6 +20,6 @@ const { width = 180, class: className, loading = 'lazy' } = Astro.props;
 	format="webp"
 	quality="mid"
 	loading={loading}
-	class:list={['h-auto w-auto max-w-full', className]}
+	class:list={['max-w-full', className ?? 'h-auto w-auto']}
 	densities={[1, 2]}
 />
