@@ -6,9 +6,11 @@ interface Props {
 	/** Largura em CSS (header menor, hero maior). */
 	width?: number;
 	class?: string;
+	/** No header/hero (acima da dobra) use "eager". */
+	loading?: 'eager' | 'lazy';
 }
 
-const { width = 180, class: className } = Astro.props;
+const { width = 180, class: className, loading = 'lazy' } = Astro.props;
 ---
 
 <Image
@@ -17,6 +19,7 @@ const { width = 180, class: className } = Astro.props;
 	width={width}
 	format="webp"
 	quality="mid"
+	loading={loading}
 	class:list={['h-auto w-auto max-w-full', className]}
 	densities={[1, 2]}
 />
