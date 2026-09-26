@@ -259,12 +259,17 @@ export async function gerarOgPadrao(): Promise<Buffer> {
 	);
 }
 
-/** Resolve o caminho do arquivo de `cover` a partir do frontmatter bruto do post. */
+/**
+ * Resolve o caminho do arquivo de `cover` a partir do frontmatter bruto do post.
+ * Fotos com licença CC (coverLicencaUrl) ficam fora do OG: a atribuição com link
+ * não cabe na imagem, então esses posts usam o layout tipográfico.
+ */
 export async function caminhoCover(filePath: string | undefined): Promise<string | undefined> {
 	if (!filePath) return undefined;
 	const absoluto = resolve(process.cwd(), filePath);
 	const bruto = await readFile(absoluto, 'utf8');
 	const fm = bruto.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+	if (/^coverLicencaUrl:/m.test(fm)) return undefined;
 	const valor = fm.match(/^cover:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g, '');
 	return valor ? resolve(dirname(absoluto), valor) : undefined;
 }

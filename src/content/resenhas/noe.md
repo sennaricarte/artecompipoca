@@ -9,6 +9,10 @@ legacyUrl: /critica-definitiva-noe/
 draft: false
 obra: Noé
 tipo: filme
+cover: "../../assets/capas/noe.jpg"
+coverAlt: "Darren Aronofsky, diretor de Noé"
+coverCredito: "Foto: ManoSolo13241324 / CC0 / Wikimedia Commons"
+coverLicencaUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
 ficha:
   tituloOriginal: Noah
   ano: 2014

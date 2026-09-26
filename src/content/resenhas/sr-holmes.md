@@ -9,6 +9,10 @@ legacyUrl: /sr-holmes-critica/
 draft: false
 obra: Sr. Holmes
 tipo: filme
+cover: "../../assets/capas/sr-holmes.jpg"
+coverAlt: "Bill Condon, diretor de Sr. Holmes"
+coverCredito: "Foto: Everwest / CC BY 4.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/4.0"
 ficha:
   tituloOriginal: "Mr. Holmes"
   ano: 2015

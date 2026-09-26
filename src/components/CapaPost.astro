@@ -14,6 +14,8 @@ interface Props {
 	cover?: ImageMetadata;
 	coverAlt?: string;
 	coverCredito?: string;
+	/** Link da licença (CC BY / BY-SA exigem atribuição com link). */
+	coverLicencaUrl?: string;
 	/** Eager + fetchpriority high (LCP). Só faz diferença com cover real. */
 	prioridade?: boolean;
 	sizes?: string;
@@ -35,6 +37,7 @@ const {
 	cover,
 	coverAlt,
 	coverCredito,
+	coverLicencaUrl,
 	prioridade = false,
 	sizes = '(max-width: 768px) 100vw, 800px',
 	widths = [400, 800],
@@ -86,11 +89,23 @@ const alturaImg =
 					]}
 				/>
 			</div>
-			{coverCredito && (
-				<small class="pointer-events-none absolute bottom-2 right-2 z-10 max-w-[85%] rounded-sm bg-black/70 px-2 py-1 text-[0.65rem] leading-tight text-white/90 md:text-xs">
-					{coverCredito}
-				</small>
-			)}
+			{coverCredito &&
+				(coverLicencaUrl ? (
+					<small class="absolute bottom-2 right-2 z-10 max-w-[85%] rounded-sm bg-black/70 px-2 py-1 text-[0.65rem] leading-tight text-white/90 md:text-xs">
+						<a
+							href={coverLicencaUrl}
+							rel="noopener nofollow"
+							target="_blank"
+							class="underline decoration-white/50 underline-offset-2 hover:text-white hover:decoration-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+						>
+							{coverCredito}
+						</a>
+					</small>
+				) : (
+					<small class="pointer-events-none absolute bottom-2 right-2 z-10 max-w-[85%] rounded-sm bg-black/70 px-2 py-1 text-[0.65rem] leading-tight text-white/90 md:text-xs">
+						{coverCredito}
+					</small>
+				))}
 		</figure>
 	) : (
 		<CapaTipografica

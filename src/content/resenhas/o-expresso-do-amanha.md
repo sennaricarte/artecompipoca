@@ -9,6 +9,10 @@ legacyUrl: /o-expresso-do-amanha-critica/
 draft: false
 obra: O Expresso do Amanhã
 tipo: filme
+cover: "../../assets/capas/o-expresso-do-amanha.jpg"
+coverAlt: "Bong Joon-ho, diretor de O Expresso do Amanhã"
+coverCredito: "Foto: Kevin Paul / CC BY 4.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/4.0"
 notaEditorial: "Texto de agosto de 2015; a menção à chegada atrasada aos cinemas brasileiros refere-se àquele momento."
 ficha:
   tituloOriginal: "설국열차"

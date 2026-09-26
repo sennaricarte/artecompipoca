@@ -9,6 +9,10 @@ legacyUrl: /bicho-de-sete-cabecas-critica/
 draft: false
 obra: Bicho de Sete Cabeças
 tipo: filme
+cover: "../../assets/capas/bicho-de-sete-cabecas.jpg"
+coverAlt: "Laís Bodanzky, diretora de Bicho de Sete Cabeças"
+coverCredito: "Foto: RELACIONAIS / CC BY 2.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/2.0"
 ficha:
   tituloOriginal: "Bicho de Sete Cabeças"
   ano: 2000

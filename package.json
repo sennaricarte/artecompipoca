@@ -20,6 +20,7 @@
     "fichas:wikidata": "node scripts/fichas-wikidata.mjs",
     "fichas:importar": "node scripts/importar-fichas-editoriais.mjs",
     "cartaz:commons": "node scripts/baixar-cartaz-commons.mjs",
+    "fotos:commons": "node scripts/fotos-commons.mjs",
     "redirects:gerar": "node scripts/gerar-redirects.mjs"
   },
   "dependencies": {

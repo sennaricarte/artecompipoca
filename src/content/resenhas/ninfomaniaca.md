@@ -9,6 +9,10 @@ legacyUrl: /critica-definitiva-ninfomaniaca/
 draft: false
 obra: Ninfomaníaca
 tipo: filme
+cover: "../../assets/capas/ninfomaniaca.jpg"
+coverAlt: "Lars von Trier, diretor de Ninfomaníaca"
+coverCredito: "Foto: Siebbi / CC BY 3.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/3.0"
 ficha:
   tituloOriginal: Nymphomaniac
   ano: 2013

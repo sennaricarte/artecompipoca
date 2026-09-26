@@ -9,6 +9,10 @@ legacyUrl: /whiplash-em-busca-da-perfeicao-critica/
 draft: false
 obra: "Whiplash: Em Busca da Perfeição"
 tipo: filme
+cover: "../../assets/capas/whiplash-em-busca-da-perfeicao.jpg"
+coverAlt: "Damien Chazelle, diretor de Whiplash: Em Busca da Perfeição"
+coverCredito: "Foto: isabelle VERONESE from ELBEUF, France / CC BY-SA 2.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/2.0"
 ficha:
   tituloOriginal: Whiplash
   ano: 2014

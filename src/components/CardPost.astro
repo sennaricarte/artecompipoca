@@ -22,6 +22,7 @@ interface Props {
 	cover?: ImageMetadata;
 	coverAlt?: string;
 	coverCredito?: string;
+	coverLicencaUrl?: string;
 	capaPrioridade?: boolean;
 	nivelTitulo?: 'h2' | 'h3';
 	/** Cards um pouco maiores (home / destaques). */
@@ -46,6 +47,7 @@ const {
 	cover,
 	coverAlt,
 	coverCredito,
+	coverLicencaUrl,
 	capaPrioridade = false,
 	nivelTitulo = 'h2',
 	destaque = false,
@@ -92,6 +94,7 @@ const sizesPadrao = largo
 					cover={cover}
 					coverAlt={coverAlt}
 					coverCredito={coverCredito}
+					coverLicencaUrl={coverLicencaUrl}
 					prioridade={capaPrioridade}
 					sizes={capaSizes ?? sizesPadrao}
 					widths={largo ? [400, 800, 1200] : [400, 800]}

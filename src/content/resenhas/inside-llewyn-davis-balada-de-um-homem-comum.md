@@ -9,6 +9,10 @@ legacyUrl: /critica-definitiva-inside-llewyn-davis-balada-de-um-homem-comum/
 draft: false
 obra: Inside Llewyn Davis – Balada de Um Homem Comum
 tipo: filme
+cover: "../../assets/capas/inside-llewyn-davis-balada-de-um-homem-comum.jpg"
+coverAlt: "Ethan Coen, diretor de Inside Llewyn Davis – Balada de Um Homem Comum"
+coverCredito: "Foto: Siebbi / CC BY 3.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/3.0"
 ficha:
   tituloOriginal: "Inside Llewyn Davis"
   ano: 2013

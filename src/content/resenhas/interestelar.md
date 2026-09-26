@@ -9,6 +9,10 @@ legacyUrl: /interestelar-critica/
 draft: false
 obra: Interestelar
 tipo: filme
+cover: "../../assets/capas/interestelar.jpg"
+coverAlt: "Christopher Nolan, diretor de Interestelar"
+coverCredito: "Foto: Republic of Korea / CC BY-SA 4.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 ficha:
   tituloOriginal: Interstellar
   ano: 2014

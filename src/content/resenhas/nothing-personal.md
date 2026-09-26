@@ -9,6 +9,10 @@ legacyUrl: /nothing-personal-critica/
 draft: false
 obra: Nothing Personal
 tipo: filme
+cover: "../../assets/capas/nothing-personal.jpg"
+coverAlt: "Urszula Antoniak, diretora de Nothing Personal"
+coverCredito: "Foto: MFA+ FilmDistribution e.K. / CC BY-SA 3.0 de / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
 ficha:
   tituloOriginal: "Nothing Personal"
   ano: 2009

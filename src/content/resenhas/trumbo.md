@@ -9,6 +9,10 @@ legacyUrl: /trumbo-critica/
 draft: false
 obra: Trumbo
 tipo: filme
+cover: "../../assets/capas/trumbo.jpg"
+coverAlt: "Jay Roach, diretor de Trumbo"
+coverCredito: "Foto: Peabody Awards / CC BY 2.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/2.0"
 ficha:
   tituloOriginal: Trumbo
   ano: 2015

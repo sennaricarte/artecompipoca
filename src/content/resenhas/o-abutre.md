@@ -9,6 +9,10 @@ legacyUrl: /o-abutre/
 draft: false
 obra: O Abutre
 tipo: filme
+cover: "../../assets/capas/o-abutre.jpg"
+coverAlt: "Dan Gilroy, diretor de O Abutre"
+coverCredito: "Foto: Kevin Paul / CC BY 4.0 / Wikimedia Commons"
+coverLicencaUrl: "https://creativecommons.org/licenses/by/4.0"
 ficha:
   tituloOriginal: Nightcrawler
   ano: 2014
