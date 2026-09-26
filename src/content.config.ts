@@ -2,11 +2,36 @@ import { defineCollection, reference } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
+/** Conteúdo de arquivo (Wayback) não pode ter pubDate anterior ao acervo. */
+const PUBDATE_ARQUIVO_MIN = new Date('2000-01-01T00:00:00.000Z');
+
+/**
+ * @template {z.ZodRawShape} T
+ * @param {z.ZodObject<T>} schema
+ */
+function withArquivoPubDateGuard(schema) {
+	return schema
+		.refine((data) => !data.cover || Boolean(data.coverAlt), {
+			message: 'coverAlt é obrigatório quando cover estiver definido',
+			path: ['coverAlt'],
+		})
+		.refine(
+			(data) =>
+				data.origem !== 'arquivo' ||
+				data.pubDate.getTime() >= PUBDATE_ARQUIVO_MIN.getTime(),
+			{
+				message:
+					'pubDate de conteúdo com origem "arquivo" deve ser >= 2000-01-01',
+				path: ['pubDate'],
+			},
+		);
+}
+
 const artigos = defineCollection({
 	loader: glob({ base: './src/content/artigos', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
-		z
-			.object({
+		withArquivoPubDateGuard(
+			z.object({
 				title: z.string(),
 				seoTitle: z.string().optional(),
 				description: z.string(),
@@ -19,18 +44,15 @@ const artigos = defineCollection({
 				legacyUrl: z.string().optional(),
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
-			})
-			.refine((data) => !data.cover || Boolean(data.coverAlt), {
-				message: 'coverAlt é obrigatório quando cover estiver definido',
-				path: ['coverAlt'],
 			}),
+		),
 });
 
 const resenhas = defineCollection({
 	loader: glob({ base: './src/content/resenhas', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
-		z
-			.object({
+		withArquivoPubDateGuard(
+			z.object({
 				title: z.string(),
 				seoTitle: z.string().optional(),
 				description: z.string(),
@@ -45,11 +67,8 @@ const resenhas = defineCollection({
 				legacyUrl: z.string().optional(),
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
-			})
-			.refine((data) => !data.cover || Boolean(data.coverAlt), {
-				message: 'coverAlt é obrigatório quando cover estiver definido',
-				path: ['coverAlt'],
 			}),
+		),
 });
 
 const autores = defineCollection({
