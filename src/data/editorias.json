@@ -1,0 +1,22 @@
+[
+	{
+		"id": "cinema",
+		"nome": "Cinema",
+		"descricao": "Análises, listas e conversas sobre filmes. Do lançamento recente ao clássico que ainda vale a sessão."
+	},
+	{
+		"id": "series",
+		"nome": "Séries",
+		"descricao": "Temporadas, personagens e narrativas em episódios. Cobertura do que vale acompanhar na TV e no streaming."
+	},
+	{
+		"id": "quadrinhos",
+		"nome": "Quadrinhos",
+		"descricao": "HQs, graphic novels e histórias em painéis. Leituras, recomendações e o universo dos balões."
+	},
+	{
+		"id": "musica",
+		"nome": "Música",
+		"descricao": "Álbuns, trilhas e o que ecoa além da tela. Discos, artistas e momentos sonoros que merecem nota."
+	}
+]

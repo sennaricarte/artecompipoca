@@ -1,0 +1,18 @@
+[
+	{
+		"id": "equipe-arte-com-pipoca",
+		"nome": "Equipe Arte com Pipoca",
+		"bio": "Redação colaborativa do Arte com Pipoca: cinema, séries, quadrinhos e música com opinião e curiosidade.",
+		"avatar": "/avatars/equipe.svg"
+	},
+	{
+		"id": "lexy-soares",
+		"nome": "Lexy Soares",
+		"bio": ""
+	},
+	{
+		"id": "senna-ricarte",
+		"nome": "Senna Ricarte",
+		"bio": "Fundador do Arte Com Pipoca. Nerd assumido e consumidor compulsivo de informação e cultura pop."
+	}
+]

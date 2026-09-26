@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Página não encontrada"
+	description="A página que você procura não existe ou mudou de endereço."
+	noindex={true}
+>
+	<section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-6xl">
+			Essa cena foi cortada na edição
+		</h1>
+		<div class="conteudo mt-8">
+			<p>
+				A página não existe ou mudou de endereço. Volte ao início ou escolha
+				uma editoria:
+			</p>
+			<ul>
+				<li><a href="/">Página inicial</a></li>
+				<li><a href="/cinema/">Cinema</a></li>
+				<li><a href="/series/">Séries</a></li>
+				<li><a href="/quadrinhos/">Quadrinhos</a></li>
+				<li><a href="/musica/">Música</a></li>
+				<li><a href="/resenhas/">Resenhas</a></li>
+			</ul>
+		</div>
+	</section>
+</BaseLayout>

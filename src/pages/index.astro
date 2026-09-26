@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+
+const siteUrl = site.url.replace(/\/?$/, '/');
+const logoUrl = new URL('/favicon.svg', site.url).href;
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'WebSite',
+			name: site.nome,
+			url: siteUrl,
+		},
+		{
+			'@type': 'Organization',
+			name: site.nome,
+			url: siteUrl,
+			logo: logoUrl,
+			founder: {
+				'@type': 'Person',
+				name: 'Senna Ricarte',
+			},
+			contactPoint: {
+				'@type': 'ContactPoint',
+				contactType: 'customer support',
+				telephone: '+55-11-96148-5763',
+				email: site.emailContato,
+				availableLanguage: 'Portuguese',
+			},
+		},
+	],
+};
+---
+
+<BaseLayout
+	title="Arte Com Pipoca"
+	description="Resenhas, listas e análises de cinema, séries, quadrinhos e música."
+>
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+	<section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
+		<h1 class="font-display text-5xl tracking-wide text-text md:text-7xl">
+			ARTE COM <span class="text-pipoca">PIPOCA</span>
+		</h1>
+	</section>
+</BaseLayout>

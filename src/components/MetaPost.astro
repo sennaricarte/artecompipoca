@@ -1,0 +1,54 @@
+---
+import { formatarData, tempoLeitura } from '../lib/conteudo';
+
+interface Props {
+	autor: { id: string; nome: string };
+	pubDate: Date;
+	updatedDate?: Date;
+	texto: string;
+	origem?: 'original' | 'arquivo';
+}
+
+const { autor, pubDate, updatedDate, texto, origem = 'original' } = Astro.props;
+const minutos = tempoLeitura(texto);
+const dataIso = pubDate.toISOString();
+const dataLegivel = formatarData(pubDate);
+---
+
+<div class="mt-4 flex flex-col gap-2 text-sm text-muted">
+	<p class="flex flex-wrap items-center gap-x-2 gap-y-1">
+		<span>
+			Por{' '}
+			<a
+				href={`/autores/${autor.id}/`}
+				class="font-medium text-text transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+			>
+				{autor.nome}
+			</a>
+		</span>
+		<span aria-hidden="true">·</span>
+		<time datetime={dataIso}>{dataLegivel}</time>
+		{
+			updatedDate && (
+				<>
+					<span aria-hidden="true">·</span>
+					<span>
+						Atualizado em{' '}
+						<time datetime={updatedDate.toISOString()}>
+							{formatarData(updatedDate)}
+						</time>
+					</span>
+				</>
+			)
+		}
+		<span aria-hidden="true">·</span>
+		<span>{minutos} min de leitura</span>
+	</p>
+	{
+		origem === 'arquivo' && (
+			<p class="text-muted">
+				Publicado originalmente em {dataLegivel} no Arte Com Pipoca.
+			</p>
+		)
+	}
+</div>

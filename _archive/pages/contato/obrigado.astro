@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+	title="Mensagem enviada"
+	description="Recebemos sua mensagem. Obrigado pelo contato."
+	noindex={true}
+>
+	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Contato', href: '/contato/' },
+				{ label: 'Mensagem enviada' },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			Mensagem enviada
+		</h1>
+		<div class="conteudo mt-10">
+			<p>
+				Obrigado pelo contato. Recebemos sua mensagem e responderemos assim que
+				possível.
+			</p>
+			<p>
+				<a href="/">Voltar para a página inicial</a>
+			</p>
+		</div>
+	</article>
+</BaseLayout>

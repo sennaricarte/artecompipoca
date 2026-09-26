@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Arte Com Pipoca">
+	<!-- Pipoca no topo -->
+	<circle cx="10" cy="7" r="2.2" fill="#FFC83D"/>
+	<circle cx="16" cy="5.5" r="2.6" fill="#FFC83D"/>
+	<circle cx="22" cy="7" r="2.2" fill="#FFC83D"/>
+	<circle cx="13" cy="9.5" r="1.8" fill="#FFC83D"/>
+	<circle cx="19" cy="9.2" r="1.9" fill="#FFC83D"/>
+	<!-- Balde -->
+	<path d="M7 11h18l-2.2 17H9.2L7 11z" fill="#E63946"/>
+	<!-- Listras brancas -->
+	<path d="M11.2 11h3.2l-1.5 17h-3.2L11.2 11z" fill="#FFFFFF"/>
+	<path d="M17.6 11h3.2l-1.5 17h-3.2L17.6 11z" fill="#FFFFFF"/>
+	<!-- Borda superior do balde -->
+	<rect x="6.2" y="10" width="19.6" height="2.2" rx="0.6" fill="#E63946"/>
+</svg>

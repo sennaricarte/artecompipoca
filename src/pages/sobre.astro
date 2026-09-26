@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+	title="Sobre o Arte Com Pipoca"
+	description="A história do Arte Com Pipoca: cinema, séries, quadrinhos, música e o acervo recuperado."
+>
+	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Sobre' },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			Sobre o Arte Com Pipoca
+		</h1>
+
+		<div class="conteudo mt-10">
+			<section aria-labelledby="historia">
+				<h2 id="historia">Nossa história</h2>
+				<p>
+					O Arte Com Pipoca nasceu em 2013 e publicou até 2016 críticas de
+					cinema, reviews de séries, quadrinhos e listas, além dos podcasts
+					PipocaCast, Balde Cheio e Balde Vazio, Sete Reinos e Na Mesa. Depois
+					de alguns anos fora do ar, o site voltou em 2026.
+				</p>
+				<p>
+					O Arte Com Pipoca foi fundado por
+					<a href="/autores/senna-ricarte/">Senna Ricarte</a>, movido pela
+					paixão pela cultura pop. Nerd assumido e consumidor compulsivo de
+					informação e cultura, Senna transformou esse hábito em um espaço para
+					comentar, analisar e recomendar o que há de melhor (e de pior) no
+					cinema, nas séries, nos quadrinhos e na música.
+				</p>
+			</section>
+
+			<section aria-labelledby="encontra">
+				<h2 id="encontra">O que você encontra aqui</h2>
+				<p>
+					O conteúdo está organizado por editorias. Em
+					<a href="/cinema/">Cinema</a> falamos de filmes e sala escura; em
+					<a href="/series/">Séries</a>, de temporadas e personagens; em
+					<a href="/quadrinhos/">Quadrinhos</a>, de HQs e graphic novels; em
+					<a href="/musica/">Música</a>, de discos e trilhas. Em
+					<a href="/resenhas/">Resenhas</a> você encontra críticas com ficha da
+					obra e, quando couber, uma nota.
+				</p>
+			</section>
+
+			<section aria-labelledby="acervo">
+				<h2 id="acervo">O acervo</h2>
+				<p>
+					Parte dos textos publicados entre 2013 e 2016 foi recuperada e
+					revisada. Esses textos mantêm a data e o autor originais e são
+					identificados com a nota “Publicado originalmente em”.
+				</p>
+			</section>
+
+			<section aria-labelledby="escreve">
+				<h2 id="escreve">Quem escreve</h2>
+				<p>
+					Conheça a equipe e os textos de cada pessoa na página
+					<a href="/autores/">Nossa equipe</a>.
+				</p>
+			</section>
+		</div>
+	</article>
+</BaseLayout>

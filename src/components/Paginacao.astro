@@ -1,0 +1,71 @@
+---
+interface Props {
+	paginaAtual: number;
+	totalPaginas: number;
+	baseUrl: string;
+}
+
+const { paginaAtual, totalPaginas, baseUrl } = Astro.props;
+
+function hrefPara(pagina: number): string {
+	if (pagina <= 1) return baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+	const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+	return `${base}pagina/${pagina}/`;
+}
+
+const paginas = Array.from({ length: totalPaginas }, (_, i) => i + 1);
+---
+
+{
+	totalPaginas > 1 && (
+		<nav aria-label="Paginação" class="mt-12 flex flex-wrap items-center gap-2">
+			{paginaAtual > 1 ? (
+				<a
+					href={hrefPara(paginaAtual - 1)}
+					class="rounded px-3 py-2 text-sm text-muted transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+				>
+					Anterior
+				</a>
+			) : (
+				<span class="rounded px-3 py-2 text-sm text-muted/40" aria-disabled="true">
+					Anterior
+				</span>
+			)}
+
+			<ol class="flex flex-wrap items-center gap-1">
+				{paginas.map((n) => (
+					<li>
+						{n === paginaAtual ? (
+							<span
+								aria-current="page"
+								class="inline-flex min-w-9 items-center justify-center rounded bg-surface px-3 py-2 text-sm font-medium text-pipoca"
+							>
+								{n}
+							</span>
+						) : (
+							<a
+								href={hrefPara(n)}
+								class="inline-flex min-w-9 items-center justify-center rounded px-3 py-2 text-sm text-muted transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+							>
+								{n}
+							</a>
+						)}
+					</li>
+				))}
+			</ol>
+
+			{paginaAtual < totalPaginas ? (
+				<a
+					href={hrefPara(paginaAtual + 1)}
+					class="rounded px-3 py-2 text-sm text-muted transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+				>
+					Próxima
+				</a>
+			) : (
+				<span class="rounded px-3 py-2 text-sm text-muted/40" aria-disabled="true">
+					Próxima
+				</span>
+			)}
+		</nav>
+	)
+}

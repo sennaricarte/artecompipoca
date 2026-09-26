@@ -1,0 +1,38 @@
+---
+const year = new Date().getFullYear();
+
+const links = [
+	{ href: '/sobre/', label: 'Sobre' },
+	{ href: '/autores/', label: 'Nossa equipe' },
+	{ href: '/contato/', label: 'Contato' },
+	{ href: '/politica-de-privacidade/', label: 'Política de privacidade' },
+] as const;
+---
+
+<footer class="mt-auto border-t border-white/10 bg-surface">
+	<div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 md:px-6">
+		<div class="flex flex-col gap-2">
+			<p class="font-display text-xl tracking-wide text-text">
+				ARTE COM <span class="text-pipoca">PIPOCA</span>
+			</p>
+			<p class="max-w-md text-sm text-muted">
+				Cinema, séries, quadrinhos e música desde 2013
+			</p>
+		</div>
+
+		<nav aria-label="Rodapé" class="flex flex-wrap gap-x-6 gap-y-2">
+			{
+				links.map((link) => (
+					<a
+						href={link.href}
+						class="text-sm text-muted transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+					>
+						{link.label}
+					</a>
+				))
+			}
+		</nav>
+
+		<p class="text-sm text-muted">© {year} Arte Com Pipoca</p>
+	</div>
+</footer>

@@ -1,0 +1,77 @@
+---
+const navItems = [
+	{ href: '/cinema/', label: 'Cinema' },
+	{ href: '/series/', label: 'Séries' },
+	{ href: '/quadrinhos/', label: 'Quadrinhos' },
+	{ href: '/musica/', label: 'Música' },
+	{ href: '/resenhas/', label: 'Resenhas' },
+] as const;
+
+const pathname = Astro.url.pathname.endsWith('/')
+	? Astro.url.pathname
+	: `${Astro.url.pathname}/`;
+
+function isActive(href: string) {
+	return pathname === href;
+}
+---
+
+<header
+	class="sticky top-0 z-50 border-b border-white/10 bg-surface"
+>
+	<div class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+		<a
+			href="/"
+			class="font-display text-2xl tracking-wide text-text transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+		>
+			ARTE COM <span class="text-pipoca">PIPOCA</span>
+		</a>
+
+		<input
+			type="checkbox"
+			id="nav-toggle"
+			class="peer sr-only"
+		/>
+		<label
+			for="nav-toggle"
+			class="inline-flex cursor-pointer items-center justify-center rounded p-2 text-text hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca md:hidden"
+			aria-label="Abrir menu"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				aria-hidden="true"
+			>
+				<path d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+		</label>
+
+		<nav
+			aria-label="Principal"
+			class="absolute left-0 right-0 top-full z-50 hidden flex-col gap-1 border-b border-white/10 bg-surface px-4 py-3 peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0"
+		>
+			{
+				navItems.map((item) => (
+					<a
+						href={item.href}
+						aria-current={isActive(item.href) ? 'page' : undefined}
+						class:list={[
+							'rounded px-2 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca md:py-1',
+							isActive(item.href)
+								? 'text-pipoca'
+								: 'text-muted hover:text-text',
+						]}
+					>
+						{item.label}
+					</a>
+				))
+			}
+		</nav>
+	</div>
+</header>

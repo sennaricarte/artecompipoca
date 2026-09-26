@@ -1,0 +1,62 @@
+---
+interface Crumb {
+	label: string;
+	href?: string;
+}
+
+interface Props {
+	items: Crumb[];
+}
+
+const { items } = Astro.props;
+const site = Astro.site ?? new URL('https://artecompipoca.net');
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: items.map((item, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: item.label,
+		...(item.href
+			? { item: new URL(item.href, site).href }
+			: {}),
+	})),
+};
+---
+
+<nav aria-label="Você está aqui" class="mb-6">
+	<ol class="flex flex-wrap items-center gap-2 text-sm text-muted">
+		{
+			items.map((item, index) => {
+				const isLast = index === items.length - 1;
+				return (
+					<li class="flex items-center gap-2">
+						{index > 0 && (
+							<span aria-hidden="true" class="text-muted/60">
+								/
+							</span>
+						)}
+						{isLast || !item.href ? (
+							<span
+								class="text-text"
+								aria-current={isLast ? 'page' : undefined}
+							>
+								{item.label}
+							</span>
+						) : (
+							<a
+								href={item.href}
+								class="transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+							>
+								{item.label}
+							</a>
+						)}
+					</li>
+				);
+			})
+		}
+	</ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

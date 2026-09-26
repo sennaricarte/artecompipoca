@@ -1,0 +1,220 @@
+---
+import { Picture } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import { getEntry, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import MetaPost from '../../components/MetaPost.astro';
+import {
+	formatarData,
+	getResenhas,
+	nomeTipoResenha,
+	type TipoResenha,
+} from '../../lib/conteudo';
+
+export async function getStaticPaths() {
+	const resenhas = await getResenhas();
+	return resenhas.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry },
+	}));
+}
+
+interface Props {
+	entry: CollectionEntry<'resenhas'>;
+}
+
+const itemReviewedType: Record<TipoResenha, string> = {
+	filme: 'Movie',
+	serie: 'TVSeries',
+	hq: 'Book',
+	album: 'MusicAlbum',
+};
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const autorEntry = await getEntry(entry.data.autor);
+const autor = {
+	id: autorEntry?.id ?? entry.data.autor.id,
+	nome: autorEntry?.data.nome ?? 'Autor',
+};
+
+const site = Astro.site ?? new URL('https://artecompipoca.net');
+const pageUrl = new URL(`/resenhas/${entry.id}/`, site).href;
+const autorUrl = new URL(`/autores/${autor.id}/`, site).href;
+const seoTitle = entry.data.seoTitle ?? entry.data.title;
+const tipoLabel = nomeTipoResenha(entry.data.tipo);
+
+let ogImage: string | undefined;
+let imageLd: string | undefined;
+if (entry.data.cover) {
+	const optimized = await getImage({
+		src: entry.data.cover,
+		format: 'jpg',
+		width: 1200,
+	});
+	ogImage = new URL(optimized.src, site).href;
+	imageLd = ogImage;
+}
+
+const relacionados = (await getResenhas())
+	.filter((r) => r.data.tipo === entry.data.tipo && r.id !== entry.id)
+	.slice(0, 3);
+
+const itemReviewed: Record<string, unknown> = {
+	'@type': itemReviewedType[entry.data.tipo],
+	name: entry.data.obra,
+};
+if (entry.data.anoObra != null) {
+	itemReviewed.dateCreated = String(entry.data.anoObra);
+}
+
+const reviewLd: Record<string, unknown> = {
+	'@context': 'https://schema.org',
+	'@type': 'Review',
+	headline: entry.data.title,
+	description: entry.data.description,
+	datePublished: entry.data.pubDate.toISOString(),
+	author: {
+		'@type': 'Person',
+		name: autor.nome,
+		url: autorUrl,
+	},
+	itemReviewed,
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': pageUrl,
+	},
+};
+if (entry.data.nota != null) {
+	reviewLd.reviewRating = {
+		'@type': 'Rating',
+		ratingValue: entry.data.nota,
+		bestRating: 10,
+		worstRating: 0,
+	};
+}
+if (imageLd) {
+	reviewLd.image = imageLd;
+}
+---
+
+<BaseLayout
+	title={seoTitle}
+	description={entry.data.description}
+	ogType="article"
+	ogImage={ogImage}
+	publishedTime={entry.data.pubDate.toISOString()}
+	modifiedTime={(entry.data.updatedDate ?? entry.data.pubDate).toISOString()}
+	noindex={entry.data.draft}
+>
+	<script
+		slot="head"
+		type="application/ld+json"
+		set:html={JSON.stringify(reviewLd)}
+	/>
+
+	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Resenhas', href: '/resenhas/' },
+				{ label: entry.data.title },
+			]}
+		/>
+
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			{entry.data.title}
+		</h1>
+
+		<MetaPost
+			autor={autor}
+			pubDate={entry.data.pubDate}
+			updatedDate={entry.data.updatedDate}
+			texto={entry.body ?? ''}
+			origem={entry.data.origem}
+		/>
+
+		<dl class="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-y border-white/10 py-4 text-sm">
+			<div>
+				<dt class="text-muted">Obra</dt>
+				<dd class="font-medium text-text">{entry.data.obra}</dd>
+			</div>
+			<div>
+				<dt class="text-muted">Tipo</dt>
+				<dd class="font-medium text-text">{tipoLabel}</dd>
+			</div>
+			{
+				entry.data.anoObra != null && (
+					<div>
+						<dt class="text-muted">Ano</dt>
+						<dd class="font-medium text-text">{entry.data.anoObra}</dd>
+					</div>
+				)
+			}
+			{
+				entry.data.nota != null && (
+					<div>
+						<dt class="text-muted">Nota</dt>
+						<dd class="font-medium text-pipoca">
+							Nota: {entry.data.nota}/10
+						</dd>
+					</div>
+				)
+			}
+		</dl>
+
+		{
+			entry.data.cover && entry.data.coverAlt && (
+				<figure class="mt-8">
+					<Picture
+						src={entry.data.cover}
+						formats={['avif', 'webp']}
+						alt={entry.data.coverAlt}
+						width={entry.data.cover.width}
+						height={entry.data.cover.height}
+						loading="eager"
+						fetchpriority="high"
+						quality="mid"
+						class="h-auto w-full max-w-3xl"
+					/>
+				</figure>
+			)
+		}
+
+		<div class="conteudo mt-10">
+			<Content />
+		</div>
+
+		{
+			relacionados.length > 0 && (
+				<section class="mt-16 border-t border-white/10 pt-10" aria-labelledby="leia-tambem">
+					<h2
+						id="leia-tambem"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Leia também
+					</h2>
+					<ul class="mt-4 flex flex-col gap-3">
+						{relacionados.map((rel) => (
+							<li>
+								<a
+									href={`/resenhas/${rel.id}/`}
+									class="group block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+								>
+									<span class="font-medium text-text transition-colors group-hover:text-pipoca">
+										{rel.data.title}
+									</span>
+									<span class="mt-1 block text-sm text-muted">
+										{formatarData(rel.data.pubDate)}
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</section>
+			)
+		}
+	</article>
+</BaseLayout>

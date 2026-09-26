@@ -1,0 +1,90 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import CardPost from '../../../components/CardPost.astro';
+import Paginacao from '../../../components/Paginacao.astro';
+import {
+	fatiaPagina,
+	getResenhas,
+	nomeTipoResenha,
+	totalPaginas,
+} from '../../../lib/conteudo';
+
+export async function getStaticPaths() {
+	const resenhas = await getResenhas();
+	const total = totalPaginas(resenhas.length);
+	const paths = [];
+	for (let pagina = 2; pagina <= total; pagina++) {
+		paths.push({
+			params: { pagina: String(pagina) },
+			props: { pagina },
+		});
+	}
+	return paths;
+}
+
+interface Props {
+	pagina: number;
+}
+
+const { pagina } = Astro.props;
+const resenhas = await getResenhas();
+const total = totalPaginas(resenhas.length);
+const paginaItens = fatiaPagina(resenhas, pagina);
+const intro =
+	'Críticas e opiniões sobre filmes, séries, quadrinhos e álbuns. Leituras com contexto, nota quando couber e espaço para discordar.';
+const baseUrl = '/resenhas/';
+
+const autores = await Promise.all(
+	paginaItens.map(async (entry) => {
+		const autor = await getEntry(entry.data.autor);
+		return {
+			id: entry.id,
+			nome: autor?.data.nome ?? 'Autor',
+		};
+	}),
+);
+const autorPorId = Object.fromEntries(autores.map((a) => [a.id, a.nome]));
+---
+
+<BaseLayout
+	title={`Resenhas – Página ${pagina}`}
+	description={intro}
+>
+	<section class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Resenhas', href: baseUrl },
+				{ label: `Página ${pagina}` },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			Resenhas
+		</h1>
+		<p class="mt-2 text-sm text-muted">Página {pagina}</p>
+		<p class="mt-4 max-w-2xl text-muted">{intro}</p>
+
+		<div class="mt-10">
+			{
+				paginaItens.map((entry) => (
+					<CardPost
+						titulo={entry.data.title}
+						href={`/resenhas/${entry.id}/`}
+						description={entry.data.description}
+						autorNome={autorPorId[entry.id] ?? 'Autor'}
+						pubDate={entry.data.pubDate}
+						rotulo={nomeTipoResenha(entry.data.tipo)}
+						nota={entry.data.nota}
+					/>
+				))
+			}
+		</div>
+		<Paginacao
+			paginaAtual={pagina}
+			totalPaginas={total}
+			baseUrl={baseUrl}
+		/>
+	</section>
+</BaseLayout>

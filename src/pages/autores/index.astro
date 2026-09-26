@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getArtigos, getResenhas } from '../../lib/conteudo';
+
+const [artigos, resenhas, autores] = await Promise.all([
+	getArtigos(),
+	getResenhas(),
+	getCollection('autores'),
+]);
+
+/** @type {Map<string, number>} */
+const contagem = new Map();
+for (const entry of [...artigos, ...resenhas]) {
+	const id = entry.data.autor.id;
+	contagem.set(id, (contagem.get(id) ?? 0) + 1);
+}
+
+const lista = autores
+	.map((autor) => ({
+		id: autor.id,
+		nome: autor.data.nome,
+		bio: autor.data.bio,
+		total: contagem.get(autor.id) ?? 0,
+	}))
+	.filter((a) => a.total > 0)
+	.sort((a, b) => b.total - a.total || a.nome.localeCompare(b.nome, 'pt-BR'));
+
+const descricao =
+	'Quem escreve no Arte Com Pipoca: críticas, listas e análises com assinatura.';
+---
+
+<BaseLayout title="Nossa equipe" description={descricao}>
+	<section class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Equipe' },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			Nossa equipe
+		</h1>
+		<p class="mt-4 max-w-2xl text-muted">{descricao}</p>
+
+		{
+			lista.length === 0 ? (
+				<p class="mt-10 text-muted">Em breve, os autores desta casa.</p>
+			) : (
+				<ul class="mt-10 flex flex-col gap-8">
+					{lista.map((autor) => (
+						<li class="border-b border-white/10 pb-8 last:border-b-0">
+							<h2 class="font-display text-2xl tracking-wide text-text">
+								<a
+									href={`/autores/${autor.id}/`}
+									class="transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+								>
+									{autor.nome}
+								</a>
+							</h2>
+							{autor.bio && (
+								<p class="mt-2 max-w-2xl text-muted">{autor.bio}</p>
+							)}
+							<p class="mt-2 text-sm text-pipoca">
+								{autor.total}{' '}
+								{autor.total === 1 ? 'texto publicado' : 'textos publicados'}
+							</p>
+						</li>
+					))}
+				</ul>
+			)
+		}
+	</section>
+</BaseLayout>

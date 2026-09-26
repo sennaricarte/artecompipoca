@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+	--color-bg: #0f0f12;
+	--color-surface: #1a1a20;
+	--color-text: #f2f2f2;
+	--color-muted: #a1a1aa;
+	--color-pipoca: #ffc83d;
+	--color-balde: #e63946;
+
+	--font-display: "Bebas Neue", sans-serif;
+	--font-body: "Inter", system-ui, sans-serif;
+
+	/* Escala de espaçamento base: 4px */
+	--spacing: 0.25rem;
+}
+
+@layer base {
+	:focus-visible {
+		outline: 2px solid var(--color-pipoca);
+		outline-offset: 2px;
+	}
+
+	.skip-link {
+		position: absolute;
+		left: 1rem;
+		top: 0;
+		z-index: 100;
+		transform: translateY(-120%);
+		border-radius: 0.25rem;
+		background-color: var(--color-pipoca);
+		padding: 0.5rem 1rem;
+		font-weight: 700;
+		color: var(--color-bg);
+		transition: transform 0.15s ease;
+	}
+
+	.skip-link:focus,
+	.skip-link:focus-visible {
+		transform: translateY(1rem);
+	}
+}
+
+@layer components {
+	.conteudo {
+		max-width: 68ch;
+		font-size: 1.125rem;
+		line-height: 1.75;
+		color: var(--color-text);
+	}
+
+	.conteudo > * + * {
+		margin-top: 1.25em;
+	}
+
+	.conteudo h2,
+	.conteudo h3 {
+		font-family: var(--font-display);
+		color: var(--color-pipoca);
+		letter-spacing: 0.025em;
+		line-height: 1.2;
+		margin-top: 1.75em;
+	}
+
+	.conteudo h2 {
+		font-size: 1.75rem;
+	}
+
+	.conteudo h3 {
+		font-size: 1.4rem;
+	}
+
+	.conteudo a {
+		color: var(--color-pipoca);
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+
+	.conteudo a:focus-visible {
+		outline: 2px solid var(--color-pipoca);
+		outline-offset: 2px;
+	}
+
+	.conteudo ul,
+	.conteudo ol {
+		padding-left: 1.25em;
+	}
+
+	.conteudo ul {
+		list-style-type: disc;
+	}
+
+	.conteudo ol {
+		list-style-type: decimal;
+	}
+
+	.conteudo li + li {
+		margin-top: 0.35em;
+	}
+
+	.conteudo blockquote {
+		border-left: 3px solid var(--color-balde);
+		padding-left: 1em;
+		color: var(--color-muted);
+	}
+
+	.conteudo strong {
+		font-weight: 700;
+		color: var(--color-text);
+	}
+
+	.conteudo p {
+		margin: 0;
+	}
+}

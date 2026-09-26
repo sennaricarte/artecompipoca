@@ -1,0 +1,64 @@
+---
+import { formatarData } from '../lib/conteudo';
+
+interface Props {
+	titulo: string;
+	href: string;
+	description: string;
+	autorNome: string;
+	pubDate: Date;
+	rotulo: string;
+	nota?: number;
+	nivelTitulo?: 'h2' | 'h3';
+}
+
+const {
+	titulo,
+	href,
+	description,
+	autorNome,
+	pubDate,
+	rotulo,
+	nota,
+	nivelTitulo = 'h2',
+} = Astro.props;
+
+const tituloClass =
+	'font-display text-2xl tracking-wide text-text md:text-3xl';
+const linkClass =
+	'transition-colors hover:text-pipoca focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca';
+---
+
+<article class="border-b border-white/10 py-6 last:border-b-0">
+	{
+		nivelTitulo === 'h3' ? (
+			<h3 class={tituloClass}>
+				<a href={href} class={linkClass}>
+					{titulo}
+				</a>
+			</h3>
+		) : (
+			<h2 class={tituloClass}>
+				<a href={href} class={linkClass}>
+					{titulo}
+				</a>
+			</h2>
+		)
+	}
+	<p class="mt-2 max-w-3xl text-base text-muted">{description}</p>
+	<p class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
+		<span>{autorNome}</span>
+		<span aria-hidden="true">·</span>
+		<time datetime={pubDate.toISOString()}>{formatarData(pubDate)}</time>
+		<span aria-hidden="true">·</span>
+		<span class="text-pipoca">{rotulo}</span>
+		{
+			nota != null && (
+				<>
+					<span aria-hidden="true">·</span>
+					<span>Nota: {nota}/10</span>
+				</>
+			)
+		}
+	</p>
+</article>

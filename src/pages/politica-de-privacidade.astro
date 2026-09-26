@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { site } from '../data/site';
+import { formatarData } from '../lib/conteudo';
+
+const atualizacao = formatarData(new Date());
+---
+
+<BaseLayout
+	title="Política de Privacidade"
+	description="Como o Arte Com Pipoca trata dados pessoais, canais de contato e direitos do titular (LGPD)."
+>
+	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Política de Privacidade' },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			Política de Privacidade
+		</h1>
+
+		<div class="conteudo mt-10">
+			<section aria-labelledby="quem-somos">
+				<h2 id="quem-somos">Quem somos</h2>
+				<p>
+					Este site é o {site.nome}, disponível em
+					<a href={site.url}>{site.url}</a>. Para assuntos de privacidade e
+					exercício de direitos, use o e-mail
+					<a href={`mailto:${site.emailContato}`}>{site.emailContato}</a> ou a
+					página de <a href="/contato/">contato</a>.
+				</p>
+			</section>
+
+			<section aria-labelledby="dados-coletados">
+				<h2 id="dados-coletados">Dados coletados</h2>
+				<p>
+					O site não possui formulários e não coleta dados pessoais
+					diretamente. O contato é feito por iniciativa do visitante via
+					WhatsApp (serviço da Meta, sujeito à política de privacidade do
+					WhatsApp) ou por e-mail, e as informações trocadas são usadas apenas
+					para responder ao contato.
+				</p>
+			</section>
+
+			<section aria-labelledby="dados-tecnicos">
+				<h2 id="dados-tecnicos">Dados técnicos</h2>
+				<p>
+					A hospedagem na Vercel pode registrar dados técnicos de acesso, como
+					endereço IP e informações do navegador, para segurança e
+					funcionamento do serviço.
+				</p>
+			</section>
+
+			<section aria-labelledby="cookies">
+				<h2 id="cookies">Cookies</h2>
+				<p>
+					O site atualmente não usa cookies próprios nem de terceiros para
+					rastreamento.
+				</p>
+			</section>
+
+			<section aria-labelledby="direitos">
+				<h2 id="direitos">Direitos do titular (LGPD)</h2>
+				<p>
+					Você pode solicitar acesso, correção ou exclusão dos dados pessoais
+					que tiver compartilhado conosco. O canal para isso é o e-mail
+					<a href={`mailto:${site.emailContato}`}>{site.emailContato}</a> ou a
+					página de <a href="/contato/">contato</a>.
+				</p>
+			</section>
+
+			<section aria-labelledby="alteracoes">
+				<h2 id="alteracoes">Alterações nesta política</h2>
+				<p>
+					Podemos atualizar este texto quando a forma de tratamento de dados
+					mudar. A data da última atualização aparece abaixo.
+				</p>
+			</section>
+
+			<section aria-labelledby="atualizacao">
+				<h2 id="atualizacao">Última atualização</h2>
+				<p>{atualizacao}</p>
+			</section>
+		</div>
+	</article>
+</BaseLayout>

@@ -1,0 +1,97 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CardPost from '../../components/CardPost.astro';
+import Paginacao from '../../components/Paginacao.astro';
+import {
+	fatiaPagina,
+	getArtigos,
+	nomeEditoria,
+	totalPaginas,
+	type EditoriaId,
+} from '../../lib/conteudo';
+
+export async function getStaticPaths() {
+	const editorias = await getCollection('editorias');
+	return editorias.map((editoria) => ({
+		params: { editoria: editoria.id },
+		props: { editoria },
+	}));
+}
+
+interface Props {
+	editoria: CollectionEntry<'editorias'>;
+}
+
+const { editoria } = Astro.props;
+const editoriaId = editoria.id as EditoriaId;
+const artigos = (await getArtigos()).filter(
+	(a) => a.data.editoria === editoriaId,
+);
+const paginaAtual = 1;
+const total = totalPaginas(artigos.length);
+const paginaItens = fatiaPagina(artigos, paginaAtual);
+const vazio = artigos.length === 0;
+const nome = editoria.data.nome || nomeEditoria(editoriaId);
+const baseUrl = `/${editoriaId}/`;
+
+const autores = await Promise.all(
+	paginaItens.map(async (entry) => {
+		const autor = await getEntry(entry.data.autor);
+		return {
+			id: entry.id,
+			nome: autor?.data.nome ?? 'Autor',
+		};
+	}),
+);
+const autorPorId = Object.fromEntries(autores.map((a) => [a.id, a.nome]));
+---
+
+<BaseLayout
+	title={nome}
+	description={editoria.data.descricao}
+	noindex={vazio}
+>
+	<section class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: nome },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			{nome}
+		</h1>
+		<p class="mt-4 max-w-2xl text-muted">{editoria.data.descricao}</p>
+
+		{
+			vazio ? (
+				<p class="mt-10 text-muted">
+					Os primeiros textos desta editoria chegam em breve.
+				</p>
+			) : (
+				<>
+					<div class="mt-10">
+						{paginaItens.map((entry) => (
+							<CardPost
+								titulo={entry.data.title}
+								href={`/${entry.data.editoria}/${entry.id}/`}
+								description={entry.data.description}
+								autorNome={autorPorId[entry.id] ?? 'Autor'}
+								pubDate={entry.data.pubDate}
+								rotulo={nome}
+							/>
+						))}
+					</div>
+					<Paginacao
+						paginaAtual={paginaAtual}
+						totalPaginas={total}
+						baseUrl={baseUrl}
+					/>
+				</>
+			)
+		}
+	</section>
+</BaseLayout>

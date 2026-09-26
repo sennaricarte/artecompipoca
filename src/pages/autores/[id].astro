@@ -1,0 +1,142 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import CardPost from '../../components/CardPost.astro';
+import {
+	getArtigos,
+	getResenhas,
+	nomeEditoria,
+	nomeTipoResenha,
+} from '../../lib/conteudo';
+
+export async function getStaticPaths() {
+	const [artigos, resenhas, autores] = await Promise.all([
+		getArtigos(),
+		getResenhas(),
+		getCollection('autores'),
+	]);
+
+	const comTextos = new Set(
+		[...artigos, ...resenhas].map((e) => e.data.autor.id),
+	);
+
+	return autores
+		.filter((autor) => comTextos.has(autor.id))
+		.map((autor) => ({
+			params: { id: autor.id },
+			props: { autor },
+		}));
+}
+
+interface Props {
+	autor: CollectionEntry<'autores'>;
+}
+
+const { autor } = Astro.props;
+const [artigos, resenhas] = await Promise.all([getArtigos(), getResenhas()]);
+
+const textosArtigo = artigos.filter((e) => e.data.autor.id === autor.id);
+const textosResenha = resenhas.filter((e) => e.data.autor.id === autor.id);
+
+/** @type {{ tipo: 'artigo' | 'resenha'; entry: CollectionEntry<'artigos'> | CollectionEntry<'resenhas'>; pubDate: Date }[]} */
+const combinados = [
+	...textosArtigo.map((entry) => ({
+		tipo: 'artigo' as const,
+		entry,
+		pubDate: entry.data.pubDate,
+	})),
+	...textosResenha.map((entry) => ({
+		tipo: 'resenha' as const,
+		entry,
+		pubDate: entry.data.pubDate,
+	})),
+].sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
+
+const vazio = combinados.length === 0;
+const site = Astro.site ?? new URL('https://artecompipoca.net');
+const pageUrl = new URL(`/autores/${autor.id}/`, site).href;
+
+const person: Record<string, unknown> = {
+	'@type': 'Person',
+	name: autor.data.nome,
+	url: pageUrl,
+};
+if (autor.data.bio) {
+	person.description = autor.data.bio;
+}
+
+const profileLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ProfilePage',
+	mainEntity: person,
+};
+
+const descricao =
+	autor.data.bio ||
+	`Textos de ${autor.data.nome} no Arte Com Pipoca.`;
+---
+
+<BaseLayout
+	title={autor.data.nome}
+	description={descricao}
+	noindex={vazio}
+>
+	<script
+		slot="head"
+		type="application/ld+json"
+		set:html={JSON.stringify(profileLd)}
+	/>
+
+	<section class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Equipe', href: '/autores/' },
+				{ label: autor.data.nome },
+			]}
+		/>
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			{autor.data.nome}
+		</h1>
+		{
+			autor.data.bio && (
+				<p class="mt-4 max-w-2xl text-muted">{autor.data.bio}</p>
+			)
+		}
+
+		{
+			vazio ? (
+				<p class="mt-10 text-muted">Nenhum texto publicado por enquanto.</p>
+			) : (
+				<div class="mt-10">
+					{combinados.map((item) =>
+						item.tipo === 'artigo' ? (
+							<CardPost
+								titulo={item.entry.data.title}
+								href={`/${item.entry.data.editoria}/${item.entry.id}/`}
+								description={item.entry.data.description}
+								autorNome={autor.data.nome}
+								pubDate={item.entry.data.pubDate}
+								rotulo={nomeEditoria(item.entry.data.editoria)}
+								nivelTitulo="h2"
+							/>
+						) : (
+							<CardPost
+								titulo={item.entry.data.title}
+								href={`/resenhas/${item.entry.id}/`}
+								description={item.entry.data.description}
+								autorNome={autor.data.nome}
+								pubDate={item.entry.data.pubDate}
+								rotulo={nomeTipoResenha(item.entry.data.tipo)}
+								nota={item.entry.data.nota}
+								nivelTitulo="h2"
+							/>
+						),
+					)}
+				</div>
+			)
+		}
+	</section>
+</BaseLayout>
