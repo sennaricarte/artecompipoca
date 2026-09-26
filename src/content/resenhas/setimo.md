@@ -8,6 +8,29 @@ legacyUrl: /setimo/
 draft: true
 obra: Sétimo
 tipo: filme
+ficha:
+  tituloOriginal: "Séptimo"
+  ano: 2013
+  direcao:
+    - "Patxi Amezcúa"
+  roteiro:
+    - "Patxi Amezcúa"
+    - "Alejo Flah"
+  elenco:
+    - "Ricardo Darín"
+    - "Belén Rueda"
+    - "Luis Ziembrowski"
+    - "Osvaldo Santoro"
+    - "Jorge D'Elía"
+    - "Guillermo Arengo"
+  generos:
+    - Suspense
+  duracaoMin: 91
+  paises:
+    - Argentina
+    - Espanha
+  wikidataId: Q16637215
+anoObra: 2013
 ---
 
 Confira a ficha técnica completa do filme Sétimo**:**

@@ -8,6 +8,28 @@ legacyUrl: /cinquenta-tons-de-cinza-critica/
 draft: true
 obra: Cinquenta Tons de Cinza
 tipo: filme
+ficha:
+  tituloOriginal: "Fifty Shades of Grey"
+  ano: 2015
+  direcao:
+    - "Sam Taylor-Wood"
+  roteiro:
+    - "Kelly Marcel"
+  elenco:
+    - "Dakota Johnson"
+    - "Eloise Mumford"
+    - "Luke Grimes"
+    - "Max Martini"
+    - "Dylan Neal"
+    - "Marcia Gay Harden"
+  generos:
+    - Drama
+    - "Cinema erótico"
+  duracaoMin: 125
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q14566553
+anoObra: 2015
 ---
 Vira e mexe o cinema aparece com filmes que usam o sexo e a sexualidade como atrativo de bilheteria. Quem pode esquecer da cruzada de pernas de **Sharon Stone** em **Instinto Selvagem**, das **9 e ½ Semanas de Amor** de **Kim Basinger** e **Mickey Rourke** ou o **Último Tango em Paris** "dançado" por **Marlon Brando** e **Maria Schneider**. Agora, realmente é difícil compreender a febre e a fissura que este **Cinquenta Tons de Cinza** provocou neste início de ano nos cinemas de todo o mundo. Está todo mundo, novamente, falando sobre as personagens criadas por **E.L.James**. Uns falando bem. Outros massacrando. Até personalidades como Madonna já se pronunciaram sobre o assunto. Os cinemas estão com filas quilométricas. Ingressos estão esgotados com semanas de antecedência. Um fenômeno cultural, sem sombra de dúvidas, que merece ser estudado e compreendido.
 

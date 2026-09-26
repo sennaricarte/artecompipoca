@@ -8,6 +8,25 @@ legacyUrl: /miss-violence-critica/
 draft: true
 obra: Miss Violence
 tipo: filme
+ficha:
+  tituloOriginal: "Miss Violence"
+  ano: 2013
+  direcao:
+    - "Alexandros Avranas"
+  roteiro:
+    - "Alexandros Avranas"
+  elenco:
+    - "Christos Loulis"
+    - "Themis Panou"
+    - "Rafika Chawishe"
+    - "Sissy Toumassi"
+  generos:
+    - Drama
+  duracaoMin: 98
+  paises:
+    - "Grécia"
+  wikidataId: Q14854116
+anoObra: 2013
 ---
 
 ## *"Filme vencedor do leão de ouro da 70ª edição do "Festival de Cinema de Veneza"  choca o espectador e combina o brilhantismo do novo cinema, que vem da Grécia, com o pessimismo já habitual, resultado da crise que pesa sobre o país".*

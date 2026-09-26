@@ -8,6 +8,26 @@ legacyUrl: /meu-jantar-com-andre/
 draft: true
 obra: Meu jantar com André
 tipo: filme
+ficha:
+  tituloOriginal: "My Dinner with Andre"
+  ano: 1981
+  direcao:
+    - "Louis Malle"
+  roteiro:
+    - "Wallace Shawn"
+    - "Andre Gregory"
+  elenco:
+    - "Wallace Shawn"
+    - "Andre Gregory"
+    - "Jean Lenauer"
+  generos:
+    - Drama
+    - "Comédia dramática"
+  duracaoMin: 111
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q1344940
+anoObra: 1981
 ---
 
 **Louis Malle** tira água de rocha em **Meu jantar com André.**

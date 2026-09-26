@@ -8,6 +8,26 @@ legacyUrl: /demolidor-resenha-2a-temporada/
 draft: true
 obra: Demolidor – 2ª temporada
 tipo: serie
+ficha:
+  tituloOriginal: Daredevil
+  elenco:
+    - "Charlie Cox"
+    - "Deborah Ann Woll"
+    - "Elden Henson"
+    - "Vondie Curtis-Hall"
+    - "Bob Gunton"
+    - "Ayelet Zurer"
+  generos:
+    - "Telessérie de ação"
+    - "Série televisiva de fantasia"
+    - "Série criminal"
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Drew Goddard"
+  temporadas: 3
+  emissora: Netflix
+  wikidataId: Q16977365
 ---
 
 I am Daredevil!!

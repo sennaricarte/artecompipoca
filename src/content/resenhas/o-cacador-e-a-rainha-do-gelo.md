@@ -8,6 +8,31 @@ legacyUrl: /o-cacador-e-rainha-do-gelo-critica/
 draft: true
 obra: O Caçador e a Rainha do Gelo
 tipo: filme
+ficha:
+  tituloOriginal: "The Huntsman: Winter's War"
+  ano: 2016
+  direcao:
+    - "Cedric Nicolas-Troyan"
+  roteiro:
+    - "Frank Darabont"
+    - "Craig Mazin"
+    - "Evan Spiliotopoulos"
+  elenco:
+    - "Chris Hemsworth"
+    - "Charlize Theron"
+    - "Emily Blunt"
+    - "Nick Frost"
+    - "Sam Claflin"
+    - "Rob Brydon"
+  generos:
+    - Fantasia
+    - "Ação"
+    - Aventura
+  duracaoMin: 114
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18485021
+anoObra: 2016
 ---
 
 Com uma abordagem um pouco diferente do primeiro filme da sequência, **O Caçador e a Rainha do gelo** surpreendeu. A nova produção de **Cedric Nicolas-Troyan** contou com um elenco de primeira e se saiu muito bem aqui na crítica do Arte com Pipoca.

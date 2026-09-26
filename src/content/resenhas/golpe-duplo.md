@@ -8,6 +8,31 @@ legacyUrl: /golpe-duplo-critica/
 draft: true
 obra: Golpe Duplo
 tipo: filme
+ficha:
+  tituloOriginal: Focus
+  ano: 2015
+  direcao:
+    - "Glenn Ficarra"
+    - "John Requa"
+  roteiro:
+    - "Glenn Ficarra"
+    - "John Requa"
+  elenco:
+    - "Rodrigo Santoro"
+    - "Will Smith"
+    - "Margot Robbie"
+    - "Adrian Martinez"
+    - "Gerald McRaney"
+    - "B. D. Wong"
+  generos:
+    - "Comédia dramática"
+    - Crime
+    - Drama
+  duracaoMin: 104
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q15548282
+anoObra: 2015
 ---
 Filmes sobre golpes e golpistas existem aos montes. Desde o clássico de **Hitchcock** com **Cary Grant** e **Grace Kelly**, **Ladrão de Casaca**, de 1955, (onde Grant interpreta um ex- ladrão de jóias famoso que, acusado de uma outra onda de roubos, tenta pegar o verdadeiro ladrão usando o charme da personagem de Kelly como isca), passando por filmes mais recentes como **Truque de Mestre** (onde os personagens utilizam as mesmas técnicas de distração para conseguirem aplicar seus golpes, como aqui) e tantos outros. Ou seja, o enredo em si deste filme, que foi a grande bilheteria da semana de estreia nos EUA e trás o galã brasileiro **Rodrigo Santoro** no elenco, não é, nunca foi e nem será novidade para os frequentadores de cinema. Nenhuma! A impressão de mais do mesmo é algo que permeia toda a sessão. Mas, de uma forma ou de outra, o filme conseguiu prender, cativar e, até mesmo, surpreender.
 

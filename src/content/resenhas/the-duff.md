@@ -8,6 +8,27 @@ legacyUrl: /the-duff-critica/
 draft: true
 obra: The Duff
 tipo: filme
+ficha:
+  tituloOriginal: "The Duff"
+  ano: 2015
+  direcao:
+    - "Ari Sandel"
+  roteiro:
+    - "Josh A. Cagan"
+  elenco:
+    - "Mae Whitman"
+    - "Robbie Amell"
+    - "Bella Thorne"
+    - "Bianca A. Santos"
+    - "Skyler Samuels"
+    - "Romany Malco"
+  generos:
+    - "Comédia cinematográfica"
+  duracaoMin: 101
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18389602
+anoObra: 2015
 ---
 
 Antes de mais nada é preciso dizer que Bianca (**Mae Whitman**)  a protagonista do filme não tem nada The Duff (Designated Ugly Fat Friend), ou em bom português típica amiga feia e gorda, ela não é o padrão de beleza imposto pela sociedade, mas não tem nada de errado com ela e sim com a sociedade, mesmo que Duff seja somente uma gíria e não é necessário ser feia e gorda para se a Duff de alguém, como se explica no filme, é bom esclarecer, outra coisa que é importante é que se você leu o livro de **Kody Keplinger** que deu base para o filme, saiba que a única coisa que é fiel ao livro no filme são os nomes dos personagens.

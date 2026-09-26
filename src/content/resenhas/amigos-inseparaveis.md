@@ -8,6 +8,25 @@ legacyUrl: /amigos-inseparaveis-critica/
 draft: true
 obra: Amigos Inseparáveis
 tipo: filme
+ficha:
+  tituloOriginal: "Stand Up Guys"
+  ano: 2012
+  direcao:
+    - "Fisher Stevens"
+  elenco:
+    - "Al Pacino"
+    - "Christopher Walken"
+    - "Alan Arkin"
+    - "Julianna Margulies"
+    - "Katheryn Winnick"
+    - "Mark Margolis"
+  generos:
+    - "Comédia de ação"
+  duracaoMin: 94
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q891678
+anoObra: 2012
 ---
 
 **Amigos Inseparáveis** dura mais de uma hora e meia, mas esta longe de se tornar cansativo, quase tudo esta na medida certa. **Al Pacino** é **Val** um criminoso que sai da cadeia depois de 28 anos e é recepcionado por seu melhor amigo e antigo parceiro de crimes, **Doc (Christopher Walken)**.

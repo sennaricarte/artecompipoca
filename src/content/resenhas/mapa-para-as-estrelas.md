@@ -8,6 +8,30 @@ legacyUrl: /mapa-para-estrelas-critica/
 draft: true
 obra: Mapa Para as Estrelas
 tipo: filme
+ficha:
+  tituloOriginal: "Maps to the Stars"
+  ano: 2014
+  direcao:
+    - "David Cronenberg"
+  roteiro:
+    - "Bruce Wagner"
+  elenco:
+    - "Julianne Moore"
+    - "John Cusack"
+    - "Robert Pattinson"
+    - "Mia Wasikowska"
+    - "Olivia Williams"
+    - "Sarah Gadon"
+  generos:
+    - Drama
+  duracaoMin: 112
+  paises:
+    - "França"
+    - Alemanha
+    - "Estados Unidos"
+    - "Canadá"
+  wikidataId: Q14369911
+anoObra: 2014
 ---
 
 **David Cronenberg** é, sem dúvida, o mais bizarro cineasta em atividade. Os enredos de seus filmes são quase sempre fora do comum. E mesmo quando aparentam ser normais, sempre há algo que leva o expectador pra uma realidade meio absurda, meio surreal, mas sempre encantadora.

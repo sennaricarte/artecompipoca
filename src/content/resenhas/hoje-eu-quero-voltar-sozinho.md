@@ -8,6 +8,27 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-hoje-eu-quero-voltar-sozinho-2014/
 draft: true
 obra: Hoje Eu Quero Voltar Sozinho
 tipo: filme
+ficha:
+  tituloOriginal: "Hoje Eu Quero Voltar Sozinho"
+  ano: 2014
+  direcao:
+    - "Daniel Ribeiro"
+  roteiro:
+    - "Daniel Ribeiro"
+  elenco:
+    - "Ghilherme Lobo"
+    - "Fábio Audi"
+    - "Tess Amorim"
+    - "Selma Egrei"
+    - "Eucir de Souza"
+    - "Naruna Costa"
+  generos:
+    - Drama
+  duracaoMin: 95
+  paises:
+    - Brasil
+  wikidataId: Q15485665
+anoObra: 2014
 ---
 
 Cinema

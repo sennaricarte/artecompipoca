@@ -8,6 +8,29 @@ legacyUrl: /oblogquenaoestavala/filmes-do-outro-mundo-crash-estranhos-prazeres-c
 draft: true
 obra: "Crash: Estranhos Prazeres (1996)"
 tipo: filme
+ficha:
+  tituloOriginal: Crash
+  ano: 1996
+  direcao:
+    - "David Cronenberg"
+  roteiro:
+    - "David Cronenberg"
+  elenco:
+    - "James Spader"
+    - "Deborah Kara Unger"
+    - "Elias Koteas"
+    - "Holly Hunter"
+    - "Rosanna Arquette"
+    - "Michael Biehn"
+  generos:
+    - Drama
+    - "Thriller erótico"
+  duracaoMin: 100
+  paises:
+    - "Canadá"
+    - "Reino Unido"
+  wikidataId: Q839133
+anoObra: 1996
 ---
 
 Cinema

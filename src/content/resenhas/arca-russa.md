@@ -8,6 +8,37 @@ legacyUrl: /arca-russa-e-o-sentido-da-historia/
 draft: true
 obra: Arca Russa
 tipo: filme
+ficha:
+  tituloOriginal: "Русский ковчег"
+  ano: 2002
+  direcao:
+    - "Alexandr Sokurov"
+  roteiro:
+    - "Alexandr Sokurov"
+    - "Anatoli Nikiforov"
+    - "Svetlana Proskurina"
+  elenco:
+    - "Alexandr Sokurov"
+    - "Sergei Dontsov"
+    - "Mikhail Piotrovsky"
+    - "Marija Wladimirowna Kusnezowa"
+    - "Leonid Mozgovoy"
+    - "Alla Osipenko"
+  generos:
+    - Fantasia
+    - "Drama histórico"
+    - "Mistério"
+  duracaoMin: 99
+  paises:
+    - "Rússia"
+    - Alemanha
+    - "França"
+    - "Japão"
+    - "Canadá"
+    - "Finlândia"
+    - Dinamarca
+  wikidataId: Q59721
+anoObra: 2002
 ---
 
 Quando assistimos **Arca Russa** **(Aleksander Sokurov, 2002)** experienciamos uma forte sensação de desorientação:

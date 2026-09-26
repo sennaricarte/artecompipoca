@@ -8,6 +8,29 @@ legacyUrl: /oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd
 draft: true
 obra: Crepúsculo dos Deuses (1950)
 tipo: filme
+ficha:
+  tituloOriginal: "Sunset Boulevard"
+  ano: 1950
+  direcao:
+    - "Billy Wilder"
+  roteiro:
+    - "Charles Brackett"
+    - "Billy Wilder"
+    - "D.M. Marshman Jr."
+  elenco:
+    - "William Holden"
+    - "Gloria Swanson"
+    - "Erich von Stroheim"
+    - "Nancy Olson"
+    - "Fred Clark"
+    - "Jack Webb"
+  generos:
+    - Drama
+  duracaoMin: 110
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q193570
+anoObra: 1950
 ---
 
 Cinema

@@ -8,6 +8,31 @@ legacyUrl: /star-wars-o-despertar-da-forca-critica-iii/
 draft: true
 obra: Star Wars - O Despertar da Força
 tipo: filme
+ficha:
+  tituloOriginal: "Star Wars: The Force Awakens"
+  ano: 2015
+  direcao:
+    - "J. J. Abrams"
+  roteiro:
+    - "Lawrence Kasdan"
+    - "J. J. Abrams"
+    - "Michael Arndt"
+  elenco:
+    - "Carrie Fisher"
+    - "Harrison Ford"
+    - "Mark Hamill"
+    - "Adam Driver"
+    - "Daisy Ridley"
+    - "John Boyega"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - "Ação"
+  duracaoMin: 138
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q6074
+anoObra: 2015
 ---
 
 Finalmente! Depois de anos, um novo filme de **Star Wars**! Quando parecia que nunca mais teríamos um episódio da série, já que **George Lucas** havia anunciado, após o Episódio III, que não iria produzir a terceira trilogia. Mas após a venda da **Lucasfilm** para a **Disney**, a nova casa dos filmes decidiu continuar a saga, com uma nova proposta para a saga e os personagens.

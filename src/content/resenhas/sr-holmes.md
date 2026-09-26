@@ -9,7 +9,48 @@ legacyUrl: /sr-holmes-critica/
 draft: false
 obra: Sr. Holmes
 tipo: filme
+ficha:
+  tituloOriginal: "Mr. Holmes"
+  ano: 2015
+  direcao:
+    - "Bill Condon"
+  roteiro:
+    - "Jeffrey Hatcher"
+  elenco:
+    - "Ian McKellen"
+    - "Laura Linney"
+    - "Milo Parker"
+    - "Hiroyuki Sanada"
+    - "Hattie Morahan"
+    - "Patrick Kennedy"
+  generos:
+    - Drama
+    - "Mistério"
+    - Crime
+  duracaoMin: 104
+  paises:
+    - "Reino Unido"
+    - "Estados Unidos"
+    - "França"
+  wikidataId: Q17344458
+  sinopse: "Em 1947, aos 93 anos, Sherlock Holmes vive aposentado no interior da Inglaterra, cuidando de abelhas ao lado da governanta e do filho dela. Com a memória falhando, ele tenta reconstruir o último caso da carreira, aquele que o fez abandonar a profissão e que nunca foi contado como realmente aconteceu."
+  curiosidades:
+    - "O filme adapta o romance \"A Slight Trick of the Mind\", de Mitch Cullin, publicado em 2005."
+    - "É o reencontro de Ian McKellen com o diretor Bill Condon, com quem havia feito \"Deuses e Monstros\" (1998)."
+    - "Em maio de 2015, os herdeiros de Arthur Conan Doyle entraram na Justiça contra o autor do livro e os produtores do filme, alegando uso não autorizado de histórias ainda protegidas por direitos autorais."
+    - "Teve sua estreia mundial fora de competição no Festival de Berlim."
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-223770/"
+    - nome: Cinema10
+      url: "https://cinema10.com.br/filme/mr-holmes"
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/A_Slight_Trick_of_the_Mind"
+    - nome: "Cinecartaz (Público)"
+      url: "https://cinecartaz.publico.pt/filme/mr-holmes-350004"
+anoObra: 2015
 ---
+<!-- CONFERIR: Título de lançamento no Brasil: o AdoroCinema usa "Sr. Sherlock Holmes"; outras fontes usam "Sr. Holmes". -->
 
 E se **Sherlock Holmes** realmente tivesse existido? Essa premissa não é nova, mas com certeza originou um dos melhores filmes do ano, "**Sr. Holmes**", dirigido por **Bill Condon**. O filme se passa em 1947, com um Holmes de 93 anos, aposentado e doente, vivendo em uma casa de campo com uma governanta e seu filho. Com problemas de memória devido à idade e à sua doença (que, embora não seja mencionada, aparenta ser Alzheimer), ele tenta se lembrar de seu último caso, que resultou na morte de uma mulher e que o levou a se aposentar. Ao mesmo tempo, ele começa uma amizade com o filho da governanta, o que faz o filme parecer que será uma história do tipo "mestre e aprendiz".
 

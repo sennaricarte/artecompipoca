@@ -8,6 +8,32 @@ legacyUrl: /cinema-a-dois-jurassic-world-o-mundo-dos-dinossauros/
 draft: true
 obra: "Jurassic World: O Mundo dos Dinossauros"
 tipo: filme
+ficha:
+  tituloOriginal: "Jurassic World"
+  ano: 2015
+  direcao:
+    - "Colin Trevorrow"
+  roteiro:
+    - "Colin Trevorrow"
+    - "Derek Connolly"
+    - "Rick Jaffa"
+    - "Amanda Silver"
+  elenco:
+    - "Chris Pratt"
+    - "Bryce Dallas Howard"
+    - "Irrfan Khan"
+    - "Vincent D'Onofrio"
+    - "Ty Simpkins"
+    - "Omar Sy"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - "Ação"
+  duracaoMin: 124
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q3512046
+anoObra: 2015
 ---
 
 Olá pipoqueiros e pipoqueiras, este é o terceiro texto da nova coluna aqui do **Arte com Pipoca**, **Cinema à Dois**, onde o casal **Marcos Antonio** e **Mariana Silv**a vai relatar o ponto de vista de cada um sobre os filmes que assistem juntos, desta vez eles foram juntinhos ao cinema para assistir **Jurassic World – O Mundo dos Dinossauros**. Confira a opinião deles:

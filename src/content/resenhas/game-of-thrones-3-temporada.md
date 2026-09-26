@@ -8,6 +8,37 @@ legacyUrl: /oblogquenaoestavala/game-of-thrones-terceira-temporada/
 draft: true
 obra: Game of Thrones – 3ª temporada
 tipo: serie
+ficha:
+  tituloOriginal: "Game of Thrones"
+  roteiro:
+    - "George R. R. Martin"
+    - "David Benioff"
+    - "D. B. Weiss"
+    - "Bryan Cogman"
+  elenco:
+    - "Sean Bean"
+    - "Nikolaj Coster-Waldau"
+    - "Peter Dinklage"
+    - "Emilia Clarke"
+    - "Lena Headey"
+    - "Iain Glen"
+  generos:
+    - "Telessérie de ação"
+    - "Série televisiva de fantasia"
+  duracaoMin: 66
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "D. B. Weiss"
+    - "David Benioff"
+    - "George R. R. Martin"
+    - "Bryan Cogman"
+    - "Jane Espenson"
+    - "Vanessa Taylor"
+    - "Dave Hill"
+  temporadas: 8
+  emissora: HBO
+  wikidataId: Q23572
 ---
 
 Séries

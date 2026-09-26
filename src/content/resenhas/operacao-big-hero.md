@@ -8,6 +8,24 @@ legacyUrl: /operacao-big-hero/
 draft: true
 obra: Operação Big Hero
 tipo: filme
+ficha:
+  tituloOriginal: "Big Hero 6"
+  ano: 2014
+  direcao:
+    - "Chris Williams"
+    - "Don Hall"
+  roteiro:
+    - "Robert L. Baird"
+    - "Dan Gerson"
+  generos:
+    - "Ficção científica"
+    - Fantasia
+    - Amigos
+  duracaoMin: 102
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q13091172
+anoObra: 2014
 ---
 Confira a ficha técnica completa do filme Operação Big Hero**:**
 

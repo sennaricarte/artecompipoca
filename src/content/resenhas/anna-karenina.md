@@ -8,6 +8,29 @@ legacyUrl: /especial-oscar-anna-karenina/
 draft: true
 obra: Anna Karenina
 tipo: filme
+ficha:
+  tituloOriginal: "Anna Karenina"
+  ano: 2012
+  direcao:
+    - "Joe Wright"
+  roteiro:
+    - "Tom Stoppard"
+  elenco:
+    - "Keira Knightley"
+    - "Aaron Johnson"
+    - "Jude Law"
+    - "Matthew Macfadyen"
+    - "Kelly Macdonald"
+    - "Domhnall Gleeson"
+  generos:
+    - Drama
+    - "Comédia romântica"
+  duracaoMin: 130
+  paises:
+    - "Reino Unido"
+    - "França"
+  wikidataId: Q80204
+anoObra: 2012
 ---
 
 Seria uma inútil redundância ficar aqui neste artigo enaltecendo a obra de **Liev Tolstoi**, que nos deu clássicos como este **Anna Karenina**, **Guerra e Paz**, dentre outras menos faladas. Para o cinema, este clássico já teve várias adaptações. A mais clássica com **Greta Garbo** lá nos longínquos 1935. Houve também uma impecável versão inglesa com a eterna **Scarlett O´Hara**, **Vivien Leigh**, em 1948, um telefilme com **Jaqueline Bisset** e **Christopher Reeve** em 1985 e o mais recente com **Sophie Marceau** e **Sean Bean** em 1997, que foi a primeira versão americana totalmente filmada na Rússia. Cada um tem seu charme especial. As versões clássicas merecem um artigo exclusivo, tamanha a importância que têm para a história cinematográfica mundial. Mas acredito que nenhuma venha a ter o impacto e o charme dessa versão de **Joe Wright**, que consegue se diferir de todas elas e fazer como se estivéssemos diante de um material inédito.

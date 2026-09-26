@@ -8,6 +8,26 @@ legacyUrl: /unbreakable-kimmy-schmidt-resenha/
 draft: true
 obra: Unbreakable Kimmy Schmidt
 tipo: serie
+ficha:
+  tituloOriginal: "Unbreakable Kimmy Schmidt"
+  elenco:
+    - "Ellie Kemper"
+    - "Tituss Burgess"
+    - "Jane Krakowski"
+    - "Carol Kane"
+    - "Sara Chase"
+    - "Lauren Adams"
+  generos:
+    - "Comédia da televisão"
+  duracaoMin: 25
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Tina Fey"
+    - "Robert Carlock"
+  temporadas: 4
+  emissora: Netflix
+  wikidataId: Q16889037
 ---
 
 ## Unbreakable Kimmy Schmidt: uma comédia na medida certa

@@ -9,6 +9,27 @@ legacyUrl: /kurt-cobain-montage-of-heck-critica/
 draft: false
 obra: "Kurt Cobain: Montage of Heck"
 tipo: filme
+ficha:
+  tituloOriginal: "Kurt Cobain: Montage of Heck"
+  ano: 2015
+  direcao:
+    - "Brett Morgen"
+  roteiro:
+    - "Brett Morgen"
+  elenco:
+    - "Chad Channing"
+    - "Kurt Cobain"
+    - "Dale Crover"
+    - "Jason Everman"
+    - "Dave Grohl"
+    - "Courtney Love"
+  generos:
+    - "Documentário"
+  duracaoMin: 132
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18603034
+anoObra: 2015
 ---
 **NIRVANA**. Para muitos fãs de rock, a banda foi a maior e mais significativa dos anos 90. Quase os **Beatles** para a época. A banda que melhor soube cantar as ansiedades e emoções dos jovens da época. E, com o suicídio do vocalista **Kurt Cobain** em 1994, criou-se o mito. Mito que não deixa de fazer parte da vida dos admiradores, mesmo aqueles que nem eram vivos na época em que o grupo gravou seus discos.
 

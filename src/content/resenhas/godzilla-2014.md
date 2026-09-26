@@ -1,4 +1,4 @@
-﻿---
+---
 title: Godzilla (2014)
 description: Cinema
 pubDate: 2014-05-28
@@ -8,6 +8,32 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-godzilla-2014/
 draft: true
 obra: Godzilla (2014)
 tipo: filme
+ficha:
+  tituloOriginal: Godzilla
+  ano: 2014
+  direcao:
+    - "Gareth Edwards"
+  roteiro:
+    - "David Callaham"
+    - "Frank Darabont"
+    - "David S. Goyer"
+    - "Drew Pearce"
+  elenco:
+    - "Aaron Johnson"
+    - "Ken Watanabe"
+    - "Elizabeth Olsen"
+    - "Juliette Binoche"
+    - "David Strathairn"
+    - "Bryan Cranston"
+  generos:
+    - "Ficção científica"
+    - "Ação"
+  duracaoMin: 123
+  paises:
+    - "Estados Unidos"
+    - "Japão"
+  wikidataId: Q7731172
+anoObra: 2014
 ---
 
 <!-- CONFERIR: pubDate aproximada pelo primeiro snapshot do Wayback -->

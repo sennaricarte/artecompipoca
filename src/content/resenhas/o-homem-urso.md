@@ -8,6 +8,20 @@ legacyUrl: /o-homem-urso-critica/
 draft: true
 obra: O Homem Urso
 tipo: filme
+ficha:
+  tituloOriginal: "Grizzly Man"
+  ano: 2005
+  direcao:
+    - "Werner Herzog"
+  roteiro:
+    - "Werner Herzog"
+  generos:
+    - "Documentário"
+  duracaoMin: 103
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q1067409
+anoObra: 2005
 ---
 
 **Herzog** e a beleza do fascínio em **O Homem Urso.**

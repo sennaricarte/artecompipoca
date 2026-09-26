@@ -8,6 +8,29 @@ legacyUrl: /cinema-a-dois-poltergeist-o-fenomeno/
 draft: true
 obra: "Poltergeist: O Fenômeno"
 tipo: filme
+ficha:
+  tituloOriginal: Poltergeist
+  ano: 2015
+  direcao:
+    - "Gil Kenan"
+  roteiro:
+    - "David Lindsay-Abaire"
+  elenco:
+    - "Sam Rockwell"
+    - "Rosemarie DeWitt"
+    - "Saxon Sharbino"
+    - "Kyle Catlett"
+    - "Kennedi Clements"
+    - "Jared Harris"
+  generos:
+    - Terror
+    - Suspense
+    - "Terror sobrenatural"
+  duracaoMin: 93
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q15040721
+anoObra: 2015
 ---
 
 Olá pipoqueiros e pipoqueiras, este é o segundo texto da nova coluna aqui do **Arte com Pipoca**, **Cinema à Dois**, onde o casal **Marcos Antonio** e **Mariana Silv**a vai relatar o ponto de vista de cada um sobre os filmes que assistem juntos, desta vez eles foram juntinhos ao cinema para assistir **Poltergeist: O Fenômeno**. Confira a opinião deles:

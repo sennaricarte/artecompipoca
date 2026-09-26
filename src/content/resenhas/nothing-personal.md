@@ -9,6 +9,28 @@ legacyUrl: /nothing-personal-critica/
 draft: false
 obra: Nothing Personal
 tipo: filme
+ficha:
+  tituloOriginal: "Nothing Personal"
+  ano: 2009
+  direcao:
+    - "Urszula Antoniak"
+  roteiro:
+    - "Urszula Antoniak"
+  elenco:
+    - "Lotte Verbeek"
+    - "Stephen Rea"
+    - "Ann Marie Horan"
+    - "Paul Ronan"
+    - "Wimie Wilhelm"
+    - "Aindrias Stack"
+  generos:
+    - Drama
+  duracaoMin: 85
+  paises:
+    - "República da Irlanda"
+    - "Países Baixos"
+  wikidataId: Q1838622
+anoObra: 2009
 ---
 
 Segundo, dicionário Aurélio – Minimalismo é qualquer movimento artístico que se expressa através da extrema simplificação da forma. É assim que enxergo a película: **Nothing Personal** (Nada Pessoal) um cenário inóspito, fotografia singular, atuações brilhantes, enredo funcional e uma simplicidade detalhada sutilmente, tornam este filme essencial.

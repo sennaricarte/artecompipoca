@@ -8,6 +8,25 @@ legacyUrl: /boulevard-critica/
 draft: true
 obra: Boulevard
 tipo: filme
+ficha:
+  tituloOriginal: Boulevard
+  ano: 2014
+  direcao:
+    - "Dito Montiel"
+  elenco:
+    - "Robin Williams"
+    - "Bob Odenkirk"
+    - "Kathy Baker"
+    - "Giles Matthey"
+    - "Roberto Aguire"
+    - "J. Karen Thomas"
+  generos:
+    - Drama
+  duracaoMin: 88
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q17478848
+anoObra: 2014
 ---
 
 Dirigido por **Dito Montie**, **Boulevard** é o último filme do ator **Robin Williams**, que nos deixou a pouco mais de um ano, em Boulevard o ator vive Nolan, um homem de 60 anos que trabalha em um banco há 26 anos e é casado com Joy.

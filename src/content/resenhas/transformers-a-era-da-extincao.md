@@ -8,6 +8,29 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-transformers-a-era-da-extincao-trans
 draft: true
 obra: "Transformers: A Era da Extinção"
 tipo: filme
+ficha:
+  tituloOriginal: "Transformers: Age of Extinction"
+  ano: 2014
+  direcao:
+    - "Michael Bay"
+  roteiro:
+    - "Ehren Kruger"
+  elenco:
+    - "Mark Wahlberg"
+    - "Nicola Peltz"
+    - "Jack Reynor"
+    - "Kelsey Grammer"
+    - "T.J. Miller"
+    - "Sophia Myles"
+  generos:
+    - "Ficção científica"
+    - "Ação"
+    - "Comédia cinematográfica"
+  duracaoMin: 165
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q6151665
+anoObra: 2014
 ---
 
 Cinema

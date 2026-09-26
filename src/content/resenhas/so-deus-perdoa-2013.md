@@ -8,6 +8,33 @@ legacyUrl: /oblogquenaoestavala/so-deus-perdoa-only-god-forgives-2013/
 draft: true
 obra: Só Deus Perdoa (2013)
 tipo: filme
+ficha:
+  tituloOriginal: "Only God Forgives"
+  ano: 2013
+  direcao:
+    - "Nicolas Winding Refn"
+  roteiro:
+    - "Nicolas Winding Refn"
+  elenco:
+    - "Ryan Gosling"
+    - "Kristin Scott Thomas"
+    - "Tom Burke"
+    - "Vithaya Pansringarm"
+    - "Ratha Pho-ngam"
+    - "Byron Gibson"
+  generos:
+    - Crime
+    - Drama
+    - "Ação"
+  duracaoMin: 90
+  paises:
+    - "França"
+    - Dinamarca
+    - "Tailândia"
+    - "Estados Unidos"
+    - "Suécia"
+  wikidataId: Q2679094
+anoObra: 2013
 ---
 
 Cinema

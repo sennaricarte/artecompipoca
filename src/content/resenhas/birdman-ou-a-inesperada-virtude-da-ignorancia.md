@@ -8,6 +8,32 @@ legacyUrl: /especial-oscar-birdman-ou-inesperada-virtude-da-ignorancia/
 draft: true
 obra: Birdman (ou A Inesperada Virtude da Ignorância)
 tipo: filme
+ficha:
+  tituloOriginal: Birdman
+  ano: 2014
+  direcao:
+    - "Alejandro González Iñárritu"
+  roteiro:
+    - "Alejandro González Iñárritu"
+    - "Nicolás Giacobone"
+    - "Alexander Dinelaris"
+    - "Armando Bó"
+  elenco:
+    - "Michael Keaton"
+    - "Emma Stone"
+    - "Edward Norton"
+    - "Andrea Riseborough"
+    - "Zach Galifianakis"
+    - "Naomi Watts"
+  generos:
+    - "Comédia cinematográfica"
+    - Drama
+    - "Tragicomédia"
+  duracaoMin: 119
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q13255497
+anoObra: 2014
 ---
 
 **Elenco:** Michael Douglas, Zach Galifianakis, Edward Norton, Andrea Riseborough, Amy Ryan, Emma Stone, Naomi Watts Alejandro G. Iñáritu.

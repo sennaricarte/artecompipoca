@@ -8,6 +8,29 @@ legacyUrl: /oblogquenaoestavala/filmes-do-outro-mundo-donnie-darko-2001/
 draft: true
 obra: Donnie Darko (2001)
 tipo: filme
+ficha:
+  tituloOriginal: "Donnie Darko"
+  ano: 2001
+  direcao:
+    - "Richard Kelly"
+  roteiro:
+    - "Richard Kelly"
+  elenco:
+    - "Patrick Swayze"
+    - "Mary McDonnell"
+    - "Jake Gyllenhaal"
+    - "Maggie Gyllenhaal"
+    - "Katharine Ross"
+    - "Jena Malone"
+  generos:
+    - "Comédia dramática"
+    - Fantasia
+    - "Ficção científica"
+  duracaoMin: 113
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q426828
+anoObra: 2001
 ---
 
 Cinema

@@ -8,6 +8,32 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-planeta-dos-macacos-o-confronto-dawn
 draft: true
 obra: "Planeta dos Macacos: O Confronto"
 tipo: filme
+ficha:
+  tituloOriginal: "Dawn of the Planet of the Apes"
+  ano: 2014
+  direcao:
+    - "Matt Reeves"
+  roteiro:
+    - "Scott Z. Burns"
+    - "Mark Bomback"
+    - "Rick Jaffa"
+    - "Amanda Silver"
+  elenco:
+    - "Andy Serkis"
+    - "Gary Oldman"
+    - "Jason Clarke"
+    - "Kodi Smit-McPhee"
+    - "Keri Russell"
+    - "Judy Greer"
+  generos:
+    - "Ficção científica"
+    - "Ação"
+    - Drama
+  duracaoMin: 130
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q11220194
+anoObra: 2014
 ---
 
 Cinema

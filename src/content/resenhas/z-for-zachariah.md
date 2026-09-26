@@ -8,6 +8,26 @@ legacyUrl: /z-for-zachariah-critica/
 draft: true
 obra: Z for Zachariah
 tipo: filme
+ficha:
+  tituloOriginal: "Z for Zachariah"
+  ano: 2015
+  direcao:
+    - "Craig Zobel"
+  elenco:
+    - "Margot Robbie"
+    - "Chris Pine"
+    - "Chiwetel Ejiofor"
+  generos:
+    - "Ficção científica"
+    - "Filme pós-apocalíptico"
+    - "Filme distópico"
+  duracaoMin: 98
+  paises:
+    - "Suíça"
+    - "Estados Unidos"
+    - "Islândia"
+  wikidataId: Q16683848
+anoObra: 2015
 ---
 O novo longa de ficção científica "**Z for Zachariah**" dirigido por **Craig Zobel** e estrelado por **Chris Pine** não foi um dos maiores sucessos do ator, sobretudo, tem lá seus méritos. Em projeto desde 2009 após ser citado pela **Black list** – lista que trata dos melhores roteiros ainda não utilizados —, e baseado na obra de **Robert C. O'Brien**, o filme, que possui o mesmo nome do livro, relata a vida no planeta água com as mínimas condições de existência e mostra como as relações interpessoais podem ser destrutivas.
 

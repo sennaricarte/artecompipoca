@@ -9,6 +9,31 @@ legacyUrl: /critica-definitiva-ninfomaniaca/
 draft: false
 obra: Ninfomaníaca
 tipo: filme
+ficha:
+  tituloOriginal: Nymphomaniac
+  ano: 2013
+  direcao:
+    - "Lars von Trier"
+  roteiro:
+    - "Lars von Trier"
+  elenco:
+    - "Charlotte Gainsbourg"
+    - "Stellan Skarsgård"
+    - "Stacy Martin"
+    - "Shia LaBeouf"
+    - "Uma Thurman"
+    - "Sophie Kennedy Clark"
+  generos:
+    - Drama
+  duracaoMin: 240
+  paises:
+    - "França"
+    - Dinamarca
+    - Alemanha
+    - "Bélgica"
+    - "Reino Unido"
+  wikidataId: Q3346699
+anoObra: 2013
 ---
 
 *"Sexo. Despudor. Transtorno. Prazer. A junção de tais ingredientes, nas mãos de um gênio, torna-se um filme impecável, composto por um berço de atuações magníficas e extremamente carnais. Aqui tudo o que se disser vai ser pouco, muito pouco mesmo, pois imagens e sons têm muito mais o que dizer. Ou não**."*

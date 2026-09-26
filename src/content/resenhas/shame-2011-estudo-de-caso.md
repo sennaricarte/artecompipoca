@@ -8,6 +8,30 @@ legacyUrl: /estudo-de-caso-shame-2011/
 draft: true
 obra: "Shame (2011): estudo de caso"
 tipo: filme
+ficha:
+  tituloOriginal: Shame
+  ano: 2011
+  direcao:
+    - "Steve McQueen"
+  roteiro:
+    - "Steve McQueen"
+    - "Abi Morgan"
+    - "Harold Manning"
+  elenco:
+    - "Michael Fassbender"
+    - "Carey Mulligan"
+    - "James Badge Dale"
+    - "Nicole Beharie"
+    - "Hannah Ware"
+    - "Amy Hargreaves"
+  generos:
+    - Drama
+    - "Cinema erótico"
+  duracaoMin: 100
+  paises:
+    - "Reino Unido"
+  wikidataId: Q909445
+anoObra: 2011
 ---
 
 Nos minutos iniciais de **Shame**, recebemos material o suficiente para entender aquilo que é **Brandon** (**Michael Fassbender**): Basta observar o olhar de predador, sem exprimir qualquer emoção ou até mesmo forçar o sorriso enquanto flerta com uma desconhecida no metrô de Nova Iorque, ou seu olhar faminto enquanto uma prostituta adentra em seu apartamento. Nenhum resquício de apego a qualquer coisa senão as sensações que aqueles "pedaços de carne" lhe causarão. Até mesmo a maneira como evita retornar uma insistente ligação que nunca atende pois sempre estava ocupado com seus orgasmos entrega bastante sobre o personagem e sua relação com o sexo, consigo e com seus relacionamentos.

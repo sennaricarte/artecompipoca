@@ -8,6 +8,27 @@ legacyUrl: /oblogquenaoestavala/boardwalk-empire-terceira-temporada/
 draft: true
 obra: Boardwalk Empire – 3ª temporada
 tipo: serie
+ficha:
+  tituloOriginal: "Boardwalk Empire"
+  direcao:
+    - "Martin Scorsese"
+    - "Tim Van Patten"
+  elenco:
+    - "Steve Buscemi"
+    - "Michael Pitt"
+    - "Kelly Macdonald"
+    - "Michael Shannon"
+    - "Shea Whigham"
+    - "Aleksa Palladino"
+  generos:
+    - "Série criminal"
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Terence Winter"
+  temporadas: 5
+  emissora: HBO
+  wikidataId: Q585758
 ---
 
 Séries

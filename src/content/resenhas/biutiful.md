@@ -8,6 +8,30 @@ legacyUrl: /biutiful-critica/
 draft: true
 obra: Biutiful
 tipo: filme
+ficha:
+  tituloOriginal: Biutiful
+  ano: 2010
+  direcao:
+    - "Alejandro González Iñárritu"
+  roteiro:
+    - "Alejandro González Iñárritu"
+    - "Armando Bó"
+    - "Nicolás Giacobone"
+  elenco:
+    - "Javier Bardem"
+    - "Maricel Álvarez"
+    - "Guillermo Estrella Mora"
+    - "Eduard Fernández"
+    - "Cheikh Ndiaye"
+    - "Nasser Saleh"
+  generos:
+    - Drama
+  duracaoMin: 148
+  paises:
+    - "México"
+    - Espanha
+  wikidataId: Q879174
+anoObra: 2010
 ---
 
 *"Uma*  *mão diminuta mexe em um anel que ocupa todo o dedo mínimo da mão de um homem. A voz de uma menina pergunta para aquele homem se o anel é de verdade, e ele responde que sim, que a joia foi um presente do pai para a mãe dele. Ela pergunta porque ele está com o anel, e ele responde que é porque o avô da menina deu a joia para a mãe dele antes de sair da Espanha. Depois disso, a mãe dele, que estava grávida, nunca mais teria visto o marido. A menina então pede para colocar o anel no dedo, e ele deixa, antes dela comentar que a mãe sempre usava o objeto no dedo anelar e que afirmava que a joia era de mentira. Corta."*

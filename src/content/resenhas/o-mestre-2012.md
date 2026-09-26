@@ -8,6 +8,27 @@ legacyUrl: /oblogquenaoestavala/grandes-filmes-o-mestre-the-master-2012/
 draft: true
 obra: O Mestre (2012)
 tipo: filme
+ficha:
+  tituloOriginal: "The Master"
+  ano: 2012
+  direcao:
+    - "Paul Thomas Anderson"
+  roteiro:
+    - "Paul Thomas Anderson"
+  elenco:
+    - "Joaquin Phoenix"
+    - "Philip Seymour Hoffman"
+    - "Amy Adams"
+    - "Laura Dern"
+    - "Rami Malek"
+    - "Jesse Plemons"
+  generos:
+    - Drama
+  duracaoMin: 138
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q283586
+anoObra: 2012
 ---
 
 Cinema

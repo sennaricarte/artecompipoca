@@ -8,6 +8,27 @@ legacyUrl: /especial-oscar-album-de-familia/
 draft: true
 obra: Álbum de Família
 tipo: filme
+ficha:
+  tituloOriginal: "August: Osage County"
+  ano: 2013
+  direcao:
+    - "John Wells"
+  roteiro:
+    - "Tracy Letts"
+  elenco:
+    - "Meryl Streep"
+    - "Julia Roberts"
+    - "Ewan McGregor"
+    - "Abigail Breslin"
+    - "Sam Shepard"
+    - "Chris Cooper"
+  generos:
+    - Drama
+  duracaoMin: 121
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q4055443
+anoObra: 2013
 ---
 
 Entrou recentemente na grade de programação de um canal por assinatura este maravilhoso filme de **John Wells**, com um elenco de grandes estrelas e com mais uma atuação brilhante de **Meryl Streep**, que acabou lhe rendendo sua 18ª indicação ao Oscar. Assim como sua antagonista, **Julia Roberts**, que voltou a brilhar na lista de indicações na temporada de prêmios de 2014, reafirmando seu talento como atriz dramática, já que antes ela vinha estrelando somente comédias românticas (**Idas e Vindas do Amor**, **Larry Crowne**, **Comer Rezar e Amar**) e reconstruções de contos de fada (**Espelho Espelho Meu**).

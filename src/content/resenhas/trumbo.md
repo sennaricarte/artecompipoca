@@ -9,6 +9,41 @@ legacyUrl: /trumbo-critica/
 draft: false
 obra: Trumbo
 tipo: filme
+ficha:
+  tituloOriginal: Trumbo
+  ano: 2015
+  direcao:
+    - "Jay Roach"
+  roteiro:
+    - "John McNamara"
+  elenco:
+    - "Bryan Cranston"
+    - "Diane Lane"
+    - "Helen Mirren"
+    - "Louis C.K."
+    - "Elle Fanning"
+    - "John Goodman"
+  generos:
+    - Drama
+  duracaoMin: 124
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18692630
+  sinopse: "No fim dos anos 1940, Dalton Trumbo, um dos roteiristas mais bem pagos de Hollywood, é preso e colocado na lista negra por suas convicções políticas. Impedido de assinar o próprio trabalho, passa a escrever sob pseudônimos e a organizar uma rede de colegas banidos, enquanto a perseguição cobra um preço alto de sua família."
+  curiosidades:
+    - "Trumbo ganhou dois Oscars de roteiro enquanto estava banido: em 1954, por \"A Princesa e o Plebeu\", assinado pelo amigo Ian McLellan Hunter, e em 1957 por \"Arenas Sangrentas\", creditado a um desconhecido \"Robert Rich\"."
+    - "A Academia só entregou a estatueta de \"Arenas Sangrentas\" ao verdadeiro autor em 1975, pouco antes de sua morte; a de \"A Princesa e o Plebeu\" veio em 1993, 16 anos depois de ele morrer."
+    - "O filme recria figuras reais da velha Hollywood dos dois lados da disputa: a colunista Hedda Hopper e John Wayne contra os comunistas, e o diretor Otto Preminger e o ator Kirk Douglas ajudando Trumbo."
+  premios:
+    - "Indicação ao Oscar de Melhor Ator (Bryan Cranston)"
+  fontes:
+    - nome: "Cinema com Rapadura"
+      url: "https://cinemacomrapadura.com.br/criticas/402673/trumbo-lista-negra-2015-tempos-sombrios-em-hollywood/"
+    - nome: IMDb
+      url: "https://www.imdb.com/name/nm0874308/bio/"
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-224115/criticas-adorocinema/"
+anoObra: 2015
 ---
 
 Em tempos de paranoia anticomunista que vivemos atualmente, um filme que conta a história de um roteirista de cinema perseguido por ser comunista soa mais que atual. Com a diferença que a história começa nos anos 40, nos EUA. Trata-se de **Trumbo**, cinebiografia de **Dalton Trumbo**, roteirista de grandes filmes, como "Spartacus", de **Stanley Kubrick**, entre outros, e que figurou na lista negra da caça às bruxas comunista, sendo um dos integrantes do chamado "Os Dez de Hollywood", um grupo de roteiristas renegados pela indústria cinematográfica americana, devido ao envolvimento com o Partido Comunista.

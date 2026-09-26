@@ -8,6 +8,28 @@ legacyUrl: /especial-oscar-clube-de-compras-dallas/
 draft: true
 obra: Clube de Compras Dallas
 tipo: filme
+ficha:
+  tituloOriginal: "Dallas Buyers Club"
+  ano: 2013
+  direcao:
+    - "Jean-Marc Vallée"
+  roteiro:
+    - "Craig Borten"
+    - "Melisa Wallack"
+  elenco:
+    - "Matthew McConaughey"
+    - "Jennifer Garner"
+    - "Jared Leto"
+    - "Bradford Cox"
+    - "Dallas Roberts"
+    - "Denis O'Hare"
+  generos:
+    - Drama
+  duracaoMin: 117
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q3520498
+anoObra: 2013
 ---
 
 ***Elenco:** Matthew McConaughey, Jared Leto, Jennifer Garner, Dallar Roberts, Lawrence Turner*

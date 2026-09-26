@@ -8,6 +8,24 @@ legacyUrl: /oslo-31-de-agosto-critica/
 draft: true
 obra: "Oslo, 31 de Agosto"
 tipo: filme
+ficha:
+  tituloOriginal: "Oslo, 31. august"
+  ano: 2011
+  direcao:
+    - "Joachim Trier"
+  roteiro:
+    - "Eskil Vogt"
+  elenco:
+    - "Anders Danielsen Lie"
+    - "Ingrid Olava"
+    - "Malin Crépin"
+  generos:
+    - Drama
+  duracaoMin: 96
+  paises:
+    - Noruega
+  wikidataId: Q401566
+anoObra: 2011
 ---
 
 *"Oslo, a capital da Noruega, é anteposta a personagem que, a partir do texto e a partir da interpretação poderosa do ator **Anders Danielsen Lie**, compõe jornada de reinserção pós dependência química, atacada por inadequação depressiva ao espaço e a existência. O resultado é brilhante."*

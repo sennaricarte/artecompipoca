@@ -8,6 +8,26 @@ legacyUrl: /resenha-de-seriado-house-cards-segunda-temporada/
 draft: true
 obra: House of Cards – 2ª temporada
 tipo: serie
+ficha:
+  tituloOriginal: "House of Cards"
+  direcao:
+    - "David Fincher"
+  elenco:
+    - "Kevin Spacey"
+    - "Robin Wright"
+    - "Kate Mara"
+    - "Corey Stoll"
+    - "Michael Kelly"
+    - "Sakina Jaffrey"
+  generos:
+    - "Thriller político"
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Beau Willimon"
+  temporadas: 6
+  emissora: Netflix
+  wikidataId: Q3330940
 ---
 
 *"Pensaram que eu tinha esquecido vocês?"*, diz, olhando para a câmera, o agora Vice-Presidente dos Estados Unidos **Francis Underwood**, na cena final do primeiro episódio da segunda temporada de **House of Cards**. Sim, ele continua lançando seus comentários sarcásticos e ácidos na nossa direção, falando diretamente para o espectador e fazendo de nós seus cumplices. Até as suas abotoaduras, com as suas iniciais e enfocadas sobre a pia, representam uma brincadeira de duplo sentido, direcionada a quem está assistindo ao seriado.

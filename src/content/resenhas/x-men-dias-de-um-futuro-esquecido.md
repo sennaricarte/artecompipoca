@@ -1,4 +1,4 @@
-﻿---
+---
 title: "X-Men: Dias de um Futuro Esquecido"
 description: Cinema
 pubDate: 2014-05-28
@@ -8,6 +8,32 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-x-men-dias-de-um-futuro-esquecido-x-
 draft: true
 obra: "X-Men: Dias de um Futuro Esquecido"
 tipo: filme
+ficha:
+  tituloOriginal: "X-Men: Days of Future Past"
+  ano: 2014
+  direcao:
+    - "Bryan Singer"
+  roteiro:
+    - "Jane Goldman"
+    - "Simon Kinberg"
+    - "Matthew Vaughn"
+  elenco:
+    - "Shawn Ashmore"
+    - "Halle Berry"
+    - "Adan Canto"
+    - "Daniel Cudmore"
+    - "Peter Dinklage"
+    - "Fan Bingbing"
+  generos:
+    - "Ação"
+    - "Super-herói"
+    - "Filme distópico"
+  duracaoMin: 131
+  paises:
+    - "Estados Unidos"
+    - "Reino Unido"
+  wikidataId: Q4985891
+anoObra: 2014
 ---
 
 <!-- CONFERIR: pubDate aproximada pelo primeiro snapshot do Wayback -->

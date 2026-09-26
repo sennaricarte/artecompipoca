@@ -8,6 +8,32 @@ legacyUrl: /oblogquenaoestavala/frances-ha-2013/
 draft: true
 obra: Frances Ha (2013)
 tipo: filme
+ficha:
+  tituloOriginal: "Frances Ha"
+  ano: 2012
+  direcao:
+    - "Noah Baumbach"
+  roteiro:
+    - "Noah Baumbach"
+    - "Greta Gerwig"
+  elenco:
+    - "Greta Gerwig"
+    - "Mickey Sumner"
+    - "Michael Esper"
+    - "Adam Driver"
+    - "Michael Zegen"
+    - "Juliet Rylance"
+  generos:
+    - "Comédia dramática"
+    - "Comédia cinematográfica"
+    - Drama
+  duracaoMin: 86
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Noah Baumbach"
+  wikidataId: Q5478692
+anoObra: 2012
 ---
 
 Cinema

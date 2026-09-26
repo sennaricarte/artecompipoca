@@ -8,6 +8,27 @@ legacyUrl: /atividade-paranormal-dimensao-fantasma-critica/
 draft: true
 obra: "Atividade Paranormal: Dimensão Fantasma"
 tipo: filme
+ficha:
+  tituloOriginal: "Paranormal Activity: The Ghost Dimension"
+  ano: 2015
+  direcao:
+    - "Gregory Plotkin"
+  roteiro:
+    - "Gavin Heffernan"
+  elenco:
+    - "Jessica Tyler Brown"
+    - "Olivia Taylor Dudley"
+    - "Chloe Csengery"
+    - "Don McManus"
+    - "Hallie Foote"
+    - "Cara Pifko"
+  generos:
+    - Terror
+  duracaoMin: 88
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18558912
+anoObra: 2015
 ---
 
 Quando se muda para uma nova casa com a família, Ryan Fleege (Chris J. Murray) descobre uma caixa com dezenas de fitas cassetes de décadas atrás. Estranhamente, as imagens parecem se comunicar com os vivos. Procurando mais, Ryan encontra uma câmera diferente, capaz de registrar atividades paranormais. Com a ajuda da esposa, do irmão e da filha, ele passa a gravar fenômenos malignos que ameaçam seus entes queridos. Essa é a premissa do novo Atividade Paranormal, como vimos na sinopse esse novo filme continua bem parecido com os anteriores. Eu particularmente gosto da franquia e acho interessante o clima que os filmes passam de suspense, principalmente nas cenas em que as câmaras ficam mostrando os ambientes da casa.

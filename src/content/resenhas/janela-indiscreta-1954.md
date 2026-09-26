@@ -8,6 +8,30 @@ legacyUrl: /oblogquenaoestavala/grandes-filmes-janela-indiscreta-rear-window-195
 draft: true
 obra: Janela Indiscreta (1954)
 tipo: filme
+ficha:
+  tituloOriginal: "Rear Window"
+  ano: 1954
+  direcao:
+    - "Alfred Hitchcock"
+  roteiro:
+    - "John Michael Hayes"
+    - "Cornell Woolrich"
+  elenco:
+    - "James Stewart"
+    - "Grace Kelly"
+    - "Wendell Corey"
+    - "Thelma Ritter"
+    - "Raymond Burr"
+    - "Judith Evelyn"
+  generos:
+    - Crime
+    - "Mistério"
+    - Suspense
+  duracaoMin: 112
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q34414
+anoObra: 1954
 ---
 
 Cinema

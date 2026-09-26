@@ -8,6 +8,31 @@ legacyUrl: /especial-oscar-para-sempre-alice/
 draft: true
 obra: Para Sempre Alice
 tipo: filme
+ficha:
+  tituloOriginal: "Still Alice"
+  ano: 2014
+  direcao:
+    - "Richard Glatzer"
+    - "Wash Westmoreland"
+  roteiro:
+    - "Richard Glatzer"
+    - "Wash Westmoreland"
+  elenco:
+    - "Alec Baldwin"
+    - "Hunter Parrish"
+    - "Julianne Moore"
+    - "Kate Bosworth"
+    - "Kristen Stewart"
+    - "Shane McRae"
+  generos:
+    - Drama
+  duracaoMin: 101
+  paises:
+    - "Estados Unidos"
+    - "Reino Unido"
+    - "França"
+  wikidataId: Q16354843
+anoObra: 2014
 ---
 
 A categoria de Melhor Atriz das últimas três edições do Oscar já tinham sua vencedora praticamente no dia do anúncio dos indicados. **Meryl Streep** (2012), **Jennifer Lawerence** (2013) e **Cate Blanchett** (2014) saíram arrebatando todos os prêmios da categoria na temporada e já entravam no tapete vermelho praticamente com a estatueta nas mãos.

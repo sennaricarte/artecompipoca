@@ -8,6 +8,31 @@ legacyUrl: /operacao-sombra-jack-ryan-critica/
 draft: true
 obra: "Operação Sombra: Jack Ryan"
 tipo: filme
+ficha:
+  tituloOriginal: "Jack Ryan: Shadow Recruit"
+  ano: 2014
+  direcao:
+    - "Kenneth Branagh"
+  roteiro:
+    - "David Koepp"
+    - "Anthony Peckham"
+    - "Steven Zaillian"
+  elenco:
+    - "Chris Pine"
+    - "Kevin Costner"
+    - "Keira Knightley"
+    - "David Paymer"
+    - "Kenneth Branagh"
+    - "Nonso Anozie"
+  generos:
+    - Suspense
+    - "Ação"
+    - Espionagem
+  duracaoMin: 105
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q902672
+anoObra: 2014
 ---
 
 No começo da década de 1990, quando o cinema de ação era dominado pelos atores **Sylvester Stallone** e **Arnold Schwarzenegger** (e seus personagens brutamontes), o estúdio **Paramount Pictures** começou a levar para as telas um tipo de produção que poderia se qualificar de **"o filme de ação com cérebro"**. Eram as adaptações cinematográficas dos livros do escritor **Tom Clancy**: histórias que misturavam suspense e aventura com cenários e situações plausíveis, ambientados no mundo da **Guerra Fria** e seu imediato período posterior. E esses livros eram estrelados por um herói bastante humano: o analista da CIA **Jack Ryan**, sempre metido em encrencas maiores do que ele, e das quais ele escapava usando, sobretudo, a sua inteligência.

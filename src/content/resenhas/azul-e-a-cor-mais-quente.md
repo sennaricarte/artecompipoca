@@ -8,6 +8,31 @@ legacyUrl: /azul-e-a-cor-mais-quente-critica/
 draft: true
 obra: Azul é a Cor Mais Quente
 tipo: filme
+ficha:
+  tituloOriginal: "La Vie d'Adèle : Chapitres 1 et 2"
+  ano: 2013
+  direcao:
+    - "Abdellatif Kechiche"
+  roteiro:
+    - "Abdellatif Kechiche"
+    - "Ghalya Lacroix"
+  elenco:
+    - "Léa Seydoux"
+    - "Adèle Exarchopoulos"
+    - "Jérémie Laheurte"
+    - "Catherine Salée"
+    - "Mona Walravens"
+    - "Aurélien Recoing"
+  generos:
+    - Drama
+    - "Cinema erótico"
+  duracaoMin: 179
+  paises:
+    - "França"
+    - "Bélgica"
+    - Espanha
+  wikidataId: Q11648811
+anoObra: 2013
 ---
 
 Como interpretar o fato de "faltar algo no coração"? E quando vocês são objetos do olhar de alguém, trocam olhares ou se cruzam espontaneamente, como "amor à primeira vista", por exemplo? Seguem em frente com algo a menos ou a mais no coração? Além disso, quero que pensem sobre a ideia de predestinação nos encontros, como o acontece, às vezes, no amor à primeira vista.

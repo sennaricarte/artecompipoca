@@ -8,6 +8,25 @@ legacyUrl: /a-estrada-47-critica/
 draft: true
 obra: A Estrada 47
 tipo: filme
+ficha:
+  tituloOriginal: "A Estrada 47"
+  ano: 2013
+  direcao:
+    - "Vicente Ferraz"
+  elenco:
+    - "Sergio Rubini"
+    - "Daniel de Oliveira"
+    - "Ivo Canelas"
+    - "Richard Sammel"
+  generos:
+    - Drama
+  duracaoMin: 107
+  paises:
+    - Portugal
+    - "Itália"
+    - Brasil
+  wikidataId: Q17053260
+anoObra: 2013
 ---
 
 **A Estrada 47** é um dos tipos de filmes nacionais que você termina de assistir e um certo patriotismo invade seu peito enchendo-o de orgulho, principalmente por se tratar de um enredo baseado em fatos reais, de uma passagem histórica da qual poucos conhecem, aqui no Brasil e principalmente no exterior.

@@ -8,6 +8,28 @@ legacyUrl: /o-prisioneiro-series-classicas/
 draft: true
 obra: O Prisioneiro
 tipo: serie
+ficha:
+  tituloOriginal: "The Prisoner"
+  direcao:
+    - "Pat Jackson"
+    - "Don Chaffey"
+  roteiro:
+    - "Patrick McGoohan"
+    - "David Tomblin"
+  elenco:
+    - "Patrick McGoohan"
+  generos:
+    - Espionagem
+  duracaoMin: 48
+  paises:
+    - "Reino Unido"
+  criadores:
+    - "Patrick McGoohan"
+    - "George Markstein"
+    - "David Tomblin"
+  temporadas: 1
+  emissora: ITV
+  wikidataId: Q714753
 ---
 
 Talvez essa seja a série mais inusitada, instigante e criativamente crítica já criada. Hoje em dia, poucos a conhecem, mas quem teve o privilégio de assistir, nunca via esquecer o desconforto e deslumbre que ela causa no espectador.

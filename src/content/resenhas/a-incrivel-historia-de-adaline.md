@@ -8,6 +8,28 @@ legacyUrl: /a-incrivel-historia-de-adalinecritica/
 draft: true
 obra: A Incrível História de Adaline
 tipo: filme
+ficha:
+  tituloOriginal: "The Age of Adaline"
+  ano: 2015
+  direcao:
+    - "Lee Toland Krieger"
+  roteiro:
+    - "J. Mills Goodloe"
+  elenco:
+    - "Blake Lively"
+    - "Michiel Huisman"
+    - "Harrison Ford"
+    - "Ellen Burstyn"
+    - "Kathy Baker"
+    - "Amanda Crew"
+  generos:
+    - Fantasia
+    - Drama
+  duracaoMin: 112
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q16242543
+anoObra: 2015
 ---
 Poder viver em contáveis anos e sem envelhecer isso séria um sonho para muitos, pelo menos nos primeiros anos, mas para Adaline que já  vive nessa situação por muitos e muitos anos isso é quase que um maldição e é do fardo que essa vida eterna se tornou que se trata o filme **A Incrível História de Adaline** (The Age of Adeline).
 

@@ -8,6 +8,30 @@ legacyUrl: /pele-que-habito-critica/
 draft: true
 obra: A Pele que Habito
 tipo: filme
+ficha:
+  tituloOriginal: "La piel que habito"
+  ano: 2011
+  direcao:
+    - "Pedro Almodóvar"
+  roteiro:
+    - "Pedro Almodóvar"
+    - "Agustín Almodóvar"
+    - "Thierry Jonquet"
+  elenco:
+    - "Antonio Banderas"
+    - "Elena Anaya"
+    - "Marisa Paredes"
+    - "Jan Cornet"
+    - "Blanca Suárez"
+    - "Susi Sánchez"
+  generos:
+    - Suspense
+    - Drama
+  duracaoMin: 120
+  paises:
+    - Espanha
+  wikidataId: Q1130310
+anoObra: 2011
 ---
 
 Confesso que foi um filme absolutamente diferente do trabalho que estamos acostumados a ver por **Pedro Almodóvar** (Vicky Cristina  Barcelona) .

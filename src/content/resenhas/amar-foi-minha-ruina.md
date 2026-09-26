@@ -8,6 +8,27 @@ legacyUrl: /especial-oscar-amar-foi-minha-ruina/
 draft: true
 obra: Amar Foi Minha Ruína
 tipo: filme
+ficha:
+  tituloOriginal: "Leave Her to Heaven"
+  ano: 1945
+  direcao:
+    - "John M. Stahl"
+  roteiro:
+    - "Jo Swerling"
+  elenco:
+    - "Gene Tierney"
+    - "Cornel Wilde"
+    - "Jeanne Crain"
+    - "Vincent Price"
+    - "Mary Philips"
+    - "Ray Collins"
+  generos:
+    - Drama
+  duracaoMin: 110
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q210873
+anoObra: 1945
 ---
 
 **Amar Foi Minha Ruína**, de 1945, marca o reencontro de **Gene Tierney** e **Vincent Price** nas telas. O mesmo casal havia protagonizado, no ano anterior, o clássico noir de **Otto Preminger Laura**, e vive aqui outro triângulo amoroso.

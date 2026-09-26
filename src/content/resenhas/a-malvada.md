@@ -8,6 +8,31 @@ legacyUrl: /especial-oscar-a-malvada/
 draft: true
 obra: A Malvada
 tipo: filme
+ficha:
+  tituloOriginal: "All About Eve"
+  ano: 1950
+  direcao:
+    - "Joseph L. Mankiewicz"
+  roteiro:
+    - "Joseph L. Mankiewicz"
+    - "Erich Kästner"
+  elenco:
+    - "Bette Davis"
+    - "Anne Baxter"
+    - "George Sanders"
+    - "Celeste Holm"
+    - "Gary Merrill"
+    - "Hugh Marlowe"
+  generos:
+    - Drama
+    - "Comédia cinematográfica"
+  duracaoMin: 138
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Joseph L. Mankiewicz"
+  wikidataId: Q200299
+anoObra: 1950
 ---
 
 Em época de **Oscar** é impossível não falarmos de certos filmes. Entre os recordistas de prêmios temos empatadas três produções: **Bem Hur, Titanic** *e* **O Senhor dos Anéis: O Retorno do Rei**, todos eles com 11 Oscars. Entre os recordistas de indicações temos este clássico, **A Malvada**, empatado com **Titanic**, com 14 indicações.

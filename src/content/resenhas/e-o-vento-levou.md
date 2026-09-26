@@ -8,6 +8,34 @@ legacyUrl: /e-o-vento-levou/
 draft: true
 obra: E o Vento Levou
 tipo: filme
+ficha:
+  tituloOriginal: "Gone with the Wind"
+  ano: 1939
+  direcao:
+    - "Victor Fleming"
+    - "George Cukor"
+    - "Sam Wood"
+  roteiro:
+    - "Sidney Howard"
+    - "Ben Hecht"
+    - "Jo Swerling"
+    - "John Van Druten"
+  elenco:
+    - "Clark Gable"
+    - "Vivien Leigh"
+    - "Leslie Howard"
+    - "Olivia de Havilland"
+    - "Hattie McDaniel"
+    - "Butterfly McQueen"
+  generos:
+    - Drama
+    - "Filme histórico"
+    - Guerra
+  duracaoMin: 238
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q2875
+anoObra: 1939
 ---
 
 Confira a ficha técnica completa do filme **E o Vento Levou:**

@@ -8,6 +8,32 @@ legacyUrl: /critica-definitiva-noe/
 draft: true
 obra: Noé
 tipo: filme
+ficha:
+  tituloOriginal: Noah
+  ano: 2014
+  direcao:
+    - "Darren Aronofsky"
+  roteiro:
+    - "Darren Aronofsky"
+    - "Ari Handel"
+  elenco:
+    - "Russell Crowe"
+    - "Jennifer Connelly"
+    - "Anthony Hopkins"
+    - "Logan Lerman"
+    - "Douglas Booth"
+    - "Emma Watson"
+  generos:
+    - Aventura
+    - "Ficção especulativa"
+    - "Filme épico"
+  duracaoMin: 138
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Darren Aronofsky"
+  wikidataId: Q286868
+anoObra: 2014
 ---
 
 *"Esqueça completamente críticas negativas. Esqueça polêmicas  criadas pelo Islamismo, mesmo o catolicismo ou qualquer outra religião. A verdade é que o filme do genial Darren Aronofsky lança um olhar para a postura de Noé, entre sua relação com Deus e com os seus, tão cheia de uma ironia e de um sarcasmo saborosíssimos, procurando um equilíbrio crucial entre justiça e misericórdia, que incomodaria de fato aos literais. Incomodou aos literais religiosos e aos literais a obra de Aronofsky, que por não conseguirem enxergar a espada lancinante da direção de "**CISNE NEGRO"***,  ***"O LUTADOR"*** e ***"REQUIEM PARA UM SONHO"***, chegaram a taxar ao filme como o pior da obra do diretor. Mas tal visão é pessoal e equivocada diante de um grande filme"

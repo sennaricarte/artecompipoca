@@ -8,6 +8,30 @@ legacyUrl: /ladroes-de-bicicletas-critica/
 draft: true
 obra: Ladrões de Bicicletas
 tipo: filme
+ficha:
+  tituloOriginal: "Ladri di biciclette"
+  ano: 1948
+  direcao:
+    - "Vittorio De Sica"
+  roteiro:
+    - "Cesare Zavattini"
+    - "Vittorio De Sica"
+    - "Suso Cecchi D'Amico"
+    - "Oreste Biancoli"
+  elenco:
+    - "Lamberto Maggiorani"
+    - "Enzo Staiola"
+    - "Lianella Carell"
+    - "Gino Saltamerenda"
+    - "Elena Altieri"
+    - "Carlo Jachino"
+  generos:
+    - Drama
+  duracaoMin: 90
+  paises:
+    - "Itália"
+  wikidataId: Q172837
+anoObra: 1948
 ---
 
 A crítica social sempre se fez bastante presente dentro do cinema italiano. Intensificada pela condição que o País passou a se encontrar após o final da segunda guerra mundial, afinal havia acabado de vivenciar o regime fascista e o mórbido cotidiano da guerra, o cinema feito nessa época passou a abordar de maneira política a emergência do abismo social que passou a separar ricos e pobres em tempos de reconstrução econômica. Porém, diferente do exemplo russo, o neorrealismo passou longe do panfletarismo, saem respostas ditadas por um Estado pretensamente libertário e sobra o sujeito comum. Nunca as ruas se reconheceram na tela dessa forma, um engajamento social que não perdeu o lado mais interessante do entretenimento, a diversão.

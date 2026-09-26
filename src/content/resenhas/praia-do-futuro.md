@@ -1,4 +1,4 @@
-﻿---
+---
 title: Praia do Futuro
 description: Cinema
 pubDate: 2014-05-28
@@ -8,6 +8,28 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-praia-do-futuro-2014/
 draft: true
 obra: Praia do Futuro
 tipo: filme
+ficha:
+  tituloOriginal: "Praia do Futuro"
+  ano: 2014
+  direcao:
+    - "Karim Aïnouz"
+  roteiro:
+    - "Karim Aïnouz"
+    - "Felipe Bragança"
+  elenco:
+    - "Wagner Moura"
+    - "Emily Cox"
+    - "Clemens Schick"
+    - "Sabine Timoteo"
+    - "Sophie Charlotte Conrad"
+  generos:
+    - Drama
+  duracaoMin: 106
+  paises:
+    - Alemanha
+    - Brasil
+  wikidataId: Q16938850
+anoObra: 2014
 ---
 
 <!-- CONFERIR: pubDate aproximada pelo primeiro snapshot do Wayback -->

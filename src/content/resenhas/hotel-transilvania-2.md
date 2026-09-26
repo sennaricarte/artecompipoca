@@ -8,6 +8,24 @@ legacyUrl: /hotel-transylvania-2-critica/
 draft: true
 obra: Hotel Transilvânia 2
 tipo: filme
+ficha:
+  tituloOriginal: "Hotel Transylvania 2"
+  ano: 2015
+  direcao:
+    - "Genndy Tartakovsky"
+  roteiro:
+    - "Robert Smigel"
+    - "Adam Sandler"
+    - "The Hageman Brothers"
+  generos:
+    - "Comédia de terror"
+    - Monstro
+    - Vampiro
+  duracaoMin: 89
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q15270775
+anoObra: 2015
 ---
 
 Os nossos monstros preferidos estão de volta nessa mais nova aventura, em **Hotel Transylvânia 2**  . Junte-Junte-se novamente a Drácula e sua turma na mais nova missão:  fazer seu neto Dennis a torna-se um vampiro.

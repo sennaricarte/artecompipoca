@@ -8,6 +8,32 @@ legacyUrl: /oblogquenaoestavala/nos-cinemas-no-limite-do-amanha-edge-of-tomorrow
 draft: true
 obra: No Limite do Amanhã
 tipo: filme
+ficha:
+  tituloOriginal: "Edge of Tomorrow"
+  ano: 2014
+  direcao:
+    - "Doug Liman"
+  roteiro:
+    - "Joby Harold"
+    - "John-Henry Butterworth"
+    - "Christopher McQuarrie"
+    - "Jez Butterworth"
+  elenco:
+    - "Tom Cruise"
+    - "Bill Paxton"
+    - "Brendan Gleeson"
+    - "Charlotte Riley"
+    - "Emily Blunt"
+    - "Jonas Armstrong"
+  generos:
+    - "Ficção científica"
+    - "Ficção científica militar"
+    - "Filme distópico"
+  duracaoMin: 113
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q1187607
+anoObra: 2014
 ---
 
 Cinema

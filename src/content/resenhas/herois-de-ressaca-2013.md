@@ -8,6 +8,32 @@ legacyUrl: /oblogquenaoestavala/filmes-do-outro-mundo-herois-de-ressaca-the-worl
 draft: true
 obra: Heróis de Ressaca (2013)
 tipo: filme
+ficha:
+  tituloOriginal: "The World's End"
+  ano: 2013
+  direcao:
+    - "Edgar Wright"
+  roteiro:
+    - "Edgar Wright"
+    - "Simon Pegg"
+  elenco:
+    - "Nick Frost"
+    - "Simon Pegg"
+    - "Rosamund Pike"
+    - "Paddy Considine"
+    - "Martin Freeman"
+    - "Eddie Marsan"
+  generos:
+    - "Ficção científica"
+    - "Invasão alienígena"
+    - "Comédia romântica"
+  duracaoMin: 109
+  paises:
+    - "Reino Unido"
+    - "Japão"
+    - "Estados Unidos"
+  wikidataId: Q722379
+anoObra: 2013
 ---
 
 Cinema

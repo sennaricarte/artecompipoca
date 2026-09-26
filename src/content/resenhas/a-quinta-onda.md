@@ -8,6 +8,31 @@ legacyUrl: /a-quinta-onda-critica/
 draft: true
 obra: A Quinta Onda
 tipo: filme
+ficha:
+  tituloOriginal: "The 5th Wave"
+  ano: 2016
+  direcao:
+    - "J Blakeson"
+  roteiro:
+    - "Susannah Grant"
+    - "Akiva Goldsman"
+    - "Jeff Pinkner"
+  elenco:
+    - "Chloë Moretz"
+    - "Nick Robinson"
+    - "Ron Livingston"
+    - "Maggie Siff"
+    - "Alex Roe"
+    - "Maria Bello"
+  generos:
+    - "Ficção científica"
+    - "Filme distópico"
+    - "Ação"
+  duracaoMin: 117
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q17436508
+anoObra: 2016
 ---
 
 E temos mais um sci fi com triangulo amoroso.

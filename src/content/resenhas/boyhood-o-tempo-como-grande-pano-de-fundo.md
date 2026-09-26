@@ -8,6 +8,27 @@ legacyUrl: /boyhood-o-tempo-como-grande-pano-de-fundo/
 draft: true
 obra: "Boyhood: o tempo como grande pano de fundo"
 tipo: filme
+ficha:
+  tituloOriginal: Boyhood
+  ano: 2014
+  direcao:
+    - "Richard Linklater"
+  roteiro:
+    - "Richard Linklater"
+  elenco:
+    - "Ethan Hawke"
+    - "Patricia Arquette"
+    - "Ellar Coltrane"
+    - "Nick Krause"
+    - "Lorelei Linklater"
+    - "Brad Hawkins"
+  generos:
+    - Drama
+  duracaoMin: 163
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q4103201
+anoObra: 2014
 ---
 O roteiro de **Boyhood** todos já devem conhecer, o acompanhamento da vida de Mason a partir de seus 5 anos até os 18. Aqui vale o destaque para o diretor **Richard Linklater** que merece ser reconhecido podendo até ser aclamado por tamanha maestria filmando o tempo como grande remédio, ou melhor, por colocar a vida num filme e o tempo como grande pano de fundo, tal como ocorre na vida.
 

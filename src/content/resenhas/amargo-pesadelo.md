@@ -8,6 +8,30 @@ legacyUrl: /amargo-pesadelo-critica/
 draft: true
 obra: Amargo Pesadelo
 tipo: filme
+ficha:
+  tituloOriginal: Deliverance
+  ano: 1972
+  direcao:
+    - "John Boorman"
+  roteiro:
+    - "James Dickey"
+    - "John Boorman"
+  elenco:
+    - "Jon Voight"
+    - "Burt Reynolds"
+    - "Ned Beatty"
+    - "Ronny Cox"
+    - "James Dickey"
+    - "Bill McKinney"
+  generos:
+    - Suspense
+    - Drama
+    - Aventura
+  duracaoMin: 109
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q814778
+anoObra: 1972
 ---
 
 Amargo Pesadelo é um filme de ação estrelado pelos atros Burt Reynolds e Jon Voight com uma envolvente história de quatro amigos que se reúnem para uma descida de canoa pelas corredeiras na floresta de Geógia. O que era para ser uma aventura de fim de semana se transforma em um final de semana sangrento.

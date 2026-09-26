@@ -8,6 +8,23 @@ legacyUrl: /oblogquenaoestavala/mad-men-sexta-temporada/
 draft: true
 obra: Mad Men – 6ª temporada
 tipo: serie
+ficha:
+  tituloOriginal: "Mad Men"
+  elenco:
+    - "Jon Hamm"
+    - "Elisabeth Moss"
+    - "Vincent Kartheiser"
+    - "January Jones"
+    - "Christina Hendricks"
+    - "John Slattery"
+  duracaoMin: 47
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Matthew Weiner"
+  temporadas: 7
+  emissora: AMC
+  wikidataId: Q223977
 ---
 
 Séries

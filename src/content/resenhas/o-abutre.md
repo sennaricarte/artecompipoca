@@ -9,6 +9,28 @@ legacyUrl: /o-abutre/
 draft: false
 obra: O Abutre
 tipo: filme
+ficha:
+  tituloOriginal: Nightcrawler
+  ano: 2014
+  direcao:
+    - "Dan Gilroy"
+  roteiro:
+    - "Dan Gilroy"
+  elenco:
+    - "Ann Cusack"
+    - "Bill Paxton"
+    - "Jake Gyllenhaal"
+    - "Kathleen York"
+    - "Kevin Rahm"
+    - "Rene Russo"
+  generos:
+    - Suspense
+    - Drama
+  duracaoMin: 117
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q15154975
+anoObra: 2014
 ---
 Confira a ficha técnica completa do filme O Abutre**:**
 

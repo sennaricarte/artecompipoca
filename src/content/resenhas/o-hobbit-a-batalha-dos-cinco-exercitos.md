@@ -8,6 +8,33 @@ legacyUrl: /o-hobbit-batalha-dos-cinco-exercitos-2/
 draft: true
 obra: "O Hobbit: A Batalha dos Cinco Exércitos"
 tipo: filme
+ficha:
+  tituloOriginal: "The Hobbit: The Battle of the Five Armies"
+  ano: 2014
+  direcao:
+    - "Peter Jackson"
+  roteiro:
+    - "Philippa Boyens"
+    - "Peter Jackson"
+    - "Fran Walsh"
+    - "Guillermo del Toro"
+  elenco:
+    - "Adam Brown"
+    - "Aidan Turner"
+    - "Benedict Cumberbatch"
+    - "Bret McKenzie"
+    - "Christopher Lee"
+    - "Dean O'Gorman"
+  generos:
+    - Aventura
+    - Fantasia
+    - "Ação"
+  duracaoMin: 144
+  paises:
+    - "Estados Unidos"
+    - "Nova Zelândia"
+  wikidataId: Q919649
+anoObra: 2014
 ---
 Confira a ficha técnica completa do filme O Hobbit: A Batalha dos Cinco Exércitos**:**
 

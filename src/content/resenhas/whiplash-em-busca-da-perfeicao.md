@@ -9,6 +9,44 @@ legacyUrl: /whiplash-em-busca-da-perfeicao-critica/
 draft: false
 obra: "Whiplash: Em Busca da Perfeição"
 tipo: filme
+ficha:
+  tituloOriginal: Whiplash
+  ano: 2014
+  direcao:
+    - "Damien Chazelle"
+  roteiro:
+    - "Damien Chazelle"
+  elenco:
+    - "Austin Stowell"
+    - "J. K. Simmons"
+    - "Jayson Blair"
+    - "Melissa Benoist"
+    - "Miles Teller"
+    - "Paul Reiser"
+  generos:
+    - Drama
+  duracaoMin: 106
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q15648198
+  sinopse: "Andrew Neiman, jovem baterista de um conservatório de elite em Nova York, é escolhido para a banda de jazz de Terence Fletcher, um maestro tão respeitado quanto implacável. Sob pressão constante, a busca de Andrew pela excelência vira obsessão, e a relação entre aluno e professor se transforma num duelo de resistência."
+  curiosidades:
+    - "Parte da história vem da experiência do próprio Damien Chazelle como baterista na banda da escola, onde se sentia intimidado pelo instrutor."
+    - "A produção foi relâmpago: as filmagens duraram vinte dias, e entre o set, a montagem e a inscrição em Sundance passaram-se só dez semanas."
+    - "Miles Teller toca bateria desde os 15 anos, mas o estilo vigoroso do jazz deixou suas mãos cheias de bolhas."
+  premios:
+    - "Oscar de Ator Coadjuvante (J.K. Simmons)"
+    - "Oscar de Montagem"
+    - "Oscar de Mixagem de Som"
+    - "5 indicações ao Oscar, incluindo Melhor Filme"
+    - "Globo de Ouro de Ator Coadjuvante (J.K. Simmons)"
+    - "Grande Prêmio do Júri e Prêmio do Público em Sundance 2014"
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-225953/curiosidades/"
+    - nome: "Wikipédia"
+      url: "https://pt.wikipedia.org/wiki/Whiplash_(filme)"
+anoObra: 2014
 ---
 Dos filmes indicados ao **Oscar** de 2015 que eu vi, o que mais me surpreendeu foi este **Whiplash – Em Busca da Perfeição**, de **Damien Chazelle**. O filme conta uma história bastante simples: a de **Andrew Neyman**, jovem estudante de música que deseja se tornar o melhor baterista do mundo. E, para realizar sua ambição, ele se matricula no que ele considera ser o melhor conservatório musical dos EUA. Nesse conservatório, **Terence Fletcher**, o diretor, é conhecido como um severo, mal humorado, e superexigente profissional. É difícil ser selecionado para fazer parte de sua turma, e mais difícil ainda se manter parte dela. E quando Neyman consegue ser convidado pelo próprio Fletcher, começa uma história que mistura o sonho da realização com o pesadelo da obsessão.
 

@@ -8,6 +8,30 @@ legacyUrl: /mazer-runner-correr-ou-morrer-critica/
 draft: true
 obra: "Maze Runner: Correr ou Morrer"
 tipo: filme
+ficha:
+  tituloOriginal: "The Maze Runner"
+  ano: 2014
+  direcao:
+    - "Wes Ball"
+  roteiro:
+    - "Noah Oppenheim"
+    - "T.S. Nowlin"
+  elenco:
+    - "Dylan O'Brien"
+    - "Thomas Sangster"
+    - "Kaya Scodelario"
+    - "Will Poulter"
+    - "Aml Ameen"
+    - "Patricia Clarkson"
+  generos:
+    - "Filme distópico"
+    - Suspense
+    - "Filme pós-apocalíptico"
+  duracaoMin: 113
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q13099455
+anoObra: 2014
 ---
 **Mazer Runner: Correr ou Morrer** é adaptação para o cinema do romance futurista de James Dashner e conta a história de Thomas (Dylan O'Brien) que se encontra em um lugar chamado Clareira.
 

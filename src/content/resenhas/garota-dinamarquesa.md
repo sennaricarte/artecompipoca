@@ -8,6 +8,31 @@ legacyUrl: /garota-dinamarquesa-critica/
 draft: true
 obra: Garota Dinamarquesa
 tipo: filme
+ficha:
+  tituloOriginal: "The Danish Girl"
+  ano: 2015
+  direcao:
+    - "Tom Hooper"
+  roteiro:
+    - "Lucinda Coxon"
+  elenco:
+    - "Eddie Redmayne"
+    - "Alicia Vikander"
+    - "Matthias Schoenaerts"
+    - "Ben Whishaw"
+    - "Sebastian Koch"
+    - "Amber Heard"
+  generos:
+    - Drama
+  duracaoMin: 120
+  paises:
+    - "Estados Unidos"
+    - "Reino Unido"
+    - "Bélgica"
+    - Alemanha
+    - Dinamarca
+  wikidataId: Q19347583
+anoObra: 2015
 ---
 
 E será que **Eddie Redmayne** leva o Oscar de novo? Se dependesse de mim sim. Não tem como não começar essa crítica sem falar da atuação de Eddie, que faz a **Garota Dinamarquesa** ser melhor do que pretendia ser.

@@ -9,6 +9,31 @@ legacyUrl: /critica-definitiva-inside-llewyn-davis-balada-de-um-homem-comum/
 draft: false
 obra: Inside Llewyn Davis – Balada de Um Homem Comum
 tipo: filme
+ficha:
+  tituloOriginal: "Inside Llewyn Davis"
+  ano: 2013
+  direcao:
+    - "Ethan Coen"
+    - "Joel Coen"
+  roteiro:
+    - "Ethan Coen"
+    - "Joel Coen"
+  elenco:
+    - "Oscar Isaac"
+    - "Carey Mulligan"
+    - "Justin Timberlake"
+    - "John Goodman"
+    - "Garrett Hedlund"
+    - "F. Murray Abraham"
+  generos:
+    - Drama
+    - "Comédia dramática"
+  duracaoMin: 105
+  paises:
+    - "Estados Unidos"
+    - "França"
+  wikidataId: Q2340655
+anoObra: 2013
 ---
 
 *"É autoral. É inebriante. É singular. É a melhor parte dos irmãos Coen, guardada até agora, mas oferecida em profusão. Filme se distancia de cinebiografias feitas com roteiros lineares, se distancia da própria filmografia dos irmãos, surgindo como um fragmento, cujo elo é personagem todo entregue à subjetividade, em meados de momento íntimo da música. Torna-se um deleite aos olhos, mas principalmente aos ouvidos."*

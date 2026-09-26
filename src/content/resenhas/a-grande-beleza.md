@@ -9,6 +9,29 @@ legacyUrl: /grande-beleza-critica/
 draft: false
 obra: A Grande Beleza
 tipo: filme
+ficha:
+  tituloOriginal: "La grande bellezza"
+  ano: 2013
+  direcao:
+    - "Paolo Sorrentino"
+  roteiro:
+    - "Umberto Contarello"
+    - "Paolo Sorrentino"
+  elenco:
+    - "Toni Servillo"
+    - "Carlo Verdone"
+    - "Sabrina Ferilli"
+    - "Carlo Buccirosso"
+    - "Iaia Forte"
+    - "Pamela Villoresi"
+  generos:
+    - "Comédia dramática"
+  duracaoMin: 142
+  paises:
+    - "Itália"
+    - "França"
+  wikidataId: Q6379279
+anoObra: 2013
 ---
 *"Como expressão artística, que integra outras expressões, físicas ou extrassensoriais, **"A GRANDE BELEZA"** surge como um desabafo, um recorte da sociedade e um choque de culturas. Emocional, por vezes idílico e estilizado, propõe a reflexão e nunca se sobrepõe a Roma, o grande interesse da obra. E não se sobrepõe a ***" A* DOCE VIDA *"***, ***" R*OMA*"*** ou ***" A* NOITE *"***, clássicos onde encontra referências."*
 

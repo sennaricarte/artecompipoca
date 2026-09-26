@@ -8,6 +8,30 @@ legacyUrl: /tomorrowland-um-lugar-onde-nada-e-impossivel-critica/
 draft: true
 obra: Tomorrowland – Um Lugar Onde Nada é Impossível
 tipo: filme
+ficha:
+  tituloOriginal: Tomorrowland
+  ano: 2015
+  direcao:
+    - "Brad Bird"
+  roteiro:
+    - "Damon Lindelof"
+    - "Brad Bird"
+  elenco:
+    - "George Clooney"
+    - "Britt Robertson"
+    - "Hugh Laurie"
+    - "Raffey Cassidy"
+    - "Kathryn Hahn"
+    - "Tim McGraw"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - Fantasia
+  duracaoMin: 130
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q7820305
+anoObra: 2015
 ---
 
 **Tomorrowland – Um Lugar Onde Nada é Impossível** é inspirado em uma atração da Disney e conta história uma jovem  com vocação para a ciência, um  inventor de meia-idade (Frank, papel de George Clooney) que foi expulso da Terra do Amanhã e uma garota robô chamada Athena (Raffey Cassidy). Na trama eles precisam desvendar o que aconteceu com a Tomorrowland comandada pelo vilão Nix (Hugh Laurie) numa dimensão alternativa para salvar a Terra.

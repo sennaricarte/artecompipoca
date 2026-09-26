@@ -8,6 +8,25 @@ legacyUrl: /hannibal-2a-temporada-imperdivel/
 draft: true
 obra: Hannibal – 2ª temporada
 tipo: serie
+ficha:
+  tituloOriginal: Hannibal
+  elenco:
+    - "Hugh Dancy"
+    - "Mads Mikkelsen"
+    - "Caroline Dhavernas"
+    - "Laurence Fishburne"
+    - "Hettienne Park"
+    - "Gillian Anderson"
+  generos:
+    - "Séries de televisão de horror"
+  duracaoMin: 43
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Bryan Fuller"
+  temporadas: 3
+  emissora: NBC
+  wikidataId: Q888841
 ---
 
 **Hannibal Lecter** é um psiquiatra, e canibal. Infelizmente, Jack Crawford (**Laurence Fishburne**) e o resto do FBI não receberam essa 2ª característica num memorando interno durante a 1ª temporada da série Hannibal, que acabou com o pobre Will Graham (**Hugh Dancy**) sendo acusado de assassinato pela trama que o Dr. Lecter (**Mads Mikkelsen**) armou para ele, e acabou trancafiado no Baltimore State Hospital para criminosos insanos. Vamos esperar que eles, pelo menos, deixem-no lavar o gosto da orelha humana regurgitada de sua boca.

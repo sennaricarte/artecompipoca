@@ -8,6 +8,28 @@ legacyUrl: /amy-critica/
 draft: true
 obra: Amy
 tipo: filme
+ficha:
+  tituloOriginal: Amy
+  ano: 2015
+  direcao:
+    - "Asif Kapadia"
+  roteiro:
+    - "Asif Kapadia"
+  elenco:
+    - "Amy Winehouse"
+    - "Jonathan Ross"
+    - "Janis Seaton"
+    - "Mitch Winehouse"
+    - "Bobby Womack"
+    - "Mos Def"
+  generos:
+    - "Documentário"
+    - Drama
+  duracaoMin: 128
+  paises:
+    - "Reino Unido"
+  wikidataId: Q19803462
+anoObra: 2015
 ---
 
 Quantas vez nós vemos um artista em envolvido em escândalos, afundados no mundo das drogas e logo concluímos que fama subiu a cabeça dele e por isso ele age de tal forma?

@@ -8,6 +8,30 @@ legacyUrl: /walt-bastidores-mary-poppins-critica/
 draft: true
 obra: Walt nos Bastidores de Mary Poppins
 tipo: filme
+ficha:
+  tituloOriginal: "Saving Mr. Banks"
+  ano: 2013
+  direcao:
+    - "John Lee Hancock"
+  roteiro:
+    - "Kelly Marcel"
+    - "Sue Smith"
+  elenco:
+    - "Tom Hanks"
+    - "Colin Farrell"
+    - "Emma Thompson"
+    - "Paul Giamatti"
+    - "Jason Schwartzman"
+    - "Ruth Wilson"
+  generos:
+    - Drama
+  duracaoMin: 125
+  paises:
+    - "Reino Unido"
+    - "Austrália"
+    - "Estados Unidos"
+  wikidataId: Q3474574
+anoObra: 2013
 ---
 
 O título nacional de Walt nos Bastidores de Mary Poppins é, além de tolo, errado em mais de um sentido. Primeiramente, porque pode levar muitos espectadores a pensarem que se trata de uma obra sobre o lendário Walt Disney, mas não é. O foco da história é a escritora australiana P. L. Travers, criadora da personagem **Mary Poppins**, cujos livros tanto encantaram a Disney. Além disso, não é realmente uma obra apenas sobre os bastidores da adaptação de Mary Poppins para o cinema. Embora o filme também aborde isso, ele acaba falando mesmo sobre o processo da criação artística, apresentando um interessante "ponto de vista hollywoodiano" sobre a forma como o cinema americano se apropria de obras provenientes de outras mídias.

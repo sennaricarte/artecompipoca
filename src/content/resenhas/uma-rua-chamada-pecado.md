@@ -8,6 +8,28 @@ legacyUrl: /especial-oscar-uma-rua-chamada-pecado/
 draft: true
 obra: Uma Rua Chamada Pecado
 tipo: filme
+ficha:
+  tituloOriginal: "A Streetcar Named Desire"
+  ano: 1951
+  direcao:
+    - "Elia Kazan"
+  roteiro:
+    - "Tennessee Williams"
+    - "Oscar Saul"
+  elenco:
+    - "Vivien Leigh"
+    - "Marlon Brando"
+    - "Kim Hunter"
+    - "Karl Malden"
+    - "Nick Dennis"
+    - "Richard Garrick"
+  generos:
+    - Drama
+  duracaoMin: 120
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q212129
+anoObra: 1951
 ---
 
 O filme de **Woody Allen**, Blue Jasmine, que concorre este ano ao **Oscar** de Melhor Atriz pela interpretação de **Cate Blanchett**, com vitória quase certa, de Melhor Atriz Coadjuvante para **Sally Hawkins** e de Melhor Roteiro Original, para o próprio Woody Allen, conta a história de uma socialite decadente que, depois de descobrir a traição do marido, suas falcatruas e ir praticamente à falência, muda-se de Nova York para São Francisco para morar com a irmã adotiva, que sempre desprezou, e viver uma vida mais simples. Com a saúde mental abalada, ela vai tentando reconstruir a sua vida, trabalhando e agindo como uma pessoa de classe média normal. Sua irmã tem um relacionamento com um cara rude, grosseirão, que ela totalmente desaprova e as duas vivem em um grande embate por causa disso.

@@ -8,6 +8,32 @@ legacyUrl: /evereste-critica/
 draft: true
 obra: Evereste
 tipo: filme
+ficha:
+  tituloOriginal: Everest
+  ano: 2015
+  direcao:
+    - "Baltasar Kormákur"
+  roteiro:
+    - "William Nicholson"
+    - "Simon Beaufoy"
+  elenco:
+    - "Jason Clarke"
+    - "Josh Brolin"
+    - "John Hawkes"
+    - "Robin Wright"
+    - "Emily Watson"
+    - "Keira Knightley"
+  generos:
+    - Suspense
+    - "Cinema catástrofe"
+    - Aventura
+  duracaoMin: 121
+  paises:
+    - "Estados Unidos"
+    - "Reino Unido"
+    - "Islândia"
+  wikidataId: Q15631013
+anoObra: 2015
 ---
 
 **Evereste**  conta a  história de dois diferentes grupos de expedições desafiados além de seus limites quando são acometidos por uma das maiores tempestades já registradas. A partir disso começa a luta pela sobrevivência deles e o desespero de quem os aguarda no acampamento e em casa.

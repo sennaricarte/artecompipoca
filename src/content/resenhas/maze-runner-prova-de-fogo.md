@@ -8,6 +8,29 @@ legacyUrl: /maze-runner-prova-de-fogo-critica/
 draft: true
 obra: "Maze Runner: Prova de fogo"
 tipo: filme
+ficha:
+  tituloOriginal: "The Maze Runner: Scorch Trials"
+  ano: 2015
+  direcao:
+    - "Wes Ball"
+  roteiro:
+    - "T.S. Nowlin"
+  elenco:
+    - "Dylan O'Brien"
+    - "Thomas Sangster"
+    - "Ki Hong Lee"
+    - "Kaya Scodelario"
+    - "Rosa Salazar"
+    - "Giancarlo Esposito"
+  generos:
+    - "Filme distópico"
+    - "Filme pós-apocalíptico"
+    - Drama
+  duracaoMin: 131
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18359358
+anoObra: 2015
 ---
 Gostei muito do primeiro filme, mas estava completamente desanimado com essa sequência, pois o que me agradou no primeiro filme foi a questão do labirinto e o mistério que o cercava, pelos trailers já tinha certeza, *"Prova de fogo*" não seguiria o "tom" do primeiro filme.
 

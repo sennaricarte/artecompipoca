@@ -8,6 +8,20 @@ legacyUrl: /faroeste-caboclo-critica/
 draft: true
 obra: Faroeste Caboclo
 tipo: filme
+ficha:
+  tituloOriginal: "Faroeste Caboclo"
+  ano: 2013
+  direcao:
+    - "René Sampaio"
+  elenco:
+    - "Ísis Valverde"
+  generos:
+    - Drama
+  duracaoMin: 105
+  paises:
+    - Brasil
+  wikidataId: Q4356286
+anoObra: 2013
 ---
 
 *"Não tinha medo tal João de Santo Cristo era o que todos diziam quando ele se perdeu."* Estes são os primeiros dos 168 versos da clássica canção de **Renato Russo**, escrita em forma de poema em 1979 e lançada anos depois no álbum de 1987 – **Que País é Esse***.* Quem foi adolescente na época, e até hoje mesmo, já deve ter brincado muito de desafiar os amigos a cantar a música toda sem errar uma linha, uma palavra. E isso já fez muita festa, mesmo se as palavras da música fossem somente repetidas maquinalmente e o sentido da história toda ficasse renegado à segundo plano. A música entrou para a história do rock brasileiro, não somente por ser uma das mais longas lançadas até então (tem exatos nove minutos e três segundos, que variam de acordo com as fontes), mas também por ser recheada de palavrões e ter um enredo que fala de tráfico de drogas, coronelismos e violência explícita. É realmente uma história, e longe de querer aqui fazer uma análise de sua estilística e semântica já não era sem tempo que fosse adaptada para algum outro meio que a contasse, e **René Sampaio** consegue fazer isto.

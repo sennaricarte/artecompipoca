@@ -8,6 +8,29 @@ legacyUrl: /a-visita-critica/
 draft: true
 obra: A Visita
 tipo: filme
+ficha:
+  tituloOriginal: "The Visit"
+  ano: 2015
+  direcao:
+    - "M. Night Shyamalan"
+  roteiro:
+    - "M. Night Shyamalan"
+  elenco:
+    - "Kathryn Hahn"
+    - "Olivia DeJonge"
+    - "Ed Oxenbould"
+    - "Deanna Dunagan"
+    - "Peter McRobbie"
+    - "Celia Keenan-Bolger"
+  generos:
+    - Terror
+    - Suspense
+    - "Mistério"
+  duracaoMin: 94
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q18386312
+anoObra: 2015
 ---
 
 **A Visita**  conta a história de um casal de irmãos que vão passar uma semana com seus avós que nunca conheceram, pois a mãe a havia cortado relação com eles anos atrás, mas o que era para ser um período de diversão familiar se torna um pesadelo, quando os avós passam a ter comportamentos estranhos.

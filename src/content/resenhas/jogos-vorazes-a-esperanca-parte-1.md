@@ -8,6 +8,30 @@ legacyUrl: /jogos-vorazes-esperanca-parte-1/
 draft: true
 obra: "Jogos Vorazes: A Esperança - Parte 1"
 tipo: filme
+ficha:
+  tituloOriginal: "The Hunger Games: Mockingjay – Part 1"
+  ano: 2014
+  direcao:
+    - "Francis Lawrence"
+  roteiro:
+    - "Danny Strong"
+    - "Peter Craig"
+  elenco:
+    - "Jennifer Lawrence"
+    - "Josh Hutcherson"
+    - "Liam Hemsworth"
+    - "Woody Harrelson"
+    - "Elizabeth Banks"
+    - "Philip Seymour Hoffman"
+  generos:
+    - "Ficção científica"
+    - "Ação"
+    - Drama
+  duracaoMin: 123
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q4142083
+anoObra: 2014
 ---
 
 Confira a ficha técnica completa do filme Jogos Vorazes: A Esperança – Parte 1**:**

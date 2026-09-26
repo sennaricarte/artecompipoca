@@ -8,6 +8,30 @@ legacyUrl: /os-bons-companheiros-critica/
 draft: true
 obra: Os Bons Companheiros
 tipo: filme
+ficha:
+  tituloOriginal: Goodfellas
+  ano: 1990
+  direcao:
+    - "Martin Scorsese"
+  roteiro:
+    - "Nicholas Pileggi"
+    - "Martin Scorsese"
+  elenco:
+    - "Joe Pesci"
+    - "Robert De Niro"
+    - "Ray Liotta"
+    - "Lorraine Bracco"
+    - "Paul Sorvino"
+    - "Frank Sivero"
+  generos:
+    - Gangster
+    - Crime
+    - Suspense
+  duracaoMin: 146
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q42047
+anoObra: 1990
 ---
 
 Para mim, é difícil fazer uma resenha da maioria dos filmes do **Martin Scorcese**. Ele possui um estilo tão único, que foge dos padrões da maioria dos cineastas, o que me faz sentir que me falta bagagem para poder escrever sobre ele. No máximo, o que eu consigo é comparar os filmes dele com outros filmes dele. Nesse estilo, ele brinca até com um recurso que muitos professores de roteiro dizem para seus alunos não usarem, que é a narração em off, e ele utiliza em seus filmes de forma perfeita.

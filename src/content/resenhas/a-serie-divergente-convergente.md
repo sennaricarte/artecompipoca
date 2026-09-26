@@ -8,6 +8,29 @@ legacyUrl: /a-serie-divergente-convergente-critica/
 draft: true
 obra: "A Série Divergente: Convergente"
 tipo: filme
+ficha:
+  tituloOriginal: "The Divergent Series: Allegiant"
+  ano: 2016
+  direcao:
+    - "Robert Schwentke"
+  roteiro:
+    - "Veronica Roth"
+  elenco:
+    - "Shailene Woodley"
+    - "Theo James"
+    - "Octavia Spencer"
+    - "Ray Stevenson"
+    - "Zoë Kravitz"
+    - "Miles Teller"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - "Filme pós-apocalíptico"
+  duracaoMin: 121
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q19648591
+anoObra: 2016
 ---
 
 A série Divergente entrega apenas um bom filme no seu pré final.

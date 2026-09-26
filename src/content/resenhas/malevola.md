@@ -8,6 +8,29 @@ legacyUrl: /malevola-2014-critica/
 draft: true
 obra: Malévola
 tipo: filme
+ficha:
+  tituloOriginal: Maleficent
+  ano: 2014
+  direcao:
+    - "Robert Stromberg"
+  roteiro:
+    - "Linda Woolverton"
+  elenco:
+    - "Angelina Jolie"
+    - "Elle Fanning"
+    - "Sharlto Copley"
+    - "Juno Temple"
+    - "Sam Riley"
+    - "Miranda Richardson"
+  generos:
+    - Fantasia
+    - Drama
+    - "Ação"
+  duracaoMin: 97
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q172271
+anoObra: 2014
 ---
 
 Aqui estou eu às 21h30 na minha cozinha, comendo pizza de chocolate e trazendo de volta à minha memória a experiência que foi assistir ao tão aguardado por muitos filme **Malévola** no cinema, nesse que é seu fim de semana de estréia mundial, só umas cinco horas atrás. Mesmo que não tenha sido nenhuma experiência maravilhosamente inesquecível, foi possível passar 1h30m dentro da sala lotada, lotada, de forma agradável, então não é nenhuma tarefa ruim recordar.

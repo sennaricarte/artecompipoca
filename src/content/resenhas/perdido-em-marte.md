@@ -8,6 +8,31 @@ legacyUrl: /perdido-em-marte-critica/
 draft: true
 obra: Perdido em Marte
 tipo: filme
+ficha:
+  tituloOriginal: "The Martian"
+  ano: 2015
+  direcao:
+    - "Ridley Scott"
+  roteiro:
+    - "Drew Goddard"
+    - "Andy Weir"
+  elenco:
+    - "Matt Damon"
+    - "Jessica Chastain"
+    - "Kristen Wiig"
+    - "Jeff Daniels"
+    - "Michael Peña"
+    - "Kate Mara"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - Drama
+  duracaoMin: 141
+  paises:
+    - "Estados Unidos"
+    - "Reino Unido"
+  wikidataId: Q18547944
+anoObra: 2015
 ---
 
 **Perdido em Marte** conta a história do astronauta Mark Watney (Matt Damon) que é enviado para uma missão junto com sua tribulação para Marte.

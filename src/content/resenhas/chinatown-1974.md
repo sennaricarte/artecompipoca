@@ -8,6 +8,29 @@ legacyUrl: /oblogquenaoestavala/grandes-filmes-chinatown-1974/
 draft: true
 obra: Chinatown (1974)
 tipo: filme
+ficha:
+  tituloOriginal: Chinatown
+  ano: 1974
+  direcao:
+    - "Roman Polanski"
+  roteiro:
+    - "Robert Towne"
+    - "Roman Polanski"
+  elenco:
+    - "Jack Nicholson"
+    - "John Huston"
+    - "Faye Dunaway"
+    - "John Hillerman"
+    - "Diane Ladd"
+    - "Roman Polanski"
+  generos:
+    - "Mistério"
+    - Drama
+  duracaoMin: 131
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q644987
+anoObra: 1974
 ---
 
 Cinema

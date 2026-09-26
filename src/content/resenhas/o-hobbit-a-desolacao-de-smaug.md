@@ -8,6 +8,35 @@ legacyUrl: /o-hobbit-desolacao-de-smaug/
 draft: true
 obra: "O Hobbit: A Desolação de Smaug"
 tipo: filme
+ficha:
+  tituloOriginal: "The Hobbit: The Desolation of Smaug"
+  ano: 2013
+  direcao:
+    - "Peter Jackson"
+  roteiro:
+    - "Philippa Boyens"
+    - "Guillermo del Toro"
+    - "Fran Walsh"
+    - "Peter Jackson"
+  elenco:
+    - "Adam Brown"
+    - "Aidan Turner"
+    - "Cate Blanchett"
+    - "Dean O'Gorman"
+    - "Graham McTavish"
+    - "James Nesbitt"
+  generos:
+    - Fantasia
+    - Aventura
+    - "Ação"
+  duracaoMin: 161
+  paises:
+    - "Estados Unidos"
+    - "Nova Zelândia"
+  criadores:
+    - "Peter Jackson"
+  wikidataId: Q719915
+anoObra: 2013
 ---
 
 Confira a ficha técnica do filme **O Hobbit: A Desolação de Smaug:**

@@ -9,6 +9,29 @@ draft: true
 obra: As Três Máscaras de Eva
 tipo: filme
 notaEditorial: "Texto de janeiro de 2014; a menção a exibição em cartaz refere-se àquele momento."
+ficha:
+  tituloOriginal: "The Three Faces of Eve"
+  ano: 1957
+  direcao:
+    - "Nunnally Johnson"
+  roteiro:
+    - "Nunnally Johnson"
+    - "Hervey M. Cleckley"
+  elenco:
+    - "Joanne Woodward"
+    - "David Wayne"
+    - "Lee J. Cobb"
+    - "Al Thompson"
+    - "Alistair Cooke"
+    - "Douglas Spencer"
+  generos:
+    - Drama
+    - "Mistério"
+  duracaoMin: 92
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q1379585
+anoObra: 1957
 ---
 
 Tanto o **Globo de Ouro** quanto o **Oscar de Melhor Atriz** no ano de 1957 foram para **Joanne Woodward** e sua marcante interpretação como **Eva White/Eva Black** e **Jane**, neste filme clássico dirigido por **Nunnaly Johnson** e considerado, ainda hoje, um dos melhores sobre o tema múltiplas personalidades.

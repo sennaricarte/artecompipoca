@@ -8,6 +8,25 @@ legacyUrl: /oblogquenaoestavala/grandes-filmes-persona-1966/
 draft: true
 obra: Persona (1966)
 tipo: filme
+ficha:
+  tituloOriginal: Persona
+  ano: 1966
+  direcao:
+    - "Ingmar Bergman"
+  roteiro:
+    - "Ingmar Bergman"
+  elenco:
+    - "Bibi Andersson"
+    - "Liv Ullmann"
+    - "Gunnar Björnstrand"
+    - "Margaretha Krook"
+  generos:
+    - Drama
+  duracaoMin: 84
+  paises:
+    - "Suécia"
+  wikidataId: Q695255
+anoObra: 1966
 ---
 
 Cinema

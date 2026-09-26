@@ -9,6 +9,49 @@ legacyUrl: /interestelar-critica/
 draft: false
 obra: Interestelar
 tipo: filme
+ficha:
+  tituloOriginal: Interstellar
+  ano: 2014
+  direcao:
+    - "Christopher Nolan"
+  roteiro:
+    - "Christopher Nolan"
+    - "Jonathan Nolan"
+  elenco:
+    - "Matthew McConaughey"
+    - "Anne Hathaway"
+    - "Jessica Chastain"
+    - "Michael Caine"
+    - "Bill Irwin"
+    - "Ellen Burstyn"
+  generos:
+    - "Ficção científica"
+    - Aventura
+    - "Filme distópico"
+  duracaoMin: 169
+  paises:
+    - "Estados Unidos"
+    - "Reino Unido"
+  wikidataId: Q13417189
+  sinopse: "Num futuro próximo, pragas nas lavouras e tempestades de poeira ameaçam a sobrevivência da humanidade. Cooper, ex-piloto da NASA que virou fazendeiro, aceita liderar uma missão através de um buraco de minhoca em busca de um planeta habitável, sabendo que o tempo corre de outro jeito no espaço e que talvez nunca mais veja os filhos crescerem."
+  curiosidades:
+    - "Na maior parte das cenas, o robô TARS não é computação gráfica: era um boneco operado e dublado no set pelo ator Bill Irwin, que depois foi apagado digitalmente da imagem."
+    - "O elenco reúne cinco vencedores do Oscar: Matthew McConaughey, Anne Hathaway, Michael Caine, Ellen Burstyn e Matt Damon."
+    - "O buraco negro Gargantua foi concebido com a consultoria do físico Kip Thorne e é tido como a representação mais fiel à ciência já feita no cinema até então. O nome vem de um gigante de apetite insaciável criado pelo escritor renascentista François Rabelais."
+    - "Steven Spielberg trabalhou no projeto antes de Christopher Nolan e, anos depois, admitiu que o filme ficou muito melhor nas mãos dele."
+  premios:
+    - "Oscar de Melhores Efeitos Visuais"
+    - "5 indicações ao Oscar"
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-114782/curiosidades/"
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/noticias/filmes/noticia-1000199000/"
+    - nome: "Olhar Digital"
+      url: "https://olhardigital.com.br/2025/01/29/cinema-e-streaming/interestelar-10-curiosidades-que-voce-nao-sabia-sobre-o-filme/"
+    - nome: "Estação Nerd"
+      url: "https://estacaonerd.com/interestelar-confira-algumas-curiosidades-sobre-o-filme/"
+anoObra: 2014
 ---
 
 Se parecia que trabalhar com os filmes do Batman iria fazer com que **Christopher Nolan** desse uma guinada em sua carreira, se tornando mais comercial, **Interestelar** é a prova de que ele não se rendeu ao caminho fácil. Seu mais recente filme, além de uma ótima incursão à Ficção Científica espacial, possui um dos roteiros mais inteligentes do gênero realizado nos últimos anos.

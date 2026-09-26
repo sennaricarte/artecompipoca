@@ -8,6 +8,29 @@ legacyUrl: /frank-critica/
 draft: true
 obra: Frank
 tipo: filme
+ficha:
+  tituloOriginal: Frank
+  ano: 2014
+  direcao:
+    - "Lenny Abrahamson"
+  roteiro:
+    - "Jon Ronson"
+  elenco:
+    - "Domhnall Gleeson"
+    - "François Civil"
+    - "Maggie Gyllenhaal"
+    - "Michael Fassbender"
+    - "Scoot McNairy"
+    - "Moira Brooker"
+  generos:
+    - Drama
+    - "Comédia cinematográfica"
+  duracaoMin: 94
+  paises:
+    - "Reino Unido"
+    - "República da Irlanda"
+  wikidataId: Q3082474
+anoObra: 2014
 ---
 
 Sabe quando as sinopses e os trailers e teasers de um filme fazem você pensar uma coisa sobre ele, mas quando você o assiste, é algo diferente? Na maioria dos casos, o resultado é decepção, mas de vez em quando, acontece de o filme te surpreender de forma positiva, mesmo não sendo o que você esperava. O meu caso mais recente foi o filme **F****rank**, de Lenny Abrahamson.

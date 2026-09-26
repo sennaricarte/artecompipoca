@@ -8,6 +8,26 @@ legacyUrl: /anos-incriveis/
 draft: true
 obra: Anos Incríveis
 tipo: serie
+ficha:
+  tituloOriginal: "The Wonder Years"
+  elenco:
+    - "Fred Savage"
+    - "Dan Lauria"
+    - "Alley Mills"
+    - "Olivia d'Abo"
+    - "Jason Hervey"
+    - "Danica McKellar"
+  generos:
+    - "Comédia dramática"
+    - "Comédia da televisão"
+  duracaoMin: 22
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Neal Marlens"
+  temporadas: 6
+  emissora: "American Broadcasting Company"
+  wikidataId: Q691581
 ---
 
 **Gênero:** Comédia/Drama/Romance

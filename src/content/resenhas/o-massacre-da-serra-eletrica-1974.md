@@ -8,6 +8,30 @@ legacyUrl: /oblogquenaoestavala/filmes-do-outro-mundo-o-massacre-da-serra-eletri
 draft: true
 obra: O Massacre da Serra Elétrica (1974)
 tipo: filme
+ficha:
+  tituloOriginal: "The Texas Chain Saw Massacre"
+  ano: 1974
+  direcao:
+    - "Tobe Hooper"
+  roteiro:
+    - "Tobe Hooper"
+    - "Kim Henkel"
+  elenco:
+    - "Marilyn Burns"
+    - "Edwin Neal"
+    - "Gunnar Hansen"
+    - "Paul A. Partain"
+    - "Jim Siedow"
+    - "Allen Danziger"
+  generos:
+    - Terror
+    - Crime
+    - "Mistério"
+  duracaoMin: 83
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q886597
+anoObra: 1974
 ---
 
 Cinema

@@ -8,6 +8,33 @@ legacyUrl: /oblogquenaoestavala/dexter-oitava-e-ultima-temporada/
 draft: true
 obra: Dexter – 8ª e última temporada
 tipo: serie
+ficha:
+  tituloOriginal: Dexter
+  ano: 2007
+  direcao:
+    - "Michael Cuesta"
+    - "Tony Goldwyn"
+    - "Robert Lieberman"
+    - "Steve Shill"
+    - "Adam Davidson"
+    - "Keith Gordon"
+    - "Marcos Siega"
+    - "Jeremy Podeswa"
+  elenco:
+    - "Michael C. Hall"
+    - "Jennifer Carpenter"
+    - "David Zayas"
+    - "James Remar"
+    - "Lauren Vélez"
+    - "C.S. Lee"
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "James Manos, Jr."
+  temporadas: 8
+  emissora: Showtime
+  wikidataId: Q23577
+anoObra: 2007
 ---
 
 Séries

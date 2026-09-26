@@ -8,6 +8,28 @@ legacyUrl: /blue-jasmine-critica/
 draft: true
 obra: Blue Jasmine
 tipo: filme
+ficha:
+  tituloOriginal: "Blue Jasmine"
+  ano: 2013
+  direcao:
+    - "Woody Allen"
+  roteiro:
+    - "Woody Allen"
+  elenco:
+    - "Cate Blanchett"
+    - "Alec Baldwin"
+    - "Peter Sarsgaard"
+    - "Louis C.K."
+    - "Alden Ehrenreich"
+    - "Bobby Cannavale"
+  generos:
+    - "Comédia dramática"
+    - Drama
+  duracaoMin: 98
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q2907178
+anoObra: 2013
 ---
 
 Um avião pronto para aterrissar, e dentro dele uma personagem que também esta prestes a voltar ao chão, talvez seja melhor falar numa queda. Falo da socialite Jasmine, protagonista de **Blue Jasmine (Woddy Allen, 2013)** e que usa uma metáfora aérea, "ele me tirou do chão", para se referir à paixão que ira mudar seu destino – tirando-a da universidade quando cursava o último ano de Antropologia e lançando-a nos braços de Hal, engravatado que posteriormente ira preso devido a crimes financeiros, e da sua busca por uma nova vida após o fim desse relacionamento.

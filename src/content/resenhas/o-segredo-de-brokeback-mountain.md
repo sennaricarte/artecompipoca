@@ -8,6 +8,31 @@ legacyUrl: /especial-oscar-o-segredo-de-brokeback-mountain/
 draft: true
 obra: O Segredo de Brokeback Mountain
 tipo: filme
+ficha:
+  tituloOriginal: "Brokeback Mountain"
+  ano: 2005
+  direcao:
+    - "Ang Lee"
+  roteiro:
+    - "Larry McMurtry"
+    - "Diana Ossana"
+    - "Annie Proulx"
+  elenco:
+    - "Heath Ledger"
+    - "Jake Gyllenhaal"
+    - "Anne Hathaway"
+    - "Michelle Williams"
+    - "Randy Quaid"
+    - "Linda Cardellini"
+  generos:
+    - Drama
+  duracaoMin: 134
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Ang Lee"
+  wikidataId: Q160618
+anoObra: 2005
 ---
 
 Quando correu o Oscar de 2006 e este filme estava concorrendo a 8 estatuetas, realmente era o meu favorito a ganhar na categoria de Melhor Filme e qual foi a minha decepção quando **Jack Nicholson** anunciou que o vencedor do grande prêmio daquela noite era, o também maravilhoso, **Crash**. Mas não ficamos de mãos abanando. **Ang Lee** levou na categoria de Melhor Diretor e a produção acabou ganhando também Melhor Roteiro Adaptado e Melhor Trilha Sonora Original para **Gustavo Santaolalla**, que tem outra estatueta na categoria por **Babel** e este ano trabalhou na bela trilha de **Álbum de Família**, mas não foi indicado.

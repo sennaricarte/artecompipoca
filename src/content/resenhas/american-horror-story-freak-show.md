@@ -8,6 +8,29 @@ legacyUrl: /american-horror-story-freak-show/
 draft: true
 obra: American Horror Story - Freak Show
 tipo: serie
+ficha:
+  tituloOriginal: "American Horror Story"
+  roteiro:
+    - "Ryan Murphy"
+  elenco:
+    - "Connie Britton"
+    - "Dylan McDermott"
+    - "Evan Peters"
+    - "Taissa Farmiga"
+    - "Denis O'Hare"
+    - "Jessica Lange"
+  generos:
+    - Antologia
+    - "Séries de televisão de horror"
+  duracaoMin: 44
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Ryan Murphy"
+    - "Brad Falchuk"
+  temporadas: 13
+  emissora: FX
+  wikidataId: Q53922
 ---
 
 Temos aguardado ansiosamente desde o término da última temporada de "American Horror Story" – "Coven" por pistas que nos dessem uma indicação de como será a 4 ª temporada. E tampouco sabíamos como iria se chamar, "Carnaval"? "Circus"?

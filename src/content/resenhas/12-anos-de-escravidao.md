@@ -8,6 +8,28 @@ legacyUrl: /a-critica-definitiva-12-anos-de-escravidao/
 draft: true
 obra: 12 Anos de Escravidão
 tipo: filme
+ficha:
+  tituloOriginal: "12 Years a Slave"
+  ano: 2013
+  direcao:
+    - "Steve McQueen"
+  roteiro:
+    - "John Ridley"
+  elenco:
+    - "Chiwetel Ejiofor"
+    - "Michael Fassbender"
+    - "Benedict Cumberbatch"
+    - "Paul Dano"
+    - "Paul Giamatti"
+    - "Lupita Nyong'o"
+  generos:
+    - Drama
+  duracaoMin: 133
+  paises:
+    - "Reino Unido"
+    - "Estados Unidos"
+  wikidataId: Q3023357
+anoObra: 2013
 ---
 
 *"Diretor funde importante adaptação literária dos tempos da escravidão americana, codificada pela Inglaterra, em obra cinematográfica histórica. Dessa forma realiza uma  'mise-en-scène' opulenta, definitiva e corajosamente questionadora onde, a violência física e psicológica, questiona a inércia de dois continentes mal resolvidos frente a questão. E que até hoje permanecem em seu cinismo e perversidade."*

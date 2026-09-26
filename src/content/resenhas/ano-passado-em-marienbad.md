@@ -8,6 +8,31 @@ legacyUrl: /ano-passado-em-marienbad/
 draft: true
 obra: Ano passado em Marienbad
 tipo: filme
+ficha:
+  tituloOriginal: "L’Année dernière à Marienbad"
+  ano: 1961
+  direcao:
+    - "Alain Resnais"
+  roteiro:
+    - "Alain Robbe-Grillet"
+  elenco:
+    - "Delphine Seyrig"
+    - "Giorgio Albertazzi"
+    - "Sacha Pitoëff"
+    - "Françoise Bertin"
+    - "Luce Garcia-Ville"
+    - "Françoise Spira"
+  generos:
+    - Drama
+  duracaoMin: 94
+  paises:
+    - "França"
+    - "Itália"
+    - Alemanha
+  criadores:
+    - "Alain Resnais"
+  wikidataId: Q225355
+anoObra: 1961
 ---
 
 Resnais observa o coletivo pela óptica individual, e estuda o individual através dos

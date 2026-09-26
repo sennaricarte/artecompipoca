@@ -8,6 +8,28 @@ legacyUrl: /oblogquenaoestavala/filmes-do-outro-mundo-arraste-me-para-o-inferno-
 draft: true
 obra: Arraste-me para o Inferno (2009)
 tipo: filme
+ficha:
+  tituloOriginal: "Drag Me to Hell"
+  ano: 2009
+  direcao:
+    - "Sam Raimi"
+  roteiro:
+    - "Ivan Raimi"
+    - "Sam Raimi"
+  elenco:
+    - "Alison Lohman"
+    - "Justin Long"
+    - "Lorna Raver"
+    - "Dileep Rao"
+    - "David Paymer"
+    - "Adriana Barraza"
+  generos:
+    - "Comédia de terror"
+  duracaoMin: 99
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q632737
+anoObra: 2009
 ---
 
 Cinema

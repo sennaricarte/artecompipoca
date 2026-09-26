@@ -8,6 +8,31 @@ legacyUrl: /quarteto-fantastico-critica/
 draft: true
 obra: Quarteto Fantástico
 tipo: filme
+ficha:
+  tituloOriginal: "Fantastic Four"
+  ano: 2015
+  direcao:
+    - "Josh Trank"
+  roteiro:
+    - "Josh Trank"
+    - "Simon Kinberg"
+    - "Jeremy Slater"
+  elenco:
+    - "Miles Teller"
+    - "Michael B. Jordan"
+    - "Kate Mara"
+    - "Jamie Bell"
+    - "Toby Kebbell"
+    - "Reg E. Cathey"
+  generos:
+    - "Super-herói"
+    - "Ação"
+    - "Ficção científica"
+  duracaoMin: 100
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q16795448
+anoObra: 2015
 ---
 
 **Um quarteto nada fantástico**: foi assim que eu me senti ao sair da sala de cinema após ficar sentada por pouco mais de 90 minutos. Confesso que quando foi anunciada uma nova produção de "Quarteto Fantástico" fiquei interessada, mais ainda pela falta de notícias dos bastidores. Tudo estava envolta de um mistério que a cada momento me deixava mais ansiosa. Entretanto, tudo deveria ter sido mantido em segredo mesmo.

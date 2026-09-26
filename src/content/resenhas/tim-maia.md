@@ -8,6 +8,18 @@ legacyUrl: /tim-maia-um-filme-emocionante-divertido-e-corajoso/
 draft: true
 obra: Tim Maia
 tipo: filme
+ficha:
+  tituloOriginal: "Tim Maia"
+  ano: 2014
+  direcao:
+    - "Mauro Lima"
+  generos:
+    - Drama
+  duracaoMin: 141
+  paises:
+    - Brasil
+  wikidataId: Q17169009
+anoObra: 2014
 ---
 Ao decidir assistir a uma cinebiografia de, a princípio pelo menos, uma certeza você pode ter, a trilha sonora não vai de maneira alguma te decepcionar.
 

@@ -9,6 +9,46 @@ legacyUrl: /monsieur-verdoux-critica/
 draft: false
 obra: Monsieur Verdoux
 tipo: filme
+ficha:
+  tituloOriginal: "Monsieur Verdoux"
+  ano: 1947
+  direcao:
+    - "Charlie Chaplin"
+  roteiro:
+    - "Charlie Chaplin"
+    - "Orson Welles"
+  elenco:
+    - "Martha Raye"
+    - "William Frawley"
+    - "Marilyn Nash"
+    - "Charlie Chaplin"
+    - "Isobel Elsom"
+    - "Edna Purviance"
+  generos:
+    - "Comédia dramática"
+    - "Comédia cinematográfica"
+  duracaoMin: 124
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q572440
+  sinopse: "Demitido depois de trinta anos como funcionário de banco, Henri Verdoux encontra um jeito macabro de sustentar a esposa e o filho: seduz viúvas ricas, casa-se com elas, mata-as e fica com suas fortunas. Chaplin abandona o vagabundo Carlitos para viver um assassino elegante, numa sátira sombria sobre crime, guerra e dinheiro."
+  curiosidades:
+    - "A ideia partiu de Orson Welles, que queria dirigir Chaplin num filme sobre o assassino francês Henri Landru; Chaplin, avesso a ser dirigido por outra pessoa, ficou com a ideia em troca de 5 mil dólares e do crédito \"a partir de uma ideia de Orson Welles\". Os dois nunca concordaram sobre o que aconteceu depois: Welles afirmava ter escrito um roteiro que Chaplin reescreveu."
+    - "Landru, o \"Barba Azul\" que inspirou o personagem, foi condenado em novembro de 1921 e guilhotinado em fevereiro de 1922."
+    - "Chaplin acumulou as funções de produtor, diretor, roteirista, protagonista e compositor da trilha."
+    - "O filme fracassou nos Estados Unidos, em grande parte por causa dos boicotes e da má publicidade ligados à perseguição anticomunista contra Chaplin."
+  premios:
+    - "Indicação ao Oscar de Melhor Roteiro (1948)"
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-2257/curiosidades/"
+    - nome: "Site oficial de Charlie Chaplin"
+      url: "https://www.charliechaplin.com/en/films/8-monsieur-verdoux/articles/8-Filming-Monsieur-Verdoux"
+    - nome: Cinemascope
+      url: "https://cinemascope.com.br/especiais/monsieur-verdoux/"
+    - nome: "Groucho Reviews"
+      url: "https://www.grouchoreviews.com/reviews/4487"
+anoObra: 1947
 ---
 
 Quem só conhece **Charlie Chaplin** das comédias mudas com seu personagem "**Carlitos**", o vagabundo, pode se assustar bastante ao ver este filme, onde o diretor/ator faz o papel de um assassino serial de mulheres dos mais frios já vistos no cinema. Imagine um cruzamento de Dexter Morgan com **Hannibal Lecter**! E não estou brincando.

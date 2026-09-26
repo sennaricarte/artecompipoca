@@ -9,6 +9,29 @@ legacyUrl: /bicho-de-sete-cabecas-critica/
 draft: false
 obra: Bicho de Sete Cabeças
 tipo: filme
+ficha:
+  tituloOriginal: "Bicho de Sete Cabeças"
+  ano: 2000
+  direcao:
+    - "Laís Bodanzky"
+  roteiro:
+    - "Luiz Bolognesi"
+    - "Austregésilo Carrano Bueno"
+  elenco:
+    - "Rodrigo Santoro"
+    - "Othon Bastos"
+    - "Cássia Kis"
+    - "Caco Ciocler"
+    - "Gero Camilo"
+    - "Luiz Bolognesi"
+  generos:
+    - Drama
+  duracaoMin: 74
+  paises:
+    - Brasil
+    - "Itália"
+  wikidataId: Q3281991
+anoObra: 2000
 ---
 
 "o buraco do espelho está fechado

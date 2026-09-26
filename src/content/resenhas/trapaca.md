@@ -8,6 +8,30 @@ legacyUrl: /trapaca-critica/
 draft: true
 obra: Trapaça
 tipo: filme
+ficha:
+  tituloOriginal: "American Hustle"
+  ano: 2013
+  direcao:
+    - "David O. Russell"
+  roteiro:
+    - "Eric Warren Singer"
+    - "David O. Russell"
+  elenco:
+    - "Christian Bale"
+    - "Amy Adams"
+    - "Bradley Cooper"
+    - "Jennifer Lawrence"
+    - "Robert De Niro"
+    - "Jeremy Renner"
+  generos:
+    - Crime
+    - Assalto
+    - "Comédia cinematográfica"
+  duracaoMin: 138
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q9013673
+anoObra: 2013
 ---
 
 Estreou nessa sexta-feira, de 07 de fevereiro, em circuito nacional este novo trabalho do diretor **David O. Russel** e sua trupe, vencedor do **Globo de Ouro** de Melhor Filme Musical ou Comédia e um dos grandes favoritos ao Oscar, com suas 10 indicações. Muitos críticos não o estão considerando o melhor filme da lista de indicados e já chegaram mesmo a dizer que, se for o vencedor, entrará nas estatísticas de erros do Oscar (alguém ainda se lembra do erro que foi premiar **Guerra ao Terror** ao invés de **Avatar***?*). Acontece que depois de começar o ano com grande vantagem, o filme andou perdendo prêmios importantes, que servem de termômetro para o grande vencedor da grande premiação do dia 02 de março, como o prêmio do Sindicado de Produtores, o **PGA**, que empatou este ano. **12 Years a Slave** e **Gravidade** foram os vencedores. Porém ficou com o **SAG** de Melhor Elenco. Em resumo: ainda está no páreo. E com chances!

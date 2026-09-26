@@ -8,6 +8,33 @@ legacyUrl: /o-expresso-do-amanha-critica/
 draft: true
 obra: O Expresso do Amanhã
 tipo: filme
+ficha:
+  tituloOriginal: "설국열차"
+  ano: 2013
+  direcao:
+    - "Bong Joon-ho"
+  roteiro:
+    - "Kelly Masterson"
+    - "Bong Joon-ho"
+  elenco:
+    - "Chris Evans"
+    - "Song Kang-ho"
+    - "Jamie Bell"
+    - "Alison Pill"
+    - "John Hurt"
+    - "Tilda Swinton"
+  generos:
+    - Suspense
+    - "Ficção científica"
+    - "Ação"
+  duracaoMin: 126
+  paises:
+    - "Coreia do Sul"
+    - "Tchéquia"
+    - "Estados Unidos"
+    - "França"
+  wikidataId: Q492908
+anoObra: 2013
 ---
 Um Filme que chega aos cinemas brasileiros com um certo atraso, o longa é dirigido por **Boon Joon Ho** (O Hospedeiro), e, por sua vez, é uma adaptação da HQ **"O Perfuraneve"**, lançado recentemente por aqui pela **Editora Aleph**. A história é ambientada em um futuro próximo, onde o que restou da humanidade vive dentro de um imenso trem que percorre todo o planeta de forma ininterrupta. O motivo? Para resolver o problema do aquecimento global, os países se uniram pra liberar na atmosfera um gás que resfriaria o planeta. Mas o gás acabou por trazer uma nova era glacial, acabando com a vida na superfície. Wilford, um industrial "visionário", dono de uma indústria de trens, construiu o trem que leva as pessoas que restaram nesse passeio sem fim.
 

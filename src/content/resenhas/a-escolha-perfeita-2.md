@@ -8,6 +8,27 @@ legacyUrl: /a-escolha-perfeita-2-critica/
 draft: true
 obra: A Escolha Perfeita 2
 tipo: filme
+ficha:
+  tituloOriginal: "Pitch Perfect 2"
+  ano: 2015
+  direcao:
+    - "Elizabeth Banks"
+  roteiro:
+    - "Kay Cannon"
+  elenco:
+    - "Anna Kendrick"
+    - "Chrissie Fit"
+    - "Kelley Jakle"
+    - "Skylar Astin"
+    - "Ester Dean"
+    - "John Michael Higgins"
+  generos:
+    - "Comédia cinematográfica"
+  duracaoMin: 115
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q16619265
+anoObra: 2015
 ---
 **A Escolha Perfeita 2** comente um dos grandes erros das continuações, a repetição da formula que deu certo, o que faz desse filme quase uma copia do primeiro, sem nenhuma grande mudança, as personagens que no primeiro filme estavam no primeiro ano de faculdade e agora estão no último, não sofreram grandes mudanças em suas emoções, ambições ou seja não há uma grande evolução .
 

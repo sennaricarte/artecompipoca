@@ -8,6 +8,29 @@ legacyUrl: /o-lobo-de-wall-street-critica/
 draft: true
 obra: O Lobo de Wall Street
 tipo: filme
+ficha:
+  tituloOriginal: "The Wolf of Wall Street"
+  ano: 2013
+  direcao:
+    - "Martin Scorsese"
+  roteiro:
+    - "Terence Winter"
+  elenco:
+    - "Leonardo DiCaprio"
+    - "Jonah Hill"
+    - "Margot Robbie"
+    - "Matthew McConaughey"
+    - "Jon Favreau"
+    - "Kyle Chandler"
+  generos:
+    - "Humor negro"
+    - Crime
+    - Drama
+  duracaoMin: 180
+  paises:
+    - "Estados Unidos"
+  wikidataId: Q1392744
+anoObra: 2013
 ---
 
 **O Lobo de Wall Street, um Scorsese vigoroso e original.**
