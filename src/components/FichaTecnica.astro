@@ -1,4 +1,9 @@
 ---
+interface Fonte {
+	nome: string;
+	url: string;
+}
+
 interface Ficha {
 	tituloOriginal?: string;
 	ano?: number;
@@ -12,13 +17,22 @@ interface Ficha {
 	temporadas?: number;
 	emissora?: string;
 	wikidataId?: string;
+	sinopse?: string;
+	curiosidades?: string[];
+	premios?: string[];
+	trailerYoutubeId?: string;
+	fontes?: Fonte[];
 }
 
 interface Props {
-	ficha: Ficha;
+	ficha?: Ficha;
+	obra: string;
+	tipo: 'filme' | 'serie' | 'hq' | 'album';
+	/** inicio = sinopse/trailer; fim = ficha técnica e blocos finais */
+	parte: 'inicio' | 'fim';
 }
 
-const { ficha } = Astro.props;
+const { ficha = {}, obra, tipo, parte } = Astro.props;
 
 /**
  * @param {number} min
@@ -73,28 +87,253 @@ if (ficha.emissora) {
 if (juntar(ficha.paises)) {
 	campos.push({ rotulo: 'País', valor: juntar(ficha.paises)! });
 }
+
+const temSinopse = Boolean(ficha.sinopse?.trim());
+const temTrailer = Boolean(ficha.trailerYoutubeId);
+const temCampos = campos.length > 0;
+const temPremios = Boolean(ficha.premios?.length);
+const temCuriosidades = Boolean(ficha.curiosidades?.length);
+const temFontes = Boolean(ficha.fontes?.length);
+const mostrarOndeAssistir = tipo === 'filme' || tipo === 'serie';
+const justWatchUrl = `https://www.justwatch.com/br/busca?q=${encodeURIComponent(obra)}`;
+const trailerId = ficha.trailerYoutubeId ?? '';
+const trailerWatchUrl = trailerId
+	? `https://www.youtube.com/watch?v=${trailerId}`
+	: '';
+const trailerThumb = trailerId
+	? `https://i.ytimg.com/vi_webp/${trailerId}/hqdefault.webp`
+	: '';
 ---
 
 {
-	campos.length > 0 && (
-		<section
-			class="mt-12 rounded-sm border border-white/10 bg-surface px-4 py-6 md:px-6"
-			aria-labelledby="ficha-titulo"
-		>
-			<h2
-				id="ficha-titulo"
-				class="font-display text-2xl tracking-wide text-pipoca"
-			>
-				Ficha técnica
-			</h2>
-			<dl class="mt-4 grid grid-cols-1 gap-x-8 gap-y-3 text-sm md:grid-cols-2">
-				{campos.map((campo) => (
-					<div>
-						<dt class="text-muted">{campo.rotulo}</dt>
-						<dd class="font-medium text-text">{campo.valor}</dd>
+	parte === 'inicio' && (
+		<>
+			{temSinopse && (
+				<section class="mt-10" aria-labelledby="sinopse-titulo">
+					<h2
+						id="sinopse-titulo"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Sinopse
+					</h2>
+					<p class="mt-3 max-w-[68ch] text-base leading-relaxed text-text md:text-lg">
+						{ficha.sinopse}
+					</p>
+				</section>
+			)}
+
+			{temTrailer && (
+				<section class="mt-10" aria-labelledby="trailer-titulo">
+					<h2
+						id="trailer-titulo"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Trailer
+					</h2>
+					<div class="relative mt-4 aspect-video w-full max-w-3xl overflow-hidden rounded-sm bg-black">
+						{/*
+							Com JS: botão troca-se por iframe no clique.
+							Sem JS: o noscript expõe o mesmo visual como link para o YouTube.
+						*/}
+						<button
+							type="button"
+							class="group absolute inset-0 block h-full w-full cursor-pointer border-0 bg-transparent p-0"
+							data-yt-trailer={trailerId}
+							aria-label={`Assistir ao trailer de ${obra}`}
+						>
+							<img
+								src={trailerThumb}
+								alt={`Trailer de ${obra}`}
+								width="480"
+								height="360"
+								loading="lazy"
+								decoding="async"
+								class="h-full w-full object-cover"
+							/>
+							<span
+								class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/35 transition-colors group-hover:bg-black/45"
+								aria-hidden="true"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="68"
+									height="68"
+									viewBox="0 0 68 68"
+									fill="none"
+								>
+									<circle cx="34" cy="34" r="34" fill="#FFC83D"></circle>
+									<path d="M28 22v24l22-12-22-12z" fill="#0F0F12"></path>
+								</svg>
+							</span>
+						</button>
+						<noscript>
+							<style>
+								[data-yt-trailer] {
+									display: none !important;
+								}
+							</style>
+							<a
+								href={trailerWatchUrl}
+								class="group absolute inset-0 block h-full w-full"
+								aria-label={`Assistir ao trailer de ${obra}`}
+								rel="noopener"
+								target="_blank"
+							>
+								<img
+									src={trailerThumb}
+									alt={`Trailer de ${obra}`}
+									width="480"
+									height="360"
+									loading="lazy"
+									decoding="async"
+									class="h-full w-full object-cover"
+								/>
+								<span
+									class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/35"
+									aria-hidden="true"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="68"
+										height="68"
+										viewBox="0 0 68 68"
+										fill="none"
+									>
+										<circle cx="34" cy="34" r="34" fill="#FFC83D"></circle>
+										<path d="M28 22v24l22-12-22-12z" fill="#0F0F12"></path>
+									</svg>
+								</span>
+							</a>
+						</noscript>
 					</div>
-				))}
-			</dl>
-		</section>
+				</section>
+			)}
+		</>
+	)
+}
+
+{
+	parte === 'fim' && (
+		<>
+			{temCampos && (
+				<section
+					class="mt-12 rounded-sm border border-white/10 bg-surface px-4 py-6 md:px-6"
+					aria-labelledby="ficha-titulo"
+				>
+					<h2
+						id="ficha-titulo"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Ficha técnica
+					</h2>
+					<dl class="mt-4 grid grid-cols-1 gap-x-8 gap-y-3 text-sm md:grid-cols-2">
+						{campos.map((campo) => (
+							<div>
+								<dt class="text-muted">{campo.rotulo}</dt>
+								<dd class="font-medium text-text">{campo.valor}</dd>
+							</div>
+						))}
+					</dl>
+				</section>
+			)}
+
+			{temPremios && (
+				<section class="mt-12" aria-labelledby="premios-titulo">
+					<h2
+						id="premios-titulo"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Prêmios
+					</h2>
+					<ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-text md:text-base">
+						{ficha.premios!.map((item) => (
+							<li>{item}</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{mostrarOndeAssistir && (
+				<section class="mt-12" aria-labelledby="onde-assistir-titulo">
+					<h2
+						id="onde-assistir-titulo"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Onde assistir
+					</h2>
+					<p class="mt-4">
+						<a
+							href={justWatchUrl}
+							target="_blank"
+							rel="noopener"
+							class="font-medium text-pipoca underline-offset-2 transition-colors hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+						>
+							Ver onde assistir no JustWatch
+						</a>
+					</p>
+				</section>
+			)}
+
+			{temCuriosidades && (
+				<section class="mt-12" aria-labelledby="curiosidades-titulo">
+					<h2
+						id="curiosidades-titulo"
+						class="font-display text-2xl tracking-wide text-pipoca"
+					>
+						Curiosidades
+					</h2>
+					<ul class="mt-4 list-disc space-y-3 pl-5 text-sm leading-relaxed text-text md:text-base">
+						{ficha.curiosidades!.map((item) => (
+							<li>{item}</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{temFontes && (
+				<p class="mt-10 text-xs text-muted">
+					Fontes:{' '}
+					{ficha.fontes!.map((fonte, i) => (
+						<>
+							{i > 0 && ', '}
+							<a
+								href={fonte.url}
+								target="_blank"
+								rel="noopener nofollow"
+								class="underline-offset-2 hover:text-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+							>
+								{fonte.nome}
+							</a>
+						</>
+					))}
+				</p>
+			)}
+		</>
+	)
+}
+
+{
+	parte === 'inicio' && temTrailer && (
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', function () {
+				document.querySelectorAll('[data-yt-trailer]').forEach(function (el) {
+					el.addEventListener('click', function (ev) {
+						ev.preventDefault();
+						var id = el.getAttribute('data-yt-trailer');
+						if (!id) return;
+						var iframe = document.createElement('iframe');
+						iframe.src =
+							'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+						iframe.title = 'Trailer';
+						iframe.allow =
+							'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+						iframe.allowFullscreen = true;
+						iframe.setAttribute('frameborder', '0');
+						iframe.className = 'absolute inset-0 h-full w-full';
+						el.replaceWith(iframe);
+					});
+				});
+			});
+		</script>
 	)
 }

@@ -1,0 +1,51 @@
+---
+interface Props {
+	id?: string;
+	inputClass?: string;
+	compact?: boolean;
+}
+
+const { id = 'busca', inputClass = '', compact = false } = Astro.props;
+const inputId = `${id}-input`;
+---
+
+<form
+	action="/busca/"
+	method="get"
+	role="search"
+	class:list={[
+		'flex min-w-0 items-stretch overflow-hidden rounded-sm border border-white/15 bg-bg',
+		compact ? 'w-full max-w-[14rem]' : 'w-full max-w-xl',
+	]}
+>
+	<label for={inputId} class="sr-only">Buscar no site</label>
+	<input
+		type="search"
+		id={inputId}
+		name="q"
+		placeholder={compact ? 'Buscar…' : 'Buscar resenhas e artigos…'}
+		autocomplete="off"
+		class:list={[
+			'min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-text placeholder:text-muted focus:outline-none',
+			inputClass,
+		]}
+	/>
+	<button
+		type="submit"
+		class="inline-flex shrink-0 items-center justify-center bg-pipoca px-3 text-bg transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+		aria-label="Buscar"
+	>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="h-5 w-5"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			aria-hidden="true"
+		>
+			<circle cx="11" cy="11" r="8"></circle>
+			<path d="M21 21l-4.35-4.35"></path>
+		</svg>
+	</button>
+</form>

@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import SearchForm from '../components/SearchForm.astro';
+
+const description =
+	'Busque resenhas e artigos de cinema, séries, quadrinhos e música no Arte Com Pipoca.';
+---
+
+<BaseLayout title="Busca" description={description} noindex={true}>
+	<section class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Busca' },
+			]}
+		/>
+
+		<h1 class="mt-6 font-display text-4xl tracking-wide text-pipoca md:text-5xl">
+			Busca
+		</h1>
+		<p class="mt-3 max-w-2xl text-muted">
+			{description}
+		</p>
+
+		<div class="mt-8">
+			<SearchForm id="busca-pagina" inputClass="py-3 sm:text-base" />
+		</div>
+
+		<p
+			id="busca-status"
+			class="mt-6 text-sm text-muted"
+			role="status"
+			aria-live="polite"
+		>
+		</p>
+
+		<ul id="busca-resultados" class="mt-8 divide-y divide-white/10" role="list"></ul>
+	</section>
+</BaseLayout>
+
+<script>
+	import {
+		searchItems,
+		formatSearchDate,
+		getSearchTypeLabel,
+		type SearchItem,
+	} from '../scripts/site-search';
+
+	const form = document.querySelector<HTMLFormElement>('form[action="/busca/"]');
+	const input = form?.querySelector<HTMLInputElement>('input[name="q"]');
+	const status = document.getElementById('busca-status');
+	const list = document.getElementById('busca-resultados');
+
+	let index: SearchItem[] = [];
+	let loaded = false;
+
+	function escapeHtml(text: string): string {
+		return text
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;');
+	}
+
+	function renderResults(query: string, hits: SearchItem[]) {
+		if (!status || !list) return;
+
+		const trimmed = query.trim();
+
+		if (!trimmed) {
+			status.textContent = 'Digite um termo para buscar resenhas e artigos.';
+			list.innerHTML = '';
+			return;
+		}
+
+		if (hits.length === 0) {
+			status.textContent = `Nenhum resultado para “${trimmed}”.`;
+			list.innerHTML = '';
+			return;
+		}
+
+		status.textContent =
+			hits.length === 1
+				? '1 resultado encontrado.'
+				: `${hits.length} resultados encontrados.`;
+
+		list.innerHTML = hits
+			.map((item) => {
+				const tipo = getSearchTypeLabel(item.type);
+				const meta =
+					item.type === 'resenha'
+						? `${escapeHtml(item.category)} · ${escapeHtml(item.obra)} · ${formatSearchDate(item.pubDate)}`
+						: `${escapeHtml(item.category)} · ${formatSearchDate(item.pubDate)}`;
+				return `
+			<li class="py-6">
+				<a href="${item.url}" class="group block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca">
+					<p class="text-xs font-semibold uppercase tracking-widest text-pipoca">${escapeHtml(tipo)} · ${escapeHtml(item.category)}</p>
+					<h2 class="mt-2 font-display text-2xl tracking-wide text-text transition-colors group-hover:text-pipoca md:text-3xl">${escapeHtml(item.title)}</h2>
+					<p class="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">${escapeHtml(item.description)}</p>
+					<p class="mt-3 text-xs text-muted">${meta}</p>
+				</a>
+			</li>
+		`;
+			})
+			.join('');
+	}
+
+	function runSearch(query: string) {
+		if (!loaded) {
+			if (status) status.textContent = 'Carregando índice de busca…';
+			return;
+		}
+		renderResults(query, searchItems(index, query));
+	}
+
+	async function loadIndex() {
+		try {
+			const response = await fetch('/search-index.json');
+			if (!response.ok) throw new Error('Índice indisponível');
+			index = await response.json();
+			loaded = true;
+		} catch {
+			loaded = false;
+			if (status) {
+				status.textContent =
+					'Não foi possível carregar o índice de busca. Tente de novo em instantes.';
+			}
+		}
+	}
+
+	function syncFromUrl() {
+		const q = new URLSearchParams(window.location.search).get('q') ?? '';
+		if (input) input.value = q;
+		runSearch(q);
+	}
+
+	let debounceTimer = 0;
+	input?.addEventListener('input', () => {
+		window.clearTimeout(debounceTimer);
+		debounceTimer = window.setTimeout(() => {
+			const q = input.value;
+			const url = new URL(window.location.href);
+			if (q.trim()) url.searchParams.set('q', q);
+			else url.searchParams.delete('q');
+			history.replaceState(null, '', url);
+			runSearch(q);
+		}, 200);
+	});
+
+	form?.addEventListener('submit', (event) => {
+		event.preventDefault();
+		const q = input?.value ?? '';
+		const url = new URL(window.location.href);
+		if (q.trim()) url.searchParams.set('q', q);
+		else url.searchParams.delete('q');
+		history.replaceState(null, '', url);
+		runSearch(q);
+	});
+
+	await loadIndex();
+	syncFromUrl();
+</script>

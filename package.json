@@ -17,7 +17,8 @@
     "wayback:converter": "node scripts/wayback-converter.mjs",
     "wayback:promover": "node scripts/wayback-promover.mjs",
     "limpar:artefatos": "node scripts/limpar-artefatos.mjs",
-    "fichas:wikidata": "node scripts/fichas-wikidata.mjs"
+    "fichas:wikidata": "node scripts/fichas-wikidata.mjs",
+    "fichas:importar": "node scripts/importar-fichas-editoriais.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.2",

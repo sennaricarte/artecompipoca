@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+import SearchForm from './SearchForm.astro';
 
 const navItems = [
 	{ href: '/cinema/', label: 'Cinema' },
@@ -57,7 +58,7 @@ function isActive(href: string) {
 
 		<nav
 			aria-label="Principal"
-			class="absolute left-0 right-0 top-full z-50 hidden flex-col gap-1 border-b border-white/10 bg-surface px-4 py-3 peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0"
+			class="absolute left-0 right-0 top-full z-50 hidden flex-col gap-1 border-b border-white/10 bg-surface px-4 py-3 peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0 lg:gap-6"
 		>
 			{
 				navItems.map((item) => (
@@ -75,6 +76,9 @@ function isActive(href: string) {
 					</a>
 				))
 			}
+			<div class="mt-2 border-t border-white/10 pt-3 md:mt-0 md:ml-2 md:border-0 md:pt-0">
+				<SearchForm id="busca-header" compact />
+			</div>
 		</nav>
 	</div>
 </header>

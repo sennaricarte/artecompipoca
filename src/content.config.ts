@@ -87,6 +87,24 @@ const resenhas = defineCollection({
 							.string()
 							.regex(/^Q\d+$/, 'wikidataId deve ser Q seguido de dígitos')
 							.optional(),
+						sinopse: z.string().optional(),
+						curiosidades: z.array(z.string()).optional(),
+						premios: z.array(z.string()).optional(),
+						trailerYoutubeId: z
+							.string()
+							.regex(
+								/^[A-Za-z0-9_-]{11}$/,
+								'trailerYoutubeId deve ter 11 caracteres [A-Za-z0-9_-]',
+							)
+							.optional(),
+						fontes: z
+							.array(
+								z.object({
+									nome: z.string(),
+									url: z.string().url(),
+								}),
+							)
+							.optional(),
 					})
 					.optional(),
 			}),
