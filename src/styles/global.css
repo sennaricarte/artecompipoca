@@ -41,75 +41,78 @@
 	}
 }
 
-@layer components {
-	.conteudo {
-		max-width: 68ch;
-		font-size: 1.125rem;
-		line-height: 1.75;
-		color: var(--color-text);
-	}
+/* Fora de @layer: precisa vencer o preflight (p { margin: 0 }) do Tailwind. */
+.conteudo {
+	max-width: 68ch;
+	font-size: 1.125rem;
+	line-height: 1.75;
+	color: var(--color-text);
+}
 
-	.conteudo > * + * {
-		margin-top: 1.25em;
-	}
+.conteudo > * + * {
+	margin-top: 1.25em;
+}
 
-	.conteudo h2,
-	.conteudo h3 {
-		font-family: var(--font-display);
-		color: var(--color-pipoca);
-		letter-spacing: 0.025em;
-		line-height: 1.2;
-		margin-top: 1.75em;
-	}
+.conteudo h2,
+.conteudo h3 {
+	font-family: var(--font-display);
+	color: var(--color-pipoca);
+	letter-spacing: 0.025em;
+	line-height: 1.2;
+}
 
-	.conteudo h2 {
-		font-size: 1.75rem;
-	}
+.conteudo h2 {
+	font-size: 1.75rem;
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+}
 
-	.conteudo h3 {
-		font-size: 1.4rem;
-	}
+.conteudo h3 {
+	font-size: 1.4rem;
+	margin-top: 1.75em;
+	margin-bottom: 0.5em;
+}
 
-	.conteudo a {
-		color: var(--color-pipoca);
-		text-decoration: underline;
-		text-underline-offset: 0.15em;
-	}
+.conteudo h2 + *,
+.conteudo h3 + * {
+	margin-top: 0;
+}
 
-	.conteudo a:focus-visible {
-		outline: 2px solid var(--color-pipoca);
-		outline-offset: 2px;
-	}
+.conteudo a {
+	color: var(--color-pipoca);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
 
-	.conteudo ul,
-	.conteudo ol {
-		padding-left: 1.25em;
-	}
+.conteudo a:focus-visible {
+	outline: 2px solid var(--color-pipoca);
+	outline-offset: 2px;
+}
 
-	.conteudo ul {
-		list-style-type: disc;
-	}
+.conteudo ul,
+.conteudo ol {
+	padding-left: 1.5em;
+}
 
-	.conteudo ol {
-		list-style-type: decimal;
-	}
+.conteudo ul {
+	list-style-type: disc;
+}
 
-	.conteudo li + li {
-		margin-top: 0.35em;
-	}
+.conteudo ol {
+	list-style-type: decimal;
+}
 
-	.conteudo blockquote {
-		border-left: 3px solid var(--color-balde);
-		padding-left: 1em;
-		color: var(--color-muted);
-	}
+.conteudo li + li {
+	margin-top: 0.5em;
+}
 
-	.conteudo strong {
-		font-weight: 700;
-		color: var(--color-text);
-	}
+.conteudo blockquote {
+	border-left: 3px solid var(--color-balde);
+	padding-left: 1em;
+	color: var(--color-muted);
+}
 
-	.conteudo p {
-		margin: 0;
-	}
+.conteudo strong {
+	font-weight: 700;
+	color: var(--color-text);
 }
