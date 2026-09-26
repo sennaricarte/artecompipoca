@@ -7,6 +7,7 @@ origem: arquivo
 legacyUrl: /top-lista-os-finais-mais-decepcionantes-de-seriados/
 draft: true
 editoria: series
+notaEditorial: "Lista de junho de 2014; a menção à exibição então em curso na FOX reflete aquele momento."
 ---
 
 - Abaixo listamos os finais mais decepcionantes de séries. Importante ressaltar que o texto contém spoilers!

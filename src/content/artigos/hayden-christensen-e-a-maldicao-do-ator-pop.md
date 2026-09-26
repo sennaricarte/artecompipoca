@@ -7,6 +7,7 @@ origem: arquivo
 legacyUrl: /hayden-christensen-e-a-maldicao-do-ator-pop/
 draft: true
 editoria: cinema
+notaEditorial: "Texto de dezembro de 2015; a menção ao então vindouro Batman vs. Superman reflete aquela data."
 ---
 
 Estava discutindo com amigos sobre ***Star Wars**,* claro, e surgiu o tema do **Anakin Skywalker**. *"Vocês não acham que foi culpa do ator?",* perguntaram, e quando foi a minha vez de opinar eu disse não. E todos ficaram chocados ao meu redor.

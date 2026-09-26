@@ -9,9 +9,6 @@ draft: true
 obra: Operação Big Hero
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Confira a ficha técnica completa do filme Operação Big Hero**:**
 
 **Elenco:** Vozes: Ryan Potter, Scott Adsit, Jamie Chung, T.J. Miller, Genesis Rodriguez, James Cromwell, Alan Tudyk, Daniel Henney, Maya Rudolph.
@@ -58,14 +55,3 @@ Cidade de San Fransokyo, Estados Unidos. Hiro Hamada (voz de Ryan Potter) é um 
 
 - Trailer:
 - Cartaz:
-
-### Você também vai gostar de ler:
-
--   Operação Big Hero 6: Divulgadas novas imagens da animação
--   Operação Big Hero 6 ganha novo comercial
--   Frozen: Uma Aventura Congelante
--   Turbo
--   O Que Será de Nozes?
--   A Soma de Todos os Medos
-
-[](https://www.addtoany.com/share_save)

@@ -8,9 +8,6 @@ legacyUrl: /cinco-filmes-adolescente-que-voce-precisa-ver/
 draft: true
 editoria: cinema
 ---
-
-[](https://www.addtoany.com/share_save)
-
 A adolescência sempre foi um dos grande temas usados para pano de fundo para filmes, jovens em uma fase de confusão,de descobertas e curiosidades, sempre rederam grandes histórias,por isso nós do **Arte com Pipoca** listamos cinco filmes adolescente que você precisa ver. Confira:
 
  ****5 .Meninas Malvadas****
@@ -34,14 +31,3 @@ Em Beverly Hills, uma adolescente de 15 anos muito popular chamada Cher (Alicia 
 Com vidas e personalidades diferentes, cinco estudantes são obrigados a ficarem de castigo juntos em uma biblioteca por um sábado inteiro após cometerem alguns delitos na escola. Formam o grupo: São um rebelde, um nerd, uma patricinha, um atleta e uma introvertida. Após várias brigas e discussões eles acabam abrindo seus corações e conversando sobre os dramas que enfrentam em suas vidas.
 
 E para você faltou algum  filme? Qual? Conta pra gente ai nos comentários.
-
-### Você também vai gostar de ler:
-
--   Ganhe ingressos para a peça O Corcunda de Notre Dame
--   Confira quando volta o seu seriado favorito!
--   Curta o Arte com Pipoca também no Facebook
--   Conto de Verão: Ganhe ingressos para a peça
--   Estudo de Caso – Três filmes para salvar o seu domingo!
--   Ganhe ingressos para o Vem com Smigol
-
-[](https://www.addtoany.com/share_save)

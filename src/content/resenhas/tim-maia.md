@@ -9,9 +9,6 @@ draft: true
 obra: Tim Maia
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Ao decidir assistir a uma cinebiografia de, a princípio pelo menos, uma certeza você pode ter, a trilha sonora não vai de maneira alguma te decepcionar.
 
 Se você é daquelas pessoas que se ofende com palavrões, fique longe do filme, mas se você quer dar boas risadas e também se emocionar, o longa é uma boa pedida, afinal veremos um personagem principal desbocado ao extremo, mas que não deixa de ser engraçado, afinal o Tim era assim, basta procurar no Youtube algumas entrevistas dele, recomendo sua última entrevista no **Programa do Jô Soares**.
@@ -27,14 +24,3 @@ A história – baseada no livro "Vale Tudo – O Som e a Fúria de Tim Maia", d
 Podemos dizer que o filme cumpre o seu papel ao mostrar os diversos lados de um artista, individualista, prepotente as vezes, machista, egocêntrico, mas também – um gênio da música.
 
 Emocionante e divertido, um trabalho corajoso de **Mauro Lima**.
-
-### Você também vai gostar de ler:
-
--   Canção Azul da Cor do Mar embala novo trailer de Tim Maia
--   Filme sobre cantor Tim Maia ganha trailer
--   Tim Maia
--   Especial Oscar | O Segredo de Brokeback Mountain
--   Noé | Crítica
--   50% (50/50) | Crítica
-
-[](https://www.addtoany.com/share_save)

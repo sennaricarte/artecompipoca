@@ -8,6 +8,7 @@ legacyUrl: /o-concreto-ja-rachou-um-dos-melhores-discos-do-rock-brasileiro/
 draft: true
 obra: O Concreto Já Rachou (Plebe Rude)
 tipo: album
+notaEditorial: "Texto de janeiro de 2016; a formação da banda citada como atual refere-se àquela data."
 ---
 
 A mais de 30 anos atrás, mais precisamente em 1985 chegava as lojas o mini LP **O Concreto Já Rachou**, primeiro álbum da banda mais punk de Brasilia, a **Plebe Rude**.

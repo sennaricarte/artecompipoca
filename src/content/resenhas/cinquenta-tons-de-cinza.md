@@ -9,9 +9,6 @@ draft: true
 obra: Cinquenta Tons de Cinza
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Vira e mexe o cinema aparece com filmes que usam o sexo e a sexualidade como atrativo de bilheteria. Quem pode esquecer da cruzada de pernas de **Sharon Stone** em **Instinto Selvagem**, das **9 e ½ Semanas de Amor** de **Kim Basinger** e **Mickey Rourke** ou o **Último Tango em Paris** "dançado" por **Marlon Brando** e **Maria Schneider**. Agora, realmente é difícil compreender a febre e a fissura que este **Cinquenta Tons de Cinza** provocou neste início de ano nos cinemas de todo o mundo. Está todo mundo, novamente, falando sobre as personagens criadas por **E.L.James**. Uns falando bem. Outros massacrando. Até personalidades como Madonna já se pronunciaram sobre o assunto. Os cinemas estão com filas quilométricas. Ingressos estão esgotados com semanas de antecedência. Um fenômeno cultural, sem sombra de dúvidas, que merece ser estudado e compreendido.
 
 Mas o que são estes 50 tons?
@@ -35,14 +32,3 @@ O elenco coadjuvante tras uma oscarizada, Marcia Gay Harden, como a mãe de Chri
 Gostei da fotografia das cenas no apartamento de Christian e da trilha sonora, com uma versão boa, mais lenta, de Crazy in Love de Beyonce. É um filme que dá a sensação de que estamos vendo uma coisa proibida, mas ao mesmo tempo com a aprovação dos pais. Nada que nenhuma série de TV Global ou qualquer outra coisa já não tenha mostrado.
 
 Em tempos onde decapitar inocentes em guerra, queimá-los por motivos religiosos e trocas não realizadas. Em tempos onde crianças são seviciadas e assassinadas e onde as coisas parecem ter perdido totalmente o rumo do que é moral, não existe nada em Cinquenta Tons que pode ser chamado de imoral ou indecente. É preciso nos despirmos dos preconceitos, abrirmos a mente e pararmos de classificar as coisas como boas e ruins somente porque os outros a estão classificando assim. Pode não ser um dos melhores filmes da temporada, mas existe algum motivo pelo qual está sendo tão popular. Uma das funções do cinema e da literatura é justamente essa, nos tirar da realidade.
-
-### Você também vai gostar de ler:
-
--   Divulgada a data da estreia brasileira de 'Cinquenta Tons de Cinza'
--   Cinquenta Tons de Cinza
--   50 Tons de Cinza: Assista ao primeiro trailer do filme
--   Cinquenta Tons Mais Escuros: assista ao primeiro teaser do longa
--   Cinquenta Tons de Cinza: Assista cena inédita do filme
--   Cinquenta Tons de Cinza: filme ganha novo comercial com música de Beyoncé
-
-[](https://www.addtoany.com/share_save)

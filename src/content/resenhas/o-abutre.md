@@ -10,9 +10,6 @@ draft: false
 obra: O Abutre
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Confira a ficha técnica completa do filme O Abutre**:**
 
 **Elenco:** Jake Gyllenhaal, Rene Russo, Riz Ahmed, Bill Paxton, Ann Cusack, Kevin Rahm, Jonny Coyne, Kathleen York, Michael Hyatt.
@@ -65,14 +62,3 @@ Enfrentando dificuldades para conseguir um emprego formal, o jovem Louis Bloom (
 
 - Trailer:
 - Cartaz:
-
-### Você também vai gostar de ler:
-
--   Confira o cartaz nacional de O Abutre
--   Jake Gylenhaal em trailer de O Abutre
--   PipocaCast 17 – O Abutre
--   Novo pôster de Nightcrawler traz Jake Gyllenhaal em meio às sombras
--   Os 10 pôsteres de filmes mais bonitos de 2014
--   O Homem Duplicado
-
-[](https://www.addtoany.com/share_save)

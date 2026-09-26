@@ -9,9 +9,6 @@ draft: true
 obra: "Maze Runner: Correr ou Morrer"
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 **Mazer Runner: Correr ou Morrer** é adaptação para o cinema do romance futurista de James Dashner e conta a história de Thomas (Dylan O'Brien) que se encontra em um lugar chamado Clareira.
 
 Ele não consegue se lembrar de quem era antes de acordar na caixa em movimento que o levou para lá ou do motivo pelo qual ele foi levado, porém ele não é o único que passou por isso. Foi assim com todos os Clareanos, meninos que são levados à Clareira, um Novato por mês, e que aprenderam a sobreviver com o que tinham.
@@ -29,14 +26,3 @@ O filme que é direcionado ao publico jovem adulto cumpre com eficácia seu pape
 Nota: 3,5
 
 loading...
-
-### Você também vai gostar de ler:
-
--   Mazer Runner – Correr ou Morrer: Longa ganha trailer final
--   Maze Runner – Correr ou Morrer
--   Correr ou Morrer
--   Maze Runner: Prova de fogo | Critica
--   Dylan O'Brien no cartaz de Maze Runner‬: Prova de Fogo
--   Confira trailer dublado e legendado de Correr ou Morrer (The Maze Runner)
-
-[](https://www.addtoany.com/share_save)

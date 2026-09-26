@@ -8,9 +8,6 @@ legacyUrl: /os-10-melhores-titulos-vertigo/
 draft: true
 editoria: quadrinhos
 ---
-
-[](https://www.addtoany.com/share_save)
-
 O selo **Vertigo** é um dos pilares dos quadrinhos adultos mainstream, desde a sua criação, em 1993 (embora o fã do selo saiba que suas raízes começaram muitos anos antes). Não seria absurdo dizer que os quadrinhos para maiores não teriam o mesmo sucesso de mídia e no coração dos leitores hoje em dia se não fosse o selo.
 
 Pra este texto, resolvi listar 10 grandes obras do selo, pela sua qualidade e originalidade. Resolvi fugir dos óbvios Sandman, Preacher, entre outros medalhões top de vendas, e colocar alguns títulos que poucos lembram na hora de fazer suas listas de melhores.
@@ -74,14 +71,3 @@ Eu costumo chamar essa de "O Breaking Bad dos quadrinhos". Além de ter o tráfi
 Em uma das séries com melhor roteiro que eu já li. A forma realista como os decadentes índios americanos são retratados nessa HQ, a crudeza do meio em que eles vivem, a linguagem, etc. Jason Aaron não tem medo de ser explícito nessa bela e envolvente história. Focando inicialmente em Cavalo Ruim, mas logo dando espaço igual à cada um dos envolvidos na trama, somos lançados às sagas individuais deles, que se juntam em um todo fascinante.
 
 loading...
-
-### Você também vai gostar de ler:
-
--   Sandman Teatro do Mistério | Crítica
--   O Despertar | Crítica
--   Lúcifer: série baseada em HQ da Vertigo ganha primeiro trailer
--   Dedos Mágicos | Crítica
--   Turma da Mônica – Lições | Resenha
--   Cumbe | Crítica
-
-[](https://www.addtoany.com/share_save)

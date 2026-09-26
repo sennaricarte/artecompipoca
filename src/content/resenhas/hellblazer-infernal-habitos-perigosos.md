@@ -8,8 +8,8 @@ legacyUrl: /hellblazer-infernal-habitos-perigosos/
 draft: true
 obra: Hellblazer Infernal - Hábitos Perigosos
 tipo: hq
+notaEditorial: "Texto de maio de 2014; a referência ao então vindouro seriado Constantine reflete aquela época."
 ---
-
 Um homem descobre que está com câncer terminal no pulmão. Mas decide que não vai se entregar tão facilmente. Não, eu não estou falando do **Walter White**, mas de **John Constantine**, o maior e mais famoso mago dos quadrinhos adultos, criado por **Alan Moore** em 1985, durante sua passagem pela revista do **Monstro do Pântano**. Em um encadernado que acaba de ser lançado pela Panini, ele enfrenta um mal que talvez nenhum de seus "poderes" e conhecimento de magia poderão ajudar a vencer.
 
 Publicado Nos EUA em 1991 na revista mensal do mago, **HELLBLAZER**, a saga começa quando John descobre que está com câncer terminal, devido ao uso abusivo de cigarro. Quem conhece o personagem sabe que um dos seus charmes é justamente esse vício. O cigarro dá ao personagem um ar de malandro, que só ajuda a acentuar sua canalhice. Assim, **Garth Ennis**, na época estreante no mercado americano, teve a brilhante ideia de começar sua fase na revista com a descoberta de que o protagonista está às portas da morte devido à isso. "O que eu poderia fazer com ele que ainda não havia sido feito? Matá-lo, talvez.", diria o autor mais tarde.
@@ -29,18 +29,3 @@ A revista possui apenas um defeito: os desenhos. O traço de Will Simpson são u
 Após a conclusão da fase inicial do personagem, em "Hellblazer Origens", a fase seguinte começa com o título "Hellblazer Infernal", e, para o leitor que ainda não teve o prazer de ler a fase Garth Ennis, é uma das melhores do personagem. Ennis escreveu um Constantine mais humano, no sentido de ser mais próximo de uma pessoa real. Um cara comum que só quer beber com os amigos, e que sabe que seu principal poder mágico é a esperteza. Claro que, sem deixar de lado os monstros e demônios do dia a dia dele.
 
 A edição inicial tem 212 páginas, possui 8 histórias da saga "Hábitos perigosos" e seu epílogo, e já está nas bancas. Essas histórias já haviam sido lançadas no Brasil, primeiramente pela editora Abril, em 1995, nos primeiros números da revista **VERTIGO.** Anos depois, a Pixel publicou Hábitos Perigosos como encadernado, mas sem o epílogo. Agora, teremos a história completa, além da promessa da Panini de publicar toda a fase Ennis. Acredito que, se o leitor nunca leu nada do personagem, pode acontecer o mesmo que aconteceu comigo quando li a edição da editora Abril: ficar fã do personagem, e começar a colecioná-lo. Garanto que você não vai se decepcionar.
-
-The following two tabs change content below.
-
--   [Bio](#ts-fab-bio-below)
--   [Latest Posts](#ts-fab-latest-posts-below)
-
-#### Lexy Soares
-
-Quadrinhista, cineasta independente, e cineclubista. Produz tiras e quadrinhos desde 2001, tendo participado de vários fanzines. Desde 2008, possui seu próprio blog. Estuda cinema desde 2004, e presidiu o Cineclube Pilar, em Mauá/SP, onde dirigiu alguns curtas, realizou exibições e mostras, e ministrou oficinas. Colabora com sites escrevendo sobre cinema e quadrinhos.
-
-#### Latest posts by Lexy Soares (see all)
-
--   Batman (1989) | Crítica – 2 de julho de 2014
--   O Homem Duplicado | Crítica – 19 de junho de 2014
--   Monsieur Verdoux | Crítica – 21 de maio de 2014

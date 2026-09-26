@@ -8,9 +8,6 @@ legacyUrl: /cinco-filmes-para-entender-a-ditadura/
 draft: true
 editoria: cinema
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Nos últimos dias muitas pessoas têm falando sobre ditadura,alguns até falam que ela deveria voltar,outros que quem a quer de volta é doido,mas e você entende bem o que foi a ditadura? Como ocorreu? quem sofreu com ela?. Se não essa top lista **cinco filmes para entender** a ditadura é perfeita para você começar a entender melhor sobre o assunto e mesmo se você já souber de tudo isso, essa lista pode de trazer mais conhecimento e esclarecimento ,além dos filmes serem um entretenimento de qualidade.
 
 ## Zuzu Angel
@@ -34,14 +31,3 @@ Em 1971, Miguel (Rodrigo Brassalto), Paulo (Heberson Hoerbe), Elói (Sérgio Cav
 Vera (Denise Fraga) é uma ex-militante política que recebe uma indenização do governo, em decorrência do desaparecimento do marido, vítima da repressão provocada pela ditadura militar. Com o dinheiro ela consegue comprar um apartamento próprio, além de enfim poder ser reconhecida como viúva. Só que, quando está prestes a se mudar, recebe uma visita que altera sua vida.
 
 Faltou algum filme na nossa lista? Conta pra gente ai nos comentários.
-
-### Você também vai gostar de ler:
-
--   5 melhores filmes de 2013 na opinião de Dhébora Ricarte
--   Cinco filmes adolescentes que você precisa ver
--   Cinco filmes baseados em livros que vem por ai
--   Top 20: melhores atuações de atores de todos os tempos
--   Cinco filmes que todo nerd quer ver em 2015
--   Cinco beijos inesquecíveis na história das séries
-
-[](https://www.addtoany.com/share_save)

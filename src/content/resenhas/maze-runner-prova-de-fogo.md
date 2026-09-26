@@ -9,9 +9,6 @@ draft: true
 obra: "Maze Runner: Prova de fogo"
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Gostei muito do primeiro filme, mas estava completamente desanimado com essa sequência, pois o que me agradou no primeiro filme foi a questão do labirinto e o mistério que o cercava, pelos trailers já tinha certeza, *"Prova de fogo*" não seguiria o "tom" do primeiro filme.
 
 Nesse novo filme Thomas e os amigos acreditam ter encontrado a paz e o abrigo que tanto esperavam, porém logo verão que o pior ainda está por vir e que se livra do Cruel será mais difícil do que imaginavam.
@@ -29,14 +26,3 @@ Confira também nossa critica do longa **Maze Runner: Correr ou Morrer** aqui.
 Nota: 3
 
 loading...
-
-### Você também vai gostar de ler:
-
--   Maze Runner – Correr ou Morrer
--   Mazer Runner: Correr ou Morrer | Critica
--   Dylan O'Brien no cartaz de Maze Runner‬: Prova de Fogo
--   Correr ou Morrer
--   18/09/2014 – Estreias de hoje nos cinemas
--   Fox irá produzir sequencia de Maze Runner – Correr ou Morrer
-
-[](https://www.addtoany.com/share_save)

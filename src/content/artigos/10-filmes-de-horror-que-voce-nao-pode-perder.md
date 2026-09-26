@@ -8,7 +8,6 @@ legacyUrl: /10-filmes-de-horror-que-voce-nao-pode-perder/
 draft: true
 editoria: cinema
 ---
-
 Nosso Top Lista de dessa vez traz uma super lista com 10 filmes de horror que você não pode perder, comente sobre os que você já assistiu, se tem algum na lista que você ainda não assistiu, não perca tempo. Confira:
 
 ## O Exorcista (1973)
@@ -59,18 +58,3 @@ A maior jogada de marketing da história do terror, esse filme gravado em forma 
 ## Evil Dead
 
 A refilmagem do clássico de terror de Raimi tirou o riso e colocou uma atmosfera arrepiante sobre o grupo de jovens que se isolam numa cabana para cuidar da amiga viciada e que acaba possuída pelo espírito da floresta e todos acabam por pagar o preço.
-
-The following two tabs change content below.
-
--   [Bio](#ts-fab-bio-below)
--   [Latest Posts](#ts-fab-latest-posts-below)
-
-#### Regis Rocha
-
-Por vezes mal encarado como a foto, amante de cinema, poker, games, da minha esposa e minha cachorra Cora. Espero compartilhar um pouco da minha visão do mundo com vocês.
-
-#### Latest posts by Regis Rocha (see all)
-
--   10 filmes de horror que você não pode perder – 11 de agosto de 2014
--   As 20 maiores atuações femininas da história do cinema – 14 de julho de 2014
--   Top 5 – Melhores filmes com cães – 9 de abril de 2014

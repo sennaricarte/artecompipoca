@@ -9,9 +9,6 @@ draft: true
 obra: "Boyhood: o tempo como grande pano de fundo"
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 O roteiro de **Boyhood** todos já devem conhecer, o acompanhamento da vida de Mason a partir de seus 5 anos até os 18. Aqui vale o destaque para o diretor **Richard Linklater** que merece ser reconhecido podendo até ser aclamado por tamanha maestria filmando o tempo como grande remédio, ou melhor, por colocar a vida num filme e o tempo como grande pano de fundo, tal como ocorre na vida.
 
 A saber: num ciclo de 20 anos, de 93 a 2013, ele filmou, naturalmente, a vida do casal Jesse e Celine na trilogia Antes do Amanhecer, Pôr do Sol e Meia-noite, e agora, com ousadia se interessa pela vida de um garoto da infância à juventude. Passando pelo ambiente familiar como formador do ser humano, ao menos deixando questões nesse sentido.
@@ -29,14 +26,3 @@ O filme deixa essas e outras questões interessantes, mas suas quase três horas
 Descrevendo numa metáfora, ver ele sendo levado pela maré em alguns momentos e buscando suas próprias ondas, em outros. Evidenciando sempre a busca incessante por algo, inclusive inúmeras respostas para crescentes perguntas as quais vamos nos deparando conforme o passar do tempo. Descobrir o mundo e descobrir-se. Perder, errar, sofrer, ter esperanças, aprender…
 
 O ideal talvez não exista, mas será que o encanto não esteja em viver tão-somente o presente? Ou isso é algo que fica na juventude?
-
-### Você também vai gostar de ler:
-
--   Oscar 2015 – Uma análise
--   Globo de Ouro: conheça os ganhadores na categoria cinema
--   Antes da Meia-noite
--   Boyhood, filme filmado durante 12 anos ganha trailer legendado
--   Clipe de Boyhood, filme gravado durante 12 anos
--   Assista o primeiro trailer de Boyhood, filme gravado durante 12 anos
-
-[](https://www.addtoany.com/share_save)

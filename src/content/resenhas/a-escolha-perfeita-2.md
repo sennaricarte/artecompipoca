@@ -9,9 +9,6 @@ draft: true
 obra: A Escolha Perfeita 2
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 **A Escolha Perfeita 2** comente um dos grandes erros das continuações, a repetição da formula que deu certo, o que faz desse filme quase uma copia do primeiro, sem nenhuma grande mudança, as personagens que no primeiro filme estavam no primeiro ano de faculdade e agora estão no último, não sofreram grandes mudanças em suas emoções, ambições ou seja não há uma grande evolução .
 
 O  filme  utiliza  das piadas manjadas das maioria dos filmes de comédias atuais. Talvez por está pela primeira vez a frente da direção **Elizabeth Banks** tenha ficado receosa em ousar mais e apenas reciclou a formula do primeiro.
@@ -25,14 +22,3 @@ o longa deixou claro as dispersão das belas e o possível surgimento de uma nov
 Enfim **A Escolha Perfeita 2**, deixa a desejar em relação ao primeiro, mas ainda serve de diversão sem compromisso.
 
 loading...
-
-### Você também vai gostar de ler:
-
--   A Escolha Perfeita 2: assista novo teaser do longa
--   A Escolha Perfeita 2: Veja o novo pôster do filme
--   A Escolha Perfeita 2: Confira o segundo trailer oficial do filme
--   A Escolha Perfeita 2: Muita música em novo comercial do longa
--   A Escolha Perfeita 2: Bellas cantam Cups em novo clipe do longa
--   A Escolha Perfeita 2: Assista ao primeiro trailer do longa
-
-[](https://www.addtoany.com/share_save)

@@ -9,9 +9,6 @@ draft: true
 obra: Z for Zachariah
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 O novo longa de ficção científica "**Z for Zachariah**" dirigido por **Craig Zobel** e estrelado por **Chris Pine** não foi um dos maiores sucessos do ator, sobretudo, tem lá seus méritos. Em projeto desde 2009 após ser citado pela **Black list** – lista que trata dos melhores roteiros ainda não utilizados —, e baseado na obra de **Robert C. O'Brien**, o filme, que possui o mesmo nome do livro, relata a vida no planeta água com as mínimas condições de existência e mostra como as relações interpessoais podem ser destrutivas.
 
 A história baseia-se numa Terra pós-apocalíptica e mostra Ann (**Margot Robbie**), uma tímida garota humilde cuja após perder toda a família em consequência das condições do planeta, se encontra sozinha enquanto sobrevive de subsistência. Ao perder as esperanças de encontrar qualquer outro ser humano pelo resto da sua vida, eis que surge o engenheiro de pesquisa John Loomis (**Chiwetel Ejiofor**) lhe retornando a esperança a respeito do medo da eterna solidão. Após a moça salvá-lo da morte devido à exposição de água contaminada por elementos radioativos, os dois passam, então, a viver sobre o mesmo teto e dividir não só experiências, como sentimentos. Todavia, quando a comida começa a desaparecer, Caleb (**Chris Pine**), o culpado, aparece como um estranho faminto e decide ajudá-los na missão de criar uma pequena usina hidrelétrica e assim garantir um inverno menos doloroso. Ann, intrigada, acaba se interessando por Caleb, o qual corresponde e gradativamente conquista o coração que outrora pertenceu ao cético Sr. Loomis. Esse, então, decide que Ann será sua e que vai fazer de tudo para isso acontecer.
@@ -25,14 +22,3 @@ A produção baseada no **romance homônimo** de 1975 de **Robert C. O'Brien** �
 Nota: 3.7/5
 
 loading...
-
-### Você também vai gostar de ler:
-
--   Margot Robbie vai estrelar cinebiografia de Marisa Lankester
--   Esquadrão Suicida ganha logo oficial
--   Trailer oficial do Esquadrão Suicida é liberado
--   Esquadrão Suicida ganha data para inicio das fimagens
--   Esquadrão Suicida: Veja a primeira imagem de Jared Leto como o Coringa
--   Esquadrão Suicida: Viola Davis pode entrar para o elenco do filme
-
-[](https://www.addtoany.com/share_save)

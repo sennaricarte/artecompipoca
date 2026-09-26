@@ -9,9 +9,6 @@ draft: true
 obra: O Expresso do Amanhã
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Um Filme que chega aos cinemas brasileiros com um certo atraso, o longa é dirigido por **Boon Joon Ho** (O Hospedeiro), e, por sua vez, é uma adaptação da HQ **"O Perfuraneve"**, lançado recentemente por aqui pela **Editora Aleph**. A história é ambientada em um futuro próximo, onde o que restou da humanidade vive dentro de um imenso trem que percorre todo o planeta de forma ininterrupta. O motivo? Para resolver o problema do aquecimento global, os países se uniram pra liberar na atmosfera um gás que resfriaria o planeta. Mas o gás acabou por trazer uma nova era glacial, acabando com a vida na superfície. Wilford, um industrial "visionário", dono de uma indústria de trens, construiu o trem que leva as pessoas que restaram nesse passeio sem fim.
 
 Após 17 anos, no interior do trem habita uma nova sociedade, dividida em classes sociais, cada qual vivendo em um dos carros, e separada das outras. As classes altas, dominantes, vivem na ponta do trem. Eles possuem os melhores recursos, e vivem com maior conforto. Como é mencionado em um diálogo, as pessoas da parte de trás demoraram até mesmo a receber alimentação nos primeiros meses de funcionamento do trem. Enquanto os da cauda do trem, quando começaram a receber comida, ela veio na forma de uma barra de "protéicos", que lembra uma barra de gelatina, e contém os nutrientes necessários para sua subexistência.
@@ -29,14 +26,3 @@ Se o filme possui defeitos estão no fato de ser uma história sem grandes novid
 Como todas essas qualidades, e os poucos defeitos, o filme é um programa agradável de se ver, sem pretensões de ser revolucionário no gênero, mas competente em sua proposta.
 
 loading...
-
-### Você também vai gostar de ler:
-
--   Expresso do Amanhã estrelado por Chris Evans estreia no Brasil um ano depois de estreia nos EUA
--   Capitão América 2 – O Soldado Invernal | Crítica
--   A Última Bailarina | Crítica
--   O Despertar | Crítica
--   Turma da Mônica – Lições | Resenha
--   Cumbe | Crítica
-
-[](https://www.addtoany.com/share_save)

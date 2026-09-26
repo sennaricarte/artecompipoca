@@ -9,9 +9,6 @@ draft: true
 obra: "O Hobbit: A Batalha dos Cinco Exércitos"
 tipo: filme
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Confira a ficha técnica completa do filme O Hobbit: A Batalha dos Cinco Exércitos**:**
 
 **Elenco:** Martin Freeman, Richard Armitage, Evangeline Lilly, Lee Pace, Luke Evans, Ian McKellen, Ken Stott, James Nesbitt, Cate Blanchett, Ian Holm, Christopher Lee, Hugo Weaving, Orlando Bloom, Manu Bennett, Graham McTavish, Aidan Turner, Billy Connolly, Stephen Fry, Mikael Persbrandt, Bret McKenzie, Dean O'Gorman, Sylvester McCoy, Ryan Gage, Peter Hambleton, Adam Brown, William Kircher, Lawrence Makoare, Jed Brophy, Stephen Hunter, John Bell (II), Mark Hadlow, John Callen (II).
@@ -64,14 +61,3 @@ Confira a ficha técnica completa do filme O Hobbit: A Batalha dos Cinco Exérci
 
 - Trailer:
 - Cartaz:
-
-### Você também vai gostar de ler:
-
--   O Hobbit: A Desolação de Smaug
--   O Hobbit: A Batalha dos Cinco Exércitos
--   Bilbo em novo cartaz de O Hobbit: A Batalha dos Cinco Exércitos
--   O rei élfico Thranduil em novo pôster de O Hobbit: A Batalha dos Cinco Exércitos
--   O Hobbit – A Batalha dos Cinco Exércitos: Thranduil no novo cartaz do longa
--   O Hobbit – A Batalhas dos Cinco Exércitos: Longa ganhou quatro novos pôsteres
-
-[](https://www.addtoany.com/share_save)

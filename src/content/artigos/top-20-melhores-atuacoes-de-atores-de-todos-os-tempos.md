@@ -8,9 +8,6 @@ legacyUrl: /top-20-melhores-atuacoes-de-atores-de-todos-os-tempos/
 draft: true
 editoria: cinema
 ---
-
-[](https://www.addtoany.com/share_save)
-
 Nosso Top Lista de hoje traz uma lista com 20 das melhores atuações do cinema, confira nossa lista de atuações memoráveis desses grandes atores:
 
 - Hors concours
@@ -99,14 +96,3 @@ Denzel foi recompensado com o Oscar por um papel menor em "Dia de Treinamento" d
 Grande ator da nova geração, se transforma para seus papeis, seja por "O Sobrevivente", "O Lutador", "O Operário", bem como para papeis de apelo muito popular com foi com "Trilogia Batman". Em seu primeiro papel de destaque já adulto Bale é um ianque narcisista e superficial que resolve se tornar o assassino. Estupenda atuação!
 
 loading...
-
-### Você também vai gostar de ler:
-
--   TOP 10 – As melhores atuações masculinas vencedoras do Oscar
--   5 péssimos filmes com grandes atores
--   PipocaCast 18 – Game of Thrones
--   PipocaCast 14 – Filmes com mulheres fortes
--   O Segredo dos Seus Olhos
--   Top 5 finais surpreendentes
-
-[](https://www.addtoany.com/share_save)

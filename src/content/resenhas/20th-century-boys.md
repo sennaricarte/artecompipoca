@@ -8,6 +8,7 @@ legacyUrl: /20th-century-boys/
 draft: true
 obra: 20th Century Boys
 tipo: hq
+notaEditorial: "Texto de setembro de 2014; a avaliação sobre mangás então em bancas reflete aquele momento."
 ---
 
 Se eu puder eleger os dois melhores mangás em bancas brasileiras atualmente, escolho **Monster** e **20th Century Boys**, não por acaso ambos escritos e desenhados por **Naoki Urasawa**. Um dos mestres dos mangás adultos de suspense, ele cria tramas cheias de reviravoltas, e personagens críveis. Pra aqueles que não são leitores assíduos de mangás, e que torcem o nariz ao ver qualquer mangá juvenil super colorido nas bancas, saiba que este é um mangá dirigido ao público adulto. Tanto a trama quando o estilo de roteiro e desenhos são diferentes dos mangás que são voltados apenas aos jovens. Aqui há uma história mais densa, narrada com a precisão necessária. E os desenhos procuram ser mais realistas.
