@@ -1,0 +1,248 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Ficha {
+	tituloOriginal?: string;
+	ano?: number;
+	direcao?: string[];
+	roteiro?: string[];
+	elenco?: string[];
+	generos?: string[];
+	duracaoMin?: number;
+	paises?: string[];
+	criadores?: string[];
+	temporadas?: number;
+	emissora?: string;
+	sinopse?: string;
+	trailerYoutubeId?: string;
+}
+
+interface Props {
+	obra: string;
+	tipo: 'filme' | 'serie';
+	ficha?: Ficha;
+	cartaz?: ImageMetadata;
+	cartazAlt?: string;
+	cartazCredito?: string;
+	/** Eager + fetchpriority high quando o cartaz é candidato a LCP (sem cover no topo). */
+	prioridadeCartaz?: boolean;
+}
+
+const {
+	obra,
+	tipo,
+	ficha = {},
+	cartaz,
+	cartazAlt,
+	cartazCredito,
+	prioridadeCartaz = false,
+} = Astro.props;
+
+const CARTAZ_LARGURA = 300;
+
+const temCartaz = Boolean(cartaz && cartazAlt);
+const cartazAltura = cartaz
+	? Math.round((CARTAZ_LARGURA * cartaz.height) / cartaz.width)
+	: 0;
+
+/** @param {string[] | undefined} list */
+function juntar(list: string[] | undefined): string | undefined {
+	if (!list?.length) return undefined;
+	return list.join(', ');
+}
+
+/** @param {number} min */
+function formatarDuracao(min: number): string {
+	const h = Math.floor(min / 60);
+	const m = min % 60;
+	if (h <= 0) return `${m}min`;
+	if (m <= 0) return `${h}h`;
+	return `${h}h ${m}min`;
+}
+
+type Linha = { rotulo: string; valor: string; sinopse?: boolean };
+
+/** @type {Linha[]} */
+const linhas: Linha[] = [];
+
+linhas.push({ rotulo: 'Nome', valor: obra });
+if (ficha.tituloOriginal) {
+	linhas.push({ rotulo: 'Título original', valor: ficha.tituloOriginal });
+}
+if (tipo === 'filme' && juntar(ficha.direcao)) {
+	linhas.push({ rotulo: 'Direção', valor: juntar(ficha.direcao)! });
+}
+if (tipo === 'serie' && juntar(ficha.criadores)) {
+	linhas.push({ rotulo: 'Criação', valor: juntar(ficha.criadores)! });
+}
+if (juntar(ficha.roteiro)) {
+	linhas.push({ rotulo: 'Roteiro', valor: juntar(ficha.roteiro)! });
+}
+if (juntar(ficha.elenco)) {
+	linhas.push({ rotulo: 'Elenco', valor: juntar(ficha.elenco)! });
+}
+if (juntar(ficha.generos)) {
+	linhas.push({ rotulo: 'Gênero', valor: juntar(ficha.generos)! });
+}
+if (tipo === 'filme' && ficha.duracaoMin != null) {
+	linhas.push({ rotulo: 'Duração', valor: formatarDuracao(ficha.duracaoMin) });
+}
+if (tipo === 'serie' && ficha.temporadas != null) {
+	linhas.push({ rotulo: 'Temporadas', valor: String(ficha.temporadas) });
+}
+if (tipo === 'serie' && ficha.emissora) {
+	linhas.push({ rotulo: 'Emissora', valor: ficha.emissora });
+}
+if (juntar(ficha.paises)) {
+	linhas.push({ rotulo: 'País', valor: juntar(ficha.paises)! });
+}
+if (ficha.ano != null) {
+	linhas.push({ rotulo: 'Ano', valor: String(ficha.ano) });
+}
+if (ficha.sinopse?.trim()) {
+	linhas.push({ rotulo: 'Sinopse', valor: ficha.sinopse.trim(), sinopse: true });
+}
+
+const temTrailer = Boolean(ficha.trailerYoutubeId);
+const trailerId = ficha.trailerYoutubeId ?? '';
+const trailerWatchUrl = trailerId
+	? `https://www.youtube.com/watch?v=${trailerId}`
+	: '';
+const trailerThumb = trailerId
+	? `https://i.ytimg.com/vi_webp/${trailerId}/hqdefault.webp`
+	: '';
+
+const tituloFicha = tipo === 'serie' ? 'Ficha da série' : 'Ficha do filme';
+---
+
+<section
+	class="ficha-obra mt-10 rounded-sm border border-white/10 bg-surface"
+	aria-labelledby="ficha-av-titulo"
+>
+	<h2 id="ficha-av-titulo" class="sr-only">{tituloFicha}</h2>
+
+	<div class="ficha-obra__grid flex flex-col gap-6 p-4 md:flex-row md:items-start md:gap-8 md:p-6">
+		{
+			temCartaz && cartaz && cartazAlt && (
+				<figure class="ficha-obra__capa mx-auto m-0 w-full max-w-[240px] shrink-0 md:mx-0 md:max-w-[300px]">
+					<Picture
+						src={cartaz}
+						formats={['avif', 'webp']}
+						widths={[240, 300, 480, 600]}
+						sizes="(min-width: 768px) 300px, 240px"
+						width={CARTAZ_LARGURA}
+						height={cartazAltura}
+						alt={cartazAlt}
+						loading={prioridadeCartaz ? 'eager' : 'lazy'}
+						fetchpriority={prioridadeCartaz ? 'high' : undefined}
+						quality="mid"
+						pictureAttributes={{ class: 'block' }}
+						class="h-auto w-full rounded-sm"
+					/>
+					{cartazCredito && (
+						<figcaption class="mt-1.5 text-center text-xs leading-snug text-muted md:text-left">
+							{cartazCredito}
+						</figcaption>
+					)}
+				</figure>
+			)
+		}
+
+		<div class="ficha-obra__tabela min-w-0 flex-1 overflow-x-auto">
+			<table class="ficha-obra__table w-full border-collapse text-sm">
+				<caption class="sr-only">{tituloFicha}</caption>
+				<tbody>
+					{
+						linhas.map((linha) =>
+							linha.sinopse ? (
+								<tr class="ficha-obra__row ficha-obra__row--sinopse border-t border-white/10">
+									<th
+										scope="row"
+										class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-top font-bold text-text"
+									>
+										{linha.rotulo}
+									</th>
+									<td class="ficha-obra__td ficha-obra__td--sinopse px-3 py-3 text-left leading-relaxed text-text">
+										{linha.valor}
+									</td>
+								</tr>
+							) : (
+								<tr class="ficha-obra__row border-t border-white/10 first:border-t-0">
+									<th
+										scope="row"
+										class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text"
+									>
+										{linha.rotulo}
+									</th>
+									<td class="ficha-obra__td px-3 py-3 text-center align-middle text-text">
+										{linha.valor}
+									</td>
+								</tr>
+							),
+						)
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	{
+		temTrailer && (
+			<section
+				class="border-t border-white/10 px-4 pb-6 pt-6 md:px-6"
+				aria-labelledby="trailer-titulo"
+			>
+				<h3
+					id="trailer-titulo"
+					class="font-display text-2xl tracking-wide text-pipoca"
+				>
+					Trailer
+				</h3>
+				<div class="relative mt-4 aspect-video w-full max-w-3xl overflow-hidden rounded-sm bg-black">
+					<a
+						href={trailerWatchUrl}
+						class="group absolute inset-0 block h-full w-full"
+						aria-label={`Assistir ao trailer de ${obra}`}
+						rel="noopener"
+						target="_blank"
+					>
+						<img
+							src={trailerThumb}
+							alt={`Trailer de ${obra}`}
+							width="480"
+							height="360"
+							loading="lazy"
+							decoding="async"
+							class="h-full w-full object-cover"
+						/>
+						<span
+							class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/35 transition-colors group-hover:bg-black/45"
+							aria-hidden="true"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="68"
+								height="68"
+								viewBox="0 0 68 68"
+								fill="none"
+							>
+								<circle cx="34" cy="34" r="34" fill="#FFC83D"></circle>
+								<path d="M28 22v24l22-12-22-12z" fill="#0F0F12"></path>
+							</svg>
+						</span>
+					</a>
+				</div>
+			</section>
+		)
+	}
+</section>
+
+<style>
+	@media (min-width: 768px) {
+		.ficha-obra__capa :global(picture),
+		.ficha-obra__capa :global(img) {
+			max-width: 300px;
+		}
+	}
+</style>
