@@ -9,9 +9,9 @@ legacyUrl: /monsieur-verdoux-critica/
 draft: false
 obra: Monsieur Verdoux
 tipo: filme
-cover: "../../assets/capas/monsieur-verdoux.jpg"
-coverAlt: "Cartaz de Monsieur Verdoux: Chaplin de chapéu, terno e bengala ao lado de letreiros em vermelho e azul"
-coverCredito: "Cartaz original (1947), domínio público. Fonte: Wikimedia Commons"
+cartaz: "../../assets/capas/monsieur-verdoux-cartaz.jpg"
+cartazAlt: "Cartaz de Monsieur Verdoux: Chaplin de chapéu, terno e bengala ao lado de letreiros em vermelho e azul"
+cartazCredito: "Cartaz original (1947), domínio público. Fonte: Wikimedia Commons"
 ficha:
   tituloOriginal: "Monsieur Verdoux"
   ano: 1947

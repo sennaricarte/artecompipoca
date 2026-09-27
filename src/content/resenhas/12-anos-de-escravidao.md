@@ -4,6 +4,9 @@ description: "Crítica de 12 Anos de Escravidão: Steve McQueen funde escravidã
 pubDate: 2014-02-20
 updatedDate: 2026-09-26
 autor: daniel-serafim
+cover: "../../assets/capas/12-anos-de-escravidao-cena.jpg"
+coverAlt: "Homem de camisa clara apoiado numa cerca de galhos, entre homens e mulheres em roupas de época, sob árvores"
+coverCredito: "Divulgação/Buena Vista International"
 origem: arquivo
 legacyUrl: /a-critica-definitiva-12-anos-de-escravidao/
 draft: false

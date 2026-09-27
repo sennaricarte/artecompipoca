@@ -4,15 +4,14 @@ description: "Crítica de Chinatown (1974), de Roman Polanski: noir solar da Nov
 pubDate: 2014-06-26
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/chinatown-1974-cena.jpg"
+coverAlt: "Homem de chapéu, curativo no nariz e cigarro na boca ao lado de mulher de chapéu preto, num carro ao entardecer"
+coverCredito: "Divulgação/Paramount Pictures"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/grandes-filmes-chinatown-1974/
 draft: false
 obra: Chinatown (1974)
 tipo: filme
-cover: "../../assets/capas/chinatown-1974.jpg"
-coverAlt: "Roman Polanski, diretor de Chinatown (1974)"
-coverCredito: "Foto: Mariusz Kubik / CC BY-SA 4.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 ficha:
   tituloOriginal: Chinatown
   ano: 1974

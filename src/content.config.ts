@@ -15,6 +15,10 @@ function withArquivoPubDateGuard(schema) {
 			message: 'coverAlt é obrigatório quando cover estiver definido',
 			path: ['coverAlt'],
 		})
+		.refine((data) => !data.cartaz || Boolean(data.cartazAlt), {
+			message: 'cartazAlt é obrigatório quando cartaz estiver definido',
+			path: ['cartazAlt'],
+		})
 		.refine(
 			(data) =>
 				data.origem !== 'arquivo' ||
@@ -43,6 +47,11 @@ const artigos = defineCollection({
 				coverAlt: z.string().optional(),
 				coverCredito: z.string().optional(),
 				coverLicencaUrl: z.string().url().optional(),
+				/** object-position da cena na moldura 16:9 (ex.: "center 30%"). */
+				coverPosicao: z.string().optional(),
+				cartaz: image().optional(),
+				cartazAlt: z.string().optional(),
+				cartazCredito: z.string().optional(),
 				legacyUrl: z.string().optional(),
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
@@ -70,6 +79,11 @@ const resenhas = defineCollection({
 				coverAlt: z.string().optional(),
 				coverCredito: z.string().optional(),
 				coverLicencaUrl: z.string().url().optional(),
+				/** object-position da cena na moldura 16:9 (ex.: "center 30%"). */
+				coverPosicao: z.string().optional(),
+				cartaz: image().optional(),
+				cartazAlt: z.string().optional(),
+				cartazCredito: z.string().optional(),
 				legacyUrl: z.string().optional(),
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),

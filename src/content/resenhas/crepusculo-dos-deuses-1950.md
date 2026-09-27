@@ -4,14 +4,17 @@ description: "Crítica de Crepúsculo dos Deuses (1950): Billy Wilder retrata a 
 pubDate: 2014-07-14
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/crepusculo-dos-deuses-1950-cena.jpg"
+coverAlt: "Em preto e branco, mulher de cabelos cacheados ergue o olhar e estende a mão diante de homens de terno e chapéu"
+coverCredito: "Divulgação/Paramount Pictures"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd-1950/
 draft: false
 obra: Crepúsculo dos Deuses (1950)
 tipo: filme
-cover: "../../assets/capas/crepusculo-dos-deuses-1950.jpg"
-coverAlt: "Cartaz de Crepúsculo dos Deuses: rosto feminino sobre fundo vermelho, casal abraçado e uma fita de filme com o título"
-coverCredito: "Cartaz original (1950), domínio público. Fonte: Wikimedia Commons"
+cartaz: "../../assets/capas/crepusculo-dos-deuses-1950-cartaz.jpg"
+cartazAlt: "Cartaz de Crepúsculo dos Deuses: rosto feminino sobre fundo vermelho, casal abraçado e uma fita de filme com o título"
+cartazCredito: "Cartaz original (1950), domínio público. Fonte: Wikimedia Commons"
 ficha:
   tituloOriginal: "Sunset Boulevard"
   ano: 1950

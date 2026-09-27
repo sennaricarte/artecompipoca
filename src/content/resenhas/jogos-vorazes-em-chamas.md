@@ -4,6 +4,9 @@ description: "Ficha técnica de Jogos Vorazes: Em Chamas com elenco, direção, 
 pubDate: 2013-11-04
 updatedDate: 2026-09-26
 autor: redacao
+cover: "../../assets/capas/jogos-vorazes-em-chamas-cena.jpg"
+coverAlt: "Jovem de cabelos longos mira com arco e flecha diante de chamas e de um grande emblema circular com asas"
+coverCredito: "Divulgação/Paris Filmes"
 origem: arquivo
 legacyUrl: /jogos-vorazes-em-chamas/
 draft: false

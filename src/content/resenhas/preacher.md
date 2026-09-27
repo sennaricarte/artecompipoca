@@ -4,6 +4,9 @@ description: "Crítica da HQ Preacher, de Garth Ennis e Steve Dillon: Jesse Cust
 pubDate: 2016-05-27
 updatedDate: 2026-09-26
 autor: lexy-soares
+cartaz: "../../assets/capas/preacher-cartaz.jpg"
+cartazAlt: "Capa de Preacher: rosto de um homem de colarinho clerical sobre céu de tempestade e figuras num campo de trigo"
+cartazCredito: "Divulgação/Panini Comics"
 origem: arquivo
 legacyUrl: /preacher-critica/
 draft: false

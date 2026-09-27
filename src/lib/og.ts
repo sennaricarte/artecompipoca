@@ -88,26 +88,16 @@ export interface DadosOgPost {
 	/** Id do post: mesma variante de cor da capa no site. */
 	idPost: string;
 	nota?: number;
-	/** Caminho absoluto do arquivo original da capa. */
+	/** Caminho absoluto do arquivo original da cena (cover). */
 	coverPath?: string;
 }
 
-type Cartaz = { dataUri: string; largura: number; vertical: boolean };
-
-async function prepararCartaz(caminho: string): Promise<Cartaz> {
-	const meta = await sharp(caminho).metadata();
-	const vertical = (meta.height ?? 0) > (meta.width ?? 0);
-	const img = sharp(caminho);
-	const buf = vertical
-		? await img.resize({ height: OG_ALTURA }).jpeg({ quality: 82 }).toBuffer()
-		: await img
-				.resize({ width: OG_LARGURA, height: OG_ALTURA, fit: 'cover' })
-				.jpeg({ quality: 82 })
-				.toBuffer();
-	const largura = vertical
-		? Math.round((OG_ALTURA * (meta.width ?? 1)) / (meta.height ?? 1))
-		: OG_LARGURA;
-	return { dataUri: `data:image/jpeg;base64,${buf.toString('base64')}`, largura, vertical };
+async function prepararCena(caminho: string): Promise<string> {
+	const buf = await sharp(caminho)
+		.resize({ width: OG_LARGURA, height: OG_ALTURA, fit: 'cover' })
+		.jpeg({ quality: 82 })
+		.toBuffer();
+	return `data:image/jpeg;base64,${buf.toString('base64')}`;
 }
 
 function colunaTexto(
@@ -189,27 +179,14 @@ function colunaTexto(
 
 export async function gerarOgPost(dados: DadosOgPost): Promise<Buffer> {
 	const tema = capaDoPost(dados.editoria, dados.idPost);
-	const cartaz = dados.coverPath ? await prepararCartaz(dados.coverPath) : undefined;
+	const cena = dados.coverPath ? await prepararCena(dados.coverPath) : undefined;
 
-	if (cartaz?.vertical) {
-		return renderizar(
-			el('div', { display: 'flex', width: OG_LARGURA, height: OG_ALTURA, backgroundImage: tema.fundo }, [
-				el('img', { width: cartaz.largura, height: OG_ALTURA, flexShrink: 0 }, undefined, {
-					src: cartaz.dataUri,
-					width: cartaz.largura,
-					height: OG_ALTURA,
-				}),
-				colunaTexto(dados, tema, OG_LARGURA - cartaz.largura, 56),
-			]),
-		);
-	}
-
-	if (cartaz) {
+	if (cena) {
 		const temaEscuro = { ...tema, texto: '#ffffff', rotulo: '#f2f2f2', claro: false };
 		return renderizar(
 			el('div', { display: 'flex', position: 'relative', width: OG_LARGURA, height: OG_ALTURA, background: COR_FUNDO_SITE }, [
 				el('img', { position: 'absolute', top: 0, left: 0, width: OG_LARGURA, height: OG_ALTURA }, undefined, {
-					src: cartaz.dataUri,
+					src: cena,
 					width: OG_LARGURA,
 					height: OG_ALTURA,
 				}),

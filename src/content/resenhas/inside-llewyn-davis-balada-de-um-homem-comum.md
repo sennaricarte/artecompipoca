@@ -4,15 +4,14 @@ description: "Crítica de Inside Llewyn Davis, dos irmãos Coen: folk em Nova Yo
 pubDate: 2014-03-16
 updatedDate: 2026-09-26
 autor: daniel-serafim
+cover: "../../assets/capas/inside-llewyn-davis-balada-de-um-homem-comum-cena.jpg"
+coverAlt: "Três músicos num estúdio de gravação, um de pé e dois sentados com violões, sob um microfone suspenso"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /critica-definitiva-inside-llewyn-davis-balada-de-um-homem-comum/
 draft: false
 obra: Inside Llewyn Davis – Balada de Um Homem Comum
 tipo: filme
-cover: "../../assets/capas/inside-llewyn-davis-balada-de-um-homem-comum.jpg"
-coverAlt: "Ethan Coen, diretor de Inside Llewyn Davis – Balada de Um Homem Comum"
-coverCredito: "Foto: Siebbi / CC BY 3.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by/3.0"
 ficha:
   tituloOriginal: "Inside Llewyn Davis"
   ano: 2013

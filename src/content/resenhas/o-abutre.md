@@ -4,15 +4,14 @@ description: "Ficha técnica, sinopse e curiosidades de O Abutre (Nightcrawler),
 pubDate: 2014-12-18
 updatedDate: 2026-09-26
 autor: senna-ricarte
+cover: "../../assets/capas/o-abutre-cena.jpg"
+coverAlt: "Homem de jaqueta escura empunha uma câmera com luz acesa em meio à fumaça, à noite, junto a um carro"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /o-abutre/
 draft: false
 obra: O Abutre
 tipo: filme
-cover: "../../assets/capas/o-abutre.jpg"
-coverAlt: "Dan Gilroy, diretor de O Abutre"
-coverCredito: "Foto: Kevin Paul / CC BY 4.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by/4.0"
 ficha:
   tituloOriginal: Nightcrawler
   ano: 2014

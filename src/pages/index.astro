@@ -39,6 +39,7 @@ type DestaqueResolvido = {
 	coverAlt?: string;
 	coverCredito?: string;
 	coverLicencaUrl?: string;
+	coverPosicao?: string;
 	temCoverReal: boolean;
 };
 
@@ -78,6 +79,7 @@ async function resolverDestaque(
 			coverAlt: entry.data.coverAlt,
 			coverCredito: entry.data.coverCredito,
 			coverLicencaUrl: entry.data.coverLicencaUrl,
+			coverPosicao: entry.data.coverPosicao,
 			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
 		};
 	}
@@ -107,6 +109,7 @@ async function resolverDestaque(
 			coverAlt: entry.data.coverAlt,
 			coverCredito: entry.data.coverCredito,
 			coverLicencaUrl: entry.data.coverLicencaUrl,
+			coverPosicao: entry.data.coverPosicao,
 			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
 		};
 	}
@@ -209,6 +212,7 @@ function propsCardEditoria(
 		coverAlt: item.entry.data.coverAlt,
 		coverCredito: item.entry.data.coverCredito,
 		coverLicencaUrl: item.entry.data.coverLicencaUrl,
+		coverPosicao: item.entry.data.coverPosicao,
 		nivelTitulo: 'h3' as const,
 	};
 	if (item.kind === 'resenha') {
@@ -330,6 +334,7 @@ const linkSection =
 								coverAlt={d.coverAlt}
 								coverCredito={d.coverCredito}
 								coverLicencaUrl={d.coverLicencaUrl}
+								coverPosicao={d.coverPosicao}
 								capaPrioridade={i === indiceLcp}
 								destaque
 								largo={i === 0}
@@ -373,6 +378,7 @@ const linkSection =
 								coverAlt={entry.data.coverAlt}
 								coverCredito={entry.data.coverCredito}
 								coverLicencaUrl={entry.data.coverLicencaUrl}
+								coverPosicao={entry.data.coverPosicao}
 								nivelTitulo="h3"
 							/>
 						))}

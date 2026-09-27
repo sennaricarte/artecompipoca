@@ -4,15 +4,14 @@ description: "Crítica de Whiplash: Em Busca da Perfeição, de Damien Chazelle,
 pubDate: 2015-02-21
 updatedDate: 2026-09-26
 autor: lexy-soares
+cover: "../../assets/capas/whiplash-em-busca-da-perfeicao-cena.jpg"
+coverAlt: "Homem calvo de roupa preta de pé atrás de uma estante de regente com partituras, num palco iluminado"
+coverCredito: "Divulgação/Sony Pictures"
 origem: arquivo
 legacyUrl: /whiplash-em-busca-da-perfeicao-critica/
 draft: false
 obra: "Whiplash: Em Busca da Perfeição"
 tipo: filme
-cover: "../../assets/capas/whiplash-em-busca-da-perfeicao.jpg"
-coverAlt: "Damien Chazelle, diretor de Whiplash: Em Busca da Perfeição"
-coverCredito: "Foto: isabelle VERONESE from ELBEUF, France / CC BY-SA 2.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/2.0"
 ficha:
   tituloOriginal: Whiplash
   ano: 2014

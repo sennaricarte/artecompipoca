@@ -4,6 +4,9 @@ description: "Resenha de Leitmotiv, HQ de Lexy Soares com desenhos de André Oid
 pubDate: 2015-10-19
 updatedDate: 2026-09-26
 autor: senna-ricarte
+cartaz: "../../assets/capas/leitmotiv-cartaz.jpg"
+cartazAlt: "Capa de Leitmotiv: título em fundo amarelo sobre uma grade de retratos desenhados em traço azul"
+cartazCredito: "Divulgação/Lexy Comics"
 origem: arquivo
 legacyUrl: /leitmotiv-resenha/
 draft: false

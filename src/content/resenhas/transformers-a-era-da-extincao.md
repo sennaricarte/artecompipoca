@@ -4,6 +4,9 @@ description: "Crítica de Transformers: A Era da Extinção, de Michael Bay: exc
 pubDate: 2014-07-04
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/transformers-a-era-da-extincao-cena.jpg"
+coverAlt: "Robô gigante azul e vermelho com uma espada, atrás de três pessoas numa paisagem destruída, com fumaça e fogo"
+coverCredito: "Divulgação/Paramount Pictures"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/nos-cinemas-transformers-a-era-da-extincao-transformers-age-of-extinction-2014/
 draft: false

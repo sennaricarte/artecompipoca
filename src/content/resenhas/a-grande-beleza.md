@@ -9,10 +9,6 @@ legacyUrl: /grande-beleza-critica/
 draft: false
 obra: A Grande Beleza
 tipo: filme
-cover: "../../assets/capas/a-grande-beleza.jpg"
-coverAlt: "Paolo Sorrentino, diretor de A Grande Beleza"
-coverCredito: "Foto: Pietro Luca Cassarino / CC BY-SA 4.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/4.0"
 ficha:
   tituloOriginal: "La grande bellezza"
   ano: 2013

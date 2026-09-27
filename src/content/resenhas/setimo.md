@@ -4,6 +4,9 @@ description: "Ficha técnica de Sétimo, suspense argentino-espanhol com Ricardo
 pubDate: 2014-11-27
 updatedDate: 2026-09-26
 autor: senna-ricarte
+cover: "../../assets/capas/setimo-cena.jpg"
+coverAlt: "Mulher loira sorri abraçada a um menino e a uma menina de uniforme escolar, numa sala à meia-luz"
+coverCredito: "Divulgação/20th Century Fox"
 origem: arquivo
 legacyUrl: /setimo/
 draft: false

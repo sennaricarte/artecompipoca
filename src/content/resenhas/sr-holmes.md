@@ -4,15 +4,14 @@ description: "Crítica de Sr. Holmes, com Ian McKellen: o detetive idoso tenta l
 pubDate: 2015-12-17
 updatedDate: 2026-09-26
 autor: lexy-soares
+cover: "../../assets/capas/sr-holmes-cena.jpg"
+coverAlt: "Homem idoso de cartola e sobretudo preto numa rua arborizada, com um carro antigo e pedestres ao fundo"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /sr-holmes-critica/
 draft: false
 obra: Sr. Holmes
 tipo: filme
-cover: "../../assets/capas/sr-holmes.jpg"
-coverAlt: "Bill Condon, diretor de Sr. Holmes"
-coverCredito: "Foto: Everwest / CC BY 4.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by/4.0"
 ficha:
   tituloOriginal: "Mr. Holmes"
   ano: 2015

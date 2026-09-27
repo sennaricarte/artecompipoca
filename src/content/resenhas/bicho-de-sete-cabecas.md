@@ -4,15 +4,14 @@ description: "Crítica de Bicho de Sete Cabeças, de Laís Bodanzky: Neto, manic
 pubDate: 2014-01-15
 updatedDate: 2026-09-26
 autor: patricia-baleeira
+cover: "../../assets/capas/bicho-de-sete-cabecas-cena.jpg"
+coverAlt: "Três rapazes de roupas claras junto a um muro descascado; o da frente, de barba, leva a mão ao rosto"
+coverCredito: "Divulgação/Buriti Filmes"
 origem: arquivo
 legacyUrl: /bicho-de-sete-cabecas-critica/
 draft: false
 obra: Bicho de Sete Cabeças
 tipo: filme
-cover: "../../assets/capas/bicho-de-sete-cabecas.jpg"
-coverAlt: "Laís Bodanzky, diretora de Bicho de Sete Cabeças"
-coverCredito: "Foto: RELACIONAIS / CC BY 2.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by/2.0"
 ficha:
   tituloOriginal: "Bicho de Sete Cabeças"
   ano: 2000

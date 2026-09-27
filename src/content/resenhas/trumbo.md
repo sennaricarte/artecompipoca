@@ -4,15 +4,14 @@ description: "Crítica de Trumbo, cinebiografia de Dalton Trumbo com Brian Crans
 pubDate: 2016-02-19
 updatedDate: 2026-09-26
 autor: lexy-soares
+cover: "../../assets/capas/trumbo-cena.jpg"
+coverAlt: "Homem de óculos, bigode e paletó xadrez ao lado de mulher loira de chapéu de plumas e colar de contas"
+coverCredito: "Divulgação/Califórnia Filmes"
 origem: arquivo
 legacyUrl: /trumbo-critica/
 draft: false
 obra: Trumbo
 tipo: filme
-cover: "../../assets/capas/trumbo.jpg"
-coverAlt: "Jay Roach, diretor de Trumbo"
-coverCredito: "Foto: Peabody Awards / CC BY 2.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by/2.0"
 ficha:
   tituloOriginal: Trumbo
   ano: 2015

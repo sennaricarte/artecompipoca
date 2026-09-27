@@ -4,6 +4,9 @@ description: "Crítica de Jogos Vorazes: A Esperança – O Final: um desfecho m
 pubDate: 2015-11-21
 updatedDate: 2026-09-26
 autor: vivian-duarte
+cover: "../../assets/capas/jogos-vorazes-a-esperanca-o-final-cena.jpg"
+coverAlt: "Sete pessoas em uniformes pretos de combate, algumas armadas, diante de uma escultura de pássaro de asas abertas"
+coverCredito: "Divulgação/Paris Filmes"
 origem: arquivo
 legacyUrl: /jogos-vorazes-final-critica/
 draft: false

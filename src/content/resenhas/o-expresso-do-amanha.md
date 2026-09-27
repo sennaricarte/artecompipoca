@@ -4,15 +4,14 @@ description: "Crítica de O Expresso do Amanhã, de Bong Joon-ho: revolução de
 pubDate: 2015-08-25
 updatedDate: 2026-09-26
 autor: lexy-soares
+cover: "../../assets/capas/o-expresso-do-amanha-cena.jpg"
+coverAlt: "Homem de gorro e barba entre um idoso de óculos e um jovem, em meio a uma multidão de roupas gastas"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /o-expresso-do-amanha-critica/
 draft: false
 obra: O Expresso do Amanhã
 tipo: filme
-cover: "../../assets/capas/o-expresso-do-amanha.jpg"
-coverAlt: "Bong Joon-ho, diretor de O Expresso do Amanhã"
-coverCredito: "Foto: Kevin Paul / CC BY 4.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by/4.0"
 notaEditorial: "Texto de agosto de 2015; a menção à chegada atrasada aos cinemas brasileiros refere-se àquele momento."
 ficha:
   tituloOriginal: "설국열차"

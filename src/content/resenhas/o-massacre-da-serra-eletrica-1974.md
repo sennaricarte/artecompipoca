@@ -4,15 +4,14 @@ description: "Crítica de O Massacre da Serra Elétrica (1974), de Tobe Hooper: 
 pubDate: 2014-06-17
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/o-massacre-da-serra-eletrica-1974-cena.jpg"
+coverAlt: "Figura mascarada de terno ergue uma motosserra atrás de uma caçamba, ao pôr do sol, com árvores ao fundo"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/filmes-do-outro-mundo-o-massacre-da-serra-eletrica-the-texas-chain-saw-massacre-1974/
 draft: false
 obra: O Massacre da Serra Elétrica (1974)
 tipo: filme
-cover: "../../assets/capas/o-massacre-da-serra-eletrica-1974.jpg"
-coverAlt: "Tobe Hooper, diretor de O Massacre da Serra Elétrica (1974)"
-coverCredito: "Foto: Dark Attsios / CC BY-SA 3.0 / Wikimedia Commons"
-coverLicencaUrl: "https://creativecommons.org/licenses/by-sa/3.0"
 ficha:
   tituloOriginal: "The Texas Chain Saw Massacre"
   ano: 1974

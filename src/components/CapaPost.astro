@@ -1,21 +1,28 @@
 ---
 import { Picture } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import { capaDoPost } from '../lib/capas';
 import type { EditoriaId } from '../lib/conteudo';
 import CapaTipografica from './CapaTipografica.astro';
 
 interface Props {
 	editoria: EditoriaId;
-	/** Id do post: variante de cor da capa tipográfica e do fundo do cartaz vertical. */
+	/** Id do post: variante de cor da capa tipográfica. */
 	idPost: string;
 	rotulo: string;
 	nota?: number;
+	/** Cena horizontal; preenche a moldura com object-fit: cover. */
 	cover?: ImageMetadata;
 	coverAlt?: string;
 	coverCredito?: string;
 	/** Link da licença (CC BY / BY-SA exigem atribuição com link). */
 	coverLicencaUrl?: string;
+	/** object-position da cena (padrão "center"). */
+	coverPosicao?: string;
+	/**
+	 * card: crédito só quando há licença, em linha abaixo da imagem.
+	 * post: crédito sempre em figcaption abaixo da imagem.
+	 */
+	contexto?: 'card' | 'post';
 	/** Eager + fetchpriority high (LCP). Só faz diferença com cover real. */
 	prioridade?: boolean;
 	sizes?: string;
@@ -38,6 +45,8 @@ const {
 	coverAlt,
 	coverCredito,
 	coverLicencaUrl,
+	coverPosicao,
+	contexto = 'post',
 	prioridade = false,
 	sizes = '(max-width: 768px) 100vw, 800px',
 	widths = [400, 800],
@@ -48,28 +57,24 @@ const {
 } = Astro.props;
 
 const temCover = Boolean(cover && coverAlt);
-const vertical = cover ? cover.height > cover.width : false;
-// Com width e height juntos o sharp recorta (fit cover); no vertical manter a proporção natural.
+// Altura na proporção real: o recorte fica com o CSS (object-position), não com o sharp.
 const larguraImg = Math.max(...widths);
-const alturaImg =
-	cover && vertical
-		? Math.round((larguraImg * cover.height) / cover.width)
-		: Math.round((larguraImg * 9) / 16);
+const alturaImg = cover ? Math.round((larguraImg * cover.height) / cover.width) : 0;
+const mostrarCredito =
+	Boolean(coverCredito) && (contexto === 'post' || Boolean(coverLicencaUrl));
+const linkCreditoClass =
+	'underline decoration-muted/50 underline-offset-2 hover:text-text hover:decoration-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca';
 ---
 
 {
 	temCover && cover && coverAlt ? (
-		<figure
-			class:list={['capa-post relative m-0 w-full overflow-hidden', className]}
-		>
+		<figure class:list={['capa-post m-0 w-full', className]}>
 			<div
 				class:list={[
-					'w-full overflow-hidden',
+					'w-full overflow-hidden rounded-[inherit] bg-surface',
 					proporcaoClass,
-					vertical ? null : 'bg-surface',
 					molduraClass,
 				]}
-				style={vertical ? `background: ${capaDoPost(editoria, idPost).fundo};` : undefined}
 			>
 				<Picture
 					src={cover}
@@ -83,29 +88,31 @@ const alturaImg =
 					fetchpriority={prioridade ? 'high' : undefined}
 					quality="mid"
 					pictureAttributes={{ class: 'block h-full w-full' }}
-					class:list={[
-						'h-full w-full',
-						vertical ? 'object-contain' : 'object-cover',
-					]}
+					class="h-full w-full object-cover"
+					style={`object-position: ${coverPosicao ?? 'center'};`}
 				/>
 			</div>
-			{coverCredito &&
-				(coverLicencaUrl ? (
-					<small class="absolute bottom-2 right-2 z-10 max-w-[85%] rounded-sm bg-black/70 px-2 py-1 text-[0.65rem] leading-tight text-white/90 md:text-xs">
+			{mostrarCredito && (
+				<figcaption
+					class:list={[
+						'mt-1.5 text-xs leading-snug text-muted',
+						contexto === 'card' ? 'relative z-10' : null,
+					]}
+				>
+					{coverLicencaUrl ? (
 						<a
 							href={coverLicencaUrl}
 							rel="noopener nofollow"
 							target="_blank"
-							class="underline decoration-white/50 underline-offset-2 hover:text-white hover:decoration-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+							class={linkCreditoClass}
 						>
 							{coverCredito}
 						</a>
-					</small>
-				) : (
-					<small class="pointer-events-none absolute bottom-2 right-2 z-10 max-w-[85%] rounded-sm bg-black/70 px-2 py-1 text-[0.65rem] leading-tight text-white/90 md:text-xs">
-						{coverCredito}
-					</small>
-				))}
+					) : (
+						coverCredito
+					)}
+				</figcaption>
+			)}
 		</figure>
 	) : (
 		<CapaTipografica

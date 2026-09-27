@@ -4,6 +4,10 @@ description: "Ficha técnica de Jogos Vorazes: A Esperança – Parte 1 com elen
 pubDate: 2014-11-20
 updatedDate: 2026-09-26
 autor: senna-ricarte
+cover: "../../assets/capas/jogos-vorazes-a-esperanca-parte-1-cena.jpg"
+coverAlt: "Grupo caminha por ruínas; à frente, um homem com fuzil e uma mulher de armadura preta com aljava de flechas"
+coverCredito: "Divulgação/Paris Filmes"
+coverPosicao: "center"
 origem: arquivo
 legacyUrl: /jogos-vorazes-esperanca-parte-1/
 draft: false

@@ -1,4 +1,7 @@
 ---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Fonte {
 	nome: string;
 	url: string;
@@ -30,9 +33,19 @@ interface Props {
 	tipo: 'filme' | 'serie' | 'hq' | 'album';
 	/** inicio = sinopse/trailer; fim = ficha técnica e blocos finais */
 	parte: 'inicio' | 'fim';
+	/** Cartaz vertical exibido ao lado da lista da ficha técnica. */
+	cartaz?: ImageMetadata;
+	cartazAlt?: string;
+	cartazCredito?: string;
 }
 
-const { ficha = {}, obra, tipo, parte } = Astro.props;
+const { ficha = {}, obra, tipo, parte, cartaz, cartazAlt, cartazCredito } = Astro.props;
+
+const CARTAZ_LARGURA = 180;
+const temCartaz = Boolean(cartaz && cartazAlt);
+const cartazAltura = cartaz
+	? Math.round((CARTAZ_LARGURA * cartaz.height) / cartaz.width)
+	: 0;
 
 /**
  * @param {number} min
@@ -215,7 +228,7 @@ const trailerThumb = trailerId
 {
 	parte === 'fim' && (
 		<>
-			{temCampos && (
+			{(temCampos || temCartaz) && (
 				<section
 					class="mt-12 rounded-sm border border-white/10 bg-surface px-4 py-6 md:px-6"
 					aria-labelledby="ficha-titulo"
@@ -226,14 +239,49 @@ const trailerThumb = trailerId
 					>
 						Ficha técnica
 					</h2>
-					<dl class="mt-4 grid grid-cols-1 gap-x-8 gap-y-3 text-sm md:grid-cols-2">
-						{campos.map((campo) => (
-							<div>
-								<dt class="text-muted">{campo.rotulo}</dt>
-								<dd class="font-medium text-text">{campo.valor}</dd>
-							</div>
-						))}
-					</dl>
+					{temCartaz && cartaz && cartazAlt ? (
+						<div class="mt-4 flex flex-col items-center gap-6 md:flex-row md:items-start">
+							<figure class="m-0 w-40 shrink-0 md:w-[180px]">
+								<Picture
+									src={cartaz}
+									formats={['avif', 'webp']}
+									widths={[160, 180, 320, 360]}
+									sizes="(min-width: 768px) 180px, 160px"
+									width={CARTAZ_LARGURA}
+									height={cartazAltura}
+									alt={cartazAlt}
+									loading="lazy"
+									quality="mid"
+									pictureAttributes={{ class: 'block' }}
+									class="h-auto w-full rounded-sm"
+								/>
+								{cartazCredito && (
+									<figcaption class="mt-1.5 text-xs leading-snug text-muted">
+										{cartazCredito}
+									</figcaption>
+								)}
+							</figure>
+							{temCampos && (
+								<dl class="grid w-full min-w-0 flex-1 grid-cols-1 gap-x-8 gap-y-3 text-sm md:grid-cols-2">
+									{campos.map((campo) => (
+										<div>
+											<dt class="text-muted">{campo.rotulo}</dt>
+											<dd class="font-medium text-text">{campo.valor}</dd>
+										</div>
+									))}
+								</dl>
+							)}
+						</div>
+					) : (
+						<dl class="mt-4 grid grid-cols-1 gap-x-8 gap-y-3 text-sm md:grid-cols-2">
+							{campos.map((campo) => (
+								<div>
+									<dt class="text-muted">{campo.rotulo}</dt>
+									<dd class="font-medium text-text">{campo.valor}</dd>
+								</div>
+							))}
+						</dl>
+					)}
 				</section>
 			)}
 

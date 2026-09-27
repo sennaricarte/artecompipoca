@@ -95,7 +95,8 @@ const mostrarFichaFim =
 	Boolean(ficha?.curiosidades?.length) ||
 	Boolean(ficha?.fontes?.length) ||
 	entry.data.tipo === 'filme' ||
-	entry.data.tipo === 'serie';
+	entry.data.tipo === 'serie' ||
+	Boolean(entry.data.cartaz && entry.data.cartazAlt);
 
 const ogImage = new URL(`/og/resenhas/${entry.id}.png`, site).href;
 const imageLd = ogImage;
@@ -225,6 +226,7 @@ reviewLd.image = imageLd;
 			coverAlt={entry.data.coverAlt}
 			coverCredito={entry.data.coverCredito}
 			coverLicencaUrl={entry.data.coverLicencaUrl}
+			coverPosicao={entry.data.coverPosicao}
 			nota={entry.data.nota}
 			prioridade={Boolean(entry.data.cover && entry.data.coverAlt)}
 			sizes="(min-width: 1024px) 720px, 100vw"
@@ -302,6 +304,9 @@ reviewLd.image = imageLd;
 					obra={entry.data.obra}
 					tipo={entry.data.tipo}
 					parte="fim"
+					cartaz={entry.data.cartaz}
+					cartazAlt={entry.data.cartazAlt}
+					cartazCredito={entry.data.cartazCredito}
 				/>
 			)
 		}
