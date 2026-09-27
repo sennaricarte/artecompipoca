@@ -4,6 +4,12 @@ description: "Crítica de Blue Jasmine (2013), de Woody Allen: a queda da social
 pubDate: 2014-01-15
 updatedDate: 2026-09-27
 autor: paulo-rogerio-dos-santos
+cover: "../../assets/capas/blue-jasmine-cena.jpg"
+coverAlt: "Cate Blanchett como Jasmine, de óculos escuros, segurando um copo numa espreguiçadeira"
+coverCredito: "Divulgação"
+cartaz: "../../assets/capas/blue-jasmine-cartaz.jpg"
+cartazAlt: "Cartaz de Blue Jasmine: Cate Blanchett de perfil, com óculos escuros no alto da cabeça, sob o título em azul"
+cartazCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /blue-jasmine-critica/
 draft: false

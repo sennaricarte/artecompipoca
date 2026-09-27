@@ -4,6 +4,12 @@ description: "Crítica da 3ª temporada de Game of Thrones na HBO: alianças, ca
 pubDate: 2014-04-03
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
+cover: "../../assets/capas/game-of-thrones-3-temporada-cena.jpg"
+coverAlt: "Peter Dinklage como Tyrion Lannister, olhando para o lado diante de uma parede de pedra"
+coverCredito: "Divulgação/HBO"
+cartaz: "../../assets/capas/game-of-thrones-3-temporada-cartaz.jpg"
+cartazAlt: "Cartaz da 3ª temporada: close do rosto de Tyrion Lannister com cicatrizes"
+cartazCredito: "Divulgação/HBO"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/game-of-thrones-terceira-temporada/
 notaEditorial: "Texto de abril de 2014; referências ao desenrolar da série refletem aquele momento da exibição na HBO."

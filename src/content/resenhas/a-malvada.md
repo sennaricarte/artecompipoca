@@ -4,6 +4,12 @@ description: "Resenha de A Malvada (1950), clássico de Joseph L. Mankiewicz sob
 pubDate: 2014-01-25
 updatedDate: 2026-09-27
 autor: gustavo-espeschit
+cover: "../../assets/capas/a-malvada-cena.jpg"
+coverAlt: "Anne Baxter e Bette Davis frente a frente em cena em preto e branco, com um homem de smoking ao fundo"
+coverCredito: "Divulgação/20th Century Fox"
+cartaz: "../../assets/capas/a-malvada-cartaz.jpg"
+cartazAlt: "Cartaz de A Malvada: o rosto de Bette Davis em preto e branco, com o título entre setas coloridas"
+cartazCredito: "Divulgação/20th Century Fox"
 origem: arquivo
 legacyUrl: /especial-oscar-a-malvada/
 draft: false

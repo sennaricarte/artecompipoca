@@ -4,6 +4,12 @@ description: "Crítica da 4ª temporada de Game of Thrones na HBO: momentos espe
 pubDate: 2014-06-29
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
+cover: "../../assets/capas/game-of-thrones-4-temporada-cena.jpg"
+coverAlt: "Maisie Williams como Arya Stark, sentada entre pedras numa encosta"
+coverCredito: "Divulgação/HBO"
+cartaz: "../../assets/capas/game-of-thrones-4-temporada-cartaz.jpg"
+cartazAlt: "Cartaz da 4ª temporada: um corvo de asas abertas formado por espadas, com a frase All Men Must Die"
+cartazCredito: "Divulgação/HBO"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/game-of-thrones-quarta-temporada/
 draft: false

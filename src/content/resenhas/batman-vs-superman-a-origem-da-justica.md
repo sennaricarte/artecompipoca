@@ -4,6 +4,12 @@ description: "Crítica de Batman vs. Superman: A Origem da Justiça, o embate en
 pubDate: 2016-04-26
 updatedDate: 2026-09-27
 autor: vivian-duarte
+cover: "../../assets/capas/batman-vs-superman-a-origem-da-justica-cena.jpg"
+coverAlt: "Batman, Superman e Mulher-Maravilha lado a lado sob a chuva, em arte de divulgação"
+coverCredito: "Divulgação/Warner Bros."
+cartaz: "../../assets/capas/batman-vs-superman-a-origem-da-justica-cartaz.jpg"
+cartazAlt: "Cartaz de Batman vs Superman: Superman e Batman lado a lado diante do símbolo dos dois heróis em vermelho"
+cartazCredito: "Divulgação/Warner Bros."
 origem: arquivo
 legacyUrl: /batman-vs-superman-origem-da-justica/
 notaEditorial: "Texto de abril de 2016, em véspera de estreia nos cinemas."

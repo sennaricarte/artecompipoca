@@ -4,6 +4,12 @@ description: "Crítica de O Mestre (2012), de Paul Thomas Anderson: Freddie Quel
 pubDate: 2013-06-14
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
+cover: "../../assets/capas/o-mestre-2012-cena.jpg"
+coverAlt: "Philip Seymour Hoffman e Amy Adams, cercados por outros personagens, dentro de um elevador"
+coverCredito: "Divulgação/Paris Filmes"
+cartaz: "../../assets/capas/o-mestre-2012-cartaz.jpg"
+cartazAlt: "Cartaz de O Mestre: os rostos de Philip Seymour Hoffman e Joaquin Phoenix sobre fundo desbotado"
+cartazCredito: "Divulgação/Paris Filmes"
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/grandes-filmes-o-mestre-the-master-2012/
 draft: false
