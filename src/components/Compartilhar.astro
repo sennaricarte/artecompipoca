@@ -114,31 +114,6 @@ const threadsPath =
 				</nav>
 				<p class="compartilhar__feedback m-0 min-h-[1.25rem] text-xs text-pipoca" aria-live="polite">
 				</p>
-				<script is:inline>
-					(function () {
-						if (window.__compartilharInit) return;
-						window.__compartilharInit = true;
-						document.querySelectorAll('.compartilhar').forEach((root) => {
-							const btn = root.querySelector('[data-copy-link]');
-							const feedback = root.querySelector('.compartilhar__feedback');
-							if (!btn || !feedback) return;
-							btn.hidden = false;
-							btn.addEventListener('click', async () => {
-								const link = btn.getAttribute('data-url');
-								if (!link) return;
-								try {
-									await navigator.clipboard.writeText(link);
-									feedback.textContent = 'Link copiado!';
-									setTimeout(() => {
-										feedback.textContent = '';
-									}, 2000);
-								} catch {
-									feedback.textContent = '';
-								}
-							});
-						});
-					})();
-				</script>
 			</div>
 		)
 	}
@@ -216,6 +191,44 @@ const threadsPath =
 		variant === 'sidebar' && (
 			<p class="compartilhar__feedback m-0 min-h-[1.25rem] text-xs text-pipoca" aria-live="polite">
 			</p>
+		)
+	}
+
+	{
+		variant === 'sidebar' && (
+			<script is:inline>
+				(function () {
+					function initCompartilhar() {
+						document.querySelectorAll('.compartilhar').forEach((root) => {
+							if (root.dataset.copyReady === 'true') return;
+							const btn = root.querySelector('[data-copy-link]');
+							const feedback = root.querySelector('.compartilhar__feedback');
+							if (!btn || !feedback) return;
+							root.dataset.copyReady = 'true';
+							btn.hidden = false;
+							btn.removeAttribute('hidden');
+							btn.addEventListener('click', async () => {
+								const link = btn.getAttribute('data-url');
+								if (!link) return;
+								try {
+									await navigator.clipboard.writeText(link);
+									feedback.textContent = 'Link copiado!';
+									setTimeout(() => {
+										feedback.textContent = '';
+									}, 2000);
+								} catch {
+									feedback.textContent = '';
+								}
+							});
+						});
+					}
+					if (document.readyState === 'loading') {
+						document.addEventListener('DOMContentLoaded', initCompartilhar);
+					} else {
+						initCompartilhar();
+					}
+				})();
+			</script>
 		)
 	}
 </div>
