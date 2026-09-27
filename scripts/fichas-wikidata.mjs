@@ -3,7 +3,9 @@
  * Busca candidatos no Wikidata para fichas de resenhas (filme/série).
  * Read-only por padrão (nas resenhas): a varredura preserva as linhas do CSV e só
  * acrescenta resenhas que ainda não estão nele.
- * Com --apply: rebusca dados pelo wikidataId do CSV e grava.
+ * Com --apply: rebusca dados pelo wikidataId do CSV e mescla na ficha: só acrescenta
+ * campos factuais ausentes (nunca sobrescreve nem toca nos editoriais) e preenche
+ * anoObra se estiver vazio.
  * Com --segunda-busca: reprocessa linhas do CSV com titulo_busca e aprovar vazio.
  * Uso: pnpm fichas:wikidata [--apply] [--limite=N] | [--segunda-busca]
  */
@@ -699,7 +701,9 @@ function yamlScalar(v) {
 	return JSON.stringify(s);
 }
 
-const CHAVES_TECNICAS = new Set([
+/** Campos factuais, na ordem de gravação. Os demais (sinopse, curiosidades,
+ * premios, fontes, trailerYoutubeId) são editoriais e nunca são tocados. */
+const CHAVES_FACTUAIS = [
 	'tituloOriginal',
 	'ano',
 	'direcao',
@@ -712,70 +716,118 @@ const CHAVES_TECNICAS = new Set([
 	'temporadas',
 	'emissora',
 	'wikidataId',
-]);
+];
+
+/** Campos que o Wikidata costuma ter para cada tipo; decide se vale consultar. */
+const FACTUAIS_POR_TIPO = {
+	filme: ['tituloOriginal', 'ano', 'direcao', 'roteiro', 'elenco', 'generos', 'duracaoMin', 'paises', 'wikidataId'],
+	serie: ['tituloOriginal', 'ano', 'criadores', 'elenco', 'generos', 'temporadas', 'emissora', 'paises', 'wikidataId'],
+};
 
 /**
- * Ficha já existente sem wikidataId (ex.: criada por fichas:importar): troca os
- * campos técnicos pelos do Wikidata e preserva as chaves editoriais.
  * @param {string} fm
- * @param {any} ficha
  */
-function mesclarFichaTecnica(fm, ficha) {
+function localizarFicha(fm) {
 	const lines = fm.replace(/\r\n/g, '\n').split('\n');
 	const inicio = lines.findIndex((l) => /^ficha:\s*$/.test(l));
+	if (inicio === -1) return { lines, inicio: -1, fim: -1 };
 	let fim = inicio + 1;
 	while (fim < lines.length && (/^  /.test(lines[fim]) || lines[fim] === '')) {
 		fim += 1;
 	}
-	/** @type {string[]} */
-	const editoriais = [];
-	let pulando = false;
-	for (const line of lines.slice(inicio + 1, fim)) {
-		const chave = line.match(/^  ([A-Za-z_]\w*)\s*:/)?.[1];
-		if (chave) pulando = CHAVES_TECNICAS.has(chave);
-		if (!pulando && line !== '') editoriais.push(line);
+	return { lines, inicio, fim };
+}
+
+/**
+ * Chaves da ficha com valor preenchido (escalar não vazio ou lista/objeto com itens).
+ * @param {string} fm
+ * @returns {{ existe: boolean, preenchidas: Set<string>, wikidataId: string }}
+ */
+function lerFicha(fm) {
+	const { lines, inicio, fim } = localizarFicha(fm);
+	/** @type {Set<string>} */
+	const preenchidas = new Set();
+	let wikidataId = '';
+	if (inicio === -1) return { existe: false, preenchidas, wikidataId };
+	const bloco = lines.slice(inicio + 1, fim);
+	for (let i = 0; i < bloco.length; i++) {
+		const m = bloco[i].match(/^  ([A-Za-z_]\w*)\s*:\s*(.*)$/);
+		if (!m) continue;
+		const valor = m[2].trim();
+		const vazio = valor === '' || valor === '""' || valor === "''" || valor === '[]';
+		const temFilhos = /^    \S/.test(bloco[i + 1] || '');
+		if (!vazio || temFilhos) preenchidas.add(m[1]);
+		if (m[1] === 'wikidataId' && !vazio) wikidataId = valor.replace(/^["']|["']$/g, '');
 	}
-	const tecnicas = fichaToYaml(ficha).split('\n');
-	return [
-		...lines.slice(0, inicio),
-		...tecnicas,
-		...editoriais,
-		...lines.slice(fim),
-	]
+	return { existe: true, preenchidas, wikidataId };
+}
+
+/**
+ * Acrescenta à ficha só os campos factuais ausentes. Linhas de campos factuais
+ * vazios são substituídas; nada preenchido é alterado.
+ * @param {string} fm
+ * @param {any} novos campos já filtrados (só os ausentes)
+ */
+function acrescentarNaFicha(fm, novos) {
+	const { lines, inicio, fim } = localizarFicha(fm);
+	const yaml = fichaToYaml(novos).split('\n').slice(1);
+	if (inicio === -1) {
+		return `${fm.replace(/\s+$/, '')}\nficha:\n${yaml.join('\n')}`;
+	}
+	/** @type {string[]} */
+	const mantidas = [];
+	let pularVazia = false;
+	for (const line of lines.slice(inicio + 1, fim)) {
+		const m = line.match(/^  ([A-Za-z_]\w*)\s*:/);
+		if (m) pularVazia = Object.prototype.hasOwnProperty.call(novos, m[1]);
+		if (!pularVazia) mantidas.push(line);
+	}
+	const idxEditorial = mantidas.findIndex((l) => {
+		const k = l.match(/^  ([A-Za-z_]\w*)\s*:/)?.[1];
+		return k && !CHAVES_FACTUAIS.includes(k);
+	});
+	const pos = idxEditorial === -1 ? mantidas.length : idxEditorial;
+	const bloco = [...mantidas.slice(0, pos), ...yaml, ...mantidas.slice(pos)];
+	return [...lines.slice(0, inicio + 1), ...bloco, ...lines.slice(fim)]
 		.join('\n')
 		.replace(/\s+$/, '');
 }
 
 /**
  * @param {string} filePath
- * @param {any} ficha
- * @param {number | null} anoObraExistente
+ * @param {any} ficha dados do Wikidata
+ * @returns {Promise<string[]>} campos acrescentados
  */
-async function applyFicha(filePath, ficha, anoObraExistente) {
+async function applyFicha(filePath, ficha) {
 	const raw = await readFile(filePath, 'utf8');
 	const parts = splitFrontmatter(raw);
 	if (!parts) throw new Error(`Sem frontmatter: ${filePath}`);
-	if (/wikidataId:/m.test(parts.fm)) {
-		console.log(`  skip (ficha existente): ${relative(ROOT, filePath)}`);
-		return false;
+	const { preenchidas } = lerFicha(parts.fm);
+
+	/** @type {Record<string, unknown>} */
+	const novos = {};
+	for (const k of CHAVES_FACTUAIS) {
+		if (preenchidas.has(k)) continue;
+		const v = ficha[k];
+		if (v == null || v === '' || (Array.isArray(v) && !v.length)) continue;
+		novos[k] = v;
+	}
+	/** @type {string[]} */
+	const acrescentados = Object.keys(novos);
+
+	let fm = acrescentados.length ? acrescentarNaFicha(parts.fm, novos) : parts.fm;
+
+	if (!/^anoObra:[ \t]*[^\s"']/m.test(fm) && ficha.ano != null) {
+		fm = /^anoObra:/m.test(fm)
+			? fm.replace(/^anoObra:.*$/m, `anoObra: ${ficha.ano}`)
+			: `${fm.replace(/\s+$/, '')}\nanoObra: ${ficha.ano}`;
+		acrescentados.push('anoObra');
 	}
 
-	let fm = /^ficha:\s*$/m.test(parts.fm)
-		? mesclarFichaTecnica(parts.fm, ficha)
-		: `${parts.fm.replace(/\s+$/, '')}\n${fichaToYaml(ficha)}`;
-
-	if (
-		(anoObraExistente == null || anoObraExistente === '') &&
-		ficha.ano != null
-	) {
-		if (!/^anoObra:/m.test(fm)) {
-			fm += `\nanoObra: ${ficha.ano}`;
-		}
-	}
-
+	if (!acrescentados.length) return [];
 	const next = `${parts.open}${fm}${parts.close}${parts.body}`;
 	await writeFile(filePath, next, 'utf8');
-	return true;
+	return acrescentados;
 }
 
 /**
@@ -877,8 +929,15 @@ async function runApply() {
 	let applied = 0;
 	let skipped = 0;
 	let aprovadasVistas = 0;
+	let completas = 0;
 	/** @type {string[]} */
 	const classeInvalida = [];
+	/** @type {string[]} */
+	const divergentes = [];
+	/** @type {string[]} */
+	const semNovidade = [];
+	/** @type {{ arquivo: string, campos: string[] }[]} */
+	const resumo = [];
 
 	for (const row of rows) {
 		if (String(row.aprovar || '').trim().toLowerCase() !== 'sim') {
@@ -910,12 +969,6 @@ async function runApply() {
 			skipped++;
 			continue;
 		}
-		if (/wikidataId:/m.test(parts.fm)) {
-			console.log(`  skip (ficha existente): ${arquivo}`);
-			skipped++;
-			continue;
-		}
-
 		const tipoFm = getScalar(parts.fm, 'tipo');
 		const tipo =
 			tipoFm === 'filme' || tipoFm === 'serie'
@@ -923,6 +976,23 @@ async function runApply() {
 				: row.tipo === 'serie'
 					? 'serie'
 					: 'filme';
+
+		const atual = lerFicha(parts.fm);
+		if (atual.wikidataId && atual.wikidataId !== wikidataId) {
+			console.warn(
+				`  skip (wikidataId divergente: ficha ${atual.wikidataId}, CSV ${wikidataId}): ${arquivo}`,
+			);
+			divergentes.push(`${arquivo} (ficha ${atual.wikidataId}, CSV ${wikidataId})`);
+			skipped++;
+			continue;
+		}
+		const faltando = FACTUAIS_POR_TIPO[tipo].filter((k) => !atual.preenchidas.has(k));
+		const semAnoObra = !/^anoObra:[ \t]*[^\s"']/m.test(parts.fm);
+		if (!faltando.length && !semAnoObra) {
+			completas++;
+			skipped++;
+			continue;
+		}
 
 		let okClass = false;
 		try {
@@ -977,22 +1047,30 @@ async function runApply() {
 			}
 		}
 
-		const anoObraRaw = getScalar(parts.fm, 'anoObra');
-		const anoObra = anoObraRaw ? Number(anoObraRaw) : null;
-		const ok = await applyFicha(
-			abs,
-			ficha,
-			Number.isFinite(anoObra) ? anoObra : null,
-		);
-		if (ok) {
+		const acrescentados = await applyFicha(abs, ficha);
+		if (acrescentados.length) {
 			applied++;
-			console.log(`  ok ${arquivo} → ${wikidataId}`);
+			resumo.push({ arquivo, campos: acrescentados });
+			console.log(`  ok ${arquivo} → ${wikidataId}: +${acrescentados.join(', ')}`);
 		} else {
+			semNovidade.push(arquivo);
 			skipped++;
 		}
 	}
 
-	console.log(`\n--apply: ${applied} fichas gravadas, ${skipped} ignoradas.`);
+	console.log(`\n--apply: ${applied} fichas alteradas, ${skipped} ignoradas.`);
+	console.log(`  completas (sem consulta): ${completas}`);
+	if (semNovidade.length) {
+		console.log(`  consultadas sem campo novo (${semNovidade.length}): ${semNovidade.join(', ')}`);
+	}
+	if (resumo.length) {
+		console.log('Campos acrescentados:');
+		for (const r of resumo) console.log(`  - ${r.arquivo}: ${r.campos.join(', ')}`);
+	}
+	if (divergentes.length) {
+		console.log(`wikidataId divergente (${divergentes.length}):`);
+		for (const line of divergentes) console.log(`  - ${line}`);
+	}
 	if (classeInvalida.length) {
 		console.log(`classe inválida (${classeInvalida.length}):`);
 		for (const line of classeInvalida) console.log(`  - ${line}`);
