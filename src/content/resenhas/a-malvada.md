@@ -33,6 +33,29 @@ ficha:
   criadores:
     - "Joseph L. Mankiewicz"
   wikidataId: Q200299
+  sinopse: "Margo Channing é a maior estrela da Broadway, mas acaba de completar 40 anos e teme o fim da carreira. Quando a jovem e humilde fã Eve Harrington entra em sua vida, Margo a acolhe como assistente, sem perceber que a admiradora devotada tem planos muito bem calculados para tomar o seu lugar."
+  curiosidades:
+    - "O papel de Margo Channing era de Claudette Colbert, que chegou a assinar contrato, mas precisou desistir por causa de um acidente. Bette Davis aceitou depois de ler o roteiro de uma só vez."
+    - "Marilyn Monroe, ainda pouco conhecida, faz uma pequena participação como uma aspirante a atriz levada a uma festa pelo crítico Addison DeWitt."
+    - "Bette Davis se apaixonou por Gary Merrill, seu par romântico no filme, durante as filmagens, e os dois se casaram logo depois."
+    - "É o único filme com quatro atrizes indicadas ao Oscar: Bette Davis e Anne Baxter como Melhor Atriz, e Celeste Holm e Thelma Ritter como coadjuvantes. Nenhuma venceu, e muitos atribuem a derrota de Davis e Baxter à divisão dos votos entre as duas."
+    - "Na disputa pelo Oscar de Melhor Filme, venceu \"Crepúsculo dos Deuses\", outro clássico sobre uma estrela em declínio."
+  premios:
+    - "Oscar de Melhor Filme, entre 14 indicações (recorde igualado depois por Titanic e La La Land)"
+    - "6 Oscars no total, incluindo Direção e Roteiro (Joseph L. Mankiewicz) e Ator Coadjuvante (George Sanders)"
+    - "Globo de Ouro de Melhor Roteiro"
+    - "BAFTA de Melhor Filme"
+  fontes:
+    - nome: "Cinema em Cena"
+      url: "https://cinemaemcena.com.br/colunas/cinemateca/tudo-sobre-a-malvada"
+    - nome: "Cinema Livre"
+      url: "https://cinemalivre.com.br/filmes/a-malvada-1950.php"
+    - nome: "Cinema Clássico"
+      url: "https://cinemaclassico.com/curiosidades/14-curiosidades-sobre-malvada/"
+    - nome: "Cinéfilos Para Sempre"
+      url: "https://cinefilosparasempre.blogspot.com/2021/05/a-malvada-all-about-eve-1950-estados.html?m=0"
+    - nome: Cineplayers
+      url: "https://www.cineplayers.com/criticas/malvada-a"
 anoObra: 1950
 ---
 

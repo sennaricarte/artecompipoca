@@ -40,6 +40,18 @@ ficha:
   temporadas: 8
   emissora: HBO
   wikidataId: Q23572
+  sinopse: "Os Lannister parecem ter vencido a guerra, e Porto Real se prepara para um grande casamento real. Mas a paz é frágil: Tyrion se vê no centro de uma trama perigosa, os selvagens avançam contra a Muralha defendida pela Patrulha da Noite e Daenerys aprende que conquistar cidades é mais fácil do que governá-las."
+  curiosidades:
+    - "A temporada conclui a adaptação de \"A Tormenta de Espadas\", o terceiro livro da saga, iniciada na temporada anterior."
+    - "Game of Thrones se tornou a série mais premiada da história do Emmy, com 59 vitórias ao longo das oito temporadas."
+    - "Sophie Turner, a Sansa, contou que passou quase dois anos lavando pouco o cabelo para compor a aparência da personagem."
+  fontes:
+    - nome: "Mix de Séries"
+      url: "https://mixdeseries.com.br/game-of-thrones-e-outras-9-series-que-mais-venceram-o-emmy"
+    - nome: Purebreak
+      url: "https://www.purebreak.com.br/noticias/-game-of-thrones-101-curiosidades-sobre-a-serie-que-revolucionou-a-televisao/85447"
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/Game_of_Thrones_season_4"
 ---
 
 # GAME OF THRONES: Quarta Temporada

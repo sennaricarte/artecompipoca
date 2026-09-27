@@ -33,6 +33,19 @@ ficha:
   paises:
     - "Estados Unidos"
   wikidataId: Q21500759
+  sinopse: "Depois da batalha que destruiu parte de Metrópolis, o mundo se divide sobre o Superman: salvador ou ameaça sem controle? Bruce Wayne, que viu de perto a destruição, está convencido de que o kryptoniano precisa ser detido e volta a vestir o traje do Batman. Enquanto os dois se preparam para o confronto, Lex Luthor trama nos bastidores."
+  curiosidades:
+    - "Foi a primeira vez que a Mulher-Maravilha apareceu num filme de cinema em carne e osso; até então, a personagem só tinha sido interpretada em séries e animações para a TV."
+    - "Antes de vestir o manto, Ben Affleck pediu conselhos a Christian Bale, que tinha vivido o Batman na trilogia de Christopher Nolan. Os dois se encontraram por acaso numa loja de fantasias, onde ambos compravam roupas de Batman para os filhos."
+    - "Michael Shannon não voltou a gravar como General Zod: as cenas do vilão reaproveitam material de \"O Homem de Aço\", e o corpo do personagem serviu de base para a criação do Apocalipse."
+    - "Custou cerca de 250 milhões de dólares e arrecadou 872,7 milhões no mundo, resultado considerado decepcionante para o encontro dos dois heróis mais famosos da DC."
+  fontes:
+    - nome: AdoroCinema
+      url: "https://www.adorocinema.com/filmes/filme-219262/curiosidades/"
+    - nome: CinePOP
+      url: "https://cinepop.com.br/10-curiosidades-de-batman-vs-superman-a-origem-da-justica-o-filme-que-marcou-o-inicio-das-polemicas-no-dceu-658985/"
+    - nome: "Rolling Stone Brasil"
+      url: "https://rollingstone.com.br/noticia/5-anos-de-batman-vs-superman-5-melhores-momentos-do-filme-de-pesadelo-mulher-maravilha-lista/"
 anoObra: 2016
 ---
 

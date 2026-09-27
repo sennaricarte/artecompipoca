@@ -30,6 +30,24 @@ ficha:
   paises:
     - "Estados Unidos"
   wikidataId: Q2907178
+  sinopse: "Depois que o marido, um financista milionário, é preso por fraude, a socialite nova-iorquina Jasmine perde tudo e vai morar em São Francisco com a irmã Ginger, que leva uma vida simples. Entre ansiolíticos, lembranças do luxo perdido e a recusa em aceitar a nova realidade, ela tenta recomeçar sem abrir mão das aparências."
+  curiosidades:
+    - "A história conversa abertamente com a peça \"Um Bonde Chamado Desejo\", de Tennessee Williams, e Cate Blanchett já tinha vivido nos palcos a protagonista da peça, Blanche DuBois. O mesmo papel deu o Oscar a Vivien Leigh na versão para o cinema, \"Uma Rua Chamada Pecado\"."
+    - "O marido de Jasmine, vivido por Alec Baldwin, lembra os golpistas do mercado financeiro que ficaram famosos após a crise de 2008, como Bernie Madoff."
+    - "Cate Blanchett aceitou o papel antes mesmo de ler o roteiro."
+  premios:
+    - "Oscar de Melhor Atriz (Cate Blanchett)"
+    - "Indicações ao Oscar de Atriz Coadjuvante (Sally Hawkins) e Roteiro Original (Woody Allen)"
+    - "Globo de Ouro de Melhor Atriz em Drama (Cate Blanchett)"
+  fontes:
+    - nome: Escotilha
+      url: "https://escotilha.com.br/cinema/filme-blue-jasmine-woody-allen-critica-resenha/"
+    - nome: Cinemarden
+      url: "https://cinemarden.com.br/blue-jasmine/"
+    - nome: "NBC News"
+      url: "https://www.nbcnews.com/storyline/oscars/cate-blanchetts-oscar-hopes-tangled-woody-allen-allegations-n25136"
+    - nome: "CBS News"
+      url: "https://www.cbsnews.com/news/cate-blanchett-said-yes-to-woody-allen-blue-jasmine-before-reading-script/?ftag=CNM-00-10aab4i"
 anoObra: 2013
 ---
 

@@ -29,6 +29,25 @@ ficha:
   paises:
     - "Estados Unidos"
   wikidataId: Q283586
+  sinopse: "Veterano da Segunda Guerra, Freddie Quell volta para casa marcado pelo álcool e pela violência e não consegue se encaixar na sociedade do pós-guerra. Por acaso, ele cruza o caminho de Lancaster Dodd, o carismático líder de um movimento filosófico-religioso chamado \"A Causa\", que vê algo especial nele e o acolhe entre seus seguidores."
+  curiosidades:
+    - "O líder vivido por Philip Seymour Hoffman foi em parte inspirado em L. Ron Hubbard, fundador da Cientologia, mas Paul Thomas Anderson sempre recusou que o filme fosse tratado como uma biografia dele."
+    - "Foi rodado em película de 65mm, algo que nenhum longa de ficção fazia desde 1996, e ajudou a reacender o interesse pelo cinema analógico."
+    - "Marcou a volta de Joaquin Phoenix aos filmes de ficção depois do falso anúncio de aposentadoria que ele encenou no documentário \"I'm Still Here\"."
+    - "Em Veneza, o júri queria dar ao filme o Leão de Ouro, mas uma regra nova impedia que o vencedor principal também levasse prêmios de direção e atuação. O Leão de Ouro foi para \"Pietà\", e \"O Mestre\" ficou com os prêmios de direção e de ator."
+  premios:
+    - "Leão de Prata de Melhor Direção no Festival de Veneza"
+    - "Copa Volpi de Melhor Ator em Veneza, dividida entre Joaquin Phoenix e Philip Seymour Hoffman"
+    - "3 indicações ao Oscar: Ator (Joaquin Phoenix), Ator Coadjuvante (Philip Seymour Hoffman) e Atriz Coadjuvante (Amy Adams)"
+  fontes:
+    - nome: "Wikipédia"
+      url: "https://pt.wikipedia.org/wiki/The_Master_(filme)"
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/The_Master_(2012_film)"
+    - nome: "Film at Lincoln Center"
+      url: "https://www.filmlinc.org/daily/season-spotlight-the-master/"
+    - nome: "Cinema e Filosofia"
+      url: "https://www.cinemaefilosofia.com/post/o-mestre-2012-de-paul-thomas-anderson-review"
 anoObra: 2012
 ---
 
