@@ -87,7 +87,6 @@ const temFichaFactualFilmeSerie = Boolean(
 			ficha.emissora ||
 			ficha.wikidataId),
 );
-const temFichaFactual = isHQ ? false : temFichaFactualFilmeSerie;
 const temFichaInicio = Boolean(
 	ficha &&
 		((!isHQ && ficha.sinopse?.trim()) || ficha.trailerYoutubeId),
@@ -102,6 +101,8 @@ const mostrarFichaFim =
 			entry.data.tipo === 'filme' ||
 			entry.data.tipo === 'serie' ||
 			Boolean(entry.data.cartaz && entry.data.cartazAlt)));
+const temFichaExibida = mostrarFichaHQ || temFichaInicio || mostrarFichaFim;
+const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
 
 const ogImage = new URL(`/og/resenhas/${entry.id}.png`, site).href;
 const imageLd = ogImage;
@@ -235,7 +236,8 @@ reviewLd.image = imageLd;
 		set:html={JSON.stringify(reviewLd)}
 	/>
 
-	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+	<article class="px-4 py-10 md:px-6">
+		<div class="post-corpo mx-auto w-full max-w-[46rem]">
 		<Breadcrumb
 			items={[
 				{ label: 'Início', href: '/' },
@@ -244,21 +246,25 @@ reviewLd.image = imageLd;
 			]}
 		/>
 
-		<CapaPost
-			idPost={entry.id}
-			rotulo={rotuloCapaResenha(entry.data)}
-			editoria={editoriaCapa}
-			cover={entry.data.cover}
-			coverAlt={entry.data.coverAlt}
-			coverCredito={entry.data.coverCredito}
-			coverLicencaUrl={entry.data.coverLicencaUrl}
-			coverPosicao={entry.data.coverPosicao}
-			nota={entry.data.nota}
-			prioridade={Boolean(entry.data.cover && entry.data.coverAlt)}
-			sizes="(min-width: 1024px) 720px, 100vw"
-			molduraClass="max-h-[480px]"
-			class="mt-6"
-		/>
+		{
+			temCover && (
+				<CapaPost
+					idPost={entry.id}
+					rotulo={rotuloCapaResenha(entry.data)}
+					editoria={editoriaCapa}
+					cover={entry.data.cover}
+					coverAlt={entry.data.coverAlt}
+					coverCredito={entry.data.coverCredito}
+					coverLicencaUrl={entry.data.coverLicencaUrl}
+					coverPosicao={entry.data.coverPosicao}
+					nota={entry.data.nota}
+					prioridade
+					sizes="(min-width: 736px) 736px, 100vw"
+					molduraClass="max-h-[480px]"
+					class="mt-6"
+				/>
+			)
+		}
 
 		<h1 class="mt-8 font-display text-4xl tracking-wide text-text md:text-5xl">
 			{entry.data.title}
@@ -311,7 +317,7 @@ reviewLd.image = imageLd;
 		}
 
 		{
-			!temFichaFactual && (
+			!temFichaExibida && (
 				<dl class="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-y border-white/10 py-4 text-sm">
 					<div>
 						<dt class="text-muted">Obra</dt>
@@ -379,5 +385,6 @@ reviewLd.image = imageLd;
 				</section>
 			)
 		}
+		</div>
 	</article>
 </BaseLayout>

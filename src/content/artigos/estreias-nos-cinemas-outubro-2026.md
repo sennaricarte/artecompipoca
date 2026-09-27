@@ -4,6 +4,9 @@ seoTitle: "Estreias nos cinemas em outubro de 2026: os destaques semana a semana
 description: "Street Fighter, o novo filme de Aaron Sorkin, a volta de Jogos Vorazes às telas e shows de Queen, BTS e Black Sabbath: os destaques de outubro nos cinemas."
 pubDate: 2026-09-27
 autor: redacao
+cover: "../../assets/capas/estreias-nos-cinemas-outubro-2026-cena.jpg"
+coverAlt: "Balde de pipoca com óculos 3D sobre o apoio de braço de poltrona vermelha em sala de cinema"
+coverCredito: "Arquivo/Arte Com Pipoca"
 editoria: cinema
 origem: original
 draft: false

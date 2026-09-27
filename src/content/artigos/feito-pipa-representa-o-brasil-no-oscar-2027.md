@@ -3,6 +3,12 @@ title: "Feito Pipa vai representar o Brasil na corrida pelo Oscar 2027"
 description: "O filme de Allan Deberton, premiado em Berlim e Gramado, foi escolhido para disputar uma vaga em Melhor Filme Internacional. Veja o calendário até março."
 pubDate: 2026-09-27
 autor: redacao
+cover: "../../assets/capas/feito-pipa-representa-o-brasil-no-oscar-2027-cena.webp"
+coverAlt: "Gugu deitado com a cabeça no colo da avó Dilma em sofá florido, sob luz quente de abajur"
+coverCredito: "Divulgação/Deberton Filmes"
+cartaz: "../../assets/capas/feito-pipa-representa-o-brasil-no-oscar-2027-cartaz.jpg"
+cartazAlt: "Cartaz de Feito Pipa (Gugu's World): garoto de regata vermelha e capa dourada olhando para o céu azul, com selo da Berlinale Generation"
+cartazCredito: "Divulgação/Deberton Filmes"
 editoria: cinema
 origem: original
 draft: false

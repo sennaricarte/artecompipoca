@@ -163,7 +163,7 @@ const linkCreditoClass =
 				</figcaption>
 			)}
 		</figure>
-	) : (
+	) : contexto === 'card' ? (
 		<CapaTipografica
 			editoria={editoria}
 			idPost={idPost}
@@ -172,5 +172,5 @@ const linkCreditoClass =
 			proporcaoClass={proporcaoSemCoverClass}
 			class={className}
 		/>
-	)
+	) : null
 }

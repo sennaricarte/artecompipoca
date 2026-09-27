@@ -3,6 +3,9 @@ title: "50ª Mostra de São Paulo: o que já se sabe sobre a edição de anivers
 description: "De 15 a 29 de outubro, a Mostra Internacional de Cinema chega à 50ª edição. Veja datas, abertura com James Gray, novidades e o que ainda falta anunciar."
 pubDate: 2026-09-27
 autor: redacao
+cover: "../../assets/capas/mostra-de-sao-paulo-2026-50-edicao-guia-cena.jpg"
+coverAlt: "Plateia em sala de cinema durante sessão da Mostra de São Paulo, com close em preto e branco projetado na tela"
+coverCredito: "Arquivo/Mostra Internacional de Cinema"
 editoria: cinema
 origem: original
 draft: false

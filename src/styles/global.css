@@ -116,3 +116,7 @@
 	font-weight: 700;
 	color: var(--color-text);
 }
+
+.post-corpo .conteudo {
+	max-width: none;
+}

@@ -18,8 +18,9 @@ ficha:
   arte:
     - "André Oide"
   editora: "Independente (Lexy Soares)"
+  publicacao: "One-shot"
   ano: 2015
-  paginas: 45
+  paginas: 48
   sinopse: "Três pessoas levam vidas comuns, cada uma à espera de algo que dê algum sentido ao cotidiano, até que um acontecimento cruza seus caminhos. Uma HQ de humor sobre o dia a dia, no estilo slice of life."
   fontes:
     - nome: "Digital Comics"
@@ -38,9 +39,3 @@ A história possui como inspiração filmes como os dos Irmãos Coen, que sempre
 A revista possui 48 páginas, com arte em preto e branco, e pode ser comprada diretamente com os autores. O preço de capa é R$15.00, e pelo correio, R$25.00.
 
 E, para quem for na FIQ de 2015, a revista estará à venda na mesa de **André Oide**, onde você poderá adquirir um exemplar autografado!
-
-Contatos:
-
-Lexy Soares: [cine\_lexy@hotmail.com](mailto:cine_lexy@hotmail.com)
-
-André Oide: [Andre.vjo@gmail.com](mailto:Andre.vjo@gmail.com)

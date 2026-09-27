@@ -79,6 +79,8 @@ const blogPosting: Record<string, unknown> = {
 	},
 };
 blogPosting.image = imageLd;
+
+const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
 ---
 
 <BaseLayout
@@ -97,7 +99,8 @@ blogPosting.image = imageLd;
 		set:html={JSON.stringify(blogPosting)}
 	/>
 
-	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+	<article class="px-4 py-10 md:px-6">
+		<div class="post-corpo mx-auto w-full max-w-[46rem]">
 		<Breadcrumb
 			items={[
 				{ label: 'Início', href: '/' },
@@ -109,19 +112,23 @@ blogPosting.image = imageLd;
 			]}
 		/>
 
-		<CapaPost
-			idPost={entry.id}
-			rotulo={rotuloCapaArtigo(entry.data.editoria)}
-			editoria={entry.data.editoria}
-			cover={entry.data.cover}
-			coverAlt={entry.data.coverAlt}
-			coverCredito={entry.data.coverCredito}
-			coverLicencaUrl={entry.data.coverLicencaUrl}
-			coverPosicao={entry.data.coverPosicao}
-			prioridade={Boolean(entry.data.cover && entry.data.coverAlt)}
-			sizes="(min-width: 1024px) 720px, 100vw"
-			class="mt-6"
-		/>
+		{
+			temCover && (
+				<CapaPost
+					idPost={entry.id}
+					rotulo={rotuloCapaArtigo(entry.data.editoria)}
+					editoria={entry.data.editoria}
+					cover={entry.data.cover}
+					coverAlt={entry.data.coverAlt}
+					coverCredito={entry.data.coverCredito}
+					coverLicencaUrl={entry.data.coverLicencaUrl}
+					coverPosicao={entry.data.coverPosicao}
+					prioridade
+					sizes="(min-width: 736px) 736px, 100vw"
+					class="mt-6"
+				/>
+			)
+		}
 
 		<h1 class="mt-8 font-display text-4xl tracking-wide text-text md:text-5xl">
 			{entry.data.title}
@@ -172,5 +179,6 @@ blogPosting.image = imageLd;
 				</section>
 			)
 		}
+		</div>
 	</article>
 </BaseLayout>
