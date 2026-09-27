@@ -4,7 +4,7 @@ import { Resvg } from '@resvg/resvg-js';
 import satori from 'satori';
 import sharp from 'sharp';
 import { capaDoPost, COR_FUNDO_SITE, COR_PIPOCA, temaEditoria, type TemaCapa } from './capas';
-import type { EditoriaId } from './conteudo';
+import { rotuloEditoriasSite, type EditoriaId } from './conteudo';
 
 export const OG_LARGURA = 1200;
 export const OG_ALTURA = 630;
@@ -229,7 +229,7 @@ export async function gerarOgPadrao(): Promise<Buffer> {
 				el(
 					'div',
 					{ display: 'flex', marginTop: 24, fontFamily: 'Inter', fontSize: 42, color: tema.rotulo },
-					'Cinema, séries, quadrinhos e música desde 2013',
+					`${rotuloEditoriasSite()} desde 2013`,
 				),
 			],
 		),

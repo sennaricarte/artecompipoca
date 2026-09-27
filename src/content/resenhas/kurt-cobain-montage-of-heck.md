@@ -2,13 +2,19 @@
 title: "Kurt Cobain: Montage of Heck"
 description: "Documentário íntimo sobre Kurt Cobain com vídeos familiares inéditos: a pessoa comum por trás do mito do Nirvana, da infância aos meses finais."
 pubDate: 2015-07-29
-updatedDate: 2026-09-26
+updatedDate: 2026-09-27
 autor: lexy-soares
+cover: "../../assets/capas/kurt-cobain-montage-of-heck-cena.png"
+coverAlt: "Kurt Cobain brinca com um gatinho no ombro, estendendo um graveto com penas para o animal alcançar"
+coverCredito: "Divulgação/HBO Documentary Films"
 origem: arquivo
 legacyUrl: /kurt-cobain-montage-of-heck-critica/
 draft: false
 obra: "Kurt Cobain: Montage of Heck"
 tipo: filme
+cartaz: "../../assets/capas/kurt-cobain-montage-of-heck-cartaz.jpg"
+cartazAlt: "Cartaz de Kurt Cobain: Montage of Heck: retrato em preto e branco de Kurt Cobain com o título em amarelo e preto"
+cartazCredito: "Divulgação/Universal Pictures"
 ficha:
   tituloOriginal: "Kurt Cobain: Montage of Heck"
   ano: 2015

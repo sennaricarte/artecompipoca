@@ -9,6 +9,7 @@ import {
 	getResenhas,
 	nomeEditoria,
 	nomeTipoResenha,
+	imagensPost,
 	rotuloCapaArtigo,
 	rotuloCapaResenha,
 	TIPO_RESENHA_PARA_EDITORIA,
@@ -145,11 +146,7 @@ const descricao =
 								rotuloCapa={rotuloCapaResenha(item.entry.data)}
 								editoria={TIPO_RESENHA_PARA_EDITORIA[item.entry.data.tipo]}
 								nota={item.entry.data.nota}
-								cover={item.entry.data.cover}
-								coverAlt={item.entry.data.coverAlt}
-								coverCredito={item.entry.data.coverCredito}
-								coverLicencaUrl={item.entry.data.coverLicencaUrl}
-								coverPosicao={item.entry.data.coverPosicao}
+								{...imagensPost(item.entry.data)}
 								nivelTitulo="h2"
 							/>
 						),

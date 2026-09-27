@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import { nomeEditoria, rotuloEditoriasSite } from '../lib/conteudo';
 ---
 
 <BaseLayout
 	title="Sobre o Arte Com Pipoca"
-	description="A história do Arte Com Pipoca: cinema, séries, quadrinhos, música e o acervo recuperado."
+	description={`A história do Arte Com Pipoca: ${rotuloEditoriasSite()} e o acervo recuperado.`}
 >
 	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
 		<Breadcrumb
@@ -43,7 +44,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 					O conteúdo está organizado por editorias. Em
 					<a href="/cinema/">Cinema</a> falamos de filmes e sala escura; em
 					<a href="/series/">Séries</a>, de temporadas e personagens; em
-					<a href="/quadrinhos/">Quadrinhos</a>, de HQs e graphic novels; em
+					<a href="/quadrinhos/">{nomeEditoria('quadrinhos')}</a>, de HQs e graphic novels; em
 					<a href="/musica/">Música</a>, de discos e trilhas. Em
 					<a href="/resenhas/">Resenhas</a> você encontra críticas com ficha da
 					obra e, quando couber, uma nota.

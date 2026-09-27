@@ -1,12 +1,10 @@
 ---
 import Logo from './Logo.astro';
 import SearchForm from './SearchForm.astro';
+import { NAV_EDITORIAS } from '../lib/conteudo';
 
 const navItems = [
-	{ href: '/cinema/', label: 'Cinema' },
-	{ href: '/series/', label: 'Séries' },
-	{ href: '/quadrinhos/', label: 'Quadrinhos' },
-	{ href: '/musica/', label: 'Música' },
+	...NAV_EDITORIAS.map((item) => ({ href: item.href, label: item.label })),
 	{ href: '/resenhas/', label: 'Resenhas' },
 ] as const;
 
@@ -58,7 +56,7 @@ function isActive(href: string) {
 
 		<nav
 			aria-label="Principal"
-			class="absolute left-0 right-0 top-full z-50 hidden flex-col gap-1 border-b border-white/10 bg-surface px-4 py-3 peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0 lg:gap-6"
+			class="absolute left-0 right-0 top-full z-50 hidden flex-col gap-1 border-b border-white/10 bg-surface px-4 py-3 peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-2.5 md:border-0 md:bg-transparent md:p-0 lg:gap-4 xl:gap-6"
 		>
 			{
 				navItems.map((item) => (
@@ -66,7 +64,7 @@ function isActive(href: string) {
 						href={item.href}
 						aria-current={isActive(item.href) ? 'page' : undefined}
 						class:list={[
-							'rounded px-2 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca md:py-1',
+							'whitespace-nowrap rounded px-1.5 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca md:px-2 md:py-1 md:text-[0.8125rem] lg:text-sm',
 							isActive(item.href)
 								? 'text-pipoca'
 								: 'text-muted hover:text-text',

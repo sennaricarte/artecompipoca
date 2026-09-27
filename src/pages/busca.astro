@@ -2,15 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import SearchForm from '../components/SearchForm.astro';
+import { NAV_EDITORIAS, rotuloEditoriasSite } from '../lib/conteudo';
 
-const description =
-	'Busque resenhas e artigos de cinema, séries, quadrinhos e música no Arte Com Pipoca.';
+const description = `Busque resenhas e artigos de ${rotuloEditoriasSite()} no Arte Com Pipoca.`;
 
 const hubs = [
-	{ href: '/cinema/', label: 'Cinema' },
-	{ href: '/series/', label: 'Séries' },
-	{ href: '/quadrinhos/', label: 'Quadrinhos' },
-	{ href: '/musica/', label: 'Música' },
+	...NAV_EDITORIAS.map((item) => ({ href: item.href, label: item.label })),
 	{ href: '/resenhas/', label: 'Resenhas' },
 ];
 ---

@@ -5,6 +5,21 @@ import { z } from 'astro/zod';
 /** Conteúdo de arquivo (Wayback) não pode ter pubDate anterior ao acervo. */
 const PUBDATE_ARQUIVO_MIN = new Date('2000-01-01T00:00:00.000Z');
 
+const PUBLICACAO_HQ = z.enum([
+	'Série regular',
+	'Minissérie',
+	'Graphic novel',
+	'One-shot',
+	'Tira',
+]);
+
+const STATUS_HQ = z.enum([
+	'Em andamento',
+	'Terminada',
+	'Cancelada',
+	'Cancelada/Terminada',
+]);
+
 /**
  * @template {z.ZodRawShape} T
  * @param {z.ZodObject<T>} schema
@@ -106,6 +121,12 @@ const resenhas = defineCollection({
 							.regex(/^Q\d+$/, 'wikidataId deve ser Q seguido de dígitos')
 							.optional(),
 						sinopse: z.string().optional(),
+						editora: z.string().optional(),
+						editoraBrasil: z.string().optional(),
+						publicacao: PUBLICACAO_HQ.optional(),
+						status: STATUS_HQ.optional(),
+						edicoes: z.number().optional(),
+						arte: z.array(z.string()).optional(),
 						curiosidades: z.array(z.string()).optional(),
 						premios: z.array(z.string()).optional(),
 						trailerYoutubeId: z

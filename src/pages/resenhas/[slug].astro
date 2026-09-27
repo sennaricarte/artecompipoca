@@ -6,6 +6,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import CapaPost from '../../components/CapaPost.astro';
 import MetaPost from '../../components/MetaPost.astro';
 import NotaEditorial from '../../components/NotaEditorial.astro';
+import FichaHQ from '../../components/FichaHQ.astro';
 import FichaTecnica from '../../components/FichaTecnica.astro';
 import {
 	formatarData,
@@ -28,10 +29,9 @@ interface Props {
 	entry: CollectionEntry<'resenhas'>;
 }
 
-const itemReviewedType: Record<TipoResenha, string> = {
+const itemReviewedType: Record<Exclude<TipoResenha, 'hq'>, string> = {
 	filme: 'Movie',
 	serie: 'TVSeries',
-	hq: 'Book',
 	album: 'MusicAlbum',
 };
 
@@ -71,7 +71,8 @@ const seoTitle = entry.data.seoTitle ?? entry.data.title;
 const tipoLabel = nomeTipoResenha(entry.data.tipo);
 const editoriaCapa = TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo];
 const ficha = entry.data.ficha;
-const temFichaFactual = Boolean(
+const isHQ = entry.data.tipo === 'hq';
+const temFichaFactualFilmeSerie = Boolean(
 	ficha &&
 		(ficha.tituloOriginal ||
 			ficha.ano != null ||
@@ -86,17 +87,21 @@ const temFichaFactual = Boolean(
 			ficha.emissora ||
 			ficha.wikidataId),
 );
+const temFichaFactual = isHQ ? false : temFichaFactualFilmeSerie;
 const temFichaInicio = Boolean(
-	ficha && (ficha.sinopse?.trim() || ficha.trailerYoutubeId),
+	ficha &&
+		((!isHQ && ficha.sinopse?.trim()) || ficha.trailerYoutubeId),
 );
+const mostrarFichaHQ = isHQ;
 const mostrarFichaFim =
-	temFichaFactual ||
 	Boolean(ficha?.premios?.length) ||
 	Boolean(ficha?.curiosidades?.length) ||
 	Boolean(ficha?.fontes?.length) ||
-	entry.data.tipo === 'filme' ||
-	entry.data.tipo === 'serie' ||
-	Boolean(entry.data.cartaz && entry.data.cartazAlt);
+	(!isHQ &&
+		(temFichaFactualFilmeSerie ||
+			entry.data.tipo === 'filme' ||
+			entry.data.tipo === 'serie' ||
+			Boolean(entry.data.cartaz && entry.data.cartazAlt)));
 
 const ogImage = new URL(`/og/resenhas/${entry.id}.png`, site).href;
 const imageLd = ogImage;
@@ -106,9 +111,18 @@ const relacionados = (await getResenhas())
 	.slice(0, 3);
 
 const itemReviewed: Record<string, unknown> = {
-	'@type': itemReviewedType[entry.data.tipo],
+	'@type':
+		entry.data.tipo === 'hq'
+			? ficha?.publicacao === 'Série regular' ||
+				ficha?.publicacao === 'Minissérie'
+				? 'ComicSeries'
+				: 'Book'
+			: itemReviewedType[entry.data.tipo],
 	name: entry.data.obra,
 };
+if (entry.data.tipo === 'hq' && itemReviewed['@type'] === 'Book') {
+	itemReviewed.bookFormat = 'GraphicNovel';
+}
 if (entry.data.anoObra != null) {
 	itemReviewed.dateCreated = String(entry.data.anoObra);
 }
@@ -122,11 +136,23 @@ if (ficha) {
 		itemReviewed.datePublished = String(ano);
 		itemReviewed.dateCreated = String(ano);
 	}
-	if (ficha.direcao?.length) {
-		itemReviewed.director = pessoas(ficha.direcao);
-	}
-	if (ficha.elenco?.length) {
-		itemReviewed.actor = pessoas(ficha.elenco);
+	if (entry.data.tipo === 'hq') {
+		if (ficha.roteiro?.length) {
+			itemReviewed.author = pessoas(ficha.roteiro);
+		}
+		if (ficha.arte?.length) {
+			itemReviewed.illustrator = pessoas(ficha.arte);
+		}
+		if (ficha.editora) {
+			itemReviewed.publisher = { '@type': 'Organization', name: ficha.editora };
+		}
+	} else {
+		if (ficha.direcao?.length) {
+			itemReviewed.director = pessoas(ficha.direcao);
+		}
+		if (ficha.elenco?.length) {
+			itemReviewed.actor = pessoas(ficha.elenco);
+		}
 	}
 	if (ficha.generos?.length) {
 		itemReviewed.genre = ficha.generos;
@@ -260,6 +286,18 @@ reviewLd.image = imageLd;
 		{entry.data.notaEditorial && (
 			<NotaEditorial texto={entry.data.notaEditorial} />
 		)}
+
+		{
+			mostrarFichaHQ && (
+				<FichaHQ
+					obra={entry.data.obra}
+					ficha={ficha}
+					cartaz={entry.data.cartaz}
+					cartazAlt={entry.data.cartazAlt}
+					cartazCredito={entry.data.cartazCredito}
+				/>
+			)
+		}
 
 		{
 			temFichaInicio && ficha && (

@@ -2,15 +2,18 @@
 title: Monsieur Verdoux
 description: "Crítica de Monsieur Verdoux, de Charlie Chaplin: o comediante como serial killer de viúvas ricas, em drama negro de 1947 com humor e crítica social."
 pubDate: 2014-05-21
-updatedDate: 2026-09-26
+updatedDate: 2026-09-27
 autor: lexy-soares
+cover: "../../assets/capas/monsieur-verdoux-cena.jpg"
+coverAlt: "Charlie Chaplin como Henri Verdoux, de boina e jaleco, conta cédulas numa mesa de madeira esculpida"
+coverCredito: "Divulgação/United Artists"
 origem: arquivo
 legacyUrl: /monsieur-verdoux-critica/
 draft: false
 obra: Monsieur Verdoux
 tipo: filme
 cartaz: "../../assets/capas/monsieur-verdoux-cartaz.jpg"
-cartazAlt: "Cartaz de Monsieur Verdoux: Chaplin de chapéu, terno e bengala ao lado de letreiros em vermelho e azul"
+cartazAlt: "Cartaz de Monsieur Verdoux: Chaplin de terno e chapéu com a sombra do Vagabundo ao fundo e o título em vermelho"
 cartazCredito: "Cartaz original (1947), domínio público. Fonte: Wikimedia Commons"
 ficha:
   tituloOriginal: "Monsieur Verdoux"

@@ -13,6 +13,7 @@ import {
 	rotuloCapaArtigo,
 	rotuloCapaResenha,
 	editoriaDePost,
+	imagensPost,
 	totalPaginas,
 	type EditoriaId,
 	type PostPorEditoria,
@@ -61,11 +62,7 @@ function propsCard(item: PostPorEditoria) {
 		autorNome: autorPorKey[key] ?? 'Autor',
 		pubDate: item.entry.data.pubDate,
 		editoria: editoriaDePost(item),
-		cover: item.entry.data.cover,
-		coverAlt: item.entry.data.coverAlt,
-		coverCredito: item.entry.data.coverCredito,
-		coverLicencaUrl: item.entry.data.coverLicencaUrl,
-		coverPosicao: item.entry.data.coverPosicao,
+		...imagensPost(item.entry.data),
 	};
 	if (item.kind === 'resenha') {
 		return {

@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+import { rotuloEditoriasSite } from '../lib/conteudo';
 
 const year = new Date().getFullYear();
 
@@ -22,7 +23,7 @@ const links = [
 				<Logo width={96} class="h-20 w-20 md:h-24 md:w-24" />
 			</a>
 			<p class="max-w-md text-sm text-muted">
-				Cinema, séries, quadrinhos e música desde 2013
+				{rotuloEditoriasSite()} desde 2013
 			</p>
 		</div>
 

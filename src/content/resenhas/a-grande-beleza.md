@@ -2,13 +2,19 @@
 title: A Grande Beleza
 description: "Crítica de A Grande Beleza, de Paolo Sorrentino: Jep Gambardella percorre Roma em busca da beleza numa sociedade de festas, vazio e patrimônio."
 pubDate: 2014-08-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-27
 autor: daniel-serafim
+cover: "../../assets/capas/a-grande-beleza-cena.jpg"
+coverAlt: "Toni Servillo como Jep Gambardella, de blazer vermelho, fuma num sofá ornamentado enquanto uma mulher descansa ao lado"
+coverCredito: "Divulgação/Indigo Film"
 origem: arquivo
 legacyUrl: /grande-beleza-critica/
 draft: false
 obra: A Grande Beleza
 tipo: filme
+cartaz: "../../assets/capas/a-grande-beleza-cartaz.jpg"
+cartazAlt: "Cartaz de A Grande Beleza: homem de blazer amarelo sentado diante de uma estátua clássica reclinada, com o título em amarelo"
+cartazCredito: "Divulgação/Indigo Film"
 ficha:
   tituloOriginal: "La grande bellezza"
   ano: 2013

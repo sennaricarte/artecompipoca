@@ -1,0 +1,168 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Ficha {
+	tituloOriginal?: string;
+	roteiro?: string[];
+	arte?: string[];
+	editora?: string;
+	editoraBrasil?: string;
+	publicacao?: string;
+	status?: string;
+	edicoes?: number;
+	ano?: number;
+	sinopse?: string;
+}
+
+interface Props {
+	obra: string;
+	ficha?: Ficha;
+	cartaz?: ImageMetadata;
+	cartazAlt?: string;
+	cartazCredito?: string;
+}
+
+const { obra, ficha = {}, cartaz, cartazAlt, cartazCredito } = Astro.props;
+
+const CARTAZ_LARGURA = 300;
+const CARTAZ_LARGURA_MOBILE = 240;
+
+const temCartaz = Boolean(cartaz && cartazAlt);
+const cartazAltura = cartaz
+	? Math.round((CARTAZ_LARGURA * cartaz.height) / cartaz.width)
+	: 0;
+/** @param {string[] | undefined} list */
+function juntar(list: string[] | undefined): string | undefined {
+	if (!list?.length) return undefined;
+	return list.join(', ');
+}
+
+/** @param {number | undefined} n */
+function formatarEdicoes(n: number | undefined): string | undefined {
+	if (n == null) return undefined;
+	return String(n).padStart(2, '0');
+}
+
+type Linha = { rotulo: string; valor: string; sinopse?: boolean };
+
+/** @type {Linha[]} */
+const linhas: Linha[] = [];
+
+linhas.push({ rotulo: 'Nome', valor: obra });
+if (ficha.tituloOriginal) {
+	linhas.push({ rotulo: 'Nome Original', valor: ficha.tituloOriginal });
+}
+if (juntar(ficha.roteiro)) {
+	linhas.push({ rotulo: 'Roteiro', valor: juntar(ficha.roteiro)! });
+}
+if (juntar(ficha.arte)) {
+	linhas.push({ rotulo: 'Arte', valor: juntar(ficha.arte)! });
+}
+if (ficha.editora) {
+	linhas.push({ rotulo: 'Editora', valor: ficha.editora });
+}
+if (ficha.editoraBrasil) {
+	linhas.push({ rotulo: 'Editora no Brasil', valor: ficha.editoraBrasil });
+}
+if (ficha.publicacao) {
+	linhas.push({ rotulo: 'Publicação', valor: ficha.publicacao });
+}
+if (ficha.status) {
+	linhas.push({ rotulo: 'Status', valor: ficha.status });
+}
+const edicoesFmt = formatarEdicoes(ficha.edicoes);
+if (edicoesFmt) {
+	linhas.push({ rotulo: 'Edições', valor: edicoesFmt });
+}
+if (ficha.ano != null) {
+	linhas.push({ rotulo: 'Ano', valor: String(ficha.ano) });
+}
+if (ficha.sinopse?.trim()) {
+	linhas.push({ rotulo: 'Sinopse', valor: ficha.sinopse.trim(), sinopse: true });
+}
+---
+
+<section
+	class="ficha-hq mt-10 rounded-sm border border-white/10 bg-surface"
+	aria-labelledby="ficha-hq-titulo"
+>
+	<h2 id="ficha-hq-titulo" class="sr-only">Ficha da HQ</h2>
+
+	<div class="ficha-hq__grid flex flex-col gap-6 p-4 md:flex-row md:items-start md:gap-8 md:p-6">
+		{
+			temCartaz && cartaz && cartazAlt && (
+				<figure class="ficha-hq__capa mx-auto m-0 w-full max-w-[240px] shrink-0 md:mx-0 md:max-w-[300px]">
+					<Picture
+						src={cartaz}
+						formats={['avif', 'webp']}
+						widths={[240, 300, 480, 600]}
+						sizes="(min-width: 768px) 300px, 240px"
+						width={CARTAZ_LARGURA}
+						height={cartazAltura}
+						alt={cartazAlt}
+						loading="eager"
+						fetchpriority="high"
+						quality="mid"
+						pictureAttributes={{ class: 'block' }}
+						class="h-auto w-full rounded-sm"
+					/>
+					{cartazCredito && (
+						<figcaption class="mt-1.5 text-center text-xs leading-snug text-muted md:text-left">
+							{cartazCredito}
+						</figcaption>
+					)}
+				</figure>
+			)
+		}
+
+		<div class="ficha-hq__tabela min-w-0 flex-1 overflow-x-auto">
+			<table class="ficha-hq__table w-full border-collapse text-sm">
+				<caption class="sr-only">Ficha da HQ</caption>
+				<tbody>
+					{
+						linhas.map((linha) =>
+							linha.sinopse ? (
+								<tr class="ficha-hq__row ficha-hq__row--sinopse border-t border-white/10">
+									<th
+										scope="row"
+										class="ficha-hq__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-top font-bold text-text"
+									>
+										{linha.rotulo}
+									</th>
+									<td
+										colspan={1}
+										class="ficha-hq__td ficha-hq__td--sinopse px-3 py-3 text-left leading-relaxed text-text"
+									>
+										{linha.valor}
+									</td>
+								</tr>
+							) : (
+								<tr class="ficha-hq__row border-t border-white/10 first:border-t-0">
+									<th
+										scope="row"
+										class="ficha-hq__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text"
+									>
+										{linha.rotulo}
+									</th>
+									<td class="ficha-hq__td px-3 py-3 text-center align-middle text-text">
+										{linha.valor}
+									</td>
+								</tr>
+							),
+						)
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+
+<style>
+	@media (min-width: 768px) {
+		.ficha-hq__capa :global(picture),
+		.ficha-hq__capa :global(img) {
+			max-width: 300px;
+		}
+	}
+</style>

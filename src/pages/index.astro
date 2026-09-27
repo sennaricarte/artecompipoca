@@ -14,6 +14,7 @@ import {
 	nomeTipoResenha,
 	rotuloCapaArtigo,
 	rotuloCapaResenha,
+	rotuloEditoriasSite,
 	TIPO_RESENHA_PARA_EDITORIA,
 	type EditoriaId,
 	type PostPorEditoria,
@@ -40,6 +41,9 @@ type DestaqueResolvido = {
 	coverCredito?: string;
 	coverLicencaUrl?: string;
 	coverPosicao?: string;
+	cartaz?: ImageMetadata;
+	cartazAlt?: string;
+	cartazCredito?: string;
 	temCoverReal: boolean;
 };
 
@@ -80,6 +84,9 @@ async function resolverDestaque(
 			coverCredito: entry.data.coverCredito,
 			coverLicencaUrl: entry.data.coverLicencaUrl,
 			coverPosicao: entry.data.coverPosicao,
+			cartaz: entry.data.cartaz,
+			cartazAlt: entry.data.cartazAlt,
+			cartazCredito: entry.data.cartazCredito,
 			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
 		};
 	}
@@ -110,7 +117,13 @@ async function resolverDestaque(
 			coverCredito: entry.data.coverCredito,
 			coverLicencaUrl: entry.data.coverLicencaUrl,
 			coverPosicao: entry.data.coverPosicao,
-			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
+			cartaz: entry.data.cartaz,
+			cartazAlt: entry.data.cartazAlt,
+			cartazCredito: entry.data.cartazCredito,
+			temCoverReal: Boolean(
+				(entry.data.cover && entry.data.coverAlt) ||
+					(entry.data.cartaz && entry.data.cartazAlt),
+			),
 		};
 	}
 
@@ -213,6 +226,9 @@ function propsCardEditoria(
 		coverCredito: item.entry.data.coverCredito,
 		coverLicencaUrl: item.entry.data.coverLicencaUrl,
 		coverPosicao: item.entry.data.coverPosicao,
+		cartaz: item.entry.data.cartaz,
+		cartazAlt: item.entry.data.cartazAlt,
+		cartazCredito: item.entry.data.cartazCredito,
 		nivelTitulo: 'h3' as const,
 	};
 	if (item.kind === 'resenha') {
@@ -231,8 +247,7 @@ function propsCardEditoria(
 }
 
 const introducao = home.introducao;
-const seoDescription =
-	'Cinema, séries, quadrinhos e música com olhar de fã e rigor de crítica. Arte Com Pipoca: no ar desde 2013, com acervo revisado e novidades pela frente.';
+const seoDescription = `${rotuloEditoriasSite()} com olhar de fã e rigor de crítica. Arte Com Pipoca: no ar desde 2013, com acervo revisado e novidades pela frente.`;
 const seoLen = [...seoDescription].length;
 if (seoLen < 140 || seoLen > 160) {
 	console.warn(
@@ -281,7 +296,7 @@ const linkSection =
 ---
 
 <BaseLayout
-	title="Arte Com Pipoca | Cinema, séries, quadrinhos e música"
+	title={`Arte Com Pipoca | ${rotuloEditoriasSite()}`}
 	description={seoDescription}
 >
 	<script
@@ -296,7 +311,7 @@ const linkSection =
 				id="home-titulo"
 				class="font-display text-4xl tracking-wide text-text md:text-5xl lg:text-6xl"
 			>
-				Cinema, séries, quadrinhos e música desde 2013
+				{rotuloEditoriasSite()} desde 2013
 			</h1>
 			<p class="mt-5 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
 				{introducao}
@@ -335,6 +350,9 @@ const linkSection =
 								coverCredito={d.coverCredito}
 								coverLicencaUrl={d.coverLicencaUrl}
 								coverPosicao={d.coverPosicao}
+								cartaz={d.cartaz}
+								cartazAlt={d.cartazAlt}
+								cartazCredito={d.cartazCredito}
 								capaPrioridade={i === indiceLcp}
 								destaque
 								largo={i === 0}
@@ -379,6 +397,9 @@ const linkSection =
 								coverCredito={entry.data.coverCredito}
 								coverLicencaUrl={entry.data.coverLicencaUrl}
 								coverPosicao={entry.data.coverPosicao}
+								cartaz={entry.data.cartaz}
+								cartazAlt={entry.data.cartazAlt}
+								cartazCredito={entry.data.cartazCredito}
 								nivelTitulo="h3"
 							/>
 						))}

@@ -2,13 +2,19 @@
 title: Ninfomaníaca
 description: "Crítica de Ninfomaníaca, de Lars von Trier: a jornada sexual de Joe, atuações carnais e o choque ao moralismo numa obra dividida em dois volumes."
 pubDate: 2014-05-01
-updatedDate: 2026-09-26
+updatedDate: 2026-09-27
 autor: daniel-serafim
+cover: "../../assets/capas/ninfomaniaca-cena.jpg"
+coverAlt: "Charlotte Gainsbourg, como Joe, presa por uma cinta e cordas num sofá de couro, com expressão de dor e esforço"
+coverCredito: "Divulgação/Zentropa"
 origem: arquivo
 legacyUrl: /critica-definitiva-ninfomaniaca/
 draft: false
 obra: Ninfomaníaca
 tipo: filme
+cartaz: "../../assets/capas/ninfomaniaca-cartaz.jpg"
+cartazAlt: "Cartaz de Ninfomaníaca: homem e mulher de óculos em pose provocativa, com título NINF()MANÍACA e a frase Esqueça o amor"
+cartazCredito: "Divulgação/Zentropa"
 ficha:
   tituloOriginal: Nymphomaniac
   ano: 2013

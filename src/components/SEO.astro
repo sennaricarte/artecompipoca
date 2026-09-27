@@ -1,4 +1,6 @@
 ---
+import { rotuloEditoriasSite } from '../lib/conteudo';
+
 interface Props {
 	title: string;
 	description: string;
@@ -17,7 +19,7 @@ const {
 	ogImage = '/og/padrao.png',
 	ogImageAlt = Astro.props.ogImage
 		? title
-		: 'Arte Com Pipoca: cinema, séries, quadrinhos e música desde 2013',
+		: `Arte Com Pipoca: ${rotuloEditoriasSite()} desde 2013`,
 	ogType = 'website',
 	publishedTime,
 	modifiedTime,

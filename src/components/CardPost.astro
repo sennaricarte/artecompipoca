@@ -24,6 +24,9 @@ interface Props {
 	coverCredito?: string;
 	coverLicencaUrl?: string;
 	coverPosicao?: string;
+	cartaz?: ImageMetadata;
+	cartazAlt?: string;
+	cartazCredito?: string;
 	capaPrioridade?: boolean;
 	nivelTitulo?: 'h2' | 'h3';
 	/** Cards um pouco maiores (home / destaques). */
@@ -50,6 +53,9 @@ const {
 	coverCredito,
 	coverLicencaUrl,
 	coverPosicao,
+	cartaz,
+	cartazAlt,
+	cartazCredito,
 	capaPrioridade = false,
 	nivelTitulo = 'h2',
 	destaque = false,
@@ -60,6 +66,8 @@ const {
 
 const Titulo = nivelTitulo;
 const temCover = Boolean(cover && coverAlt);
+const temCartaz = Boolean(cartaz && cartazAlt);
+const temImagemCapa = temCover || temCartaz;
 const tema = capaDoPost(editoria, idPost);
 const proporcaoClass = largo ? 'aspect-video lg:aspect-[21/9]' : 'aspect-video';
 
@@ -86,7 +94,7 @@ const sizesPadrao = largo
 
 <article class:list={['relative flex flex-col', className]}>
 	{
-		temCover ? (
+		temImagemCapa ? (
 			<>
 				<CapaPost
 					editoria={editoria}
@@ -98,6 +106,9 @@ const sizesPadrao = largo
 					coverCredito={coverCredito}
 					coverLicencaUrl={coverLicencaUrl}
 					coverPosicao={coverPosicao}
+					cartaz={cartaz}
+					cartazAlt={cartazAlt}
+					cartazCredito={cartazCredito}
 					contexto="card"
 					prioridade={capaPrioridade}
 					sizes={capaSizes ?? sizesPadrao}
@@ -148,7 +159,7 @@ const sizesPadrao = largo
 		<span aria-hidden="true">·</span>
 		<time datetime={pubDate.toISOString()}>{formatarData(pubDate)}</time>
 		{
-			temCover && (
+			temImagemCapa && (
 				<>
 					<span aria-hidden="true">·</span>
 					<span class="text-pipoca">{rotulo}</span>

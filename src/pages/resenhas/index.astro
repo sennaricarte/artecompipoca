@@ -8,6 +8,7 @@ import {
 	fatiaPagina,
 	getResenhas,
 	nomeTipoResenha,
+	imagensPost,
 	rotuloCapaResenha,
 	TIPO_RESENHA_PARA_EDITORIA,
 	totalPaginas,
@@ -19,7 +20,7 @@ const total = totalPaginas(resenhas.length);
 const paginaItens = fatiaPagina(resenhas, paginaAtual);
 const vazio = resenhas.length === 0;
 const intro =
-	'Críticas e opiniões sobre filmes, séries, quadrinhos e álbuns. Leituras com contexto, nota quando couber e espaço para discordar.';
+	'Críticas e opiniões sobre filmes, séries, HQs e álbuns. Leituras com contexto, nota quando couber e espaço para discordar.';
 const baseUrl = '/resenhas/';
 
 const autores = await Promise.all(
@@ -67,11 +68,7 @@ const autorPorId = Object.fromEntries(autores.map((a) => [a.id, a.nome]));
 								rotuloCapa={rotuloCapaResenha(entry.data)}
 								editoria={TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo]}
 								nota={entry.data.nota}
-								cover={entry.data.cover}
-								coverAlt={entry.data.coverAlt}
-								coverCredito={entry.data.coverCredito}
-								coverLicencaUrl={entry.data.coverLicencaUrl}
-								coverPosicao={entry.data.coverPosicao}
+								{...imagensPost(entry.data)}
 							/>
 						))}
 					</div>

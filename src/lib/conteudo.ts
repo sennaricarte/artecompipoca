@@ -8,9 +8,22 @@ export const POSTS_POR_PAGINA = 12;
 const NOMES_EDITORIA: Record<EditoriaId, string> = {
 	cinema: 'Cinema',
 	series: 'Séries',
-	quadrinhos: 'Quadrinhos',
+	quadrinhos: 'HQ - Quadrinhos',
 	musica: 'Música',
 };
+
+/** Rótulo do site ao listar as quatro editorias (menu, footer, OG padrão, home). */
+export function rotuloEditoriasSite(): string {
+	return `${NOMES_EDITORIA.cinema}, ${NOMES_EDITORIA.series}, ${NOMES_EDITORIA.quadrinhos} e ${NOMES_EDITORIA.musica}`;
+}
+
+/** Links das editorias no menu e hubs de busca. */
+export const NAV_EDITORIAS: { id: EditoriaId; href: string; label: string }[] = [
+	{ id: 'cinema', href: '/cinema/', label: NOMES_EDITORIA.cinema },
+	{ id: 'series', href: '/series/', label: NOMES_EDITORIA.series },
+	{ id: 'quadrinhos', href: '/quadrinhos/', label: NOMES_EDITORIA.quadrinhos },
+	{ id: 'musica', href: '/musica/', label: NOMES_EDITORIA.musica },
+];
 
 const NOMES_TIPO_RESENHA: Record<TipoResenha, string> = {
 	filme: 'Filme',
@@ -150,4 +163,27 @@ export function totalPaginas(totalItens: number): number {
 export function fatiaPagina<T>(itens: T[], pagina: number): T[] {
 	const inicio = (pagina - 1) * POSTS_POR_PAGINA;
 	return itens.slice(inicio, inicio + POSTS_POR_PAGINA);
+}
+
+/** Campos de imagem compartilhados entre cards e listagens. */
+export function imagensPost(data: {
+	cover?: CollectionEntry<'resenhas'>['data']['cover'];
+	coverAlt?: string;
+	coverCredito?: string;
+	coverLicencaUrl?: string;
+	coverPosicao?: string;
+	cartaz?: CollectionEntry<'resenhas'>['data']['cartaz'];
+	cartazAlt?: string;
+	cartazCredito?: string;
+}) {
+	return {
+		cover: data.cover,
+		coverAlt: data.coverAlt,
+		coverCredito: data.coverCredito,
+		coverLicencaUrl: data.coverLicencaUrl,
+		coverPosicao: data.coverPosicao,
+		cartaz: data.cartaz,
+		cartazAlt: data.cartazAlt,
+		cartazCredito: data.cartazCredito,
+	};
 }
