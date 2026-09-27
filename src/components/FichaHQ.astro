@@ -45,10 +45,12 @@ function formatarEdicoes(n: number | undefined): string | undefined {
 	return String(n).padStart(2, '0');
 }
 
-type Linha = { rotulo: string; valor: string; sinopse?: boolean };
+type Linha = { rotulo: string; valor: string };
 
 /** @type {Linha[]} */
 const linhas: Linha[] = [];
+
+const sinopse = ficha.sinopse?.trim();
 
 linhas.push({ rotulo: 'Nome', valor: obra });
 if (ficha.tituloOriginal) {
@@ -81,9 +83,6 @@ if (ficha.paginas != null) {
 }
 if (ficha.ano != null) {
 	linhas.push({ rotulo: 'Ano', valor: String(ficha.ano) });
-}
-if (ficha.sinopse?.trim()) {
-	linhas.push({ rotulo: 'Sinopse', valor: ficha.sinopse.trim(), sinopse: true });
 }
 ---
 
@@ -125,38 +124,35 @@ if (ficha.sinopse?.trim()) {
 				<caption class="sr-only">Ficha da HQ</caption>
 				<tbody>
 					{
-						linhas.map((linha) =>
-							linha.sinopse ? (
-								<tr class="ficha-obra__row ficha-obra__row--sinopse border-t border-white/10">
-									<th
-										scope="row"
-										class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-top font-bold text-text"
-									>
-										{linha.rotulo}
-									</th>
-									<td class="ficha-obra__td ficha-obra__td--sinopse px-3 py-3 text-left leading-relaxed text-text">
-										{linha.valor}
-									</td>
-								</tr>
-							) : (
-								<tr class="ficha-obra__row border-t border-white/10 first:border-t-0">
-									<th
-										scope="row"
-										class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text"
-									>
-										{linha.rotulo}
-									</th>
-									<td class="ficha-obra__td px-3 py-3 text-center align-middle text-text">
-										{linha.valor}
-									</td>
-								</tr>
-							),
-						)
+						linhas.map((linha) => (
+							<tr class="ficha-obra__row border-t border-white/10 first:border-t-0">
+								<th
+									scope="row"
+									class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text"
+								>
+									{linha.rotulo}
+								</th>
+								<td class="ficha-obra__td px-3 py-3 text-center align-middle text-text">
+									{linha.valor}
+								</td>
+							</tr>
+						))
 					}
 				</tbody>
 			</table>
 		</div>
 	</div>
+
+	{
+		sinopse && (
+			<div class="ficha-obra__sinopse border-t border-white/10 px-4 py-4 md:px-6 md:py-5">
+				<p class="ficha-obra__sinopse-rotulo m-0 text-sm font-bold text-text">Sinopse</p>
+				<p class="ficha-obra__sinopse-texto m-0 mt-2 text-left text-sm leading-relaxed text-text">
+					{sinopse}
+				</p>
+			</div>
+		)
+	}
 </section>
 
 <style>
