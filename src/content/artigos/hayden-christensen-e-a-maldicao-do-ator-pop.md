@@ -4,6 +4,9 @@ description: "Artigo analisa Hayden Christensen e a maldição do ator pop: Anak
 pubDate: 2015-12-17
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/hayden-christensen-e-a-maldicao-do-ator-pop-cena.webp"
+coverAlt: "Hayden Christensen de sobretudo cinza e camisa estampada, em close com leve sorriso e fundo desfocado"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /hayden-christensen-e-a-maldicao-do-ator-pop/
 draft: false

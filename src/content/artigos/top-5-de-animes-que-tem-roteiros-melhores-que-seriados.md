@@ -4,6 +4,9 @@ description: "Top 5 de animes com roteiros que rivalizam com séries live-action
 pubDate: 2014-08-05
 updatedDate: 2026-09-26
 autor: marcos-antonio
+cover: "../../assets/capas/top-5-de-animes-que-tem-roteiros-melhores-que-seriados-cena.png"
+coverAlt: "Vincent Law e Re-l Mayer de Ergo Proxy contra céu tempestuoso com texto desbotado ao fundo"
+coverCredito: "Divulgação/Manglobe"
 origem: arquivo
 legacyUrl: /top-5-de-animes-que-tem-roteiros-melhores-que-seriados/
 draft: false

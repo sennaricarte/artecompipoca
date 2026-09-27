@@ -4,6 +4,9 @@ description: "Cinco papéis marcantes de Robert De Niro — de Taxi Driver a A M
 pubDate: 2014-01-16
 updatedDate: 2026-09-26
 autor: renato-brogiato
+cover: "../../assets/capas/personalidades-robert-de-niro-cena.webp"
+coverAlt: "Robert De Niro de blazer azul-marinho e polo listrado, olhando para a câmera com leve sorriso em ambiente iluminado"
+coverCredito: "Divulgação"
 origem: arquivo
 legacyUrl: /personalidades-robert-de-niro/
 draft: false

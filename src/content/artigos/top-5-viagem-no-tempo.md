@@ -4,6 +4,9 @@ description: "Lista de cinco filmes favoritos sobre viagem no tempo: Looper, O E
 pubDate: 2015-05-11
 updatedDate: 2026-09-26
 autor: lexy-soares
+cover: "../../assets/capas/top-5-viagem-no-tempo-cena.jpg"
+coverAlt: "Doc Brown de macacão branco com controle remoto e Marty McFly de colete laranja olham para cima, surpresos, à noite"
+coverCredito: "Divulgação/Universal Pictures"
 origem: arquivo
 legacyUrl: /top-5-viagem-no-tempo/
 draft: false

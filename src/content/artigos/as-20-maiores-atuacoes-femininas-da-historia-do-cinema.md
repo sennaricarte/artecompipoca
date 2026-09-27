@@ -4,6 +4,9 @@ description: "Lista comentada das 20 maiores atuações femininas da história d
 pubDate: 2014-07-14
 updatedDate: 2026-09-26
 autor: regis-rocha
+cover: "../../assets/capas/as-20-maiores-atuacoes-femininas-da-historia-do-cinema-cena.jpg"
+coverAlt: "Shelley Duvall como Wendy Torrance em O Iluminado, gritando de terror com cabelos esvoaçantes sob luz azulada"
+coverCredito: "Divulgação/Warner Bros."
 origem: arquivo
 legacyUrl: /20-maiores-atuacoes-femininas-da-historia-cinema/
 draft: false

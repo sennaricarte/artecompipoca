@@ -4,6 +4,10 @@ description: "Lista com 20 séries marcantes desde os anos 1980: de The Simpsons
 pubDate: 2014-04-30
 updatedDate: 2026-09-26
 autor: dhebora-ricarte
+cover: "../../assets/capas/as-melhores-series-de-todos-os-tempos-cena.jpg"
+coverAlt: "Homem no sofá de couro apontando controle remoto preto para a câmera, com fundo desfocado"
+coverCredito: "cottonbro/Pexels"
+coverLicencaUrl: "https://www.pexels.com/photo/person-holding-black-remote-4114823/"
 origem: arquivo
 legacyUrl: /top-lista-melhores-series-de-todos-os-tempos/
 draft: false

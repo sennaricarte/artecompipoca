@@ -4,6 +4,12 @@ description: "Crítica de Interestelar, de Christopher Nolan: ficção científi
 pubDate: 2014-11-12
 updatedDate: 2026-09-26
 autor: lexy-soares
+cover: "../../assets/capas/interestelar-cena.webp"
+coverAlt: "Cooper de traje espacial branco em planeta gelado, com formações de gelo ao fundo e neve no ar"
+coverCredito: "Divulgação/Paramount Pictures"
+cartaz: "../../assets/capas/interestelar-cartaz.jpg"
+cartazAlt: "Cartaz de Interestelar: Cooper de traje espacial caminha por paisagem congelada; título INTERESTELAR no topo"
+cartazCredito: "Divulgação/Paramount Pictures"
 origem: arquivo
 legacyUrl: /interestelar-critica/
 draft: false

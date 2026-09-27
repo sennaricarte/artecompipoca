@@ -4,6 +4,9 @@ description: "Ensaio sobre Batman vs. Superman: como Snyder caracteriza Superman
 pubDate: 2016-04-07
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/o-problema-com-os-herois-em-batman-vs-superman-cena.jpg"
+coverAlt: "Batman de armadura metálica encara Superman de perfil sob chuva intensa, mão no peito do herói"
+coverCredito: "Divulgação/Warner Bros."
 origem: arquivo
 legacyUrl: /o-problema-com-os-herois-em-batman-vs-superman/
 draft: false

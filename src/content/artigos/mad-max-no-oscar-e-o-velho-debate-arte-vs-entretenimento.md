@@ -4,6 +4,9 @@ description: "Ensaio sobre Mad Max: Estrada da Fúria no caminho do Oscar e o ve
 pubDate: 2016-01-07
 updatedDate: 2026-09-26
 autor: ivanildo-pereira
+cover: "../../assets/capas/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento-cena.webp"
+coverAlt: "Furiosa de olhar intenso e Max com máscara metálica em primeiro plano, sob céu alaranjado e turquesa"
+coverCredito: "Divulgação/Warner Bros."
 origem: arquivo
 legacyUrl: /mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/
 draft: false
