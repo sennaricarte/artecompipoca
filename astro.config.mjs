@@ -3,6 +3,9 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import remarkMinifichas, {
+	flushMinifichaWarnings,
+} from './src/lib/remark-minifichas.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +15,21 @@ export default defineConfig({
 	build: {
 		inlineStylesheets: 'always',
 	},
-	integrations: [mdx(), sitemap()],
+	markdown: {
+		remarkPlugins: [remarkMinifichas],
+	},
+	integrations: [
+		mdx(),
+		sitemap(),
+		{
+			name: 'minificha-warnings',
+			hooks: {
+				'astro:build:done': () => {
+					flushMinifichaWarnings();
+				},
+			},
+		},
+	],
 	vite: {
 		plugins: [tailwindcss()],
 	},

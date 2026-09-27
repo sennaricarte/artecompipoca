@@ -11,6 +11,43 @@ origem: arquivo
 legacyUrl: /top-5-viagem-no-tempo/
 draft: false
 editoria: cinema
+obras:
+  - titulo: "Looper – Assassinos do Futuro"
+    tipo: filme
+    wikidataId: Q53719
+    tituloOriginal: Looper
+    ano: 2012
+    direcao:
+      - "Rian Johnson"
+  - titulo: "O Exterminador do Futuro"
+    tipo: filme
+    wikidataId: Q162255
+    tituloOriginal: "The Terminator"
+    ano: 1984
+    direcao:
+      - "James Cameron"
+  - titulo: "Os 12 Macacos"
+    tipo: filme
+    wikidataId: Q175038
+    tituloOriginal: "12 Monkeys"
+    ano: 1995
+    direcao:
+      - "Terry Gilliam"
+  - titulo: "De Volta Para o Futuro"
+    tipo: filme
+    wikidataId: Q91540
+    tituloOriginal: "Back to the Future"
+    ano: 1985
+    direcao:
+      - "Robert Zemeckis"
+  - titulo: "O Predestinado"
+    tipo: filme
+    wikidataId: Q17014394
+    tituloOriginal: Predestination
+    ano: 2014
+    direcao:
+      - "Michael Spierig"
+      - "Peter Spierig"
 ---
 Ah, a **viagem no tempo**… Quem não gostaria de poder ir ao passado, ou conhecer o futuro? É uma pena que isso não exista, mas pelo menos o cinema nos ajuda a imaginar como seria. Abaixo, uma lista dos meus filmes favoritos com o tema.
 

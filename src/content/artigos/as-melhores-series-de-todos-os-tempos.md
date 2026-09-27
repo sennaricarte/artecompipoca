@@ -13,6 +13,206 @@ legacyUrl: /top-lista-melhores-series-de-todos-os-tempos/
 draft: false
 editoria: series
 notaEditorial: "Lista publicada em 2014. Desde então, várias das séries marcadas como em exibição chegaram ao fim, e as contagens de temporadas refletem aquele momento."
+obras:
+  - titulo: "The Simpsons (1989 – Atualmente)"
+    tipo: serie
+    wikidataId: Q886
+    tituloOriginal: "The Simpsons"
+    ano: 1989
+    criacao:
+      - "Matt Groening"
+    temporadas: 37
+  - titulo: "Beverly Hills/Barrados no Baile (1990 – 2000)"
+    tipo: serie
+    wikidataId: Q117590
+    tituloOriginal: "Beverly Hills, 90210"
+    ano: 1990
+    anoFim: 2000
+    criacao:
+      - "Darren Star"
+    temporadas: 10
+  - titulo: "Friends (1994 – 2004)"
+    tipo: serie
+    wikidataId: Q79784
+    tituloOriginal: Friends
+    ano: 1994
+    anoFim: 2004
+    criacao:
+      - "Marta Kauffman"
+      - "David Crane"
+    temporadas: 10
+  - titulo: "Arquivo X (1993 – 2002)"
+    tipo: serie
+    wikidataId: Q2744
+    tituloOriginal: "The X-Files"
+    ano: 1993
+    anoFim: 2018
+    criacao:
+      - "Chris Carter"
+    temporadas: 11
+  - titulo: "Sex and The City (1998 – 2011)"
+    tipo: serie
+    wikidataId: Q35791
+    tituloOriginal: "Sex and the City"
+    ano: 1998
+    anoFim: 2004
+    criacao:
+      - "Darren Star"
+    temporadas: 6
+  - titulo: "Dawson's Creek (1998 – 2003)"
+    tipo: serie
+    wikidataId: Q461357
+    tituloOriginal: "Dawson's Creek"
+    ano: 1998
+    anoFim: 2003
+    criacao:
+      - "Kevin Williamson"
+    temporadas: 6
+  - titulo: "The Sopranos (1999 – 2007)"
+    tipo: serie
+    wikidataId: Q23628
+    tituloOriginal: "The Sopranos"
+    ano: 1999
+    anoFim: 2007
+    criacao:
+      - "David Chase"
+    temporadas: 6
+  - titulo: "House (2004 – 2012)"
+    tipo: serie
+    wikidataId: Q23558
+    tituloOriginal: House
+    ano: 2004
+    anoFim: 2012
+    criacao:
+      - "David Shore"
+      - "Garrett Lerner"
+      - "Sara Hess"
+      - "Michael R. Perry"
+      - "John Mankiewicz"
+    temporadas: 8
+  - titulo: "Prison Break (2005 – 2009)"
+    tipo: serie
+    wikidataId: Q80044
+    tituloOriginal: "Prison Break"
+    ano: 2005
+    anoFim: 2017
+    criacao:
+      - "Paul Scheuring"
+    temporadas: 5
+  - titulo: "The O.C. (2003 – 2007)"
+    tipo: serie
+    wikidataId: Q194427
+    tituloOriginal: "The O.C."
+    ano: 2003
+    anoFim: 2007
+    criacao:
+      - "Josh Schwartz"
+    temporadas: 4
+  - titulo: "One Tree Hill (2003 – 2012)"
+    tipo: serie
+    wikidataId: Q203385
+    tituloOriginal: "One Tree Hill"
+    ano: 2003
+    anoFim: 2012
+    criacao:
+      - "Mark Schwahn"
+    temporadas: 9
+  - titulo: "Breaking Bad (2008 – 2013)"
+    tipo: serie
+    wikidataId: Q1079
+    tituloOriginal: "Breaking Bad"
+    ano: 2008
+    anoFim: 2013
+    criacao:
+      - "Vince Gilligan"
+      - "Peter Gould"
+      - "George Mastras"
+      - "Sam Catlin"
+      - "John Shiban"
+      - "Thomas Schnauz"
+    temporadas: 5
+  - titulo: "Two and a Half Men (2003 – Atualmente)"
+    tipo: serie
+    wikidataId: Q189267
+    tituloOriginal: "Two and a Half Men"
+    ano: 2003
+    anoFim: 2015
+    criacao:
+      - "Chuck Lorre"
+      - "Lee Aronsohn"
+    temporadas: 12
+  - titulo: "Supernatural (2005 – Atualmente)"
+    tipo: serie
+    wikidataId: Q130585
+    tituloOriginal: Supernatural
+    ano: 2005
+    anoFim: 2020
+    criacao:
+      - "Eric Kripke"
+    temporadas: 15
+  - titulo: "Grey's Anatomy (2005 – Atualmente)"
+    tipo: serie
+    wikidataId: Q438406
+    tituloOriginal: "Grey's Anatomy"
+    ano: 2005
+    criacao:
+      - "Shonda Rhimes"
+    temporadas: 22
+  - titulo: "Dexter (2006 – 2013)"
+    tipo: serie
+    wikidataId: Q23577
+    tituloOriginal: Dexter
+    ano: 2006
+    anoFim: 2013
+    criacao:
+      - "James Manos, Jr."
+    temporadas: 8
+  - titulo: "The Big Bang Theory (2007 – Atualmente)"
+    tipo: serie
+    wikidataId: Q8539
+    tituloOriginal: "The Big Bang Theory"
+    ano: 2007
+    anoFim: 2019
+    criacao:
+      - "Chuck Lorre"
+      - "Bill Prady"
+      - "Steven Molaro"
+    temporadas: 12
+  - titulo: "The Vampire Diaries (2009 – Atualmente)"
+    tipo: serie
+    wikidataId: Q28537
+    tituloOriginal: "The Vampire Diaries"
+    ano: 2009
+    anoFim: 2017
+    criacao:
+      - "Julie Plec"
+      - "Kevin Williamson"
+      - "Lisa Jane Smith"
+    temporadas: 8
+  - titulo: "The Walking Dead (2010 – Atualmente)"
+    tipo: serie
+    wikidataId: Q232737
+    tituloOriginal: "The Walking Dead"
+    ano: 2010
+    anoFim: 2022
+    criacao:
+      - "Frank Darabont"
+    temporadas: 11
+  - titulo: "Game of Thrones (2011 – Atualmente)"
+    tipo: serie
+    wikidataId: Q23572
+    tituloOriginal: "Game of Thrones"
+    ano: 2011
+    anoFim: 2019
+    criacao:
+      - "D. B. Weiss"
+      - "David Benioff"
+      - "George R. R. Martin"
+      - "Bryan Cogman"
+      - "Jane Espenson"
+      - "Vanessa Taylor"
+      - "Dave Hill"
+    temporadas: 8
 ---
 
 ## Conheça nossa lista com algumas das Melhores Séries de Todos os Tempos.
@@ -23,7 +223,7 @@ Não tem idade para gostar de série e tem para todos os gostos. Por isso separa
 
 E pra você que ainda não assistiu alguma delas, corre e não perca mais tempo!
 
-### **The Simpsons (1989 – Atualmente)**
+## **The Simpsons (1989 – Atualmente)**
 
 Gênero: Comédia/Animação
 
@@ -39,7 +239,7 @@ Temporadas: 10
 
 Drogas, alcoolismo e gravidez na adolescência eram alguns dos assuntos em pauta na série teen. Considerada uma das primeiras séries voltadas para os problemas jovens, também falava das relações familiares, amorosas e de amizade entre o grupo de Brandon, Brenda, Kelly, David, Donna e companhia. Mas é claro, tudo no bairro mais rico e mimado da Califórnia.
 
-### **Friends (1994 – 2004)**
+## **Friends (1994 – 2004)**
 
 Gênero: Comédia
 

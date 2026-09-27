@@ -8,6 +8,43 @@ origem: arquivo
 legacyUrl: /top-5-filmes-de-ficcao-cientifica/
 draft: false
 editoria: cinema
+obras:
+  - titulo: Matrix
+    tipo: filme
+    wikidataId: Q83495
+    tituloOriginal: "The Matrix"
+    ano: 1999
+    direcao:
+      - "Lana Wachowski"
+      - "Lilly Wachowski"
+  - titulo: "Metrópolis (1927)"
+    tipo: filme
+    wikidataId: Q151599
+    tituloOriginal: Metropolis
+    ano: 1927
+    direcao:
+      - "Fritz Lang"
+  - titulo: "O Planeta dos Macacos"
+    tipo: filme
+    wikidataId: Q59534
+    tituloOriginal: "Planet of the Apes"
+    ano: 1968
+    direcao:
+      - "Franklin J. Schaffner"
+  - titulo: "2001 – Uma Odisseia no Espaço"
+    tipo: filme
+    wikidataId: Q103474
+    tituloOriginal: "2001: A Space Odyssey"
+    ano: 1968
+    direcao:
+      - "Stanley Kubrick"
+  - titulo: "Blade Runner, o Caçador de Androides"
+    tipo: filme
+    wikidataId: Q184843
+    tituloOriginal: "Blade Runner"
+    ano: 1982
+    direcao:
+      - "Ridley Scott"
 ---
 
 Nossa Top Lista traz uma seleção com 5 grandes filmes do gênero Ficção Científica que marcaram época. Confira:

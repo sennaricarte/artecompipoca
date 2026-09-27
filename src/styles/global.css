@@ -99,6 +99,23 @@
 	margin-top: 0;
 }
 
+.conteudo .minificha {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: var(--color-muted);
+	margin-top: 0.25em;
+	margin-bottom: 0;
+}
+
+.conteudo h2 + .minificha,
+.conteudo h3 + .minificha {
+	margin-top: 0.25em;
+}
+
+.conteudo .minificha a {
+	color: var(--color-pipoca);
+}
+
 .conteudo a {
 	color: var(--color-pipoca);
 	text-decoration: underline;

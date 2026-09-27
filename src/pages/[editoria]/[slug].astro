@@ -81,6 +81,45 @@ const blogPosting: Record<string, unknown> = {
 };
 blogPosting.image = imageLd;
 
+const obras = entry.data.obras ?? [];
+const itemListLd =
+	obras.length > 0
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'ItemList',
+				itemListElement: obras.map((obra, i) => {
+					const isFilme = obra.tipo === 'filme';
+					/** @type {Record<string, unknown>} */
+					const item = {
+						'@type': isFilme ? 'Movie' : 'TVSeries',
+						name: obra.titulo,
+					};
+					if (obra.tituloOriginal) item.alternateName = obra.tituloOriginal;
+					if (obra.ano != null) item.datePublished = String(obra.ano);
+					if (obra.wikidataId) {
+						item.sameAs = `https://www.wikidata.org/wiki/${obra.wikidataId}`;
+					}
+					if (isFilme && obra.direcao?.length) {
+						item.director = obra.direcao.map((name) => ({
+							'@type': 'Person',
+							name,
+						}));
+					}
+					if (!isFilme && obra.criacao?.length) {
+						item.creator = obra.criacao.map((name) => ({
+							'@type': 'Person',
+							name,
+						}));
+					}
+					return {
+						'@type': 'ListItem',
+						position: i + 1,
+						item,
+					};
+				}),
+			}
+		: null;
+
 const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
 ---
 
@@ -99,6 +138,15 @@ const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
 		type="application/ld+json"
 		set:html={JSON.stringify(blogPosting)}
 	/>
+	{
+		itemListLd && (
+			<script
+				slot="head"
+				type="application/ld+json"
+				set:html={JSON.stringify(itemListLd)}
+			/>
+		)
+	}
 
 	<article class="px-4 py-10 md:px-6">
 		<div class="post-pre mx-auto w-full max-w-[46rem]">

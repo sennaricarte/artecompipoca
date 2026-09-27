@@ -20,6 +20,20 @@ const STATUS_HQ = z.enum([
 	'Cancelada/Terminada',
 ]);
 
+const obraLista = z.object({
+	titulo: z.string(),
+	tipo: z.enum(['filme', 'serie']),
+	wikidataId: z
+		.string()
+		.regex(/^Q\d+$/, 'wikidataId deve ser Q seguido de dígitos'),
+	tituloOriginal: z.string().optional(),
+	ano: z.number().optional(),
+	anoFim: z.number().optional(),
+	direcao: z.array(z.string()).optional(),
+	criacao: z.array(z.string()).optional(),
+	temporadas: z.number().optional(),
+});
+
 /**
  * @template {z.ZodRawShape} T
  * @param {z.ZodObject<T>} schema
@@ -71,6 +85,7 @@ const artigos = defineCollection({
 				origem: z.enum(['original', 'arquivo']).default('original'),
 				draft: z.boolean().default(false),
 				notaEditorial: z.string().optional(),
+				obras: z.array(obraLista).optional(),
 			}),
 		),
 });
