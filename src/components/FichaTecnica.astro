@@ -37,9 +37,20 @@ interface Props {
 	cartaz?: ImageMetadata;
 	cartazAlt?: string;
 	cartazCredito?: string;
+	/** Só curiosidades, prêmios, onde assistir e fontes (ficha já exibida no corpo). */
+	somenteAuxiliares?: boolean;
 }
 
-const { ficha = {}, obra, tipo, parte, cartaz, cartazAlt, cartazCredito } = Astro.props;
+const {
+	ficha = {},
+	obra,
+	tipo,
+	parte,
+	cartaz,
+	cartazAlt,
+	cartazCredito,
+	somenteAuxiliares = false,
+} = Astro.props;
 
 const CARTAZ_LARGURA = 180;
 const temCartaz = Boolean(cartaz && cartazAlt);
@@ -228,7 +239,7 @@ const trailerThumb = trailerId
 {
 	parte === 'fim' && (
 		<>
-			{(temCampos || temCartaz) && (
+			{!somenteAuxiliares && (temCampos || temCartaz) && (
 				<section
 					class="mt-12 rounded-sm border border-white/10 bg-surface px-4 py-6 md:px-6"
 					aria-labelledby="ficha-titulo"

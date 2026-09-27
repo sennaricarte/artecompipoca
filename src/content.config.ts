@@ -126,6 +126,7 @@ const resenhas = defineCollection({
 						publicacao: PUBLICACAO_HQ.optional(),
 						status: STATUS_HQ.optional(),
 						edicoes: z.number().optional(),
+						paginas: z.number().optional(),
 						arte: z.array(z.string()).optional(),
 						curiosidades: z.array(z.string()).optional(),
 						premios: z.array(z.string()).optional(),

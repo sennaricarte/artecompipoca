@@ -24,7 +24,10 @@ ficha:
   publicacao: "Série regular"
   status: Terminada
   edicoes: 66
-  sinopse: "Jesse Custer, pastor em crise de fé, recebe o poder da Palavra após a fusão de um ser angelical e demoníaco com sua alma. Com Tulipa e Cassidy, ele percorre os EUA em busca de Deus para cobrar uma explicação pelo abandono da criação."
+  sinopse: "Jesse Custer, pastor de uma cidadezinha do Texas em crise de fé, é possuído por Gênesis, entidade nascida da união proibida entre um anjo e um demônio, e ganha o poder da Palavra, capaz de obrigar qualquer um a obedecê-lo. Ao descobrir que Deus abandonou o Céu, ele parte pelos Estados Unidos com a ex-namorada Tulip O'Hare e o vampiro irlandês Cassidy para encontrá-Lo e cobrar explicações."
+  fontes:
+    - nome: "Wikipédia (en)"
+      url: "https://en.wikipedia.org/wiki/Preacher_(comics)"
 ---
 
 Criado por Garth Ennis (roteiro) e Steve Dillon (desenhos), e lançado em 1995, **PREACHER** é um dos títulos de maior sucesso e mais controversos do selo VERTIGO da DC Comics. Ennis, considerado por muitos como o "Tarantino dos quadrinhos", devido ao seu uso de violência e humor negro em doses cavalares, assim como o cineasta, sempre surpreende os leitores com ótimas histórias, desde que despontou no mercado de comics americanos com Hellblazer, em 1991. Ao terminar sua fase no título, se juntou ao seu parceiro na revista, Steve Dillon, e juntos, criaram uma das melhores sagas dos quadrinhos adultos dos anos 90. Talvez, de toda a história do selo.

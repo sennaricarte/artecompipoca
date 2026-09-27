@@ -12,6 +12,18 @@ legacyUrl: /leitmotiv-resenha/
 draft: false
 obra: Leitmotiv
 tipo: hq
+ficha:
+  roteiro:
+    - "Lexy Soares"
+  arte:
+    - "André Oide"
+  editora: "Independente (Lexy Soares)"
+  ano: 2015
+  paginas: 45
+  sinopse: "Três pessoas levam vidas comuns, cada uma à espera de algo que dê algum sentido ao cotidiano, até que um acontecimento cruza seus caminhos. Uma HQ de humor sobre o dia a dia, no estilo slice of life."
+  fontes:
+    - nome: "Digital Comics"
+      url: "https://digitalcomics.com.br/comics/leitmotiv/00"
 notaEditorial: "Texto de outubro de 2015; a venda direta com os autores e na FIQ refere-se àquele momento."
 ---
 

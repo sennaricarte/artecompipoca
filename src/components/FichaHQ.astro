@@ -11,6 +11,7 @@ interface Ficha {
 	publicacao?: string;
 	status?: string;
 	edicoes?: number;
+	paginas?: number;
 	ano?: number;
 	sinopse?: string;
 }
@@ -75,6 +76,9 @@ const edicoesFmt = formatarEdicoes(ficha.edicoes);
 if (edicoesFmt) {
 	linhas.push({ rotulo: 'Edições', valor: edicoesFmt });
 }
+if (ficha.paginas != null) {
+	linhas.push({ rotulo: 'Páginas', valor: String(ficha.paginas) });
+}
 if (ficha.ano != null) {
 	linhas.push({ rotulo: 'Ano', valor: String(ficha.ano) });
 }
@@ -84,15 +88,15 @@ if (ficha.sinopse?.trim()) {
 ---
 
 <section
-	class="ficha-hq mt-10 rounded-sm border border-white/10 bg-surface"
+	class="ficha-obra mt-10 rounded-sm border border-white/10 bg-surface"
 	aria-labelledby="ficha-hq-titulo"
 >
 	<h2 id="ficha-hq-titulo" class="sr-only">Ficha da HQ</h2>
 
-	<div class="ficha-hq__grid flex flex-col gap-6 p-4 md:flex-row md:items-start md:gap-8 md:p-6">
+	<div class="ficha-obra__grid flex flex-col gap-6 p-4 md:flex-row md:items-start md:gap-8 md:p-6">
 		{
 			temCartaz && cartaz && cartazAlt && (
-				<figure class="ficha-hq__capa mx-auto m-0 w-full max-w-[240px] shrink-0 md:mx-0 md:max-w-[300px]">
+				<figure class="ficha-obra__capa mx-auto m-0 w-full max-w-[240px] shrink-0 md:mx-0 md:max-w-[300px]">
 					<Picture
 						src={cartaz}
 						formats={['avif', 'webp']}
@@ -116,36 +120,33 @@ if (ficha.sinopse?.trim()) {
 			)
 		}
 
-		<div class="ficha-hq__tabela min-w-0 flex-1 overflow-x-auto">
-			<table class="ficha-hq__table w-full border-collapse text-sm">
+		<div class="ficha-obra__tabela min-w-0 flex-1 overflow-x-auto">
+			<table class="ficha-obra__table w-full border-collapse text-sm">
 				<caption class="sr-only">Ficha da HQ</caption>
 				<tbody>
 					{
 						linhas.map((linha) =>
 							linha.sinopse ? (
-								<tr class="ficha-hq__row ficha-hq__row--sinopse border-t border-white/10">
+								<tr class="ficha-obra__row ficha-obra__row--sinopse border-t border-white/10">
 									<th
 										scope="row"
-										class="ficha-hq__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-top font-bold text-text"
+										class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-top font-bold text-text"
 									>
 										{linha.rotulo}
 									</th>
-									<td
-										colspan={1}
-										class="ficha-hq__td ficha-hq__td--sinopse px-3 py-3 text-left leading-relaxed text-text"
-									>
+									<td class="ficha-obra__td ficha-obra__td--sinopse px-3 py-3 text-left leading-relaxed text-text">
 										{linha.valor}
 									</td>
 								</tr>
 							) : (
-								<tr class="ficha-hq__row border-t border-white/10 first:border-t-0">
+								<tr class="ficha-obra__row border-t border-white/10 first:border-t-0">
 									<th
 										scope="row"
-										class="ficha-hq__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text"
+										class="ficha-obra__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text"
 									>
 										{linha.rotulo}
 									</th>
-									<td class="ficha-hq__td px-3 py-3 text-center align-middle text-text">
+									<td class="ficha-obra__td px-3 py-3 text-center align-middle text-text">
 										{linha.valor}
 									</td>
 								</tr>
@@ -160,8 +161,8 @@ if (ficha.sinopse?.trim()) {
 
 <style>
 	@media (min-width: 768px) {
-		.ficha-hq__capa :global(picture),
-		.ficha-hq__capa :global(img) {
+		.ficha-obra__capa :global(picture),
+		.ficha-obra__capa :global(img) {
 			max-width: 300px;
 		}
 	}
