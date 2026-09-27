@@ -8,6 +8,8 @@ import { site } from '../data/site';
 import {
 	chavePost,
 	getPorEditoria,
+	getMaisRecente,
+	getPostsPublicadosOrdenados,
 	getResenhas,
 	hrefPost,
 	nomeEditoria,
@@ -49,6 +51,63 @@ type DestaqueResolvido = {
 
 const usados = new Set<string>();
 
+async function resolverPost(item: PostPorEditoria): Promise<DestaqueResolvido> {
+	const autor = await getEntry(item.entry.data.autor);
+
+	if (item.kind === 'artigo') {
+		return {
+			chave: `artigos/${item.entry.id}`,
+			id: item.entry.id,
+			kind: 'artigo',
+			titulo: item.entry.data.title,
+			href: `/${item.entry.data.editoria}/${item.entry.id}/`,
+			description: item.entry.data.description,
+			autorNome: autor?.data.nome ?? 'Autor',
+			pubDate: item.entry.data.pubDate,
+			rotulo: nomeEditoria(item.entry.data.editoria),
+			rotuloCapa: rotuloCapaArtigo(item.entry.data.editoria),
+			editoria: item.entry.data.editoria,
+			cover: item.entry.data.cover,
+			coverAlt: item.entry.data.coverAlt,
+			coverCredito: item.entry.data.coverCredito,
+			coverLicencaUrl: item.entry.data.coverLicencaUrl,
+			coverPosicao: item.entry.data.coverPosicao,
+			cartaz: item.entry.data.cartaz,
+			cartazAlt: item.entry.data.cartazAlt,
+			cartazCredito: item.entry.data.cartazCredito,
+			temCoverReal: Boolean(item.entry.data.cover && item.entry.data.coverAlt),
+		};
+	}
+
+	const editoria = TIPO_RESENHA_PARA_EDITORIA[item.entry.data.tipo];
+	return {
+		chave: `resenhas/${item.entry.id}`,
+		id: item.entry.id,
+		kind: 'resenha',
+		titulo: item.entry.data.title,
+		href: `/resenhas/${item.entry.id}/`,
+		description: item.entry.data.description,
+		autorNome: autor?.data.nome ?? 'Autor',
+		pubDate: item.entry.data.pubDate,
+		rotulo: nomeTipoResenha(item.entry.data.tipo),
+		rotuloCapa: rotuloCapaResenha(item.entry.data),
+		editoria,
+		nota: item.entry.data.nota,
+		cover: item.entry.data.cover,
+		coverAlt: item.entry.data.coverAlt,
+		coverCredito: item.entry.data.coverCredito,
+		coverLicencaUrl: item.entry.data.coverLicencaUrl,
+		coverPosicao: item.entry.data.coverPosicao,
+		cartaz: item.entry.data.cartaz,
+		cartazAlt: item.entry.data.cartazAlt,
+		cartazCredito: item.entry.data.cartazCredito,
+		temCoverReal: Boolean(
+			(item.entry.data.cover && item.entry.data.coverAlt) ||
+				(item.entry.data.cartaz && item.entry.data.cartazAlt),
+		),
+	};
+}
+
 /** Resolve um slug "colecao/id" do home.json; ignora draft/inexistente. */
 async function resolverDestaque(
 	slug: string,
@@ -66,29 +125,7 @@ async function resolverDestaque(
 			console.warn(`[home] destaque ignorado (ausente ou draft): ${slug}`);
 			return null;
 		}
-		const autor = await getEntry(entry.data.autor);
-		return {
-			chave: `artigos/${entry.id}`,
-			id: entry.id,
-			kind: 'artigo',
-			titulo: entry.data.title,
-			href: `/${entry.data.editoria}/${entry.id}/`,
-			description: entry.data.description,
-			autorNome: autor?.data.nome ?? 'Autor',
-			pubDate: entry.data.pubDate,
-			rotulo: nomeEditoria(entry.data.editoria),
-			rotuloCapa: rotuloCapaArtigo(entry.data.editoria),
-			editoria: entry.data.editoria,
-			cover: entry.data.cover,
-			coverAlt: entry.data.coverAlt,
-			coverCredito: entry.data.coverCredito,
-			coverLicencaUrl: entry.data.coverLicencaUrl,
-			coverPosicao: entry.data.coverPosicao,
-			cartaz: entry.data.cartaz,
-			cartazAlt: entry.data.cartazAlt,
-			cartazCredito: entry.data.cartazCredito,
-			temCoverReal: Boolean(entry.data.cover && entry.data.coverAlt),
-		};
+		return resolverPost({ kind: 'artigo', entry });
 	}
 
 	if (colecao === 'resenhas') {
@@ -97,50 +134,43 @@ async function resolverDestaque(
 			console.warn(`[home] destaque ignorado (ausente ou draft): ${slug}`);
 			return null;
 		}
-		const autor = await getEntry(entry.data.autor);
-		const editoria = TIPO_RESENHA_PARA_EDITORIA[entry.data.tipo];
-		return {
-			chave: `resenhas/${entry.id}`,
-			id: entry.id,
-			kind: 'resenha',
-			titulo: entry.data.title,
-			href: `/resenhas/${entry.id}/`,
-			description: entry.data.description,
-			autorNome: autor?.data.nome ?? 'Autor',
-			pubDate: entry.data.pubDate,
-			rotulo: nomeTipoResenha(entry.data.tipo),
-			rotuloCapa: rotuloCapaResenha(entry.data),
-			editoria,
-			nota: entry.data.nota,
-			cover: entry.data.cover,
-			coverAlt: entry.data.coverAlt,
-			coverCredito: entry.data.coverCredito,
-			coverLicencaUrl: entry.data.coverLicencaUrl,
-			coverPosicao: entry.data.coverPosicao,
-			cartaz: entry.data.cartaz,
-			cartazAlt: entry.data.cartazAlt,
-			cartazCredito: entry.data.cartazCredito,
-			temCoverReal: Boolean(
-				(entry.data.cover && entry.data.coverAlt) ||
-					(entry.data.cartaz && entry.data.cartazAlt),
-			),
-		};
+		return resolverPost({ kind: 'resenha', entry });
 	}
 
 	console.warn(`[home] destaque com coleção desconhecida: ${slug}`);
 	return null;
 }
 
-const destaques: DestaqueResolvido[] = [];
-for (const slug of home.destaques) {
-	const item = await resolverDestaque(slug);
-	if (!item) continue;
-	destaques.push(item);
-	usados.add(item.chave);
+const postsRecentes = await getPostsPublicadosOrdenados();
+const maisRecente = await getMaisRecente();
+
+let destaquePrincipal =
+	home.destaqueFixo && home.destaqueFixo.trim()
+		? await resolverDestaque(home.destaqueFixo)
+		: null;
+
+if (!destaquePrincipal && maisRecente) {
+	destaquePrincipal = await resolverPost(maisRecente);
 }
 
-/** Índice do primeiro destaque com cover real (candidato a LCP). */
-const indiceLcp = destaques.findIndex((d) => d.temCoverReal);
+if (destaquePrincipal) usados.add(destaquePrincipal.chave);
+
+const destaquesMenores: DestaqueResolvido[] = [];
+for (const slug of home.destaques) {
+	const item = await resolverDestaque(slug);
+	if (!item || usados.has(item.chave)) continue;
+	destaquesMenores.push(item);
+	usados.add(item.chave);
+	if (destaquesMenores.length >= 3) break;
+}
+
+for (const post of postsRecentes) {
+	if (destaquesMenores.length >= 3) break;
+	const item = await resolverPost(post);
+	if (usados.has(item.chave)) continue;
+	destaquesMenores.push(item);
+	usados.add(item.chave);
+}
 
 const resenhas = await getResenhas();
 const criticasRecentes = resenhas
@@ -324,7 +354,7 @@ const linkSection =
 		</section>
 
 		{
-			destaques.length > 0 && (
+			(destaquePrincipal || destaquesMenores.length > 0) && (
 				<section class="mt-10 md:mt-12" aria-labelledby="destaques-titulo">
 					<h2
 						id="destaques-titulo"
@@ -332,35 +362,66 @@ const linkSection =
 					>
 						Destaques
 					</h2>
-					<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-						{destaques.map((d, i) => (
+					{destaquePrincipal && (
+						<div class="mt-6">
 							<CardPost
-								titulo={d.titulo}
-								href={d.href}
-								idPost={d.id}
-								description={d.description}
-								autorNome={d.autorNome}
-								pubDate={d.pubDate}
-								rotulo={d.rotulo}
-								rotuloCapa={d.rotuloCapa}
-								editoria={d.editoria}
-								nota={d.nota}
-								cover={d.cover}
-								coverAlt={d.coverAlt}
-								coverCredito={d.coverCredito}
-								coverLicencaUrl={d.coverLicencaUrl}
-								coverPosicao={d.coverPosicao}
-								cartaz={d.cartaz}
-								cartazAlt={d.cartazAlt}
-								cartazCredito={d.cartazCredito}
-								capaPrioridade={i === indiceLcp}
+								titulo={destaquePrincipal.titulo}
+								href={destaquePrincipal.href}
+								idPost={destaquePrincipal.id}
+								description={destaquePrincipal.description}
+								autorNome={destaquePrincipal.autorNome}
+								pubDate={destaquePrincipal.pubDate}
+								rotulo={destaquePrincipal.rotulo}
+								rotuloCapa={destaquePrincipal.rotuloCapa}
+								editoria={destaquePrincipal.editoria}
+								nota={destaquePrincipal.nota}
+								cover={destaquePrincipal.cover}
+								coverAlt={destaquePrincipal.coverAlt}
+								coverCredito={destaquePrincipal.coverCredito}
+								coverLicencaUrl={destaquePrincipal.coverLicencaUrl}
+								coverPosicao={destaquePrincipal.coverPosicao}
+								cartaz={destaquePrincipal.cartaz}
+								cartazAlt={destaquePrincipal.cartazAlt}
+								cartazCredito={destaquePrincipal.cartazCredito}
+								capaPrioridade={Boolean(
+									destaquePrincipal.cover && destaquePrincipal.coverAlt,
+								)}
 								destaque
-								largo={i === 0}
-								class={i === 0 ? 'lg:col-span-3' : undefined}
+								largo
 								nivelTitulo="h3"
 							/>
-						))}
-					</div>
+						</div>
+					)}
+					{
+						destaquesMenores.length > 0 && (
+							<div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+								{destaquesMenores.map((d) => (
+									<CardPost
+										titulo={d.titulo}
+										href={d.href}
+										idPost={d.id}
+										description={d.description}
+										autorNome={d.autorNome}
+										pubDate={d.pubDate}
+										rotulo={d.rotulo}
+										rotuloCapa={d.rotuloCapa}
+										editoria={d.editoria}
+										nota={d.nota}
+										cover={d.cover}
+										coverAlt={d.coverAlt}
+										coverCredito={d.coverCredito}
+										coverLicencaUrl={d.coverLicencaUrl}
+										coverPosicao={d.coverPosicao}
+										cartaz={d.cartaz}
+										cartazAlt={d.cartazAlt}
+										cartazCredito={d.cartazCredito}
+										destaque
+										nivelTitulo="h3"
+									/>
+								))}
+							</div>
+						)
+					}
 				</section>
 			)
 		}

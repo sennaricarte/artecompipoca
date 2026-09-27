@@ -2,7 +2,7 @@
 title: "Melhores séries da Netflix em 2026 (até agora)"
 seoTitle: "Melhores séries da Netflix em 2026: as mais vistas e as mais elogiadas"
 description: "Dele & Dela, Eu Vou Te Encontrar, Bridgerton, Treta e mais: as séries da Netflix que marcaram 2026 até agora, entre recordes de audiência e aclamação."
-pubDate: 2026-09-27
+pubDate: 2026-09-27T12:00:00-03:00
 autor: redacao
 cover: "../../assets/capas/melhores-series-da-netflix-em-2026-cena.jpg"
 coverAlt: "Televisão com o logotipo da Netflix numa sala de estar com sofá e estante de livros"

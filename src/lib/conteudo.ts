@@ -1,3 +1,5 @@
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export type EditoriaId = CollectionEntry<'artigos'>['data']['editoria'];
@@ -36,6 +38,80 @@ export function mostrarRascunhos(): boolean {
 	return import.meta.env.DEV || import.meta.env.PUBLIC_PREVIEW === 'true';
 }
 
+type PostOrdenavel = PostPorEditoria;
+
+type MetaRecencia = {
+	pubDateDia: string;
+	pubDateTemHora: boolean;
+	updatedDateMs: number;
+};
+
+const metaRecenciaCache = new Map<string, Promise<MetaRecencia>>();
+
+async function lerFrontmatterPost(
+	colecao: 'artigos' | 'resenhas',
+	id: string,
+): Promise<string> {
+	for (const ext of ['md', 'mdx']) {
+		try {
+			return await readFile(
+				join(process.cwd(), 'src', 'content', colecao, `${id}.${ext}`),
+				'utf8',
+			);
+		} catch {
+			// tenta a próxima extensão
+		}
+	}
+	throw new Error(`Arquivo de conteúdo não encontrado: ${colecao}/${id}`);
+}
+
+function extrairCampoFrontmatter(raw: string, chave: 'pubDate' | 'updatedDate'): string {
+	const match = raw.match(new RegExp(`^${chave}:\\s*(.+)$`, 'm'));
+	return match?.[1]?.trim() ?? '';
+}
+
+async function getMetaRecencia(post: PostOrdenavel): Promise<MetaRecencia> {
+	const chave = chavePost(post);
+	let promise = metaRecenciaCache.get(chave);
+	if (!promise) {
+		promise = (async () => {
+			const raw = await lerFrontmatterPost(
+				post.kind === 'artigo' ? 'artigos' : 'resenhas',
+				post.entry.id,
+			);
+			const pubDateRaw = extrairCampoFrontmatter(raw, 'pubDate');
+			const updatedDateRaw = extrairCampoFrontmatter(raw, 'updatedDate');
+			return {
+				pubDateDia:
+					pubDateRaw.match(/\d{4}-\d{2}-\d{2}/)?.[0] ??
+					post.entry.data.pubDate.toISOString().slice(0, 10),
+				pubDateTemHora: pubDateRaw.includes('T'),
+				updatedDateMs: updatedDateRaw ? new Date(updatedDateRaw).valueOf() : -Infinity,
+			};
+		})();
+		metaRecenciaCache.set(chave, promise);
+	}
+	return promise;
+}
+
+function compararRecencia(
+	a: { item: PostOrdenavel; meta: MetaRecencia },
+	b: { item: PostOrdenavel; meta: MetaRecencia },
+): number {
+	const pubDateDiff =
+		b.item.entry.data.pubDate.valueOf() - a.item.entry.data.pubDate.valueOf();
+	if (pubDateDiff !== 0) return pubDateDiff;
+
+	if (a.meta.pubDateDia === b.meta.pubDateDia && a.meta.pubDateTemHora !== b.meta.pubDateTemHora) {
+		return a.meta.pubDateTemHora ? -1 : 1;
+	}
+
+	const updatedDiff = b.meta.updatedDateMs - a.meta.updatedDateMs;
+	if (updatedDiff !== 0) return updatedDiff;
+
+	return a.item.entry.id.localeCompare(b.item.entry.id, 'pt-BR');
+}
+
 export async function getArtigos(): Promise<CollectionEntry<'artigos'>[]> {
 	const all = await getCollection('artigos');
 	const filtrados = mostrarRascunhos()
@@ -54,6 +130,26 @@ export async function getResenhas(): Promise<CollectionEntry<'resenhas'>[]> {
 	return filtrados.sort(
 		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 	);
+}
+
+export async function getPostsPublicadosOrdenados(): Promise<PostOrdenavel[]> {
+	const [artigos, resenhas] = await Promise.all([getArtigos(), getResenhas()]);
+	const posts: PostOrdenavel[] = [
+		...artigos.map((entry) => ({ kind: 'artigo' as const, entry })),
+		...resenhas.map((entry) => ({ kind: 'resenha' as const, entry })),
+	];
+	const comMeta = await Promise.all(
+		posts.map(async (item) => ({
+			item,
+			meta: await getMetaRecencia(item),
+		})),
+	);
+	return comMeta.sort(compararRecencia).map(({ item }) => item);
+}
+
+export async function getMaisRecente(): Promise<PostOrdenavel | null> {
+	const posts = await getPostsPublicadosOrdenados();
+	return posts[0] ?? null;
 }
 
 export function formatarData(date: Date): string {

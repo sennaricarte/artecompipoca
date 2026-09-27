@@ -34,6 +34,12 @@ const obraLista = z.object({
 	temporadas: z.number().optional(),
 });
 
+const dataPublicacao = z.preprocess((value) => {
+	if (value instanceof Date) return value;
+	if (typeof value === 'string') return new Date(value);
+	return value;
+}, z.date());
+
 /**
  * @template {z.ZodRawShape} T
  * @param {z.ZodObject<T>} schema
@@ -69,8 +75,8 @@ const artigos = defineCollection({
 				seoTitle: z.string().optional(),
 				description: z.string(),
 				editoria: z.enum(['cinema', 'series', 'quadrinhos', 'musica']),
-				pubDate: z.coerce.date(),
-				updatedDate: z.coerce.date().optional(),
+				pubDate: dataPublicacao,
+				updatedDate: dataPublicacao.optional(),
 				autor: reference('autores'),
 				cover: image().optional(),
 				coverAlt: z.string().optional(),
@@ -102,8 +108,8 @@ const resenhas = defineCollection({
 				tipo: z.enum(['filme', 'serie', 'hq', 'album']),
 				anoObra: z.number().optional(),
 				nota: z.number().min(0).max(10).optional(),
-				pubDate: z.coerce.date(),
-				updatedDate: z.coerce.date().optional(),
+				pubDate: dataPublicacao,
+				updatedDate: dataPublicacao.optional(),
 				autor: reference('autores'),
 				cover: image().optional(),
 				coverAlt: z.string().optional(),

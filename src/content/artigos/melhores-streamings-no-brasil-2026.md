@@ -2,7 +2,7 @@
 title: "Melhores streamings no Brasil em 2026: qual assinar de acordo com o seu perfil"
 seoTitle: "Melhores streamings no Brasil em 2026: preços, planos e qual assinar"
 description: "Netflix, Prime Video, HBO Max, Disney+, Globoplay e os nichos: compare preços, planos e catálogos e descubra qual streaming combina com você em 2026."
-pubDate: 2026-09-27
+pubDate: 2026-09-27T10:00:00-03:00
 autor: redacao
 cover: "../../assets/capas/melhores-streamings-no-brasil-2026-cena.jpg"
 coverAlt: "Televisão na parede exibindo a tela inicial da Netflix, ao lado de uma parede de tijolos"
