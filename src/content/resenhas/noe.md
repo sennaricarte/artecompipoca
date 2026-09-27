@@ -2,13 +2,19 @@
 title: Noé
 description: "Crítica de Noé (2014), de Darren Aronofsky: a postura do patriarca entre justiça e misericórdia, ironia bíblica e empatia com a fé primitiva."
 pubDate: 2014-04-18
-updatedDate: 2026-09-26
+updatedDate: 2026-09-27
 autor: daniel-serafim
+cover: "../../assets/capas/noe-cena.jpg"
+coverAlt: "Russell Crowe como Noé, de barba grisalha e túnica rústica, numa paisagem desolada sob céu nublado"
+coverCredito: "Divulgação/Paramount Pictures"
 origem: arquivo
 legacyUrl: /critica-definitiva-noe/
 draft: false
 obra: Noé
 tipo: filme
+cartaz: "../../assets/capas/noe-cartaz.jpg"
+cartazAlt: "Cartaz de Noé: elenco sobre mar tempestuoso com relâmpago e o título NOÉ em letras brancas"
+cartazCredito: "Divulgação/Paramount Pictures"
 ficha:
   tituloOriginal: Noah
   ano: 2014
