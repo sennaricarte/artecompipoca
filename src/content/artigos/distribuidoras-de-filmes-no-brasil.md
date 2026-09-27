@@ -4,6 +4,9 @@ seoTitle: "Distribuidoras de filmes no Brasil: as maiores de 2025 e como funcion
 description: "Warner, Disney, Paris Filmes, H2O e Vitrine: entenda o que faz uma distribuidora, quem domina o mercado brasileiro e como elas escolhem os filmes em cartaz."
 pubDate: 2026-09-27
 autor: redacao
+cover: "../../assets/capas/distribuidoras-de-filmes-no-brasil-cena.jpg"
+coverAlt: "Mãos segurando uma claquete de cinema sobre um fundo marrom"
+coverCredito: "Foto: Pexels"
 editoria: cinema
 origem: original
 draft: false
