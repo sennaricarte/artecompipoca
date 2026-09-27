@@ -60,11 +60,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/batman-vs-superman-origem-da-justica/",
-		"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
-		"permanent": true
-	},
-	{
 		"source": "/bidu-caminhos-resenha/",
 		"destination": "/resenhas/bidu-caminhos/",
 		"permanent": true
@@ -262,11 +257,6 @@
 	{
 		"source": "/index.php/avanti-popolo-critica/",
 		"destination": "/resenhas/avanti-popolo/",
-		"permanent": true
-	},
-	{
-		"source": "/index.php/batman-vs-superman-origem-da-justica/",
-		"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
 		"permanent": true
 	},
 	{

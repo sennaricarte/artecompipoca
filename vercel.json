@@ -49,8 +49,18 @@
 			"permanent": true
 		},
 		{
+			"source": "/batman-vs-superman-origem-da-justica/",
+			"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
+			"permanent": true
+		},
+		{
 			"source": "/bicho-de-sete-cabecas-critica/",
 			"destination": "/resenhas/bicho-de-sete-cabecas/",
+			"permanent": true
+		},
+		{
+			"source": "/blue-jasmine-critica/",
+			"destination": "/resenhas/blue-jasmine/",
 			"permanent": true
 		},
 		{
@@ -66,6 +76,16 @@
 		{
 			"source": "/critica-definitiva-noe/",
 			"destination": "/resenhas/noe/",
+			"permanent": true
+		},
+		{
+			"source": "/especial-oscar-a-malvada/",
+			"destination": "/resenhas/a-malvada/",
+			"permanent": true
+		},
+		{
+			"source": "/game-of-thrones-resenha-terceira-temporada/",
+			"destination": "/resenhas/game-of-thrones-3-temporada/",
 			"permanent": true
 		},
 		{
@@ -89,8 +109,18 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/batman-vs-superman-origem-da-justica/",
+			"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/bicho-de-sete-cabecas-critica/",
 			"destination": "/resenhas/bicho-de-sete-cabecas/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/blue-jasmine-critica/",
+			"destination": "/resenhas/blue-jasmine/",
 			"permanent": true
 		},
 		{
@@ -106,6 +136,16 @@
 		{
 			"source": "/index.php/critica-definitiva-noe/",
 			"destination": "/resenhas/noe/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/especial-oscar-a-malvada/",
+			"destination": "/resenhas/a-malvada/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/game-of-thrones-resenha-terceira-temporada/",
+			"destination": "/resenhas/game-of-thrones-3-temporada/",
 			"permanent": true
 		},
 		{
@@ -204,6 +244,16 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/oblogquenaoestavala/game-of-thrones-quarta-temporada/",
+			"destination": "/resenhas/game-of-thrones-4-temporada/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/game-of-thrones-terceira-temporada/",
+			"destination": "/resenhas/game-of-thrones-3-temporada/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/oblogquenaoestavala/grandes-filmes-chinatown-1974/",
 			"destination": "/resenhas/chinatown-1974/",
 			"permanent": true
@@ -211,6 +261,11 @@
 		{
 			"source": "/index.php/oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd-1950/",
 			"destination": "/resenhas/crepusculo-dos-deuses-1950/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/grandes-filmes-o-mestre-the-master-2012/",
+			"destination": "/resenhas/o-mestre-2012/",
 			"permanent": true
 		},
 		{
@@ -364,6 +419,16 @@
 			"permanent": true
 		},
 		{
+			"source": "/oblogquenaoestavala/game-of-thrones-quarta-temporada/",
+			"destination": "/resenhas/game-of-thrones-4-temporada/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/game-of-thrones-terceira-temporada/",
+			"destination": "/resenhas/game-of-thrones-3-temporada/",
+			"permanent": true
+		},
+		{
 			"source": "/oblogquenaoestavala/grandes-filmes-chinatown-1974/",
 			"destination": "/resenhas/chinatown-1974/",
 			"permanent": true
@@ -371,6 +436,11 @@
 		{
 			"source": "/oblogquenaoestavala/grandes-filmes-crepusculo-dos-deuses-sunset-blvd-1950/",
 			"destination": "/resenhas/crepusculo-dos-deuses-1950/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/grandes-filmes-o-mestre-the-master-2012/",
+			"destination": "/resenhas/o-mestre-2012/",
 			"permanent": true
 		},
 		{

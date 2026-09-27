@@ -31,7 +31,7 @@ Dificilmente conseguiria apontar uma única contundente de **Meryl Streep**, já
 
 **Fernanda Montenegro** é bastante conhecida de nós por novelas e peças de teatro, no entanto só foi reconhecida internacionalmente com **Central do Brasil**, belo trabalho de **Walter Salles**, que nos apresenta uma personagem genuína que ajuda na busca de uma criança por seu pai até os confins do nordeste. Incrível!
 
-## Cate Blanchett em Blue Jasmine (2013)
+## Cate Blanchett em [Blue Jasmine (2013)](/resenhas/blue-jasmine/)
 
 **Cate Blanchett** essa inglesa arretada com voz linda diversifica nos gêneros tanto quanto nas personagens, seja como uma imponente elfa em **Senhor dos Anéis**, ou um clone de Katharine Hepburn em **O Aviador**, ou mesmo fazendo um inusitado Bob Dylan em **Não Estou Lá**. Cate encheu meus olhos em **Blue Jasmine** uma personagem por vezes amarga e por vezes doce, como a vida.
 
@@ -43,7 +43,7 @@ Dificilmente conseguiria apontar uma única contundente de **Meryl Streep**, já
 
 **Katharine Hepburn** uma grande atriz só comparada para mim à **Sra Streep**, começou em meados de 1930, mas seus filmes davam péssimas bilheterias, voltou nos anos 50 com parcerias formidáveis com **Spencer Tracy**, que secretamente dividia a cama com ela na vida real até sua morte em 1967, entre suas grandes estão: **Longa Viagem Para a Noite**, **O Leão No Inverno**, **O Lago Dourado**, **Viagem à África**. Mas uma das mais memoráveis é **Adivinhe Quem Vem Para Jantar**, em parceria com Tracy. Sublime!
 
-## Bette Davis em A Malvada (1950)
+## Bette Davis em [A Malvada (1950)](/resenhas/a-malvada/)
 
 **Bette Davis** coloca qualquer um em seu devido lugar, dada a elegância e rapidez de discurso, mulher com M maiúsculo. Nos brindou com atuações ímpares em: **Perigosa**, **Floresta Petrificada**, **Jezebel**, **Vitória Amarga**, **A Carta**. Uma das grandes atuações entre tantas para mim foi **A** **Malvada** que mostra toda sua desenvoltura.
 
@@ -97,7 +97,7 @@ Pense em classe, agora pense em **Helen Mirren**, dá na mesma. Não é à toa q
 
 ## Menção Honrosa
 
-A atriz **Amy Adams** aparece como promessa por ter surgido da Disney e vem escolhendo papéis cada vez mais desafiadores como **A Dúvida**, no qual contracena impecavelmente com o monstro Streep, e no espetacular **O Mestre** de PT Anderson. De olho nessa moça que ela promete!
+A atriz **Amy Adams** aparece como promessa por ter surgido da Disney e vem escolhendo papéis cada vez mais desafiadores como **A Dúvida**, no qual contracena impecavelmente com o monstro Streep, e no espetacular [**O Mestre**](/resenhas/o-mestre-2012/) de PT Anderson. De olho nessa moça que ela promete!
 
 **Jennifer Connelly** começou também jovem e já demonstrou ser exímia atriz com em **Réquiem Para Um Sonho** e **Casa de Areia e Névoa**, no entanto ela tem feito em sua grande maioria filmes de qualidade duvidosa que acabam por engessar sua persona ao formulário da boa moça.
 

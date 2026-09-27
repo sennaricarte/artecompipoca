@@ -1,11 +1,12 @@
 ---
 title: Game of Thrones – 4ª temporada
-description: Séries
+description: "Crítica da 4ª temporada de Game of Thrones na HBO: momentos espetaculares, Tyrion em julgamento e a batalha do Castelo Negro no nono episódio."
 pubDate: 2014-06-29
+updatedDate: 2026-09-27
 autor: ivanildo-pereira
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/game-of-thrones-quarta-temporada/
-draft: true
+draft: false
 obra: Game of Thrones – 4ª temporada
 tipo: serie
 ficha:
@@ -41,33 +42,25 @@ ficha:
   wikidataId: Q23572
 ---
 
-Séries
-
-**Publicado em** junho 29th, 2014 | *por Ivanildo Pereira*
-
-0
-
 # GAME OF THRONES: Quarta Temporada
-
--   [Tweet](http://twitter.com/share)
 
 ## Cotação: ★★★★ Muito Bom
 
 *ESMAGANDO OS BESOUROS*
 
-Realmente não há outra experiência na televisão como "Game of Thrones". Inigualável em termos de escala, a série se diferencia também pelo aspecto narrativo. Quatro temporadas já se foram e o espectador ainda não consegue apontar quem é o protagonista da série. Pelo contrário, há pelo menos quatro ou cinco personagens que se destacam como os protagonistas dentro das suas histórias. Ao invés de ter um núcleo, como quase todas as séries (na verdade, como quase todas as histórias), "Game of Thrones" tem um universo vasto. Na verdade, se há um centro no seriado, é o jogo do título, disputado por vários personagens e cujo objetivo final é o Trono de Ferro.
+Realmente não há outra experiência na televisão como "Game of Thrones". Inigualável em termos de escala, a série se diferencia também pelo aspecto narrativo. Quatro temporadas já se foram e o espectador ainda não consegue apontar quem é o protagonista da série. Pelo contrário, há pelo menos quatro ou cinco personagens que se destacam como os protagonistas dentro das suas histórias. Em vez de ter um núcleo, como quase todas as séries (na verdade, como quase todas as histórias), "Game of Thrones" tem um universo vasto. Na verdade, se há um centro no seriado, é o jogo do título, disputado por vários personagens e cujo objetivo final é o Trono de Ferro.
 
 Isso a torna uma história imprevisível, pois se não há heróis ou protagonistas claros, é difícil "torcer" para qualquer personagem. Não há também o maniqueísmo geralmente presente nesse tipo de história fantástica: embora até existam em "Game of Thrones" personagens que possam ser caracterizados como "bons" ou "maus", a maioria deles se situa numa zona cinzenta. E não podemos ter certeza da vitória do bem no final, até mesmo porque poucos personagens "bons" ainda permanecem vivos na série a esta altura.
 
-A forma como o seriado é estruturado se deve ao material fonte no qual o programa se baseia, a série de livros "As Crônicas de Gelo e Fogo" de George R. R. Martin. São livros longos, detalhados, com muitos personagens e uma rica história, alimentada pela imaginação prodigiosa do autor. Por isso, são perfeitos para serem adaptados de forma episódica na TV. Porém o universo vem ficando tão vasto que nesta quarta temporada, a série adquiriu um tom ainda mais episódico. Este ano foi o ano dos "momentos" e nem tanto da coesão narrativa – mas, para o mérito do seriado, quase todos os momentos foram realmente espetaculares e inesquecíveis.
+A forma como o seriado é estruturado se deve ao material fonte no qual o programa se baseia, a série de livros "As Crônicas de Gelo e Fogo" de George R. R. Martin. São livros longos, detalhados, com muitos personagens e uma rica história, alimentada pela imaginação prodigiosa do autor. Por isso, são perfeitos para serem adaptados de forma episódica na TV. Porém o universo vem ficando tão vasto que nesta quarta temporada, a série adquiriu um tom ainda mais episódico. Em 2014, foi o ano dos "momentos" e nem tanto da coesão narrativa – mas, para o mérito do seriado, quase todos os momentos foram realmente espetaculares e inesquecíveis.
 
-A temporada se inicia sob a ressaca do final sangrento do ano anterior, no qual o "Casamento Vermelho" aparentemente trouxe o fim da guerra pelo Trono de Ferro. Com a saída de cena dos Starks, tem inicio uma nova configuração de poder nos Sete Reinos. Mais fortes do que nunca, os Lannisters planejam consolidar seu poder com o casamento do rei Joffrey (Jack Gleeson) com Margaery Tyrell (Natalie Dormer). Porém um acontecimento inesperado coloca em risco o futuro do reino e também a vida de Tyrion Lannister (Peter Dinklage).
+A temporada se inicia sob a ressaca do final sangrento do ano anterior, no qual o "Casamento Vermelho" aparentemente trouxe o fim da guerra pelo Trono de Ferro. Com a saída de cena dos Starks, tem início uma nova configuração de poder nos Sete Reinos. Mais fortes do que nunca, os Lannisters planejam consolidar seu poder com o casamento do rei Joffrey (Jack Gleeson) com Margaery Tyrell (Natalie Dormer). Porém um acontecimento inesperado coloca em risco o futuro do reino e também a vida de Tyrion Lannister (Peter Dinklage).
 
-Os eventos em Porto Real repercutem em toda a série, mas continuamos acompanhando outros personagens em suas respectivas jornadas. Vemos Arya (Maisie Williams) e o Cão de Caça (Rory McCann) seguindo a caminho do Ninho da Águia, e a menina perde um pouco mais da sua humanidade no caminho. Bran (Isaac Hempstead-Wright) e seus amigos prosseguem em sua jornada em busca do corvo de três olhos. Jaime Lannister (Nikolaj Coster-Waldau) se acostuma à sua nova posição em Porto Real, e depois manda Brienne de Tarth (Gwendolyn Christie) à procura de Arya, para cumprir uma velha promessa. E, obviamente, reencontramos Daenerys (Emilia Clarke) além do Mar Estreito, descobrindo como é difícil governar; e Jon Snow (Kit Harington), preparando-se para o ataque das forças dos Selvagens à Muralha.
+Os eventos em Porto Real repercutem em toda a série, mas continuamos acompanhando outros personagens em suas respectivas jornadas. Vemos Arya (Maisie Williams) e o Cão de Caça (Rory McCann) seguindo a caminho do Ninho da Águia, e a menina perde um pouco mais da sua humanidade no caminho. Bran (Isaac Hempstead-Wright) e seus amigos prosseguem em sua jornada em busca do corvo de três olhos. Jaime Lannister (Nikolaj Coster-Waldau) se acostuma à sua nova posição em Porto Real, e depois manda Brienne de Tarth (Gwendoline Christie) à procura de Arya, para cumprir uma velha promessa. E, obviamente, reencontramos Daenerys (Emilia Clarke) além do Mar Estreito, descobrindo como é difícil governar; e Jon Snow (Kit Harington), preparando-se para o ataque das forças dos Selvagens à Muralha.
 
 Enquanto a história de Snow pelo menos atingiu um ponto culminante com a batalha do Castelo Negro no nono episódio, "The Watchers in the Wall", a de Daenerys permaneceu estática, só esquentando em alguns momentos, como nas breves cenas entre Verme Cinzento (Jacob Anderson) e Missandei (Nathalie Emmanuel). Ou na interação entre Daenerys e Dario (agora interpretado por Michiel Huisman, e curiosamente o novo ator não tem a menor semelhança com o anterior).
 
-A fragmentação entre as histórias fez com que não houvesse episódios unificados por um tema. Ao invés disso, acompanhamos um personagem aqui, outro ali, dando uma checada neles de vez em quando, e a série passou a ser definida por momentos bombásticos. Ora, o que fica na memória após o segundo episodio, "The Lion and the Rose", é a cena final, assim como o discurso de Tyrion em "The Laws of Gods and Men", ou a luta no defecho de "The Mountain and the Viper". Um momento que causou polêmica, de forma não antecipada pelos produtores da série, foi a cena de sexo entre Jaime e Cersei Lannister (Lena Headey) no terceiro episódio, "Breaker of Chains" – foi considerada um estupro pela maioria dos telespectadores, e com razão.
+A fragmentação entre as histórias fez com que não houvesse episódios unificados por um tema. Em vez disso, acompanhamos um personagem aqui, outro ali, dando uma checada neles de vez em quando, e a série passou a ser definida por momentos bombásticos. Ora, o que fica na memória após o segundo episódio, "The Lion and the Rose", é a cena final, assim como o discurso de Tyrion em "The Laws of Gods and Men", ou a luta no desfecho de "The Mountain and the Viper". Um momento que causou polêmica, de forma não antecipada pelos produtores da série, foi a cena de sexo entre Jaime e Cersei Lannister (Lena Headey) no terceiro episódio, "Breaker of Chains" – foi considerada um estupro pela maioria dos telespectadores, e com razão.
 
 Foi um momento estranho porque não teve consequências narrativas – lá pelo final da temporada Cersei parece ter esquecido tudo e perdoado Jaime. Além disso, a cena quase destruiu todo o processo de redenção pelo qual Jaime passou na terceira temporada. Para quê fazer isso, se não há uma forte razão dentro da história para tal? A falta de uma resposta convincente a essa pergunta deixou um gosto um pouco amargo na série, e ficou parecendo que os produtores e a HBO estavam interessados em chocar apenas pelo choque. Ao longo da série houve vários momentos chocantes, inclusive com conteúdo sexual, mas sempre existia um claro propósito narrativo para eles, o que faltou aqui.
 
@@ -78,19 +71,3 @@ E tecnicamente, "Game of Thrones" continua o mais espetacular seriado da TV. A b
 Esse episódio foi um dos poucos exemplos de coesão temática na temporada. Mas, curiosamente, a falta dessa coesão na maior parte do tempo não prejudicou a temporada como um todo, devido à intensidade e o brilhantismo dos momentos individuais – de novo, à parte a já mencionada cena entre Jaime e Cersei. É uma estratégia diferente, mas adequada ao projeto de "Game of Thrones", e que se torna mais uma característica especial desse projeto. Ora, nem só os grandes momentos, como as mortes de personagens marcantes ou cenas de ação, tiraram o folego do espectador nesta temporada. Um dos mais inesquecíveis momentos é o diálogo entre Tyrion e Jaime em "The Mountain and the Viper".
 
 Ambos conversam na masmorra escura sobre o primo Orson e sua mania de esmagar besouros por diversão. É um momento brilhantemente filmado e com atuações fantásticas de Dinklage e Coster-Waldau, e que por trás de uma conversa aparentemente banal, parece sintetizar a essência de "Game of Thrones". Tyrion queria uma explicação para o fato de o seu primo ter a fixação em matar besouros e imagina os bichos sendo oprimidos por uma força maior, cruel e inescrutável (será que o primo Orson representa o autor George R. R. Martin?) Ele queria uma explicação para a crueldade da vida e para a confusão do mundo em que vive. Tyrion não consegue uma resposta, assim como nós, aqui no nosso mundinho. "Game of Thrones", o seriado, também foi bastante cruel no seu quarto ano e chegou perto de ficar confuso e frágil em face de tantas histórias espalhadas. Mas de alguma forma conseguiu se manter, e esse é o feito mais incrível desta temporada.
-
-**Tags:** Emilia Clarke, Game of Thrones, HBO, Kit Harington, Lena Headey, Nikolaj Coster-Waldau, Peter Dinklage, Séries de TV
-
-#### About the Author
-
-Ivanildo Pereira Me formei em Ciências Biológicas mas o amor pelo cinema e pela arte falou mais alto. Depois estudei Jornalismo, tendo me formado em 2013 e escrevo sobre cinema desde 2010, após ter feito o curso Teoria, Linguagem e Crítica Cinematográfica do crítico Pablo Villaça. Literatura, música e cinema são meus maiores interesses…
-
-#### Related Posts
-
-##### 24 HORAS: VIVA UM NOVO DIA (24: Live Another Day) →
-
-##### DEXTER: Oitava e última temporada →
-
-##### BOARDWALK EMPIRE: Terceira Temporada →
-
-##### MAD MEN: Sexta Temporada →

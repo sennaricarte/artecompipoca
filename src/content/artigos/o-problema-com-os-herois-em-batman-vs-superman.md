@@ -14,7 +14,7 @@ editoria: cinema
 notaEditorial: "Texto escrito em abril de 2016, antes da estreia de Esquadrão Suicida."
 ---
 
-Não gostei de **Batman vs. Superman: A Origem da Justiça***.* O filme não me agradou por vários motivos, mas neste texto, quero falar especificamente sobre a forma como os dois grandes heróis do **Universo DC** são caracterizados no longa de **Zack Snyder**. Aviso: SPOILERS no texto abaixo, tanto de *Batman vs. Superman* quanto de **O Homem de Aço** (2013).
+Não gostei de [**Batman vs. Superman: A Origem da Justiça**](/resenhas/batman-vs-superman-a-origem-da-justica/)***.* O filme não me agradou por vários motivos, mas neste texto, quero falar especificamente sobre a forma como os dois grandes heróis do **Universo DC** são caracterizados no longa de **Zack Snyder**. Aviso: SPOILERS no texto abaixo, tanto de *Batman vs. Superman* quanto de **O Homem de Aço** (2013).
 
 **Vamos começar pelo Superman.**
 
