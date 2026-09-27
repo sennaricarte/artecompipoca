@@ -16,6 +16,11 @@
 }
 
 @layer base {
+	html,
+	body {
+		overflow-x: clip;
+	}
+
 	:focus-visible {
 		outline: 2px solid var(--color-pipoca);
 		outline-offset: 2px;
