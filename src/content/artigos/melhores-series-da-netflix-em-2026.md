@@ -6,7 +6,7 @@ pubDate: 2026-09-27
 autor: redacao
 editoria: series
 origem: original
-draft: true
+draft: false
 ---
 
 A Netflix teve o maior semestre da sua história: de janeiro a junho de 2026, os assinantes assistiram a mais de 97 bilhões de horas na plataforma. Reunimos as séries que marcaram o ano até agora, combinando os números oficiais de audiência divulgados pela própria Netflix com as produções mais elogiadas pela crítica. Os números entre parênteses são as visualizações no primeiro semestre, segundo o relatório oficial da empresa.

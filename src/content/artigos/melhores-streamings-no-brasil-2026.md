@@ -6,7 +6,7 @@ pubDate: 2026-09-27
 autor: redacao
 editoria: series
 origem: original
-draft: true
+draft: false
 ---
 
 Assinar tudo ficou caro. Um levantamento de agosto de 2026 calculou que manter os oito principais serviços do país ao mesmo tempo (Netflix, Prime Video, Disney+, HBO Max, Globoplay, Apple TV, Paramount+ e Crunchyroll) custa entre **R$ 208,20 e R$ 355,20 por mês**, dependendo dos planos escolhidos. Por isso, a pergunta certa não é qual é o melhor streaming, mas qual é o melhor para o que você gosta de assistir.

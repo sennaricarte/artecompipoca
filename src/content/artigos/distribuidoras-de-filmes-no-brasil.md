@@ -6,7 +6,7 @@ pubDate: 2026-09-27
 autor: redacao
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 Entre um filme pronto e a sessão no cinema da sua cidade existe um elo que quase ninguém nota: a **distribuidora**. É ela que compra ou licencia os direitos do filme para o país, define a data de estreia, negocia com as redes de cinema quantas salas ele vai ocupar, faz a campanha de divulgação e, em muitos casos, decide também como o título chega depois ao streaming e à TV. Quando você lê "Divulgação/Paris Filmes" no crédito de uma imagem aqui no site, é disso que se trata.
