@@ -223,7 +223,7 @@ Não tem idade para gostar de série e tem para todos os gostos. Por isso separa
 
 E pra você que ainda não assistiu alguma delas, corre e não perca mais tempo!
 
-## **The Simpsons (1989 – Atualmente)**
+## The Simpsons (1989 – Atualmente)
 
 Gênero: Comédia/Animação
 
@@ -239,7 +239,7 @@ Temporadas: 10
 
 Drogas, alcoolismo e gravidez na adolescência eram alguns dos assuntos em pauta na série teen. Considerada uma das primeiras séries voltadas para os problemas jovens, também falava das relações familiares, amorosas e de amizade entre o grupo de Brandon, Brenda, Kelly, David, Donna e companhia. Mas é claro, tudo no bairro mais rico e mimado da Califórnia.
 
-## **Friends (1994 – 2004)**
+## Friends (1994 – 2004)
 
 Gênero: Comédia
 

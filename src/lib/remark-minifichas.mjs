@@ -4,6 +4,7 @@
 
 /** @type {Map<string, string[]>} */
 const unmatchedByFile = new Map();
+const INTERVALO_ANOS = '–';
 
 /**
  * @param {string} s
@@ -91,7 +92,7 @@ function buildMinifichaChildren(obra) {
 	} else {
 		if (obra.ano != null) {
 			if (obra.anoFim != null) {
-				parts.push(textNode(`${obra.ano}–${obra.anoFim}`));
+				parts.push(textNode(`${obra.ano}${INTERVALO_ANOS}${obra.anoFim}`));
 			} else {
 				parts.push(textNode(`desde ${obra.ano}`));
 			}
