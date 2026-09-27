@@ -4,13 +4,13 @@ description: "Crítica de Ainda Estou Aqui, de Walter Salles: a ausência de Rub
 pubDate: 2026-09-27T16:00:00-03:00
 autor: senna-ricarte
 cover: "../../assets/capas/ainda-estou-aqui-cena.jpg"
-coverAlt: "DESCREVA A CENA AQUI"
+coverAlt: "Homem e mulher abraçam dois jovens sorridentes diante do mar sob a luz do fim de tarde"
 coverCredito: "Divulgação/Sony Pictures"
 cartaz: "../../assets/capas/ainda-estou-aqui-cartaz.jpg"
 cartazAlt: "Cartaz de Ainda Estou Aqui: homem e mulher ao centro, com dois jovens em primeiro plano diante do mar e o título sobre fundo azul"
 cartazCredito: "Divulgação/Sony Pictures"
 origem: original
-draft: true
+draft: false
 obra: Ainda Estou Aqui
 tipo: filme
 anoObra: 2024
