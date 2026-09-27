@@ -1,11 +1,11 @@
 ---
 title: "Feito Pipa vai representar o Brasil na corrida pelo Oscar 2027"
 description: "O filme de Allan Deberton, premiado em Berlim e Gramado, foi escolhido para disputar uma vaga em Melhor Filme Internacional. Veja o calendário até março."
-pubDate: 2026-09-26
+pubDate: 2026-09-27
 autor: redacao
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 Depois de levar o Brasil ao topo com "Ainda Estou Aqui" e voltar à disputa com "O Agente Secreto", o cinema brasileiro já tem seu nome para a próxima temporada de premiações. A Academia Brasileira de Cinema anunciou no dia 16 de setembro que **"Feito Pipa"**, de **Allan Deberton**, é o representante do país na corrida por uma indicação ao Oscar 2027 de **Melhor Filme Internacional**.

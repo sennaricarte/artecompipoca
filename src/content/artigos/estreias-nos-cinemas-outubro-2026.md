@@ -2,11 +2,11 @@
 title: "Estreias de outubro de 2026 nos cinemas: Street Fighter, Aaron Sorkin e a maratona Jogos Vorazes"
 seoTitle: "Estreias nos cinemas em outubro de 2026: os destaques semana a semana"
 description: "Street Fighter, o novo filme de Aaron Sorkin, a volta de Jogos Vorazes às telas e shows de Queen, BTS e Black Sabbath: os destaques de outubro nos cinemas."
-pubDate: 2026-09-26
+pubDate: 2026-09-27
 autor: redacao
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 Outubro é um mês cheio nas salas: tem adaptação de videogame, drama sobre os bastidores das redes sociais, clássicos de volta à tela grande e uma quantidade incomum de shows e filmes musicais. Separamos os destaques semana a semana. As datas seguem o calendário das distribuidoras e podem mudar, então vale confirmar na sua cidade antes de sair de casa.

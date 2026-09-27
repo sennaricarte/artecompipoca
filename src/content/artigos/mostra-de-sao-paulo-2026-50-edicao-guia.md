@@ -1,11 +1,11 @@
 ---
 title: "50ª Mostra de São Paulo: o que já se sabe sobre a edição de aniversário"
 description: "De 15 a 29 de outubro, a Mostra Internacional de Cinema chega à 50ª edição. Veja datas, abertura com James Gray, novidades e o que ainda falta anunciar."
-pubDate: 2026-09-26
+pubDate: 2026-09-27
 autor: redacao
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 A **Mostra Internacional de Cinema em São Paulo** chega à sua **50ª edição** em 2026, e o festival que ajudou a formar gerações de cinéfilos na cidade prepara uma programação de aniversário. A maratona acontece **de 15 a 29 de outubro**, e parte da programação e dos preços ainda não foi divulgada. Reunimos aqui o que já está confirmado, e este guia será atualizado assim que a lista completa de filmes sair.
