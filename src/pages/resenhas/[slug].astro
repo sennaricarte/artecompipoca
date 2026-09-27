@@ -6,6 +6,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import CapaPost from '../../components/CapaPost.astro';
 import MetaPost from '../../components/MetaPost.astro';
 import NotaEditorial from '../../components/NotaEditorial.astro';
+import Compartilhar from '../../components/Compartilhar.astro';
 import FichaHQ from '../../components/FichaHQ.astro';
 import FichaTecnica from '../../components/FichaTecnica.astro';
 import {
@@ -237,7 +238,10 @@ reviewLd.image = imageLd;
 	/>
 
 	<article class="px-4 py-10 md:px-6">
-		<div class="post-corpo mx-auto w-full max-w-[46rem]">
+		<div
+			class="post-layout mx-auto w-full max-w-[46rem] lg:max-w-none lg:grid lg:grid-cols-[1fr_46rem_1fr] lg:items-start"
+		>
+		<div class="post-pre lg:col-start-2">
 		<Breadcrumb
 			items={[
 				{ label: 'Início', href: '/' },
@@ -265,7 +269,9 @@ reviewLd.image = imageLd;
 				/>
 			)
 		}
+		</div>
 
+		<div class="post-corpo lg:col-start-2">
 		<h1 class="mt-8 font-display text-4xl tracking-wide text-text md:text-5xl">
 			{entry.data.title}
 		</h1>
@@ -341,6 +347,10 @@ reviewLd.image = imageLd;
 			<Content />
 		</div>
 
+		<div class="mt-10 lg:hidden">
+			<Compartilhar url={pageUrl} titulo={entry.data.title} variant="inline" />
+		</div>
+
 		{
 			mostrarFichaFim && (
 				<FichaTecnica
@@ -385,6 +395,13 @@ reviewLd.image = imageLd;
 				</section>
 			)
 		}
+		</div>
+
+		<aside class="post-share hidden lg:block lg:col-start-3 lg:row-start-2 self-start pl-8">
+			<div class="sticky top-24">
+				<Compartilhar url={pageUrl} titulo={entry.data.title} variant="sidebar" />
+			</div>
+		</aside>
 		</div>
 	</article>
 </BaseLayout>
