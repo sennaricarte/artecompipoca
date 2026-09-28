@@ -4,6 +4,10 @@ seoTitle: "Lançamentos do Prime Video em outubro de 2026: as principais séries
 description: "Carrie, de Mike Flanagan, a 2ª temporada de A Lista Terminal com Chris Pratt, Kill Jackie e mais: os principais lançamentos do Prime Video em outubro de 2026."
 pubDate: 2026-09-28T13:00:00-03:00
 autor: redacao
+cover: "../../assets/capas/lancamentos-prime-video-outubro-2026-cena.jpg"
+coverAlt: "Jovem de tranças ajusta um tecido num manequim de costura, num quarto iluminado por luz natural"
+coverCredito: "Divulgação/Prime Video"
+coverPosicao: "center 30%"
 editoria: series
 origem: original
 draft: false
