@@ -2,11 +2,8 @@
 title: "Oscar 2024: todos os vencedores da 96ª edição"
 seoTitle: "Oscar 2024: lista completa de vencedores, de Oppenheimer a Emma Stone"
 description: "Oppenheimer levou sete estatuetas, Emma Stone venceu por Pobres Criaturas e O Menino e a Garça surpreendeu: veja todos os vencedores do Oscar 2024."
-pubDate: 2026-09-27T09:00:00-03:00
+pubDate: 0002-11-03T12:06:28.000Z
 autor: redacao
-cover: "../../assets/capas/oscar-2024-vencedores-cena.jpg"
-coverAlt: "Cillian Murphy como J. Robert Oppenheimer, de terno e gravata, em cena do filme Oppenheimer"
-coverCredito: "Divulgação/Universal Pictures"
 editoria: cinema
 origem: original
 draft: false
