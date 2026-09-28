@@ -4,9 +4,12 @@ seoTitle: "Oscar 2024: lista completa de vencedores, de Oppenheimer a Emma Stone
 description: "Oppenheimer levou sete estatuetas, Emma Stone venceu por Pobres Criaturas e O Menino e a Garça surpreendeu: veja todos os vencedores do Oscar 2024."
 pubDate: 2026-09-27T09:00:00-03:00
 autor: redacao
+cover: "../../assets/capas/oscar-2024-vencedores-cena.jpg"
+coverAlt: "Cillian Murphy como J. Robert Oppenheimer, de terno e gravata, em cena do filme Oppenheimer"
+coverCredito: "Divulgação/Universal Pictures"
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 A 96ª cerimônia do Oscar aconteceu em 10 de março de 2024, no Dolby Theatre, em Los Angeles, com apresentação de Jimmy Kimmel. A noite teve um vencedor claro: **"Oppenheimer"**, de Christopher Nolan, levou 7 das 13 estatuetas a que concorria, incluindo Melhor Filme. Relembre os destaques e confira a lista completa de premiados.
@@ -26,6 +29,8 @@ O filme de Yorgos Lanthimos foi o segundo mais premiado, com quatro estatuetas: 
 - **"Zona de Interesse"**, de Jonathan Glazer, venceu como Melhor Filme Internacional, pelo Reino Unido, e ainda levou o Oscar de Som.
 - **"Barbie"**, um dos maiores sucessos de bilheteria do ano, saiu com uma única estatueta, a de Melhor Canção Original, para "What Was I Made For?", de Billie Eilish e Finneas. A noite ainda teve a apresentação de "I'm Just Ken", com Ryan Gosling, um dos momentos mais comentados da cerimônia.
 - **"Assassinos da Lua das Flores"**, de Martin Scorsese, e **"A Sociedade da Neve"** saíram sem nenhum prêmio.
+
+
 
 ## Lista completa de vencedores
 
@@ -53,6 +58,8 @@ O filme de Yorgos Lanthimos foi o segundo mais premiado, com quatro estatuetas: 
 - **Melhor Curta de Animação:** War Is Over! Inspired by the Music of John & Yoko
 - **Melhor Curta Documentário:** The Last Repair Shop
 
+
+
 ## E o Brasil?
 
 O Brasil não teve indicados na edição de 2024, mas a festa brasileira viria logo depois: no Oscar 2025, [Ainda Estou Aqui](/resenhas/ainda-estou-aqui/), de Walter Salles, deu ao país o primeiro Oscar de Melhor Filme Internacional da sua história. E a próxima aposta já está definida: [Feito Pipa vai representar o Brasil na corrida pelo Oscar 2027](/cinema/feito-pipa-representa-o-brasil-no-oscar-2027/).
@@ -65,3 +72,4 @@ O Brasil não teve indicados na edição de 2024, mas a festa brasileira viria l
 - [Caras Portugal](https://caras.pt/famosos/2024-03-11-conheca-os-vencedores-dos-oscares-2024/)
 - [Rolling Stone en Español](https://es.rollingstone.com/conoce-la-lista-completa-de-ganadores-de-los-premios-oscar-2024/)
 - [Julia Gavillan](https://juliagavillan.substack.com/p/conheca-os-vencedores-do-oscar-2024)
+
