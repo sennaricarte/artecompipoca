@@ -4,6 +4,9 @@ seoTitle: "Rei Spawn Vol. 5: lançamento da Panini, edições, preço e o que es
 description: "Rei Spawn Vol. 5 chega em novembro pela Panini com as edições 25 a 30: o Palhaço volta e começa a corrida pelo Trono do Inferno. Veja preço e detalhes."
 pubDate: 2026-09-28T10:00:00-03:00
 autor: redacao
+cartaz: "../../assets/capas/rei-spawn-vol-5-panini-cartaz.jpg"
+cartazAlt: "Capa de Rei Spawn Volume 5: Spawn com a capa vermelha, envolto em correntes, sob o título em amarelo"
+cartazCredito: "Divulgação/Panini"
 editoria: quadrinhos
 origem: original
 draft: true
