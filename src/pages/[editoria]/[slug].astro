@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import { getEntry, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -121,6 +122,7 @@ const itemListLd =
 		: null;
 
 const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
+const temCartazTopo = Boolean(!temCover && entry.data.cartaz && entry.data.cartazAlt);
 ---
 
 <BaseLayout
@@ -184,6 +186,31 @@ const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
 			class="post-layout mx-auto mt-8 w-full max-w-[46rem] lg:max-w-none lg:grid lg:grid-cols-[1fr_46rem_1fr] lg:items-stretch"
 		>
 		<div class="post-corpo min-w-0 lg:col-start-2">
+		{
+			temCartazTopo && entry.data.cartaz && entry.data.cartazAlt && (
+				<figure class="mx-auto mb-8 mt-2 flex w-full flex-col items-center">
+					<Picture
+						src={entry.data.cartaz}
+						formats={['avif', 'webp']}
+						width={entry.data.cartaz.width}
+						height={entry.data.cartaz.height}
+						alt={entry.data.cartazAlt}
+						loading="eager"
+						fetchpriority="high"
+						quality="mid"
+						pictureAttributes={{ class: 'block max-w-full' }}
+						class="block h-auto max-h-[360px] w-auto max-w-full rounded-xl shadow-[0_14px_36px_rgba(0,0,0,0.28)] md:max-h-[480px]"
+					/>
+					{
+						entry.data.cartazCredito && (
+							<figcaption class="mt-2 text-center text-xs leading-snug text-muted">
+								{entry.data.cartazCredito}
+							</figcaption>
+						)
+					}
+				</figure>
+			)
+		}
 		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
 			{entry.data.title}
 		</h1>
