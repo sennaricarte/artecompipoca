@@ -6,7 +6,7 @@ pubDate: 2026-09-28T11:00:00-03:00
 autor: redacao
 editoria: quadrinhos
 origem: original
-draft: true
+draft: false
 ---
 
 Depois de colocar Spawn contra todo mundo, o universo do Soldado do Inferno resolveu colocar Spawn contra ele mesmo. A Panini anunciou **Spawn Mata Todos os Spawns**, encadernado que chega em novembro e já está em pré-venda na loja oficial da editora por **R$ 39,90**.
@@ -30,6 +30,8 @@ A história brinca com as diferentes versões e personagens do universo criado p
 - **Preço:** R$ 39,90
 - **Lançamento:** previsão de envio na segunda quinzena de novembro de 2026
 
+
+
 ## Para quem é
 
 Por ser uma minissérie fechada em cinco edições, "Spawn Mata Todos os Spawns" funciona como leitura independente: não exige acompanhar a cronologia da série principal, embora quem conhece as muitas versões de Spawn vá aproveitar melhor as piadas e referências. A Panini também publicou antes "Spawn Mata Todo Mundo", que segue a mesma linha de humor violento.
@@ -40,3 +42,4 @@ Novembro vai ser um mês cheio para os fãs do personagem: no mesmo período, a 
 
 - [JWave](https://www.jwave.com.br/2026/09/pequeno-spawn-declara-guerra-aos-seus-proprios-clones-em-nova-hq-da-panini/)
 - [Panini: catálogo de Spawn](https://panini.com.br/panini-comics/spawn)
+
