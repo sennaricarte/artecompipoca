@@ -5,9 +5,12 @@ description: "Anora levou cinco estatuetas, Adrien Brody e Mikey Madison vencera
 pubDate: 2025-02-03T15:00:00.000Z
 updatedDate: 2026-09-27
 autor: redacao
+cover: "../../assets/capas/oscar-2025-vencedores-cena.jpg"
+coverAlt: "Fernanda Torres como Eunice Paiva, de camisa verde estampada, sentada num restaurante em cena de Ainda Estou Aqui"
+coverCredito: "Divulgação/Sony Pictures"
 editoria: cinema
 origem: original
-draft: false
+draft: true
 ---
 
 A 97ª cerimônia do Oscar aconteceu em 2 de março de 2025, no Dolby Theatre, em Hollywood, com apresentação do comediante Conan O'Brien. Foi uma noite histórica para o Brasil e consagradora para um filme independente: **"Anora"**, de Sean Baker, levou cinco estatuetas, incluindo Melhor Filme. Relembre os destaques e confira a lista completa de premiados.
