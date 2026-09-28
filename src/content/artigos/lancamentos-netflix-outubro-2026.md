@@ -4,6 +4,10 @@ seoTitle: "Lançamentos da Netflix em outubro de 2026: as principais séries e f
 description: "Lupin, A Diplomata, A Leste do Éden, Anora, Pecadores e muito terror para o Halloween: os principais lançamentos da Netflix em outubro de 2026."
 pubDate: 2026-09-28T12:00:00-03:00
 autor: redacao
+cover: "../../assets/capas/lancamentos-netflix-outubro-2026-cena.jpg"
+coverAlt: "Cena de série: uma jovem olha fixamente para a câmera enquanto é abraçada por trás, sob luz quente e baixa"
+coverCredito: "Divulgação/Netflix"
+coverPosicao: "center 35%"
 editoria: series
 origem: original
 draft: false
