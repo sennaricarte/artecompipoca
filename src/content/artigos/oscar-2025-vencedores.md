@@ -2,9 +2,12 @@
 title: "Oscar 2025: todos os vencedores da 97ª edição"
 seoTitle: "Oscar 2025: lista completa de vencedores, de Anora a Ainda Estou Aqui"
 description: "Anora levou cinco estatuetas, Adrien Brody e Mikey Madison venceram, e Ainda Estou Aqui deu ao Brasil o primeiro Oscar: veja todos os vencedores de 2025."
-pubDate: 2025-02-03T15:00:00.000Z
+pubDate: 2025-03-02T12:00:00-03:00
 updatedDate: 2026-09-27
 autor: redacao
+cover: "../../assets/capas/oscar-2025-vencedores-cena.jpg"
+coverAlt: "Fernanda Torres como Eunice Paiva, de camisa verde estampada, sentada num restaurante em cena de Ainda Estou Aqui"
+coverCredito: "Divulgação/Sony Pictures"
 editoria: cinema
 origem: original
 draft: false
