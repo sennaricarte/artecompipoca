@@ -4,6 +4,9 @@ seoTitle: "Spawn Mata Todos os Spawns: lançamento da Panini, preço e o que esp
 description: "Spawn Mata Todos os Spawns chega em novembro pela Panini: o Pequeno Spawn decide eliminar todas as outras Crias do Inferno. Veja preço, autores e detalhes."
 pubDate: 2026-09-28T11:00:00-03:00
 autor: redacao
+cartaz: "../../assets/capas/spawn-mata-todos-os-spawns-panini-cartaz.jpg"
+cartazAlt: "Capa de Spawn Mata Todos os Spawns: o Pequeno Spawn, de coroa e empunhando uma arma, cercado de outros Spawns, com o título colorido no alto"
+cartazCredito: "Divulgação/Panini"
 editoria: quadrinhos
 origem: original
 draft: false
