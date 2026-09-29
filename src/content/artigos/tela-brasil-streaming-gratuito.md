@@ -6,7 +6,7 @@ pubDate: 2026-09-29T11:00:00-03:00
 autor: senna-ricarte
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 Quem acompanha o cinema brasileiro sabe que o problema nunca foi a falta de bons filmes, e sim a dificuldade de encontrá-los. Muita coisa boa passa por festivais, ganha prêmios lá fora e depois simplesmente some, sem espaço nas salas das grandes redes nem nos catálogos dos streamings. Pois o **Tela Brasil** chegou justamente para tentar resolver isso, e de graça.
@@ -62,3 +62,4 @@ Quer comparar com os serviços pagos? Veja o nosso guia dos [melhores streamings
 - [Omelete: aplicativo](https://www.omelete.com.br/filmes/tela-brasil-streaming-nacional-app-gratuito-android-e-ios)
 - [TecMundo](https://www.tecmundo.com.br/minha-serie/604151-tela-brasil-ganha-aplicativo-oficial-para-android-e-ios.htm)
 - [Universo ZN](https://universozn.com.br/tela-brasil-app-streaming-gratis/)
+
