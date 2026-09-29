@@ -3,6 +3,9 @@ title: "Barrados no Baile"
 description: "Crítica de Barrados no Baile: a série teen que marcou os anos 90 volta à Netflix com a dublagem clássica e mostra por que seus temas ainda soam atuais."
 pubDate: 2026-09-29T16:00:00-03:00
 autor: senna-ricarte
+cover: "../../assets/capas/barrados-no-baile-cena.jpg"
+coverAlt: "Elenco de Barrados no Baile em fotos de divulgação dos anos 90: a turma na praia e posando de jeans e camisetas coloridas, com o logotipo Beverly Hills 90210"
+coverCredito: "Divulgação/Paramount"
 origem: original
 draft: false
 obra: Barrados no Baile
