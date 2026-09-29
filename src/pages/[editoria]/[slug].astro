@@ -14,6 +14,7 @@ import {
 	nomeEditoria,
 	rotuloCapaArtigo,
 } from '../../lib/conteudo';
+import { getStructuredDataImages } from '../../lib/imagens-seo';
 
 export async function getStaticPaths() {
 	const artigos = await getArtigos();
@@ -49,7 +50,12 @@ const seoTitle = entry.data.seoTitle ?? entry.data.title;
 const dateModified = entry.data.updatedDate ?? entry.data.pubDate;
 
 const ogImage = new URL(`/og/artigos/${entry.id}.png`, site).href;
-const imageLd = ogImage;
+const imageLd = await getStructuredDataImages({
+	cover: entry.data.cover,
+	coverPosicao: entry.data.coverPosicao,
+	fallbackOgImage: ogImage,
+	site,
+});
 
 const relacionados = (await getArtigos())
 	.filter(

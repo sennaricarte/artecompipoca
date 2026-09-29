@@ -37,7 +37,9 @@ const canonical = Astro.props.canonical
 	: defaultCanonical;
 
 const pageTitle = title === 'Arte Com Pipoca' ? title : `${title} | Arte Com Pipoca`;
-const robots = noindex ? 'noindex,follow' : 'index,follow';
+const robots = noindex
+	? 'noindex,follow'
+	: 'index,follow,max-image-preview:large';
 const ogImageAbsolute = new URL(ogImage, site).href;
 ---
 

@@ -136,7 +136,7 @@ if (aplicar) {
 }
 
 console.log(`\nResumo: ${aprovadas.length} aprovada(s), ${reprovadas.length} reprovada(s), ${ignorados.length} arquivo(s) ignorado(s).`);
-if (abaixoIdeal.length) console.log(`Abaixo do ideal (< 1280px): ${abaixoIdeal.join(', ')}`);
+if (abaixoIdeal.length) console.log(`Abaixo de 1200px (sem imagem grande no Discover): ${abaixoIdeal.join(', ')}`);
 if (creditoPadrao.length) console.log(`Crédito "${CREDITO_PADRAO}" por falta de dado: ${creditoPadrao.join(', ')}`);
 const soDivulgacao = linhas.filter((l) => l.credito === CREDITO_PADRAO && !creditoPadrao.some((c) => c.startsWith(`${l.id} `)));
 if (soDivulgacao.length) console.log(`Crédito "${CREDITO_PADRAO}" vindo do CSV (distribuidora a confirmar): ${soDivulgacao.map((l) => l.id).join(', ')}`);

@@ -6,7 +6,7 @@
  *     --credito="Divulgação/Distribuidora" --alt="..."
  *     [--posicao="center 30%"] [--substituir] [--apply]
  *
- * cena:   horizontal, largura >= 1000px (abaixo de 1280px avisa "abaixo do ideal")
+ * cena:   horizontal, largura >= 1000px (abaixo de 1200px avisa que não qualifica para Discover)
  *         → cover, coverAlt, coverCredito, coverPosicao (remove coverLicencaUrl).
  * cartaz: vertical, altura >= 400px → cartaz, cartazAlt, cartazCredito.
  *         Resenhas de álbum: quadrado (0,95–1,05) com lado >= 500px.

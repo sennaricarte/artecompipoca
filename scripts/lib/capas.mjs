@@ -14,8 +14,8 @@ const COLECOES = ['resenhas', 'artigos'];
 export const LADO_MAIOR_MAX = 2000;
 export const QUALIDADE_JPEG = 85;
 
-/** Largura a partir da qual a cena deixa de ser "abaixo do ideal". */
-export const CENA_LARGURA_IDEAL = 1280;
+/** Largura a partir da qual a cena se qualifica para imagem grande no Discover. */
+export const CENA_LARGURA_IDEAL = 1200;
 /** Cartaz quadrado (capa de disco): proporção aceita e lado mínimo. */
 export const QUADRADO_PROPORCAO = [0.95, 1.05];
 export const QUADRADO_LADO_MIN = 500;
@@ -195,7 +195,9 @@ export async function planejarCapa(opcoes) {
 	const motivo = validarDimensoes(dims, tipo, tipoPost);
 	if (motivo) problemas.push(motivo);
 	else if (tipo === 'cena' && (dims.width ?? 0) < CENA_LARGURA_IDEAL) {
-		avisos.push(`abaixo do ideal (${dims.width}px < ${CENA_LARGURA_IDEAL}px)`);
+		avisos.push(
+			'Abaixo de 1200px: esta capa não se qualifica para imagem grande no Google Discover.',
+		);
 	}
 	if (!alt?.trim()) problemas.push('alt vazio');
 	if (!credito?.trim()) problemas.push('crédito vazio');

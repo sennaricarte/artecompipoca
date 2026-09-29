@@ -17,6 +17,7 @@ import {
 	TIPO_RESENHA_PARA_EDITORIA,
 	type TipoResenha,
 } from '../../lib/conteudo';
+import { getStructuredDataImages } from '../../lib/imagens-seo';
 
 export async function getStaticPaths() {
 	const resenhas = await getResenhas();
@@ -106,7 +107,12 @@ const temFichaExibida = mostrarFichaHQ || temFichaInicio || mostrarFichaFim;
 const temCover = Boolean(entry.data.cover && entry.data.coverAlt);
 
 const ogImage = new URL(`/og/resenhas/${entry.id}.png`, site).href;
-const imageLd = ogImage;
+const imageLd = await getStructuredDataImages({
+	cover: entry.data.cover,
+	coverPosicao: entry.data.coverPosicao,
+	fallbackOgImage: ogImage,
+	site,
+});
 
 const relacionados = (await getResenhas())
 	.filter((r) => r.data.tipo === entry.data.tipo && r.id !== entry.id)

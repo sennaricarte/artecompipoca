@@ -10,6 +10,49 @@ coverCredito: "Divulgação/Paris Filmes"
 editoria: cinema
 origem: original
 draft: false
+obras:
+  - titulo: "Jogos Vorazes"
+    tipo: filme
+    wikidataId: Q212965
+    tituloOriginal: "The Hunger Games"
+    ano: 2012
+    direcao:
+      - "Gary Ross"
+  - titulo: "Jogos Vorazes: Em Chamas"
+    tipo: filme
+    wikidataId: Q574583
+    tituloOriginal: "The Hunger Games: Catching Fire"
+    ano: 2013
+    direcao:
+      - "Francis Lawrence"
+  - titulo: "Jogos Vorazes: A Esperança – Parte 1"
+    tipo: filme
+    wikidataId: Q4142083
+    tituloOriginal: "The Hunger Games: Mockingjay – Part 1"
+    ano: 2014
+    direcao:
+      - "Francis Lawrence"
+  - titulo: "Jogos Vorazes: A Esperança – O Final"
+    tipo: filme
+    wikidataId: Q10307713
+    tituloOriginal: "The Hunger Games: Mockingjay – Part 2"
+    ano: 2015
+    direcao:
+      - "Francis Lawrence"
+  - titulo: "Jogos Vorazes: A Cantiga dos Pássaros e das Serpentes"
+    tipo: filme
+    wikidataId: Q96377121
+    tituloOriginal: "The Hunger Games: The Ballad of Songbirds and Snakes"
+    ano: 2023
+    direcao:
+      - "Francis Lawrence"
+  - titulo: "Jogos Vorazes: Amanhecer na Colheita"
+    tipo: filme
+    wikidataId: Q126390739
+    tituloOriginal: "The Hunger Games: Sunrise on the Reaping"
+    ano: 2026
+    direcao:
+      - "Francis Lawrence"
 ---
 
 Com **Jogos Vorazes: Amanhecer na Colheita** chegando aos cinemas em 20 de novembro, a saga de Panem vai somar sete filmes, e a pergunta volta: qual é a ordem certa para assistir? A resposta depende do que você procura. Abaixo estão as duas ordens possíveis, a de lançamento e a cronológica, e a nossa recomendação para quem vai começar agora.
