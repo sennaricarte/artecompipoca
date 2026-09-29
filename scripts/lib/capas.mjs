@@ -129,11 +129,12 @@ export function validarDimensoes(meta, tipo, tipoPost) {
 	const w = meta.width ?? 0;
 	const h = meta.height ?? 0;
 	const regra = REGRAS[tipo];
-	if (tipo === 'cartaz' && tipoPost === 'album') {
+	// Aceitar cartaz quadrado para álbuns e (agora) séries
+	if (tipo === 'cartaz' && (tipoPost === 'album' || tipoPost === 'serie')) {
 		const proporcao = h ? w / h : 0;
 		const [min, max] = QUADRADO_PROPORCAO;
 		if (proporcao < min || proporcao > max) {
-			return `capa de álbum precisa ser quadrada (proporção ${proporcao.toFixed(2)}, aceito ${min}–${max})`;
+			return `cartaz precisa ser quadrado (proporção ${proporcao.toFixed(2)}, aceito ${min}–${max})`;
 		}
 		if (Math.min(w, h) < QUADRADO_LADO_MIN) {
 			return `lado mínimo de ${QUADRADO_LADO_MIN}px (tem ${Math.min(w, h)}px)`;

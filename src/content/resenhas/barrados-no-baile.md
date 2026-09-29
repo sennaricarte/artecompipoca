@@ -6,6 +6,9 @@ autor: senna-ricarte
 cover: "../../assets/capas/barrados-no-baile-cena.jpg"
 coverAlt: "Elenco de Barrados no Baile em fotos de divulgação dos anos 90: a turma na praia e posando de jeans e camisetas coloridas, com o logotipo Beverly Hills 90210"
 coverCredito: "Divulgação/Paramount"
+cartaz: "../../assets/capas/barrados-no-baile-cartaz.jpg"
+cartazAlt: "Foto de divulgação do elenco original de Barrados no Baile: oito jovens posando juntos numa escada de madeira à beira da praia"
+cartazCredito: "Divulgação/Paramount"
 origem: original
 draft: false
 obra: Barrados no Baile
