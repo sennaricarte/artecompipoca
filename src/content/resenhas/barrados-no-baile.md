@@ -4,7 +4,7 @@ description: "Crítica de Barrados no Baile: a série teen que marcou os anos 90
 pubDate: 2026-09-29T16:00:00-03:00
 autor: senna-ricarte
 origem: original
-draft: true
+draft: false
 obra: Barrados no Baile
 tipo: serie
 anoObra: 1990
