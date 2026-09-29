@@ -4,6 +4,9 @@ seoTitle: "Tela Brasil: como funciona o streaming gratuito de filmes brasileiros
 description: "O Tela Brasil reúne mais de 550 filmes, séries e documentários nacionais de graça, sem anúncios. Veja como acessar, o que tem no catálogo e onde assistir."
 pubDate: 2026-09-29T11:00:00-03:00
 autor: senna-ricarte
+cover: "../../assets/capas/tela-brasil-streaming-gratuito-cena.jpg"
+coverAlt: "Logotipo da plataforma Tela Brasil em letras brancas sobre fundo preto, com formas geométricas em azul, amarelo e verde"
+coverCredito: "Divulgação/Ministério da Cultura"
 editoria: cinema
 origem: original
 draft: false
