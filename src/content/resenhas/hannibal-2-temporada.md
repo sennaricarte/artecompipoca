@@ -3,6 +3,7 @@ title: Hannibal – 2ª temporada
 description: "Will Graham é um talentoso fornecedor de perfis criminosos, mas a mente de Hannibal é complexa demais até para ele."
 pubDate: 2014-03-09
 autor: beth-nieto
+temporadaResenhada: 2
 origem: arquivo
 legacyUrl: /hannibal-2a-temporada-imperdivel/
 draft: true
@@ -27,6 +28,8 @@ ficha:
   temporadas: 3
   emissora: NBC
   wikidataId: Q888841
+  ano: 2013
+anoObra: 2013
 ---
 
 **Hannibal Lecter** é um psiquiatra, e canibal. Infelizmente, Jack Crawford (**Laurence Fishburne**) e o resto do FBI não receberam essa 2ª característica num memorando interno durante a 1ª temporada da série Hannibal, que acabou com o pobre Will Graham (**Hugh Dancy**) sendo acusado de assassinato pela trama que o Dr. Lecter (**Mads Mikkelsen**) armou para ele, e acabou trancafiado no Baltimore State Hospital para criminosos insanos. Vamos esperar que eles, pelo menos, deixem-no lavar o gosto da orelha humana regurgitada de sua boca.

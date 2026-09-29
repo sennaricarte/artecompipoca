@@ -31,6 +31,8 @@ ficha:
   temporadas: 13
   emissora: FX
   wikidataId: Q53922
+  ano: 2011
+anoObra: 2011
 ---
 
 Temos aguardado ansiosamente desde o término da última temporada de "American Horror Story" – "Coven" por pistas que nos dessem uma indicação de como será a 4 ª temporada. E tampouco sabíamos como iria se chamar, "Carnaval"? "Circus"?

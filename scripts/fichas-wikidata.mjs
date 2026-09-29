@@ -68,6 +68,8 @@ const GENRE_EN_MAP = {
 	'romantic comedy': 'Comédia romântica',
 	drama: 'Drama',
 	comedy: 'Comédia',
+	'soap opera': 'Drama',
+	'youth series': 'Série adolescente',
 	thriller: 'Suspense',
 	horror: 'Terror',
 	'science fiction': 'Ficção científica',
@@ -253,6 +255,9 @@ function fichaToYaml(ficha) {
 	add('criadores', ficha.criadores);
 	add('temporadas', ficha.temporadas);
 	add('emissora', ficha.emissora);
+	add('anoFim', ficha.anoFim);
+	add('episodios', ficha.episodios);
+	add('situacao', ficha.situacao);
 	add('wikidataId', ficha.wikidataId);
 	return lines.join('\n');
 }
@@ -275,13 +280,16 @@ const CHAVES_FACTUAIS = [
 	'criadores',
 	'temporadas',
 	'emissora',
+	'anoFim',
+	'episodios',
+	'situacao',
 	'wikidataId',
 ];
 
 /** Campos que o Wikidata costuma ter para cada tipo; decide se vale consultar. */
 const FACTUAIS_POR_TIPO = {
 	filme: ['tituloOriginal', 'ano', 'direcao', 'roteiro', 'elenco', 'generos', 'duracaoMin', 'paises', 'wikidataId'],
-	serie: ['tituloOriginal', 'ano', 'criadores', 'elenco', 'generos', 'temporadas', 'emissora', 'paises', 'wikidataId'],
+	serie: ['tituloOriginal', 'ano', 'criadores', 'elenco', 'generos', 'temporadas', 'emissora', 'paises', 'anoFim', 'episodios', 'situacao', 'wikidataId'],
 };
 
 /**
@@ -747,6 +755,9 @@ async function runSearch() {
 			paises: best.paises.join(', '),
 			criadores: best.criadores.join(', '),
 			temporadas: best.temporadas ?? '',
+			anoFim: best.anoFim ?? '',
+			episodios: best.episodios ?? '',
+			situacao: best.situacao || '',
 			emissora: best.emissora || '',
 		});
 
@@ -779,6 +790,9 @@ async function runSearch() {
 		'paises',
 		'criadores',
 		'temporadas',
+		'anoFim',
+		'episodios',
+		'situacao',
 		'emissora',
 	];
 

@@ -3,6 +3,7 @@ title: Boardwalk Empire – 3ª temporada
 description: Séries
 pubDate: 2014-05-06
 autor: ivanildo-pereira
+temporadaResenhada: 3
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/boardwalk-empire-terceira-temporada/
 draft: true
@@ -29,6 +30,8 @@ ficha:
   temporadas: 5
   emissora: HBO
   wikidataId: Q585758
+  ano: 2010
+anoObra: 2010
 ---
 
 Séries

@@ -107,7 +107,22 @@ const resenhas = defineCollection({
 				obra: z.string(),
 				tipo: z.enum(['filme', 'serie', 'hq', 'album']),
 				anoObra: z.number().optional(),
+				anoFim: z.number().optional(),
 				nota: z.number().min(0).max(10).optional(),
+				episodios: z.number().optional(),
+				situacao: z
+					.enum(['Em exibição', 'Encerrada', 'Cancelada'])
+					.optional(),
+				temporadaResenhada: z.number().optional(),
+				ondeAssistirBrasil: z.string().optional(),
+				dublagem: z
+					.array(
+						z.object({
+							personagem: z.string(),
+							dublador: z.string(),
+						}),
+					)
+					.optional(),
 				pubDate: dataPublicacao,
 				updatedDate: dataPublicacao.optional(),
 				autor: reference('autores'),

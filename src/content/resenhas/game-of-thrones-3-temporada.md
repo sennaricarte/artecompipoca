@@ -4,6 +4,7 @@ description: "Crítica da 3ª temporada de Game of Thrones na HBO: alianças, ca
 pubDate: 2014-04-03
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
+temporadaResenhada: 3
 cover: "../../assets/capas/game-of-thrones-3-temporada-cena.jpg"
 coverAlt: "Peter Dinklage como Tyrion Lannister, olhando para o lado diante de uma parede de pedra"
 coverCredito: "Divulgação/HBO"
@@ -47,6 +48,7 @@ ficha:
   temporadas: 8
   emissora: HBO
   wikidataId: Q23572
+  ano: 2011
   sinopse: "Com a Guerra dos Cinco Reis em andamento, Robb Stark vence batalhas mas começa a perder aliados, os Lannister consolidam o poder em Porto Real e, do outro lado do mar, Daenerys busca um exército para reconquistar o Trono de Ferro. Ao norte da Muralha, Jon Snow se infiltra entre os selvagens."
   curiosidades:
     - "A terceira temporada começa a adaptar \"A Tormenta de Espadas\", terceiro livro de George R.R. Martin, tão longo que foi dividido entre esta temporada e a seguinte."
@@ -57,6 +59,7 @@ ficha:
       url: "https://www.purebreak.com.br/noticias/-game-of-thrones-101-curiosidades-sobre-a-serie-que-revolucionou-a-televisao/85447"
     - nome: "Wikipédia (en)"
       url: "https://en.wikipedia.org/wiki/Game_of_Thrones_season_3"
+anoObra: 2011
 ---
 
 # GAME OF THRONES: Terceira Temporada

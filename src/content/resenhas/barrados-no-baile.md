@@ -13,7 +13,47 @@ tipo: serie
 anoObra: 1990
 nota: 8.5
 ficha:
+  tituloOriginal: "Beverly Hills, 90210"
+  ano: 1990
+  direcao:
+    - "Jason Priestley"
+  roteiro:
+    - "Darren Star"
+  duracaoMin: 44
+  paises:
+    - "Estados Unidos"
+  criadores:
+    - "Darren Star"
+  temporadas: 10
+  emissora: "Fox Broadcasting Company"
+  wikidataId: Q117590
   sinopse: "Os irmãos gêmeos Brandon e Brenda Walsh deixam Minnesota com os pais e se mudam para Beverly Hills, onde passam a estudar na elitista West Beverly High. Entre festas, rivalidades, romances e dilemas familiares, a turma cresce diante do público, do colégio à faculdade, enfrentando temas que iam muito além do romance adolescente."
+  ondeAssistirBrasil: "Netflix (temporadas 1 a 4, com dublagem clássica)"
+  dublagem:
+    - personagem: "Brandon Walsh"
+      dublador: "Henrique Ogalla"
+    - personagem: "Brenda Walsh"
+      dublador: "Marisa Leal"
+    - personagem: "Kelly Taylor"
+      dublador: "Mônica Rossi"
+    - personagem: "Dylan McKay"
+      dublador: "Marco Ribeiro"
+    - personagem: "David Silver"
+      dublador: "Manolo Rey"
+    - personagem: "Steve Sanders"
+      dublador: "Ettore Zuim"
+    - personagem: "Donna Martin"
+      dublador: "Telma da Costa"
+  elenco:
+    - "Jason Priestley"
+    - "Shannen Doherty"
+    - "Jennie Garth"
+    - "Luke Perry"
+    - "Ian Ziering"
+    - "Tori Spelling"
+  generos:
+    - "Drama"
+    - "Série adolescente"
   curiosidades:
     - "A série foi criada por Darren Star, que depois criaria Melrose Place, derivada do próprio universo de Barrados no Baile, e Sex and the City."
     - "Nos anos 90, um levantamento do Datafolha apontou Barrados no Baile como a série mais vista pelos jovens paulistanos: 76% dos entrevistados de 13 a 25 anos diziam assistir regularmente, à frente de Melrose Place e de Anos Incríveis."

@@ -1,0 +1,132 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface DublagemItem {
+	personagem: string;
+	dublador: string;
+}
+
+interface Ficha {
+	tituloOriginal?: string;
+	criadores?: string[];
+	elenco?: string[];
+	emissora?: string;
+	ano?: number;
+	anoFim?: number;
+	situacao?: 'Em exibição' | 'Encerrada' | 'Cancelada';
+	temporadas?: number;
+	episodios?: number;
+	generos?: string[];
+	paises?: string[];
+	temporadaResenhada?: number;
+	ondeAssistirBrasil?: string;
+	dublagem?: DublagemItem[];
+	sinopse?: string;
+}
+
+interface Props {
+	ficha?: Ficha;
+	obra: string;
+	cartaz?: ImageMetadata;
+	cartazAlt?: string;
+	cartazCredito?: string;
+}
+
+const { ficha = {}, obra, cartaz, cartazAlt, cartazCredito } = Astro.props;
+const CARTAZ_LARGURA = 240;
+const temCartaz = Boolean(cartaz && cartazAlt);
+
+function juntar(list?: string[]) {
+	if (!list?.length) return undefined;
+	return list.slice(0, 6).join(', ');
+}
+
+const linhas: { rotulo: string; valor: string }[] = [];
+if (ficha.tituloOriginal) linhas.push({ rotulo: 'Título original', valor: ficha.tituloOriginal });
+if (ficha.criadores && ficha.criadores.length) linhas.push({ rotulo: 'Criação', valor: juntar(ficha.criadores) ?? '' });
+if (ficha.elenco && ficha.elenco.length) linhas.push({ rotulo: 'Elenco', valor: juntar(ficha.elenco) ?? '' });
+if (ficha.emissora) linhas.push({ rotulo: 'Emissora original', valor: ficha.emissora });
+if (ficha.ano != null) {
+	const exib = ficha.anoFim != null ? `${ficha.ano}–${ficha.anoFim}` : `desde ${ficha.ano}`;
+	linhas.push({ rotulo: 'Exibição', valor: exib });
+}
+if (ficha.situacao) linhas.push({ rotulo: 'Situação', valor: ficha.situacao });
+if (ficha.temporadas != null) linhas.push({ rotulo: 'Temporadas', valor: String(ficha.temporadas) });
+if (ficha.episodios != null) linhas.push({ rotulo: 'Episódios', valor: String(ficha.episodios) });
+if (ficha.generos && ficha.generos.length) linhas.push({ rotulo: 'Gênero', valor: ficha.generos.slice(0, 3).join(', ') });
+if (ficha.paises && ficha.paises.length) linhas.push({ rotulo: 'País', valor: ficha.paises.join(', ') });
+if (ficha.temporadaResenhada != null) linhas.push({ rotulo: 'Temporada resenhada', valor: `${ficha.temporadaResenhada}ª temporada` });
+if (ficha.ondeAssistirBrasil) linhas.push({ rotulo: 'Onde assistir (BR)', valor: ficha.ondeAssistirBrasil });
+
+const temSinopse = Boolean(ficha.sinopse?.trim());
+const temDublagem = Boolean(ficha.dublagem?.length);
+---
+
+<section class="ficha-serie mt-12 rounded-sm border border-white/10 bg-surface">
+	<h2 class="sr-only">Ficha da série</h2>
+	<div class="ficha-serie__grid flex flex-col gap-6 p-4 md:flex-row md:items-start md:gap-8 md:p-6">
+		{temCartaz && cartaz && cartazAlt && (
+			<figure class="ficha-serie__capa mx-auto m-0 w-full max-w-[240px] shrink-0 md:mx-0">
+				<Picture
+					src={cartaz}
+					formats={['avif', 'webp']}
+					widths={[240, 320, 480]}
+					sizes="(min-width: 768px) 240px, 100vw"
+					width={CARTAZ_LARGURA}
+					height={Math.round((CARTAZ_LARGURA * (cartaz.height ?? 360)) / (cartaz.width ?? 240))}
+					alt={cartazAlt}
+					loading="eager"
+					fetchpriority="high"
+					quality="mid"
+					pictureAttributes={{ class: 'block' }}
+					class="h-auto w-full rounded-sm"
+				/>
+				{cartazCredito && <figcaption class="mt-1.5 text-center text-xs leading-snug text-muted md:text-left">{cartazCredito}</figcaption>}
+			</figure>
+		)}
+
+		<div class="ficha-serie__tabela min-w-0 flex-1 overflow-x-auto">
+			<table class="ficha-serie__table w-full border-collapse text-sm">
+				<caption class="sr-only">Ficha da série</caption>
+				<tbody>
+					{linhas.map((l) => (
+						<tr class="ficha-serie__row border-t border-white/10 first:border-t-0">
+							<th scope="row" class="ficha-serie__th w-36 shrink-0 border-r border-white/10 bg-white/[0.04] px-3 py-3 text-left align-middle font-bold text-text">
+								{l.rotulo}
+							</th>
+							<td class="ficha-serie__td px-3 py-3 text-center align-middle text-text">{l.valor}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	{temSinopse && (
+		<div class="ficha-serie__sinopse border-t border-white/10 px-4 py-4 md:px-6 md:py-5">
+			<p class="m-0 text-sm font-bold text-text">Sinopse</p>
+			<p class="m-0 mt-2 text-left text-base leading-relaxed text-text">{ficha.sinopse}</p>
+		</div>
+	)}
+
+	{temDublagem && (
+		<section class="ficha-serie__dublagem border-t border-white/10 px-4 py-4 md:px-6 md:py-5">
+			<p class="m-0 text-sm font-bold text-text">Dublagem brasileira</p>
+			<ul class="mt-3 grid gap-2 text-sm md:grid-cols-2">
+				{ficha.dublagem!.map((d) => (
+					<li>{d.personagem} – {d.dublador}</li>
+				))}
+			</ul>
+		</section>
+	)}
+</section>
+
+<style>
+	@media (min-width: 768px) {
+		.ficha-serie__capa :global(picture),
+		.ficha-serie__capa :global(img) {
+			max-width: 240px;
+		}
+	}
+</style>

@@ -3,6 +3,7 @@ title: Mad Men – 6ª temporada
 description: Séries
 pubDate: 2014-04-13
 autor: ivanildo-pereira
+temporadaResenhada: 6
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/mad-men-sexta-temporada/
 draft: true
@@ -25,6 +26,8 @@ ficha:
   temporadas: 7
   emissora: AMC
   wikidataId: Q223977
+  ano: 2007
+anoObra: 2007
 ---
 
 Séries

@@ -9,6 +9,7 @@ import NotaEditorial from '../../components/NotaEditorial.astro';
 import Compartilhar from '../../components/Compartilhar.astro';
 import FichaHQ from '../../components/FichaHQ.astro';
 import FichaTecnica from '../../components/FichaTecnica.astro';
+import FichaSerie from '../../components/FichaSerie.astro';
 import {
 	formatarData,
 	getResenhas,
@@ -362,16 +363,26 @@ reviewLd.image = imageLd;
 
 		{
 			mostrarFichaFim && (
-				<FichaTecnica
-					ficha={ficha}
-					obra={entry.data.obra}
-					tipo={entry.data.tipo}
-					parte="fim"
-					cartaz={entry.data.cartaz}
-					cartazAlt={entry.data.cartazAlt}
-					cartazCredito={entry.data.cartazCredito}
-					somenteAuxiliares={isHQ}
-				/>
+				entry.data.tipo === 'serie' ? (
+					<FichaSerie
+						ficha={ficha}
+						obra={entry.data.obra}
+						cartaz={entry.data.cartaz}
+						cartazAlt={entry.data.cartazAlt}
+						cartazCredito={entry.data.cartazCredito}
+					/>
+				) : (
+					<FichaTecnica
+						ficha={ficha}
+						obra={entry.data.obra}
+						tipo={entry.data.tipo}
+						parte="fim"
+						cartaz={entry.data.cartaz}
+						cartazAlt={entry.data.cartazAlt}
+						cartazCredito={entry.data.cartazCredito}
+						somenteAuxiliares={isHQ}
+					/>
+				)
 			)
 		}
 

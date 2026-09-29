@@ -28,6 +28,8 @@ ficha:
   temporadas: 4
   emissora: Netflix
   wikidataId: Q16889037
+  ano: 2015
+anoObra: 2015
 ---
 
 ## Unbreakable Kimmy Schmidt: uma comédia na medida certa

@@ -4,6 +4,7 @@ description: "Crítica da 4ª temporada de Game of Thrones na HBO: momentos espe
 pubDate: 2014-06-29
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
+temporadaResenhada: 4
 cover: "../../assets/capas/game-of-thrones-4-temporada-cena.jpg"
 coverAlt: "Maisie Williams como Arya Stark, sentada entre pedras numa encosta"
 coverCredito: "Divulgação/HBO"
@@ -46,6 +47,7 @@ ficha:
   temporadas: 8
   emissora: HBO
   wikidataId: Q23572
+  ano: 2011
   sinopse: "Os Lannister parecem ter vencido a guerra, e Porto Real se prepara para um grande casamento real. Mas a paz é frágil: Tyrion se vê no centro de uma trama perigosa, os selvagens avançam contra a Muralha defendida pela Patrulha da Noite e Daenerys aprende que conquistar cidades é mais fácil do que governá-las."
   curiosidades:
     - "A temporada conclui a adaptação de \"A Tormenta de Espadas\", o terceiro livro da saga, iniciada na temporada anterior."
@@ -58,6 +60,7 @@ ficha:
       url: "https://www.purebreak.com.br/noticias/-game-of-thrones-101-curiosidades-sobre-a-serie-que-revolucionou-a-televisao/85447"
     - nome: "Wikipédia (en)"
       url: "https://en.wikipedia.org/wiki/Game_of_Thrones_season_4"
+anoObra: 2011
 ---
 
 # GAME OF THRONES: Quarta Temporada

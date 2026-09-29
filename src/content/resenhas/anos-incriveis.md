@@ -28,6 +28,8 @@ ficha:
   temporadas: 6
   emissora: "American Broadcasting Company"
   wikidataId: Q691581
+  ano: 1988
+anoObra: 1988
 ---
 
 **Gênero:** Comédia/Drama/Romance

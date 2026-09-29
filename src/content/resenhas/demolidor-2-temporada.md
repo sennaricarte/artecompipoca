@@ -3,6 +3,7 @@ title: Demolidor – 2ª temporada
 description: "I am Daredevil!!"
 pubDate: 2016-03-22
 autor: lu-guimaraes
+temporadaResenhada: 2
 origem: arquivo
 legacyUrl: /demolidor-resenha-2a-temporada/
 draft: true
@@ -28,6 +29,8 @@ ficha:
   temporadas: 3
   emissora: Netflix
   wikidataId: Q16977365
+  ano: 2015
+anoObra: 2015
 ---
 
 I am Daredevil!!

@@ -342,7 +342,8 @@ export async function fetchCandidatesData(ids, tipo) {
 			rotulo,
 			tituloOriginal,
 			titulos,
-			ano: claimYear(ent, 'P577'),
+			// preferir P580 (início) para séries; se Ausente, usar P577 (data)
+			ano: claimYear(ent, 'P580') ?? claimYear(ent, 'P577'),
 			anoInicio: claimYear(ent, 'P580'),
 			anoFim: claimYear(ent, 'P582'),
 			sitelinks: Object.keys(ent.sitelinks || {}).length,
@@ -354,6 +355,9 @@ export async function fetchCandidatesData(ids, tipo) {
 			criadores,
 			duracaoMin: claimQuantity(ent, 'P2047'),
 			temporadas: claimQuantity(ent, 'P2437'),
+			episodios: claimQuantity(ent, 'P1113'),
+			// se houver data de fim, marcamos como encerrada
+			situacao: claimYear(ent, 'P582') ? 'Encerrada' : '',
 			emissora: emissoras[0] || '',
 		});
 	}

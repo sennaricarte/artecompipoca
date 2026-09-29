@@ -3,6 +3,7 @@ title: House of Cards – 2ª temporada
 description: "O fato do protagonista da série quebrar a quarta parede, e nos dar acesso aos seus pensamentos e planos, é mais do que apenas um diferencial da…"
 pubDate: 2014-03-31
 autor: ivanildo-pereira
+temporadaResenhada: 2
 origem: arquivo
 legacyUrl: /resenha-de-seriado-house-cards-segunda-temporada/
 draft: true
@@ -28,6 +29,8 @@ ficha:
   temporadas: 6
   emissora: Netflix
   wikidataId: Q3330940
+  ano: 2013
+anoObra: 2013
 ---
 
 *"Pensaram que eu tinha esquecido vocês?"*, diz, olhando para a câmera, o agora Vice-Presidente dos Estados Unidos **Francis Underwood**, na cena final do primeiro episódio da segunda temporada de **House of Cards**. Sim, ele continua lançando seus comentários sarcásticos e ácidos na nossa direção, falando diretamente para o espectador e fazendo de nós seus cumplices. Até as suas abotoaduras, com as suas iniciais e enfocadas sobre a pia, representam uma brincadeira de duplo sentido, direcionada a quem está assistindo ao seriado.
