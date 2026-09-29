@@ -3,6 +3,9 @@ title: "Animosidade #1"
 description: "Crítica de Animosidade #1, de Marguerite Bennett e Rafael de Latorre: os animais despertam e se vingam dos humanos, numa estreia brutal, cômica e emotiva."
 pubDate: 2026-09-29T10:00:00-03:00
 autor: Senna Ricarte
+cartaz: "../../assets/capas/animosidade-1-cartaz.jpg"
+cartazAlt: "Capa de Animosity #1: uma menina com uma espingarda nas costas olha para trás ao lado de seu cão, cercados por animais de olhos brilhantes na penumbra"
+cartazCredito: "Divulgação/AfterShock Comics"
 origem: original
 draft: false
 obra: Animosidade
