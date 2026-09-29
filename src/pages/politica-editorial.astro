@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+	title="Política editorial"
+	description="Política editorial do Arte Com Pipoca"
+>
+	<article class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+		<Breadcrumb
+			items={[
+				{ label: 'Início', href: '/' },
+				{ label: 'Política editorial' },
+			]}
+		/>
+
+		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
+			Política editorial
+		</h1>
+
+		<div class="conteudo mt-10">
+			<section aria-labelledby="quem-somos">
+				<h2 id="quem-somos">Quem somos</h2>
+				<p>
+					O Arte Com Pipoca é um site independente sobre cinema, séries,
+					quadrinhos e música, criado em 2013 por Senna Ricarte. Depois de
+					alguns anos fora do ar, voltou em 2026, com o acervo revisado e
+					conteúdo novo.
+				</p>
+			</section>
+
+			<section aria-labelledby="independencia">
+				<h2 id="independencia">Independência</h2>
+				<p>
+					Nossas críticas refletem a opinião de quem as assina. Não aceitamos
+					pagamento para publicar críticas, notas ou recomendações. Quando um
+					texto tiver qualquer relação comercial, como links de afiliados ou
+					conteúdo patrocinado, isso será informado de forma clara no próprio
+					texto.
+				</p>
+			</section>
+
+			<section aria-labelledby="apuracao-e-fontes">
+				<h2 id="apuracao-e-fontes">Apuração e fontes</h2>
+				<p>
+					Informações factuais, como datas, prêmios, elencos, números de
+					bilheteria e dados de mercado, são conferidas em mais de uma fonte
+					sempre que possível, com prioridade para fontes oficiais. Quando as
+					fontes divergem, informamos a divergência ou deixamos o dado de
+					fora. As fontes usadas aparecem ao final dos textos.
+				</p>
+			</section>
+
+			<section aria-labelledby="criticas-e-opiniao">
+				<h2 id="criticas-e-opiniao">Críticas e opinião</h2>
+				<p>
+					Críticas são textos de opinião e são sempre assinadas. A nota, quando
+					existe, é atribuída pelo autor da crítica. Notícias, guias e listas
+					de serviço são assinados pela Redação.
+				</p>
+			</section>
+
+			<section aria-labelledby="o-acervo">
+				<h2 id="o-acervo">O acervo</h2>
+				<p>
+					Parte dos textos foi publicada originalmente entre 2013 e 2016.
+					Eles foram recuperados, revisados em ortografia e formatação e
+					mantêm a data e o autor originais, identificados com o aviso
+					"Publicado originalmente em". Não alteramos opiniões nem o sentido
+					dos textos. Quando uma informação pode ter mudado desde a
+					publicação, acrescentamos uma nota da redação.
+				</p>
+			</section>
+
+			<section aria-labelledby="uso-de-ferramentas">
+				<h2 id="uso-de-ferramentas">Uso de ferramentas</h2>
+				<p>
+					Algumas etapas de pesquisa, organização e redação contam com apoio de
+					ferramentas digitais, incluindo inteligência artificial. Todo
+					conteúdo publicado passa por revisão humana e pela checagem de
+					fontes descrita acima, e a responsabilidade pelo que publicamos é
+					sempre da nossa equipe.
+				</p>
+			</section>
+
+			<section aria-labelledby="imagens">
+				<h2 id="imagens">Imagens</h2>
+				<p>
+					Usamos material de divulgação oficial de distribuidoras, estúdios,
+					editoras e plataformas, sempre com o crédito correspondente, além
+					de imagens em domínio público e de bancos de imagens gratuitos. Se
+					você é titular de alguma imagem e deseja sua remoção, fale com a
+					gente.
+				</p>
+			</section>
+
+			<section aria-labelledby="correcoes">
+				<h2 id="correcoes">Correções</h2>
+				<p>
+					Erros acontecem. Quando identificamos ou somos avisados de um erro
+					factual, corrigimos o texto e atualizamos a data de atualização.
+					Correções relevantes são indicadas no próprio texto. Para apontar
+					um erro, use nossa página de contato.
+				</p>
+			</section>
+
+			<section aria-labelledby="contato">
+				<h2 id="contato">Contato</h2>
+				<p>
+					Sugestões, correções e parcerias pela nossa página de
+					<a href="/contato/">contato</a>.
+				</p>
+			</section>
+		</div>
+	</article>
+</BaseLayout>
+

@@ -1,8 +1,9 @@
 ---
 import { formatarData, tempoLeitura } from '../lib/conteudo';
+import { getResumoAutor } from '../lib/autores';
 
 interface Props {
-	autor: { id: string; nome: string };
+	autor: { id: string; nome: string; bio?: string };
 	pubDate: Date;
 	updatedDate?: Date;
 	texto: string;
@@ -13,6 +14,7 @@ const { autor, pubDate, updatedDate, texto, origem = 'original' } = Astro.props;
 const minutos = tempoLeitura(texto);
 const dataIso = pubDate.toISOString();
 const dataLegivel = formatarData(pubDate);
+const resumoAutor = await getResumoAutor(autor.id, autor.bio ?? '');
 ---
 
 <div class="mt-4 flex flex-col gap-2 text-sm text-muted">
@@ -44,6 +46,11 @@ const dataLegivel = formatarData(pubDate);
 		<span aria-hidden="true">·</span>
 		<span>{minutos} min de leitura</span>
 	</p>
+	{
+		resumoAutor.bioCompleta && (
+			<p class="max-w-3xl text-sm leading-relaxed text-muted">{resumoAutor.bioCompleta}</p>
+		)
+	}
 	{
 		origem === 'arquivo' && (
 			<p class="text-muted">

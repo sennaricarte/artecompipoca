@@ -2,12 +2,12 @@
 	{
 		"id": "andre-de-paula-eduardo",
 		"nome": "André de Paula Eduardo",
-		"bio": ""
+		"bio": "Jornalista paulistano, mestre em Comunicação pela Unesp e cinéfilo incorrigível."
 	},
 	{
 		"id": "beth-nieto",
 		"nome": "Beth Nieto",
-		"bio": ""
+		"bio": "Professora e aprendiz curiosa, não passa sem café, séries, livros e seus gatos."
 	},
 	{
 		"id": "camila-land",
@@ -17,12 +17,12 @@
 	{
 		"id": "daniel-serafim",
 		"nome": "Daniel Serafim",
-		"bio": ""
+		"bio": "Foi responsável pelo caderno de cinema da Rede Bom Dia de Jornalismo, na região de Jundiaí (SP), com foco em cinema cult e em produções de diferentes países e culturas."
 	},
 	{
 		"id": "dhebora-ricarte",
 		"nome": "Dhebora Ricarte",
-		"bio": ""
+		"bio": "Fisioterapeuta e blogueira, maníaca por séries e apaixonada por futebol e música."
 	},
 	{
 		"id": "donovan-mc-dulles",
@@ -38,12 +38,12 @@
 	{
 		"id": "gustavo-espeschit",
 		"nome": "Gustavo Espeschit",
-		"bio": ""
+		"bio": "Professor de idiomas, formado em Letras Português/Inglês e cinéfilo desde a infância. Criou o blog Clube do Cinema, onde publica resenhas desde 2006, e foi colunista do site Cine Fashion."
 	},
 	{
 		"id": "ivanildo-pereira",
 		"nome": "Ivanildo Pereira",
-		"bio": ""
+		"bio": "Criador do blog O Blog Que Não Estava Lá, incorporado ao Arte Com Pipoca, onde publicou críticas de clássicos, filmes de gênero e séries."
 	},
 	{
 		"id": "leticia-magalhaes",
@@ -53,17 +53,17 @@
 	{
 		"id": "leticia-ribeiro",
 		"nome": "Leticia Ribeiro",
-		"bio": ""
+		"bio": "Estudante de jornalismo na época em que colaborou com o site, sempre conectada às mídias sociais, à música e ao cinema."
 	},
 	{
 		"id": "lexy-soares",
 		"nome": "Lexy Soares",
-		"bio": ""
+		"bio": "Quadrinhista, cineasta independente e cineclubista. Produz tiras e quadrinhos desde 2001 e presidiu o Cineclube Pilar, em Mauá (SP), onde dirigiu curtas, organizou mostras e ministrou oficinas."
 	},
 	{
 		"id": "lu-guimaraes",
 		"nome": "Lu Guimarães",
-		"bio": ""
+		"bio": "Formada em Rádio e TV, apaixonada por séries e filmes, que, para ela, levam a mundos novos e permitem conhecer mais profundamente a alma humana."
 	},
 	{
 		"id": "marco-magalhaes",
@@ -73,17 +73,17 @@
 	{
 		"id": "marcos-antonio",
 		"nome": "Marcos Antonio",
-		"bio": ""
+		"bio": "Técnico em rádio e TV e estudante de biomedicina na época em que escreveu para o site, fã de seriados, filmes e super-heróis, com o Homem-Aranha como favorito."
 	},
 	{
 		"id": "patricia-baleeira",
 		"nome": "Patricia Baleeira",
-		"bio": ""
+		"bio": "Bióloga, cinéfila e gestora de conteúdo em mídias sociais, ativista da causa animal e fã de livros, filmes e documentários sobre mentes criminosas."
 	},
 	{
 		"id": "paulo-rogerio-dos-santos",
 		"nome": "Paulo Rogerio dos Santos",
-		"bio": ""
+		"bio": "Paulistano da zona leste, estudou História da Arte na Unifesp e pesquisa audiovisual, com foco em teoria e crítica de cinema."
 	},
 	{
 		"id": "pedro-roma",
@@ -93,22 +93,22 @@
 	{
 		"id": "redacao",
 		"nome": "Redação Arte Com Pipoca",
-		"bio": ""
+		"bio": "Assinatura coletiva da equipe do Arte Com Pipoca, usada em notícias, guias e listas de serviço."
 	},
 	{
 		"id": "regis-rocha",
 		"nome": "Regis Rocha",
-		"bio": ""
+		"bio": "Amante de cinema, poker e games, gosta de compartilhar sua visão de mundo por meio dos filmes."
 	},
 	{
 		"id": "renato-brogiato",
 		"nome": "Renato Brogiato",
-		"bio": ""
+		"bio": "Encontra-se na arte do cinema e tem como mestres Kubrick, Almodóvar, Tarantino, Pasolini, Scorsese e John Ford."
 	},
 	{
 		"id": "senna-ricarte",
 		"nome": "Senna Ricarte",
-		"bio": "Fundador do Arte Com Pipoca. Nerd assumido e consumidor compulsivo de informação e cultura pop."
+		"bio": "Desenvolvedor e especialista em SEO, é o fundador do Arte Com Pipoca e um nerd consumidor compulsivo de informação e cultura. Atua na internet desde 2010."
 	},
 	{
 		"id": "vivian-duarte",
@@ -123,6 +123,6 @@
 	{
 		"id": "wellington-s-o",
 		"nome": "Wellington S.O",
-		"bio": ""
+		"bio": "Morador de Cabo Frio (RJ), professor de inglês e escritor, com romances publicados e projetos de roteiro para cinema."
 	}
 ]

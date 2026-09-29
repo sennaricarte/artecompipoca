@@ -14,6 +14,7 @@ import {
 	rotuloCapaResenha,
 	TIPO_RESENHA_PARA_EDITORIA,
 } from '../../lib/conteudo';
+import { getResumoAutor } from '../../lib/autores';
 
 export async function getStaticPaths() {
 	const [artigos, resenhas, autores] = await Promise.all([
@@ -62,13 +63,14 @@ const vazio = combinados.length === 0;
 const site = Astro.site ?? new URL('https://artecompipoca.net');
 const pageUrl = new URL(`/autores/${autor.id}/`, site).href;
 
+const resumo = await getResumoAutor(autor.id, autor.data.bio ?? '');
 const person: Record<string, unknown> = {
 	'@type': 'Person',
 	name: autor.data.nome,
 	url: pageUrl,
 };
-if (autor.data.bio) {
-	person.description = autor.data.bio;
+if (resumo.bioCompleta) {
+	person.description = resumo.bioCompleta;
 }
 
 const profileLd = {
@@ -77,9 +79,7 @@ const profileLd = {
 	mainEntity: person,
 };
 
-const descricao =
-	autor.data.bio ||
-	`Textos de ${autor.data.nome} no Arte Com Pipoca.`;
+const descricao = resumo.bioCompleta || `Textos de ${autor.data.nome} no Arte Com Pipoca.`;
 ---
 
 <BaseLayout
@@ -105,8 +105,16 @@ const descricao =
 			{autor.data.nome}
 		</h1>
 		{
-			autor.data.bio && (
-				<p class="mt-4 max-w-2xl text-muted">{autor.data.bio}</p>
+			resumo.bioCompleta && (
+				<p class="mt-4 max-w-2xl text-muted">{resumo.bioCompleta}</p>
+			)
+		}
+
+		{
+			resumo.totalPublicados != null && (
+				<p class="mt-4 text-sm text-pipoca">
+					{resumo.totalPublicados} {resumo.totalPublicados === 1 ? 'texto no site' : 'textos no site'}
+				</p>
 			)
 		}
 

@@ -15,6 +15,7 @@ import {
 	rotuloCapaArtigo,
 } from '../../lib/conteudo';
 import { getStructuredDataImages } from '../../lib/imagens-seo';
+import { getResumoAutor } from '../../lib/autores';
 
 export async function getStaticPaths() {
 	const artigos = await getArtigos();
@@ -34,9 +35,11 @@ interface Props {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const autorEntry = await getEntry(entry.data.autor);
+const resumoAutor = await getResumoAutor(autorEntry?.id ?? entry.data.autor.id, autorEntry?.data.bio ?? '');
 const autor = {
 	id: autorEntry?.id ?? entry.data.autor.id,
 	nome: autorEntry?.data.nome ?? 'Autor',
+	bio: resumoAutor.bioCompleta ?? '',
 };
 
 const site = Astro.site ?? new URL('https://artecompipoca.net');
