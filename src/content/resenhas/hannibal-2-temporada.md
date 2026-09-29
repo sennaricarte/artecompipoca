@@ -3,7 +3,6 @@ title: Hannibal – 2ª temporada
 description: "Will Graham é um talentoso fornecedor de perfis criminosos, mas a mente de Hannibal é complexa demais até para ele."
 pubDate: 2014-03-09
 autor: beth-nieto
-temporadaResenhada: 2
 origem: arquivo
 legacyUrl: /hannibal-2a-temporada-imperdivel/
 draft: true
@@ -18,16 +17,17 @@ ficha:
     - "Laurence Fishburne"
     - "Hettienne Park"
     - "Gillian Anderson"
-  generos:
-    - "Séries de televisão de horror"
   duracaoMin: 43
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Bryan Fuller"
   temporadas: 3
   emissora: NBC
   wikidataId: Q888841
+  generos:
+    - "Séries de televisão de horror"
+  criadores:
+    - "Bryan Fuller"
+  temporadaResenhada: 2
   ano: 2013
 anoObra: 2013
 ---

@@ -19,19 +19,19 @@ ficha:
     - "Taissa Farmiga"
     - "Denis O'Hare"
     - "Jessica Lange"
-  generos:
-    - Antologia
-    - "Séries de televisão de horror"
   duracaoMin: 44
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Ryan Murphy"
-    - "Brad Falchuk"
   temporadas: 13
   emissora: FX
   wikidataId: Q53922
   ano: 2011
+  generos:
+    - Antologia
+    - "Séries de televisão de horror"
+  criadores:
+    - "Ryan Murphy"
+    - "Brad Falchuk"
 anoObra: 2011
 ---
 

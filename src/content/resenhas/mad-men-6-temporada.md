@@ -3,7 +3,6 @@ title: Mad Men – 6ª temporada
 description: Séries
 pubDate: 2014-04-13
 autor: ivanildo-pereira
-temporadaResenhada: 6
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/mad-men-sexta-temporada/
 draft: true
@@ -21,11 +20,12 @@ ficha:
   duracaoMin: 47
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Matthew Weiner"
   temporadas: 7
   emissora: AMC
   wikidataId: Q223977
+  criadores:
+    - "Matthew Weiner"
+  temporadaResenhada: 6
   ano: 2007
 anoObra: 2007
 ---

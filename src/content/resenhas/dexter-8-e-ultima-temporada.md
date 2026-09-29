@@ -29,11 +29,11 @@ ficha:
     - "C.S. Lee"
   paises:
     - "Estados Unidos"
-  criadores:
-    - "James Manos, Jr."
   temporadas: 8
   emissora: Showtime
   wikidataId: Q23577
+  criadores:
+    - "James Manos, Jr."
 anoObra: 2007
 ---
 

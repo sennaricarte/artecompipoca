@@ -330,10 +330,11 @@ export async function fetchCandidatesData(ids, tipo) {
 		const elenco = labelsOf(claimEntityIds(ent, 'P161'), 6);
 		const generos = labelsOf(claimEntityIds(ent, 'P136'));
 		const paises = labelsOf(claimEntityIds(ent, 'P495'));
-		const criadoresIds = [
-			...claimEntityIds(ent, 'P170'),
-			...(tipo === 'serie' ? claimEntityIds(ent, 'P58') : []),
-		];
+		// Prefer P170 (creator). For series, fall back to P58 (writer) only if no P170 found.
+		let criadoresIds = claimEntityIds(ent, 'P170');
+		if (!criadoresIds.length && tipo === 'serie') {
+			criadoresIds = claimEntityIds(ent, 'P58');
+		}
 		const criadores = labelsOf([...new Set(criadoresIds)]);
 		const emissoras = labelsOf(claimEntityIds(ent, 'P449'));
 

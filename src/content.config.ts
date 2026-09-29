@@ -107,22 +107,10 @@ const resenhas = defineCollection({
 				obra: z.string(),
 				tipo: z.enum(['filme', 'serie', 'hq', 'album']),
 				anoObra: z.number().optional(),
-				anoFim: z.number().optional(),
 				nota: z.number().min(0).max(10).optional(),
 				episodios: z.number().optional(),
-				situacao: z
-					.enum(['Em exibição', 'Encerrada', 'Cancelada'])
-					.optional(),
 				temporadaResenhada: z.number().optional(),
 				ondeAssistirBrasil: z.string().optional(),
-				dublagem: z
-					.array(
-						z.object({
-							personagem: z.string(),
-							dublador: z.string(),
-						}),
-					)
-					.optional(),
 				pubDate: dataPublicacao,
 				updatedDate: dataPublicacao.optional(),
 				autor: reference('autores'),
@@ -143,6 +131,7 @@ const resenhas = defineCollection({
 					.object({
 						tituloOriginal: z.string().optional(),
 						ano: z.number().optional(),
+						anoFim: z.number().optional(),
 						direcao: z.array(z.string()).optional(),
 						roteiro: z.array(z.string()).optional(),
 						elenco: z.array(z.string()).max(6).optional(),
@@ -151,6 +140,20 @@ const resenhas = defineCollection({
 						paises: z.array(z.string()).optional(),
 						criadores: z.array(z.string()).optional(),
 						temporadas: z.number().optional(),
+						episodios: z.number().optional(),
+						situacao: z
+							.enum(['Em exibição', 'Encerrada', 'Cancelada'])
+							.optional(),
+						temporadaResenhada: z.number().optional(),
+						ondeAssistirBrasil: z.string().optional(),
+						dublagem: z
+							.array(
+								z.object({
+									personagem: z.string(),
+									dublador: z.string(),
+								}),
+							)
+							.optional(),
 						emissora: z.string().optional(),
 						wikidataId: z
 							.string()

@@ -4,7 +4,6 @@ description: "Crítica da 3ª temporada de Game of Thrones na HBO: alianças, ca
 pubDate: 2014-04-03
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
-temporadaResenhada: 3
 cover: "../../assets/capas/game-of-thrones-3-temporada-cena.jpg"
 coverAlt: "Peter Dinklage como Tyrion Lannister, olhando para o lado diante de uma parede de pedra"
 coverCredito: "Divulgação/HBO"
@@ -31,22 +30,18 @@ ficha:
     - "Emilia Clarke"
     - "Lena Headey"
     - "Iain Glen"
-  generos:
-    - "Telessérie de ação"
-    - "Série televisiva de fantasia"
   duracaoMin: 66
   paises:
     - "Estados Unidos"
+  temporadas: 8
+  emissora: HBO
+  generos:
+    - "Ação"
+    - Fantasia
   criadores:
     - "D. B. Weiss"
     - "David Benioff"
-    - "George R. R. Martin"
-    - "Bryan Cogman"
-    - "Jane Espenson"
-    - "Vanessa Taylor"
-    - "Dave Hill"
-  temporadas: 8
-  emissora: HBO
+  temporadaResenhada: 3
   wikidataId: Q23572
   ano: 2011
   sinopse: "Com a Guerra dos Cinco Reis em andamento, Robb Stark vence batalhas mas começa a perder aliados, os Lannister consolidam o poder em Porto Real e, do outro lado do mar, Daenerys busca um exército para reconquistar o Trono de Ferro. Ao norte da Muralha, Jon Snow se infiltra entre os selvagens."

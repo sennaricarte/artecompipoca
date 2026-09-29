@@ -3,7 +3,6 @@ title: Boardwalk Empire – 3ª temporada
 description: Séries
 pubDate: 2014-05-06
 autor: ivanildo-pereira
-temporadaResenhada: 3
 origem: arquivo
 legacyUrl: /oblogquenaoestavala/boardwalk-empire-terceira-temporada/
 draft: true
@@ -21,15 +20,16 @@ ficha:
     - "Michael Shannon"
     - "Shea Whigham"
     - "Aleksa Palladino"
-  generos:
-    - "Série criminal"
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Terence Winter"
   temporadas: 5
   emissora: HBO
   wikidataId: Q585758
+  generos:
+    - "Série criminal"
+  criadores:
+    - "Terence Winter"
+  temporadaResenhada: 3
   ano: 2010
 anoObra: 2010
 ---

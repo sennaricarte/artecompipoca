@@ -4,7 +4,7 @@ description: "Crítica da 4ª temporada de Game of Thrones na HBO: momentos espe
 pubDate: 2014-06-29
 updatedDate: 2026-09-27
 autor: ivanildo-pereira
-temporadaResenhada: 4
+ 
 cover: "../../assets/capas/game-of-thrones-4-temporada-cena.jpg"
 coverAlt: "Maisie Williams como Arya Stark, sentada entre pedras numa encosta"
 coverCredito: "Divulgação/HBO"
@@ -30,21 +30,17 @@ ficha:
     - "Emilia Clarke"
     - "Lena Headey"
     - "Iain Glen"
-  generos:
-    - "Telessérie de ação"
-    - "Série televisiva de fantasia"
   duracaoMin: 66
   paises:
     - "Estados Unidos"
+  temporadas: 8
+  generos:
+    - "Ação"
+    - Fantasia
   criadores:
     - "D. B. Weiss"
     - "David Benioff"
-    - "George R. R. Martin"
-    - "Bryan Cogman"
-    - "Jane Espenson"
-    - "Vanessa Taylor"
-    - "Dave Hill"
-  temporadas: 8
+  temporadaResenhada: 4
   emissora: HBO
   wikidataId: Q23572
   ano: 2011

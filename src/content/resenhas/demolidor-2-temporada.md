@@ -3,7 +3,6 @@ title: Demolidor – 2ª temporada
 description: "I am Daredevil!!"
 pubDate: 2016-03-22
 autor: lu-guimaraes
-temporadaResenhada: 2
 origem: arquivo
 legacyUrl: /demolidor-resenha-2a-temporada/
 draft: true
@@ -18,17 +17,18 @@ ficha:
     - "Vondie Curtis-Hall"
     - "Bob Gunton"
     - "Ayelet Zurer"
-  generos:
-    - "Telessérie de ação"
-    - "Série televisiva de fantasia"
-    - "Série criminal"
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Drew Goddard"
   temporadas: 3
   emissora: Netflix
   wikidataId: Q16977365
+  generos:
+    - "Ação"
+    - Fantasia
+    - "Série criminal"
+  criadores:
+    - "Drew Goddard"
+  temporadaResenhada: 2
   ano: 2015
 anoObra: 2015
 ---

@@ -3,7 +3,6 @@ title: House of Cards – 2ª temporada
 description: "O fato do protagonista da série quebrar a quarta parede, e nos dar acesso aos seus pensamentos e planos, é mais do que apenas um diferencial da…"
 pubDate: 2014-03-31
 autor: ivanildo-pereira
-temporadaResenhada: 2
 origem: arquivo
 legacyUrl: /resenha-de-seriado-house-cards-segunda-temporada/
 draft: true
@@ -20,15 +19,16 @@ ficha:
     - "Corey Stoll"
     - "Michael Kelly"
     - "Sakina Jaffrey"
-  generos:
-    - "Thriller político"
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Beau Willimon"
   temporadas: 6
   emissora: Netflix
   wikidataId: Q3330940
+  generos:
+    - "Thriller político"
+  criadores:
+    - "Beau Willimon"
+  temporadaResenhada: 2
   ano: 2013
 anoObra: 2013
 ---

@@ -17,18 +17,19 @@ ficha:
     - "Olivia d'Abo"
     - "Jason Hervey"
     - "Danica McKellar"
-  generos:
-    - "Comédia dramática"
-    - "Comédia da televisão"
   duracaoMin: 22
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Neal Marlens"
   temporadas: 6
   emissora: "American Broadcasting Company"
   wikidataId: Q691581
   ano: 1988
+  generos:
+    - "Comédia dramática"
+    - "Comédia"
+    - "Série adolescente"
+  criadores:
+    - "Neal Marlens"
 anoObra: 1988
 ---
 

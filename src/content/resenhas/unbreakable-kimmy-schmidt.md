@@ -17,18 +17,18 @@ ficha:
     - "Carol Kane"
     - "Sara Chase"
     - "Lauren Adams"
-  generos:
-    - "Comédia da televisão"
   duracaoMin: 25
   paises:
     - "Estados Unidos"
-  criadores:
-    - "Tina Fey"
-    - "Robert Carlock"
   temporadas: 4
   emissora: Netflix
   wikidataId: Q16889037
   ano: 2015
+  generos:
+    - "Comédia"
+  criadores:
+    - "Tina Fey"
+    - "Robert Carlock"
 anoObra: 2015
 ---
 

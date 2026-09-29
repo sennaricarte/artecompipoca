@@ -70,6 +70,11 @@ const GENRE_EN_MAP = {
 	comedy: 'Comédia',
 	'soap opera': 'Drama',
 	'youth series': 'Série adolescente',
+	'comedy drama': 'Comédia dramática',
+	'seriado de adolescentes': 'Série adolescente',
+	'adolescentes': 'Série adolescente',
+	'comédia dramática': 'Comédia dramática',
+	'comédia da televisão': 'Comédia',
 	thriller: 'Suspense',
 	horror: 'Terror',
 	'science fiction': 'Ficção científica',
@@ -90,12 +95,19 @@ const GENRE_EN_MAP = {
 function normalizeGenero(raw) {
 	const original = String(raw || '').trim();
 	if (!original) return null;
+	// Descartar gêneros do tipo LGBT como não sendo gênero editorial
+	if (/lgbt/i.test(original) || /lgbt-related television series/i.test(original.toLowerCase())) return null;
+
+	// Se o gênero já tem mapeamento literal (antes de qualquer transformação), retorne-o.
+	const origKey = original.toLowerCase().replace(/\s+/g, ' ').trim();
+	if (GENRE_EN_MAP[origKey]) return GENRE_EN_MAP[origKey];
+
 	const fromPt =
-		/^(filme de |filme sobre |série de televisão de |série de )/i.test(
+		/^(filme de |filme sobre |telessérie de |série televisiva de |série de televisão de |série de |seriado de )/i.test(
 			original,
 		);
 	let s = original
-		.replace(/^(filme de |filme sobre |série de televisão de |série de )/i, '')
+		.replace(/^(filme de |filme sobre |telessérie de |série televisiva de |série de televisão de |série de |seriado de )/i, '')
 		.replace(/\s+film$/i, '')
 		.trim();
 	if (!s) return null;
@@ -374,8 +386,11 @@ async function applyFicha(filePath, ficha) {
 
 	/** @type {Record<string, unknown>} */
 	const novos = {};
+	const tipoFm = getScalar(parts.fm, 'tipo');
 	for (const k of CHAVES_FACTUAIS) {
-		if (preenchidas.has(k)) continue;
+		// Exceptions for series: allow replacing 'criadores' and 'generos' even if already filled
+		const allowReplace = tipoFm === 'serie' && (k === 'criadores' || k === 'generos');
+		if (preenchidas.has(k) && !allowReplace) continue;
 		const v = ficha[k];
 		if (v == null || v === '' || (Array.isArray(v) && !v.length)) continue;
 		novos[k] = v;
