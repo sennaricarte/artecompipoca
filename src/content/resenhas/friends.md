@@ -6,6 +6,9 @@ autor: senna-ricarte
 cover: "../../assets/capas/friends-cena.jpg"
 coverAlt: "Os seis protagonistas de Friends: Phoebe, Chandler, Rachel, Ross, Monica e Joey posam sorridentes com o logo colorido da série"
 coverCredito: "Divulgação/Warner Bros."
+cartaz: "../../assets/capas/friends-cartaz.jpg"
+cartazAlt: "Cartaz de Friends: os seis protagonistas posam juntos num sofá com o logo colorido da série ao fundo"
+cartazCredito: "Divulgação/Warner Bros."
 origem: original
 draft: false
 obra: Friends

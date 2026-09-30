@@ -129,8 +129,10 @@ export function validarDimensoes(meta, tipo, tipoPost) {
 	const w = meta.width ?? 0;
 	const h = meta.height ?? 0;
 	const regra = REGRAS[tipo];
-	// Aceitar cartaz quadrado para álbuns e (agora) séries
-	if (tipo === 'cartaz' && (tipoPost === 'album' || tipoPost === 'serie')) {
+	// Regras especiais para cartaz de álbum e série:
+	// - álbum: deve ser quadrado (mesma regra antiga)
+	// - série: pode ser quadrado OU vertical (proporção < 0.95) com altura mínima de 400px
+	if (tipo === 'cartaz' && tipoPost === 'album') {
 		const proporcao = h ? w / h : 0;
 		const [min, max] = QUADRADO_PROPORCAO;
 		if (proporcao < min || proporcao > max) {
@@ -140,6 +142,29 @@ export function validarDimensoes(meta, tipo, tipoPost) {
 			return `lado mínimo de ${QUADRADO_LADO_MIN}px (tem ${Math.min(w, h)}px)`;
 		}
 		return null;
+	}
+	if (tipo === 'cartaz' && tipoPost === 'serie') {
+		const proporcao = h ? w / h : 0;
+		const [min, max] = QUADRADO_PROPORCAO;
+		// caso quadrado
+		if (proporcao >= min && proporcao <= max) {
+			if (Math.min(w, h) < QUADRADO_LADO_MIN) {
+				return `lado mínimo de ${QUADRADO_LADO_MIN}px (tem ${Math.min(w, h)}px)`;
+			}
+			return null;
+		}
+		// caso vertical aceitável (proporção < min)
+		if (proporcao < min) {
+			if (!(h > w)) {
+				return `cartaz precisa ser vertical (${w}×${h})`;
+			}
+			if (h < 400) {
+				return `altura mínima de 400px para cartaz vertical de série (tem ${h}px)`;
+			}
+			return null;
+		}
+		// demais casos (muito horizontal)
+		return `cartaz precisa ser quadrado (proporção ${proporcao.toFixed(2)}, aceito ${min}–${max})`;
 	}
 	if (regra.orientacao === 'horizontal' && !(w > h)) {
 		return `cena precisa ser horizontal (${w}×${h})`;
