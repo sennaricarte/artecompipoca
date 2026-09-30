@@ -4,6 +4,8 @@ export const site = {
 	emailContato: 'contato@artecompipoca.net',
 	whatsapp: '5511961485763',
 	whatsappExibicao: '(11) 96148-5763',
+	instagram: 'https://www.instagram.com/artecompipoca.net.ofc/',
+	facebook: 'https://www.facebook.com/artecompipoca',
 } as const;
 
 /**
