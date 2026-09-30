@@ -4,6 +4,10 @@ seoTitle: "Melhores filmes de Emma Stone: de Superbad a Bugonia, os 13 essenciai
 description: "De Superbad e A Mentira a La La Land, Pobres Criaturas e Bugonia: os melhores filmes de Emma Stone, com prêmios, parcerias e onde assistir."
 pubDate: 2026-09-30T11:00:00-03:00
 autor: redacao
+cover: "../../assets/capas/melhores-filmes-de-emma-stone-cena.jpg"
+coverAlt: "Mulher de Cabelos castanhos claros, usando um colar, e segurando uma estatueta do Oscar"
+coverCredito: "Divulgação"
+coverPosicao: "center 30%"
 editoria: cinema
 origem: original
 draft: false
