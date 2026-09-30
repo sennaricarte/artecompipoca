@@ -120,6 +120,7 @@ const imageLd = await getStructuredDataImages({
 
 const relacionados = (await getResenhas())
 	.filter((r) => r.data.tipo === entry.data.tipo && r.id !== entry.id)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
 
 const itemReviewed: Record<string, unknown> = {
@@ -322,7 +323,7 @@ reviewLd.image = imageLd;
 		}
 
 		{
-			temFichaInicio && ficha && (
+			temFichaInicio && ficha && !(entry.data.tipo === 'serie' && mostrarFichaFim) && (
 				<FichaTecnica
 					ficha={ficha}
 					obra={entry.data.obra}
