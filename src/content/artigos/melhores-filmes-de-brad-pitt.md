@@ -4,6 +4,10 @@ seoTitle: "Melhores filmes de Brad Pitt: de Seven a F1, os 13 essenciais"
 description: "De Seven e Clube da Luta a Era Uma Vez em Hollywood e F1: os melhores filmes de Brad Pitt, com prêmios, curiosidades e onde assistir a cada um."
 pubDate: 2026-09-30T10:00:00-03:00
 autor: redacao
+cover: "../../assets/capas/melhores-filmes-de-brad-pitt-cena.jpg"
+coverAlt: "Homem de boné, óculos de aviador e jaqueta de lona ao lado de um hidroavião, com lago e montanhas ao fundo"
+coverCredito: "Divulgação"
+coverPosicao: "center 30%"
 editoria: cinema
 origem: original
 draft: false
