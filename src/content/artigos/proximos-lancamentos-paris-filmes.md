@@ -2,14 +2,14 @@
 title: "Lançamentos da Paris Filmes nos cinemas: setembro a novembro de 2026"
 seoTitle: "Lançamentos Paris Filmes setembro a novembro 2026: A Queda 2, Zona Zero, Jogos Vorazes"
 description: "A Queda 2, Zona Zero, One Piece, As Dez Vantagens, Feito Pipa e Jogos Vorazes: os lançamentos da Paris Filmes nos cinemas brasileiros em setembro, outubro e novembro de 2026."
-pubDate: 2026-09-30T13:00:00-03:00
+pubDate: 2026-09-17T16:00:00.000Z
 autor: redacao
 cover: "../../assets/capas/proximos-lancamentos-paris-filmes-cena.jpg"
 coverAlt: "Alpinista de cabelos ruivos se agarra a correntes e barras de ferro numa rocha com abismo ao fundo em cena de A Queda 2: No Limite"
 coverCredito: "Divulgação/Paris Filmes"
 editoria: cinema
 origem: original
-draft: true
+draft: false
 ---
 
 A **Paris Filmes** é uma das principais distribuidoras do cinema brasileiro: foi ela que trouxe às salas a saga Jogos Vorazes, "Feito Pipa" e boa parte das franquias da Lionsgate no país. Para o fim de 2026, a agenda está movimentada, com filmes que vão do terror coreano ao drama nacional, passando por animação japonesa e a maratona mais esperada do ano.
@@ -61,3 +61,4 @@ O lançamento mais aguardado do ano pela Paris Filmes. O novo prelúdio da saga 
 - [AdoroCinema: As Dez Vantagens](https://www.adorocinema.com/filmes/filme-1000016188/)
 - [CinePOP: Zona Zero](https://cinepop.com.br/zona-zero-734263/)
 - [Terra: As Dez Vantagens adiado](https://www.terra.com.br/diversao/musica/as-dez-vantagens-de-morrer-depois-de-voce-filme-com-any-gabrielly-e-giulia-be-tem-estreia-adiada,ebec502cbf202130970995384fa466e5j74wvg6t.html)
+
