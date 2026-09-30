@@ -3,6 +3,9 @@ title: "Friends"
 description: "Crítica de Friends: a série que segue em qualquer época, pelo humor inteligente e pela conexão entre seis personagens inesquecíveis. Nota 10."
 pubDate: 2026-09-30T12:00:00-03:00
 autor: senna-ricarte
+cover: "../../assets/capas/friends-cena.jpg"
+coverAlt: "Os seis protagonistas de Friends: Phoebe, Chandler, Rachel, Ross, Monica e Joey posam sorridentes com o logo colorido da série"
+coverCredito: "Divulgação/Warner Bros."
 origem: original
 draft: false
 obra: Friends
