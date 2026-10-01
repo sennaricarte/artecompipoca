@@ -4,6 +4,9 @@ seoTitle: "Melhores séries da HBO em 2026: Hacks, Euphoria, House of the Dragon
 description: "O Cavaleiro dos Sete Reinos, Hacks, Euphoria e House of the Dragon: as melhores séries originais da HBO lançadas em 2026, com datas, notas e avaliações."
 pubDate: 2026-10-01T09:00:00-03:00
 autor: redacao
+cover: "../../assets/capas/melhores-series-hbo-2026-cena.jpg"
+coverAlt: "Três médicos de avental preto com estetoscópio observam algo fora do quadro no pronto-socorro da série The Pitt"
+coverCredito: "Divulgação/HBO"
 editoria: series
 origem: original
 draft: false
