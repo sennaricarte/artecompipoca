@@ -23,8 +23,8 @@ const apply = argv.includes('--apply');
 
 const repoRoot = process.cwd();
 const autoresPath = path.join(repoRoot, 'src', 'data', 'autores.json');
-const outputDir = path.join(repoRoot, 'src', 'assets', 'autores');
-const outputRel = (id) => `../../assets/autores/${id}.jpg`;
+const outputDir = path.join(repoRoot, 'public', 'autores');
+const outputRel = (id) => `/autores/${id}.jpg`;
 const outputPath = path.join(outputDir, `${id}.jpg`);
 
 try {
@@ -66,14 +66,14 @@ try {
   log(`Autor: ${autor.nome} (id: ${id})`);
   log(`Imagem de origem: ${imagePath} (${meta.width}x${meta.height}, ${meta.format})`);
   log(`Saída prevista: ${outputPath} (JPEG q85, resize max 400x400 mantendo proporção)`);
-  log(`Campo 'foto' que será definido em autores.json: "${outputRel(id)}"`);
+  log(`Campo 'foto' que será definido em autores.json: "${outputRel(id)}" (caminho público)`);
 
   if (!apply) {
     log('\nDRY RUN — nenhuma alteração será feita. Use --apply para aplicar as mudanças.');
     process.exit(0);
   }
 
-  // Ensure output dir exists
+  // Ensure output dir exists (public/autores)
   await fs.mkdir(outputDir, { recursive: true });
 
   // Process and write JPEG q85 resized

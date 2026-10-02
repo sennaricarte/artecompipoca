@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import autoresData from '../data/autores.json';
 const logo = '/logo.svg';
 
@@ -18,7 +17,7 @@ if (!autor || autor.id === 'redacao') {
 }
 
 const autorData = autoresData.find((a) => a.id === autor.id) ?? null;
-const foto = autorData?.foto ?? null;
+const foto = (autor as any).foto ?? autorData?.foto ?? null;
 const nome = autorData?.nome ?? autor.nome;
 const bio = autor.bio ?? autorData?.bio ?? '';
 ---
@@ -28,17 +27,9 @@ const bio = autor.bio ?? autorData?.bio ?? '';
     <div class="flex-shrink-0">
       {
         foto ? (
-          <Image
-            src={foto}
-            alt={`Foto de ${nome}`}
-            width={64}
-            height={64}
-            class="rounded-full"
-            format="webp"
-            quality="mid"
-          />
+          <img src={foto} alt={`Foto de ${nome}`} width="64" height="64" class="rounded-full object-cover" />
         ) : (
-          <img src={logo} alt={`Foto de ${nome}`} width="64" height="64" class="rounded-full" />
+          <img src={logo} alt="Arte Com Pipoca" width="64" height="64" class="rounded-full" />
         )
       }
     </div>
