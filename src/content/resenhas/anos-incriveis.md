@@ -1,108 +1,90 @@
 ---
-title: Anos Incríveis
-description: "A série mostra acontecimentos ocorridos entre 1968 a 1973, sob a visão de um garoto chamado Kevin Arnold, que esta entrando em sua fase de…"
-pubDate: 2013-02-11
+title: "Anos Incríveis"
+description: "Crítica de Anos Incríveis: a série que eu assisti pelo Canal 21, com bombril na antena, e que até hoje não encontrei nada com a mesma atmosfera."
+pubDate: 2026-10-01T11:00:00-03:00
 autor: senna-ricarte
-origem: arquivo
-legacyUrl: /anos-incriveis/
-draft: true
+cover: "../../assets/capas/anos-incriveis-cena.jpg"
+coverAlt: "Paul, Kevin e Winnie sentados juntos num muro, sorrindo, em foto de divulgação de Anos Incríveis"
+coverCredito: "Divulgação/Warner Bros."
+cartaz: "../../assets/capas/anos-incriveis-cartaz.jpg"
+cartazAlt: "Cartaz brasileiro de Anos Incríveis com a família Arnold e o logotipo da série"
+cartazCredito: "Divulgação/Warner Bros."
+origem: original
+draft: false
 obra: Anos Incríveis
 tipo: serie
+anoObra: 1988
+nota: 10
 ficha:
   tituloOriginal: "The Wonder Years"
+  ano: 1988
+  anoFim: 1993
+  criadores:
+    - "Carol Black"
+    - "Neal Marlens"
   elenco:
     - "Fred Savage"
+    - "Danica McKellar"
+    - "Josh Saviano"
     - "Dan Lauria"
     - "Alley Mills"
-    - "Olivia d'Abo"
     - "Jason Hervey"
-    - "Danica McKellar"
-  duracaoMin: 22
+  emissora: "ABC"
+  temporadas: 6
+  episodios: 115
+  situacao: "Encerrada"
+  generos:
+    - "Drama adolescente"
+    - "Comédia dramática"
   paises:
     - "Estados Unidos"
-  temporadas: 6
-  emissora: "American Broadcasting Company"
-  wikidataId: Q691581
-  ano: 1988
-  generos:
-    - "Comédia dramática"
-    - "Comédia"
-    - "Série adolescente"
-  criadores:
-    - "Neal Marlens"
-anoObra: 1988
+  ondeAssistirBrasil: "Paramount+ (verifique disponibilidade)"
+  sinopse: "Kevin Arnold tem 12 anos quando começa a série e está entrando na adolescência numa cidade suburbana dos Estados Unidos, no final dos anos 1960. Ao lado do melhor amigo Paul e da vizinha Winnie Cooper, por quem nutre um amor silencioso, Kevin enfrenta a escola, a família e o mundo que está mudando rápido demais à sua volta. Tudo narrado pelo Kevin adulto, olhando para o passado com a mistura certa de humor e nostalgia."
+  curiosidades:
+    - "A série estreou nos Estados Unidos logo após o Super Bowl XXII, em 31 de janeiro de 1988, e imediatamente se tornou um fenômeno de audiência."
+    - "No Brasil, passou pela TV Cultura, TV Bandeirantes, Canal 21 e Multishow ao longo dos anos 1990 e 2000. A dublagem foi feita pela Álamo e dirigida por Ricardo Nóvoa."
+    - "A voz do Kevin adulto, que narra todas as histórias, é de Daniel Stern, o mesmo ator do ladrão trapalhão em Esqueceram de Mim."
+    - "Danica McKellar, que interpreta Winnie Cooper, é formada em matemática pela UCLA e publicou uma série de livros de matemática voltados para garotas adolescentes."
+    - "A música de abertura, \"With a Little Help from My Friends\", era a versão de Joe Cocker para a canção original dos Beatles."
+    - "A personagem Becky Slater, rival de Winnie nos afetos de Kevin, é interpretada por Crystal McKellar, irmã de Danica McKellar na vida real."
+    - "David Schwimmer, o Ross de Friends, aparece na 5ª temporada como o marido de Karen, a irmã de Kevin."
+    - "Fred Savage tinha 12 anos na estreia da série, mesma idade de Kevin Arnold no início da história."
+    - "O cancelamento foi motivado pelo conflito entre os produtores e a ABC: à medida que Kevin amadurecia, os produtores queriam que a série também amadurecesse, mas os executivos não aprovaram o conteúdo mais adulto para o horário das 20h."
+  fontes:
+    - nome: "Wikipedia: Anos Incríveis"
+      url: "https://pt.wikipedia.org/wiki/Anos_Incr%C3%ADveis"
+    - nome: "Dublagem Brasileira: Anos Incríveis"
+      url: "https://dublagembrasileira.com.br/?p=14154"
+    - nome: "Memória Magazine: Anos Incríveis"
+      url: "https://memoriamagazine.blogspot.com/2019/03/falando-em-serie-anos-incriveis-wonder.html"
 ---
 
-**Gênero:** Comédia/Drama/Romance
+Existe uma experiência que só quem viveu a televisão brasileira nos anos 1990 conhece: a de colocar bombril na antena para tentar melhorar o sinal. Foi assim que eu assisti a **Anos Incríveis** pelo Canal 21, na época em que o Grupo Bandeirantes exibia a série aos sábados. A imagem oscilava, o som às vezes falhava, e eu não movia um músculo com medo de perder a cena.
 
-**Status:** Série Finalizada
+## Uma série fora do tempo
 
-**Estreia no Brasil:** 1988
+**Anos Incríveis** (The Wonder Years, no original) foi criada por **Carol Black** e **Neal Marlens** e exibida nos Estados Unidos pela ABC entre 1988 e 1993. Mas a história se passa entre 1968 e 1973, e é justamente esse distanciamento temporal que dá à série uma qualidade rara: a nostalgia como ponto de vista, não como truque.
 
-**Exibição****:** Bandeirantes/Cultura/Multishow
+**Kevin Arnold** (**Fred Savage**) tem 12 anos no primeiro episódio e cresce ao longo de seis temporadas. Tudo é narrado pelo Kevin adulto, com a voz de **Daniel Stern**, que olha para o passado com a mistura certa de humor e ternura. É uma série sobre a adolescência contada por quem já passou por ela e entende o que cada momento significou, mesmo que na época não soubesse.
 
-**Temporadas:** 6 Temporadas
+## O primeiro episódio
 
-**Sinopse:**
+O episódio de estreia é, sem dúvida, um dos mais impactantes da história das séries adolescentes. **Brian Cooper**, irmão de Winnie, morre no Vietnã, e é essa perda que empurra Kevin e Winnie para mais perto um do outro. A série nasce de um luto, e isso diz muito sobre o que ela é: uma comédia que nunca tem medo de doer.
 
-A série mostra acontecimentos ocorridos entre 1968 a 1973, sob a visão de um garoto chamado Kevin Arnold, que esta entrando em sua fase de adolescência ao lado do seu melhor amigo Paul e da garota Winnie Cooper, pela qual ele nutre grandes esperanças sentimentais. As histórias são narradas por Kevin, já bem mais velho, lembrando e descrevendo o que ele sentiu e o que tinha aprendeu com as suas experiências. Os temas mostram problemas familiares e também diversos outros temas.
+## Kevin e Winnie
 
-**Curiosidades:**
+Eu torci muito por eles, apesar de Winnie ser a garota mais confusa da história das séries teen. Ela avança e recua, namora outros, some por temporadas inteiras e volta quando Kevin já seguiu em frente. Mas é exatamente por isso que o casal funciona: eles são adolescentes, e adolescentes não sabem o que querem. A série nunca os simplifica.
 
-\>> A série misturava drama e comédia criado por Carol Black e Neal Marlens, exibido originalmente pela rede ABC entre 15 de março de 1988 a 12 de maio de 1993, num total de 115 episódios, de aproximadamente 22 minutos de duração, em 6 temporadas.
+O episódio do acidente de Winnie é outro dos que ficaram. A cena em que Kevin chega até ela no hospital, e o que os dois não conseguem dizer um ao outro, é do tipo que não sai da memória. E o episódio do professor de matemática, **Mr. Collins**, que morre antes de Kevin poder se redimir, é uma das representações mais honestas da culpa adolescente que já vi em qualquer tela.
 
-\>> Danica Mckellar, que interpreta Winnie Cooper,  é formada em matemática.
+## A trilha sonora
 
-\>> O Kevin Arnold do futuro, que narra a história, tem a voz de Daniel Stern, que é mais conhecido pelo papel do ladrão companheiro de Joe Pesci em Esqueceram de Mim.
+Vale ressaltar que a trilha sonora era uma atração à parte. A abertura com Joe Cocker cantando "With a Little Help from My Friends", dos Beatles, já entregava o clima antes de o primeiro frame aparecer. E ao longo dos episódios, a série usava rock clássico dos anos 60 e 70, de **Simon & Garfunkel** a **Van Morrison**, não como cenário, mas como parte da narrativa. Cada música escolhida dizia algo sobre o que Kevin estava sentindo, e o efeito é de uma intimidade que poucas séries conseguem criar.
 
-\>> O livro que Kevin e Paul roubam, "Tudo que você sempre quis saber sobre sexo, mas tinha vergonha de perguntar", só seria lançado em novembro de 69, enquanto a história se passava em setembro de 68.
+## A atmosfera inimitável
 
-\>>  Soleyl Moonfrye, a Punky, faz uma participação em um dos episódios da série.
+Anos Incríveis foi a primeira série que assisti do começo ao fim, sem pular nenhum episódio. Até hoje, não encontrei nenhuma outra com a mesma atmosfera. Não é nostalgia cega: é que a série acertou em algo muito específico, a sensação de que as coisas que acontecem quando você tem 13, 14, 15 anos parecem ao mesmo tempo urgentes demais e passageiras demais. Kevin Arnold captura isso com uma precisão que dói.
 
-\>>  David Schwimmer, o Ross de Friends, aparece na 5º temporada como o marido de Karen.
+A série está na nossa lista das [melhores séries de todos os tempos](/series/as-melhores-series-de-todos-os-tempos/) e no artigo sobre as [séries clássicas da Warner Bros.](/series/series-classicas-warner-bros/), e merecia ter ganhado essa crítica muito antes.
 
-\>> Josh Saviano, que interpreta Paul, não é, apesar de muito difundido, Marylin Mason.
-
-\>> Juliette Lewis aparece na série, interpretando uma namorada de Wayne, assim como Alicia Silverstone, que também fez uma participação.
-
-\>> Fred Savage tinha 12 anos no começo da série.
-
-\>> Joe Cocker intepretava a canção de abertura da série, "With a Litlle Help from my Friends", que por sua vez, era uma regravação da canção do álbum Sgt. Peppers Lonely Hearts Club Band, dos Beatles.
-
-\>> Fred Savage dirigiu o filme "Acampamento do Papai", e episódios de séries como, Hannah Montana, As Visões da Raven, Feiticeiros de Waverly Place, Ugly Betty, Greek, Happy Endings, Modern Family e 2 Broke Girls.
-
-\>> Danica Mckellar fez participações em How I Met Your Mother e em The Big Bang Theory.
-
-\>> Kevin foi dublado por Angélica Santos, que também dublou Kate em Lost, Askot em Guerreiras Mágicas de Rayearth, Oolong em Dragon Ball e Cebolinha no desenho da Turma da Mônica.
-
-\>> Family Guy teve um episódio dedicado a Fred Savage, com sua partipação,em 2008, chamado Fox-y Lady.
-
-\>> Dan Lauria, que interpreta o pai de Kevin, fez uma participação na primeira temporada de  Smallvile, como o treinador "Arnold".
-
-\>> Olívia D´abo, que interpretou Karen, a irmã de Kevin, participou de filmes como Conan, O Destruidor, Quanto Mais Idiota Melhor 2, além de ter uma grande carreira como cantora e dubladora, dando voz a Carrol Ferris em Lanterna Verde: Primeiro Vôo, Sonia Blade em Mortal Kombat: Defensores do Reino, a Mestra Jedi Luminara em Star Wars: Clone Wars, além de Jane, no filme e na série de Tarzan, da Disney.
-
-\>> A frase final de Kevin Arnold, sobre sua história, é a seguinte: "Crescer acontece em um instante . Um dia você está de fraldas, e no outro, está indo embora,. Mas as memórias da infância ficam com você por um longo tempo. Eu lembro de um lugar, uma cidade, uma casa, como muitas outras casas, um quintal como muitos outros quintais…..em uma rua como outras ruas. E o negócio é que, ainda olho para trás, maravilhado". É possível escutar o filho de Kevin o chamando para jogar bola (que tem a voz do filho do narrador, Daniel Stern), e ele dizendo que já vai.
-
-\>> Kevin foi guitarrista da banda Sapatos Elétricos, que durou apenas um episódio.
-
-\>> A personagem Becky Slater, que teve um rápido romance com Kevin e logo depois se tornou sua inimiga, é irmã de Danica Mckellar na vida real, e se chama Crystal Mckellar.
-
-\>> Neal Marlens e Carol Black, os criadores da série, são casados.
-
-\>> Assim como seu personagem, que havia lutado na guerra da Coréia, Dan Lauria serviu no Vietnã.
-
-\>> Winnie é um apelido, e não o nome real da personagem de Danica Mckellar. Seu nome é Gwendolyn.
-
-\>> Na série Liga da Justiça Sem Limites, Fred Savage e Jason Hervey, respectivamente Kevin e  Wayne, dublam dois personagens que são irmãos, assim como eles no seriado, Rapina e Columba. Hervey interpreta o primeiro e Savage o segundo.
-
-\>> Danica Mckellar escreveu uma série de livros de  matemática voltados para garotas, com a intenção de mostrar que a matéria não é tão complicada assim.
-
-\>> Danica dublou as personagens Freida em Super Choque, Jubileu em X-Men Legends,  Megan em Justiça Jovem e a Mulher-Ínvisivel em Marvel Ultimate Alliance 1 e 2.
-
-\>> A abertura mudou duas vezes: a primeira que mudou, mostrava Kevin já adolescente com os amigos, enquanto a segunda, mostrava fatos que ocorriam no mundo na época em que o seriado se passava.
-
-\>> Josh Saviano e Danica Mckellar, participaram juntos do filme "Acampamento Cucamonga", campeão de reprises no Cinema em Casa nos anos 90.
-
-**Abertura da Série:**
-
-loading...
+**Nota: 10/10**
