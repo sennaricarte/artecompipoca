@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "node scripts/checar-preencher.mjs && node scripts/gerar-redirects.mjs --check",
     "dev": "astro dev",
+    "autor:foto": "node scripts/autor-foto.mjs",
     "build": "astro build && node scripts/limpar-sitemap.mjs",
     "preview": "astro preview",
     "astro": "astro",

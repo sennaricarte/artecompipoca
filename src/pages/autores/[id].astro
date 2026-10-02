@@ -15,6 +15,7 @@ import {
 	TIPO_RESENHA_PARA_EDITORIA,
 } from '../../lib/conteudo';
 import { getResumoAutor } from '../../lib/autores';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
 	const [artigos, resenhas, autores] = await Promise.all([
@@ -104,6 +105,21 @@ const descricao = resumo.bioCompleta || `Textos de ${autor.data.nome} no Arte Co
 		<h1 class="font-display text-4xl tracking-wide text-text md:text-5xl">
 			{autor.data.nome}
 		</h1>
+		{
+			autor.data.foto && (
+				<div class="mt-4">
+					<Image
+						src={autor.data.foto}
+						alt={`Foto de ${autor.data.nome}`}
+						width={80}
+						height={80}
+						class="rounded-full"
+						format="webp"
+						quality="mid"
+					/>
+				</div>
+			)
+		}
 		{
 			resumo.bioCompleta && (
 				<p class="mt-4 max-w-2xl text-muted">{resumo.bioCompleta}</p>
