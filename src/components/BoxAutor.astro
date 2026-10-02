@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import autoresData from '../data/autores.json';
+import logo from '../../public/logo.svg';
+
+export interface Props {
+  autor: {
+    id: string;
+    nome: string;
+    bio?: string;
+  };
+}
+
+const { autor } = Astro.props as Props;
+if (!autor || autor.id === 'redacao') {
+  // Não renderiza para assinatura coletiva
+  return;
+}
+
+const autorData = autoresData.find((a) => a.id === autor.id) ?? null;
+const foto = autorData?.foto ?? null;
+const nome = autorData?.nome ?? autor.nome;
+const bio = autor.bio ?? autorData?.bio ?? '';
+---
+
+<div class="mt-10 border border-white/10 rounded-sm bg-surface p-4">
+  <div class="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+    <div class="flex-shrink-0">
+      <Image
+        src={foto ?? logo}
+        alt={`Foto de ${nome}`}
+        width={64}
+        height={64}
+        class="rounded-full"
+        format="webp"
+        quality="mid"
+      />
+    </div>
+    <div class="text-center sm:text-left">
+      <a href={`/autores/${autor.id}/`} class="font-medium text-text block">
+        {nome}
+      </a>
+      {
+        bio && (
+          <p class="mt-1 text-sm text-muted max-w-2xl">
+            {bio}
+          </p>
+        )
+      }
+    </div>
+  </div>
+</div>
+

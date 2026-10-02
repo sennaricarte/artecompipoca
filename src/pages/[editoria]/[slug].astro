@@ -16,6 +16,7 @@ import {
 } from '../../lib/conteudo';
 import { getStructuredDataImages } from '../../lib/imagens-seo';
 import { getResumoAutor } from '../../lib/autores';
+import BoxAutor from '../../components/BoxAutor.astro';
 
 export async function getStaticPaths() {
 	const artigos = await getArtigos();
@@ -239,6 +240,8 @@ const temCartazTopo = Boolean(!temCover && entry.data.cartaz && entry.data.carta
 		<div class="conteudo mt-10">
 			<Content />
 		</div>
+
+		<BoxAutor autor={autor} />
 
 		<div class="mt-10 lg:hidden">
 			<Compartilhar url={pageUrl} titulo={entry.data.title} variant="inline" />
