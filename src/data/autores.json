@@ -113,7 +113,8 @@
 	{
 		"id": "vivian-duarte",
 		"nome": "Vivian Duarte",
-		"bio": "Escritora, roteirista e formada em Publicidade. Autora de livros de romance e suspense, atua na criação de roteiros, séries e quadrinhos, além de mediar oficinas de escrita e projetos culturais."
+		"bio": "Escritora, roteirista e formada em Publicidade. Autora de livros de romance e suspense, atua na criação de roteiros, séries e quadrinhos, além de mediar oficinas de escrita e projetos culturais.",
+		"foto": "../../assets/autores/vivian-duarte.jpg"
 	},
 	{
 		"id": "welenson-castro",
