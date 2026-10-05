@@ -3,6 +3,9 @@ title: "Pânico (1996)"
 description: "Crítica de Pânico (1996), de Wes Craven: a desconstrução inteligente do slasher que transformou o gênero de terror nos anos 90. Nota 7."
 pubDate: 2026-10-01T15:00:00-03:00
 autor: senna-ricarte
+cartaz: "../../assets/capas/panico-1996-cartaz.jpg"
+cartazAlt: "Cartaz brasileiro de Pânico (1996) com o rosto do Ghostface e o elenco: Drew Barrymore, Neve Campbell, Courteney Cox e Skeet Ulrich"
+cartazCredito: "Divulgação/Imagem Filmes"
 origem: original
 draft: false
 obra: Pânico
