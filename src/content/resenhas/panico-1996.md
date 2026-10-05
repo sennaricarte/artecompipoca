@@ -16,6 +16,28 @@ tipo: filme
 anoObra: 1996
 nota: 7
 ficha:
+  wikidataId: "Q104727"
+  tituloOriginal: "Scream"
+  ano: 1996
+  direcao:
+    - "Wes Craven"
+  roteiro:
+    - "Kevin Williamson"
+  elenco:
+    - "Neve Campbell"
+    - "Courteney Cox"
+    - "David Arquette"
+    - "Skeet Ulrich"
+    - "Drew Barrymore"
+    - "Matthew Lillard"
+  duracao: 111
+  generos:
+    - "Terror"
+    - "Suspense"
+    - "Slasher"
+  paises:
+    - "Estados Unidos"
+  distribuidora: "Miramax"
   sinopse: "Um ano depois do assassinato de sua mãe, a adolescente Sidney Prescott começa a ser perseguida por um assassino mascarado que usa um capuz preto e uma máscara branca inspirada no quadro 'O Grito', de Edvard Munch. O diferencial: esse assassino conhece as regras dos filmes de terror tão bem quanto as vítimas."
   curiosidades:
     - "O roteirista Kevin Williamson, que também criou Dawson's Creek, escreveu o roteiro de Pânico em dois dias, após assistir a uma reportagem sobre um assassino em série em Gainesville, na Flórida."
