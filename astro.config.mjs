@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import remarkMinifichas, {
@@ -16,7 +17,7 @@ export default defineConfig({
 		inlineStylesheets: 'always',
 	},
 	markdown: {
-		remarkPlugins: [remarkMinifichas],
+		processor: unified({ remarkPlugins: [remarkMinifichas] }),
 	},
 	integrations: [
 		mdx(),
