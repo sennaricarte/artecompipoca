@@ -4,6 +4,12 @@ seoTitle: "Crítica de La La Land (2016): análise, final explicado e números m
 description: "Análise de La La Land (2016), de Damien Chazelle: a química entre Emma Stone e Ryan Gosling, as homenagens aos musicais clássicos e o desfecho agridoce."
 pubDate: 2026-10-07T19:00:00-03:00
 autor: senna-ricarte
+cover: "../../assets/capas/la-la-land-2016-cena.jpg"
+coverAlt: "Ryan Gosling e Emma Stone se abraçam e dançam num mirante com vista para Los Angeles ao entardecer em cena de La La Land"
+coverCredito: "Divulgação/Paris Filmes"
+cartaz: "../../assets/capas/la-la-land-2016-cartaz.jpg"
+cartazAlt: "Cartaz brasileiro de La La Land: Emma Stone de vestido amarelo e Ryan Gosling dançam sob um poste de luz com Los Angeles ao fundo e o texto Em La La Land, as estações contam uma história"
+cartazCredito: "Divulgação/Paris Filmes"
 origem: original
 draft: false
 obra: "La La Land: Cantando Estações"
