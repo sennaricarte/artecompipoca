@@ -3,7 +3,7 @@ title: "Crítica: La La Land (2016) e a melancolia agridoce do sonho"
 seoTitle: "Crítica de La La Land (2016): análise, final explicado e números musicais"
 description: "Análise de La La Land (2016), de Damien Chazelle: a química entre Emma Stone e Ryan Gosling, as homenagens aos musicais clássicos e o desfecho agridoce."
 pubDate: 2026-10-07T19:00:00-03:00
-autor: redacao
+autor: senna-ricarte
 origem: original
 draft: false
 obra: "La La Land: Cantando Estações"

@@ -3,10 +3,13 @@ title: "Crítica: Hereditário (2018) e o horror da herança familiar"
 seoTitle: "Crítica de Hereditário (2018): explicação, final e por que aterroriza tanto"
 description: "Análise profunda de Hereditário (2018), estreia de Ari Aster com Toni Collette: o luto transformado em horror psicológico, o culto de Paimon e o desfecho perturbador."
 pubDate: 2026-10-07T18:00:00-03:00
-autor: redacao
+autor: senna-ricarte
 cover: "../../assets/capas/hereditario-2018-cena.jpg"
 coverAlt: "Toni Collette como Annie Graham com expressão de desespero e pavor em cena de Hereditário"
 coverCredito: "Divulgação/A24"
+cartaz: "../../assets/capas/hereditario-2018-cartaz.jpg"
+cartazAlt: "Cartaz de Hereditário: Toni Collette e Milly Shapiro com rostos assustadores sobre fundo escuro, com o texto O Mal vive nesta família"
+cartazCredito: "Divulgação/Diamond Films"
 origem: original
 draft: false
 obra: "Hereditário"

@@ -3,7 +3,13 @@ title: "Crítica: Clube da Luta (1999) e o colapso do homem de catálogo"
 seoTitle: "Crítica de Clube da Luta (1999): análise, reviravolta e significado"
 description: "Análise profunda de Clube da Luta (1999), obra-prima de David Fincher com Brad Pitt e Edward Norton: niilismo, consumo, masculinidade e o plot twist definitivo."
 pubDate: 2026-10-07T20:00:00-03:00
-autor: redacao
+autor: senna-ricarte
+cover: "../../assets/capas/clube-da-luta-1999-cena.jpg"
+coverAlt: "Brad Pitt como Tyler Durden, sem camisa e com sangue no peito, cercado por membros do Clube da Luta"
+coverCredito: "Divulgação/20th Century Fox"
+cartaz: "../../assets/capas/clube-da-luta-1999-cartaz.jpg"
+cartazAlt: "Cartaz brasileiro de Clube da Luta: Brad Pitt segura um sabonete rosa com o texto Má Conduta. Caos. Sabão."
+cartazCredito: "Divulgação/20th Century Fox"
 origem: original
 draft: false
 obra: "Clube da Luta"
