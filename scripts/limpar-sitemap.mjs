@@ -2,6 +2,7 @@
 /**
  * Pós-build: remove dos sitemaps em dist/ toda URL cuja página tenha
  * <meta name="robots"> com noindex. Imprime as URLs removidas.
+ * Também grava <lastmod> a partir de article:modified_time (quando a página tem).
  */
 
 import { readdir, readFile, writeFile } from 'node:fs/promises';
@@ -18,6 +19,17 @@ function htmlDaUrl(loc) {
 	return caminho.endsWith('/')
 		? join(DIST, caminho, 'index.html')
 		: join(DIST, caminho);
+}
+
+/** @param {string} html */
+function modificadoEm(html) {
+	for (const m of html.matchAll(/<meta\b[^>]*>/gi)) {
+		const tag = m[0];
+		if (!/property\s*=\s*["']article:modified_time["']/i.test(tag)) continue;
+		const v = tag.match(/content\s*=\s*["']([^"']*)["']/i)?.[1];
+		if (v && !Number.isNaN(Date.parse(v))) return new Date(v).toISOString();
+	}
+	return null;
 }
 
 /** @param {string} html */
@@ -67,6 +79,13 @@ async function main() {
 				removidas.push(loc);
 			} else {
 				mantidas++;
+				const lastmod = modificadoEm(html);
+				if (lastmod && !bloco[0].includes('<lastmod>')) {
+					novo = novo.replace(
+						bloco[0],
+						bloco[0].replace('</loc>', `</loc><lastmod>${lastmod}</lastmod>`),
+					);
+				}
 			}
 		}
 		if (novo !== xml) await writeFile(caminho, novo);

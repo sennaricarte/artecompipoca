@@ -59,7 +59,7 @@ ficha:
 anoObra: 2011
 ---
 
-# GAME OF THRONES: Quarta Temporada
+## GAME OF THRONES: Quarta Temporada
 
 ## Cotação: ★★★★ Muito Bom
 
