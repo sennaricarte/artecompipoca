@@ -39,8 +39,18 @@
 	],
 	"redirects": [
 		{
+			"source": "/category/quadrinhos-2/",
+			"destination": "/quadrinhos/",
+			"permanent": true
+		},
+		{
 			"source": "/20-maiores-atuacoes-femininas-da-historia-cinema/",
 			"destination": "/cinema/as-20-maiores-atuacoes-femininas-da-historia-do-cinema/",
+			"permanent": true
+		},
+		{
+			"source": "/50-anos-de-007-contra-goldfinger/",
+			"destination": "/cinema/50-anos-de-007-contra-goldfinger/",
 			"permanent": true
 		},
 		{
@@ -101,6 +111,11 @@
 		{
 			"source": "/index.php/20-maiores-atuacoes-femininas-da-historia-cinema/",
 			"destination": "/cinema/as-20-maiores-atuacoes-femininas-da-historia-do-cinema/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/50-anos-de-007-contra-goldfinger/",
+			"destination": "/cinema/50-anos-de-007-contra-goldfinger/",
 			"permanent": true
 		},
 		{
@@ -196,6 +211,11 @@
 		{
 			"source": "/index.php/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
 			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/mapa-para-estrelas-critica/",
+			"destination": "/resenhas/mapa-para-as-estrelas/",
 			"permanent": true
 		},
 		{
@@ -371,6 +391,11 @@
 		{
 			"source": "/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
 			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/mapa-para-estrelas-critica/",
+			"destination": "/resenhas/mapa-para-as-estrelas/",
 			"permanent": true
 		},
 		{

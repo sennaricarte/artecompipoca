@@ -1,1 +1,7 @@
-[]
+[
+	{
+		"source": "/category/quadrinhos-2/",
+		"destination": "/quadrinhos/",
+		"permanent": true
+	}
+]

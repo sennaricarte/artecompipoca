@@ -5,7 +5,7 @@ pubDate: 2014-09-18
 autor: lexy-soares
 origem: arquivo
 legacyUrl: /50-anos-de-007-contra-goldfinger/
-draft: true
+draft: false
 editoria: cinema
 ---
 
