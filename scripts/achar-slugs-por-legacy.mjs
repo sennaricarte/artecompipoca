@@ -7,6 +7,7 @@
  */
 import { readdir, readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
+import { parseCsvWithHeaders } from './lib/csv.mjs';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -94,6 +95,39 @@ for (const alvo of ALVOS) {
 	} else {
 		console.log(`--  ${alvo}\n    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)`);
 		faltam.push(alvo);
+	}
+}
+// Diagnóstico das não encontradas: o que os CSVs do pipeline dizem sobre cada uma.
+const COLS = ['url_normalizada', 'tipo_final', 'sugestao', 'motivo', 'aprovar', 'palavras', 'palavras_corpo', 'primeiro_snapshot'];
+if (faltam.length) {
+	console.log('\n=== Diagnóstico das não encontradas (CSVs em _recuperados) ===');
+	for (const arq of ['inventario.csv', 'metadados.csv', 'decisoes-manuais.csv']) {
+		let rows = [];
+		try {
+			rows = parseCsvWithHeaders(await readFile(join(ROOT, '_recuperados', arq), 'utf8')).rows;
+		} catch {
+			console.log(`(sem ${arq})`);
+			continue;
+		}
+		for (const alvo of faltam) {
+			const casados = rows.filter((r) => {
+				const u = r.url_normalizada || r.url || '';
+				if (!u) return false;
+				let path = u;
+				try { path = new URL(u).pathname; } catch {}
+				return norm(path) === norm(alvo) || frouxa(path) === frouxa(alvo);
+			});
+			if (!casados.length) {
+				console.log(`[${arq}] ${alvo}: sem linha`);
+				continue;
+			}
+			for (const r of casados) {
+				const resumo = COLS.filter((c) => r[c] !== undefined && r[c] !== '')
+					.map((c) => `${c}=${r[c]}`)
+					.join(' | ');
+				console.log(`[${arq}] ${alvo}: ${resumo}`);
+			}
+		}
 	}
 }
 console.log(`\nEncontrados: ${achados.length} | Não encontrados: ${faltam.length}`);
