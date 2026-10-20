@@ -39,8 +39,78 @@
 	],
 	"redirects": [
 		{
+			"source": "/category/quadrinhos-2/",
+			"destination": "/quadrinhos/",
+			"permanent": true
+		},
+		{
+			"source": "/oblogquenaoestavala/nos-cinemas-oblivion-2013/",
+			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/oblogquenaoestavala/nos-cinemas-oblivion-2013/",
+			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/mad-max-estrada-da-furia-critica/",
+			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/mad-max-estrada-da-furia-critica/",
+			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/batman-1989-critica/",
+			"destination": "/cinema/o-problema-com-os-herois-em-batman-vs-superman/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/batman-1989-critica/",
+			"destination": "/cinema/o-problema-com-os-herois-em-batman-vs-superman/",
+			"permanent": true
+		},
+		{
+			"source": "/homem-formiga-critica/",
+			"destination": "/cinema/ordem-para-assistir-vingadores/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/homem-formiga-critica/",
+			"destination": "/cinema/ordem-para-assistir-vingadores/",
+			"permanent": true
+		},
+		{
+			"source": "/capitao-america-2-o-soldado-invernal-critica/",
+			"destination": "/cinema/ordem-para-assistir-vingadores/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/capitao-america-2-o-soldado-invernal-critica/",
+			"destination": "/cinema/ordem-para-assistir-vingadores/",
+			"permanent": true
+		},
+		{
+			"source": "/ela-critica/",
+			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/ela-critica/",
+			"destination": "/cinema/top-5-filmes-de-ficcao-cientifica/",
+			"permanent": true
+		},
+		{
 			"source": "/20-maiores-atuacoes-femininas-da-historia-cinema/",
 			"destination": "/cinema/as-20-maiores-atuacoes-femininas-da-historia-do-cinema/",
+			"permanent": true
+		},
+		{
+			"source": "/50-anos-de-007-contra-goldfinger/",
+			"destination": "/cinema/50-anos-de-007-contra-goldfinger/",
 			"permanent": true
 		},
 		{
@@ -106,6 +176,11 @@
 		{
 			"source": "/index.php/20-maiores-atuacoes-femininas-da-historia-cinema/",
 			"destination": "/cinema/as-20-maiores-atuacoes-femininas-da-historia-do-cinema/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/50-anos-de-007-contra-goldfinger/",
+			"destination": "/cinema/50-anos-de-007-contra-goldfinger/",
 			"permanent": true
 		},
 		{
@@ -206,6 +281,11 @@
 		{
 			"source": "/index.php/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
 			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/mapa-para-estrelas-critica/",
+			"destination": "/resenhas/mapa-para-as-estrelas/",
 			"permanent": true
 		},
 		{
@@ -401,6 +481,11 @@
 		{
 			"source": "/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
 			"destination": "/cinema/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento/",
+			"permanent": true
+		},
+		{
+			"source": "/mapa-para-estrelas-critica/",
+			"destination": "/resenhas/mapa-para-as-estrelas/",
 			"permanent": true
 		},
 		{

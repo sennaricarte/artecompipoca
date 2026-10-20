@@ -5,7 +5,7 @@ pubDate: 2015-02-24
 autor: lexy-soares
 origem: arquivo
 legacyUrl: /mapa-para-estrelas-critica/
-draft: true
+draft: false
 obra: Mapa Para as Estrelas
 tipo: filme
 ficha:
