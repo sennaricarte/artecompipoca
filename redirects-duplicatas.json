@@ -45,6 +45,11 @@
 		"permanent": true
 	},
 	{
+		"source": "/anos-incriveis/",
+		"destination": "/resenhas/anos-incriveis/",
+		"permanent": true
+	},
+	{
 		"source": "/as-cinco-melhores-series-estreantes-de-2015/",
 		"destination": "/series/as-cinco-melhores-series-estreantes-de-2015/",
 		"permanent": true
@@ -242,6 +247,11 @@
 	{
 		"source": "/index.php/american-horror-story-asylum-resenha/",
 		"destination": "/resenhas/american-horror-story-asylum/",
+		"permanent": true
+	},
+	{
+		"source": "/index.php/anos-incriveis/",
+		"destination": "/resenhas/anos-incriveis/",
 		"permanent": true
 	},
 	{
@@ -455,11 +465,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/index.php/memorias-de-minhas-pautas-tristes-critica/",
-		"destination": "/resenhas/memorias-de-minhas-putas-tristes/",
-		"permanent": true
-	},
-	{
 		"source": "/index.php/metropolis-1927/",
 		"destination": "/resenhas/metropolis/",
 		"permanent": true
@@ -477,16 +482,6 @@
 	{
 		"source": "/index.php/noites-brancas-carteiro/",
 		"destination": "/resenhas/as-noites-brancas-do-carteiro/",
-		"permanent": true
-	},
-	{
-		"source": "/index.php/o-congresso-futurista-critica/",
-		"destination": "/resenhas/o-congresso-futurista/",
-		"permanent": true
-	},
-	{
-		"source": "/index.php/o-homem-duplicado-critica/",
-		"destination": "/resenhas/o-homem-duplicado/",
 		"permanent": true
 	},
 	{
@@ -680,11 +675,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/index.php/viver-e-mais-facil-com-os-olhos-fechados-critica/",
-		"destination": "/resenhas/viver-e-mais-facil-com-os-olhos-fechados/",
-		"permanent": true
-	},
-	{
 		"source": "/index.php/youre-worst-resenha/",
 		"destination": "/resenhas/you-re-the-worst/",
 		"permanent": true
@@ -745,11 +735,6 @@
 		"permanent": true
 	},
 	{
-		"source": "/memorias-de-minhas-pautas-tristes-critica/",
-		"destination": "/resenhas/memorias-de-minhas-putas-tristes/",
-		"permanent": true
-	},
-	{
 		"source": "/metropolis-1927/",
 		"destination": "/resenhas/metropolis/",
 		"permanent": true
@@ -767,16 +752,6 @@
 	{
 		"source": "/noites-brancas-carteiro/",
 		"destination": "/resenhas/as-noites-brancas-do-carteiro/",
-		"permanent": true
-	},
-	{
-		"source": "/o-congresso-futurista-critica/",
-		"destination": "/resenhas/o-congresso-futurista/",
-		"permanent": true
-	},
-	{
-		"source": "/o-homem-duplicado-critica/",
-		"destination": "/resenhas/o-homem-duplicado/",
 		"permanent": true
 	},
 	{
@@ -967,11 +942,6 @@
 	{
 		"source": "/vincent-hq-critica/",
 		"destination": "/resenhas/vincent/",
-		"permanent": true
-	},
-	{
-		"source": "/viver-e-mais-facil-com-os-olhos-fechados-critica/",
-		"destination": "/resenhas/viver-e-mais-facil-com-os-olhos-fechados/",
 		"permanent": true
 	},
 	{

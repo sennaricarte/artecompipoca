@@ -49,6 +49,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/anos-incriveis/",
+			"destination": "/resenhas/anos-incriveis/",
+			"permanent": true
+		},
+		{
 			"source": "/batman-vs-superman-origem-da-justica/",
 			"destination": "/resenhas/batman-vs-superman-a-origem-da-justica/",
 			"permanent": true
@@ -106,6 +111,11 @@
 		{
 			"source": "/index.php/a-critica-definitiva-12-anos-de-escravidao/",
 			"destination": "/resenhas/12-anos-de-escravidao/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/anos-incriveis/",
+			"destination": "/resenhas/anos-incriveis/",
 			"permanent": true
 		},
 		{
@@ -199,6 +209,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/memorias-de-minhas-pautas-tristes-critica/",
+			"destination": "/resenhas/memorias-de-minhas-putas-tristes/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/monsieur-verdoux-critica/",
 			"destination": "/resenhas/monsieur-verdoux/",
 			"permanent": true
@@ -219,8 +234,18 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/o-congresso-futurista-critica/",
+			"destination": "/resenhas/o-congresso-futurista/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/o-expresso-do-amanha-critica/",
 			"destination": "/resenhas/o-expresso-do-amanha/",
+			"permanent": true
+		},
+		{
+			"source": "/index.php/o-homem-duplicado-critica/",
+			"destination": "/resenhas/o-homem-duplicado/",
 			"permanent": true
 		},
 		{
@@ -329,6 +354,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/index.php/viver-e-mais-facil-com-os-olhos-fechados-critica/",
+			"destination": "/resenhas/viver-e-mais-facil-com-os-olhos-fechados/",
+			"permanent": true
+		},
+		{
 			"source": "/index.php/whiplash-em-busca-da-perfeicao-critica/",
 			"destination": "/resenhas/whiplash-em-busca-da-perfeicao/",
 			"permanent": true
@@ -374,6 +404,11 @@
 			"permanent": true
 		},
 		{
+			"source": "/memorias-de-minhas-pautas-tristes-critica/",
+			"destination": "/resenhas/memorias-de-minhas-putas-tristes/",
+			"permanent": true
+		},
+		{
 			"source": "/monsieur-verdoux-critica/",
 			"destination": "/resenhas/monsieur-verdoux/",
 			"permanent": true
@@ -394,8 +429,18 @@
 			"permanent": true
 		},
 		{
+			"source": "/o-congresso-futurista-critica/",
+			"destination": "/resenhas/o-congresso-futurista/",
+			"permanent": true
+		},
+		{
 			"source": "/o-expresso-do-amanha-critica/",
 			"destination": "/resenhas/o-expresso-do-amanha/",
+			"permanent": true
+		},
+		{
+			"source": "/o-homem-duplicado-critica/",
+			"destination": "/resenhas/o-homem-duplicado/",
 			"permanent": true
 		},
 		{
@@ -501,6 +546,11 @@
 		{
 			"source": "/trumbo-critica/",
 			"destination": "/resenhas/trumbo/",
+			"permanent": true
+		},
+		{
+			"source": "/viver-e-mais-facil-com-os-olhos-fechados-critica/",
+			"destination": "/resenhas/viver-e-mais-facil-com-os-olhos-fechados/",
 			"permanent": true
 		},
 		{

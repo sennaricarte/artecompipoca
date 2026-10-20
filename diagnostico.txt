@@ -1,0 +1,65 @@
+--  /oblogquenaoestavala/nos-cinemas-oblivion-2013/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /na-mesa-10-subcelebridades/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /mad-max-estrada-da-furia-critica/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /memorias-da-boca-resenha/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /os-oito-odiados-critica-2/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /ela-critica/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /homem-formiga-critica/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /snoopy-charlie-brown-peanuts-o-filme/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /batman-1989-critica/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+--  /capitao-america-2-o-soldado-invernal-critica/
+    -> não está nos Markdown convertidos (aprovar=nao, podcast ou fora do inventário)
+OK  /o-homem-duplicado-critica/
+    -> o-homem-duplicado  [lote-2/resenhas] "O Homem Duplicado"
+OK  /o-congresso-futurista-critica/
+    -> o-congresso-futurista  [lote-2/resenhas] "O Congresso Futurista"
+OK  /viver-e-mais-facil-com-os-olhos-fechados-critica/
+    -> viver-e-mais-facil-com-os-olhos-fechados  [lote-2/resenhas] "Viver é Mais Fácil Com os Olhos Fechados"
+OK  /memorias-de-minhas-pautas-tristes-critica/
+    -> memorias-de-minhas-putas-tristes  [lote-2/resenhas] "Memórias de Minhas Putas Tristes"
+
+=== Diagnóstico das não encontradas (CSVs em _recuperados) ===
+[inventario.csv] /oblogquenaoestavala/nos-cinemas-oblivion-2013/: sem linha
+[inventario.csv] /na-mesa-10-subcelebridades/: url_normalizada=https://artecompipoca.net/na-mesa-10-subcelebridades/ | primeiro_snapshot=2016-06-24
+[inventario.csv] /mad-max-estrada-da-furia-critica/: sem linha
+[inventario.csv] /memorias-da-boca-resenha/: sem linha
+[inventario.csv] /os-oito-odiados-critica-2/: sem linha
+[inventario.csv] /ela-critica/: url_normalizada=https://artecompipoca.net/ela/ | primeiro_snapshot=2014-01-17
+[inventario.csv] /homem-formiga-critica/: sem linha
+[inventario.csv] /snoopy-charlie-brown-peanuts-o-filme/: sem linha
+[inventario.csv] /batman-1989-critica/: sem linha
+[inventario.csv] /capitao-america-2-o-soldado-invernal-critica/: sem linha
+[metadados.csv] /oblogquenaoestavala/nos-cinemas-oblivion-2013/: sem linha
+[metadados.csv] /na-mesa-10-subcelebridades/: url_normalizada=https://artecompipoca.net/na-mesa-10-subcelebridades/ | tipo_final=listagem | sugestao=sim | motivo=backlink | aprovar=sim | palavras=75
+[metadados.csv] /mad-max-estrada-da-furia-critica/: sem linha
+[metadados.csv] /memorias-da-boca-resenha/: sem linha
+[metadados.csv] /os-oito-odiados-critica-2/: sem linha
+[metadados.csv] /ela-critica/: url_normalizada=https://artecompipoca.net/ela/ | tipo_final=outro | sugestao=nao | motivo=curto | aprovar=nao | palavras=148
+[metadados.csv] /homem-formiga-critica/: sem linha
+[metadados.csv] /snoopy-charlie-brown-peanuts-o-filme/: sem linha
+[metadados.csv] /batman-1989-critica/: sem linha
+[metadados.csv] /capitao-america-2-o-soldado-invernal-critica/: sem linha
+[decisoes-manuais.csv] /oblogquenaoestavala/nos-cinemas-oblivion-2013/: sem linha
+[decisoes-manuais.csv] /na-mesa-10-subcelebridades/: url_normalizada=https://artecompipoca.net/na-mesa-10-subcelebridades/ | motivo=podcast sem conteúdo (backlink redirecionado) | aprovar=nao | palavras=75
+[decisoes-manuais.csv] /mad-max-estrada-da-furia-critica/: sem linha
+[decisoes-manuais.csv] /memorias-da-boca-resenha/: sem linha
+[decisoes-manuais.csv] /os-oito-odiados-critica-2/: sem linha
+[decisoes-manuais.csv] /ela-critica/: sem linha
+[decisoes-manuais.csv] /homem-formiga-critica/: sem linha
+[decisoes-manuais.csv] /snoopy-charlie-brown-peanuts-o-filme/: sem linha
+[decisoes-manuais.csv] /batman-1989-critica/: sem linha
+[decisoes-manuais.csv] /capitao-america-2-o-soldado-invernal-critica/: sem linha
+
+Encontrados: 4 | Não encontrados: 10
+
+Dry-run (sem gravar):
+pnpm wayback:promover --arquivos=o-homem-duplicado,o-congresso-futurista,viver-e-mais-facil-com-os-olhos-fechados,memorias-de-minhas-putas-tristes
