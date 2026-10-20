@@ -1,9 +1,62 @@
 {
 	"destaqueFixo": "",
 	"destaques": [
-		"artigos/as-melhores-series-de-todos-os-tempos",
-		"resenhas/chinatown-1974",
-		"artigos/mad-max-no-oscar-e-o-velho-debate-arte-vs-entretenimento"
+		"artigos/melhores-streamings-no-brasil-2026",
+		"artigos/estreias-nos-cinemas-novembro-2026",
+		"artigos/ordem-para-assistir-vingadores"
 	],
-	"introducao": "Cinema, séries, HQ - Quadrinhos e música com olhar de fã e rigor de crítica. No ar desde 2013, o Arte Com Pipoca está de volta com o acervo revisado e muita coisa nova pela frente."
+	"introducao": "Cinema, séries, HQ - Quadrinhos e música com olhar de fã e rigor de crítica. No ar desde 2013, o Arte Com Pipoca está de volta com o acervo revisado e muita coisa nova pela frente.",
+	"guias": [
+		{
+			"titulo": "Cinema: estreias e festivais",
+			"hub": "/cinema/",
+			"itens": [
+				"artigos/estreias-nos-cinemas-novembro-2026",
+				"artigos/estreias-nos-cinemas-outubro-2026",
+				"artigos/proximos-lancamentos-paris-filmes",
+				"artigos/mostra-de-sao-paulo-2026-50-edicao-guia",
+				"artigos/feito-pipa-representa-o-brasil-no-oscar-2027",
+				"artigos/mestres-do-universo-filme-he-man"
+			]
+		},
+		{
+			"titulo": "Streaming: o que assistir",
+			"hub": "/series/",
+			"itens": [
+				"artigos/melhores-streamings-no-brasil-2026",
+				"artigos/lancamentos-netflix-outubro-2026",
+				"artigos/lancamentos-prime-video-outubro-2026",
+				"artigos/melhores-series-da-netflix-em-2026",
+				"artigos/melhores-series-hbo-2026",
+				"artigos/series-classicas-warner-bros",
+				"artigos/yellowstone-guia-completo",
+				"artigos/tela-brasil-streaming-gratuito"
+			]
+		},
+		{
+			"titulo": "Ordem para assistir e listas",
+			"hub": "/cinema/",
+			"itens": [
+				"artigos/ordem-para-assistir-vingadores",
+				"artigos/ordem-para-assistir-homem-aranha",
+				"artigos/ordem-para-assistir-jogos-vorazes",
+				"artigos/todos-os-atores-que-interpretaram-o-superman",
+				"artigos/melhores-filmes-de-brad-pitt",
+				"artigos/melhores-filmes-de-emma-stone",
+				"artigos/filmes-de-terror-para-o-halloween"
+			]
+		},
+		{
+			"titulo": "Mercado, Oscar e quadrinhos",
+			"hub": "/quadrinhos/",
+			"itens": [
+				"artigos/oscar-2025-vencedores",
+				"artigos/oscar-2024-vencedores",
+				"artigos/fusao-warner-paramount",
+				"artigos/distribuidoras-de-filmes-no-brasil",
+				"artigos/rei-spawn-vol-5-panini",
+				"artigos/spawn-mata-todos-os-spawns-panini"
+			]
+		}
+	]
 }

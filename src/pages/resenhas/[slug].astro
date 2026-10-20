@@ -14,6 +14,7 @@ import {
 	formatarData,
 	getResenhas,
 	nomeTipoResenha,
+	relacionadosRotativos,
 	rotuloCapaResenha,
 	TIPO_RESENHA_PARA_EDITORIA,
 	type TipoResenha,
@@ -119,10 +120,12 @@ const imageLd = await getStructuredDataImages({
 	site,
 });
 
-const relacionados = (await getResenhas())
-	.filter((r) => r.data.tipo === entry.data.tipo && r.id !== entry.id)
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 3);
+const relacionados = relacionadosRotativos(
+	(await getResenhas())
+		.filter((r) => r.data.tipo === entry.data.tipo)
+		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+	entry.id,
+);
 
 const itemReviewed: Record<string, unknown> = {
 	'@type':

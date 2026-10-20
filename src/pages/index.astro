@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro';
-import { getEntry } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CardPost from '../components/CardPost.astro';
 import home from '../data/home.json';
@@ -276,6 +276,52 @@ function propsCardEditoria(
 	};
 }
 
+type GuiaGrupo = {
+	titulo: string;
+	hub: string;
+	itens: { titulo: string; href: string }[];
+};
+
+/** Guias e listas (home.json): só entram artigos publicados. */
+const guiasHome: GuiaGrupo[] = [];
+for (const grupo of home.guias ?? []) {
+	const itens: GuiaGrupo['itens'] = [];
+	for (const slug of grupo.itens) {
+		const [colecao, ...rest] = slug.split('/');
+		const id = rest.join('/');
+		if (colecao !== 'artigos') continue;
+		const entry = await getEntry('artigos', id);
+		if (!entry || entry.data.draft) {
+			console.warn(`[home] guia ignorado (ausente ou draft): ${slug}`);
+			continue;
+		}
+		itens.push({
+			titulo: entry.data.title,
+			href: `/${entry.data.editoria}/${entry.id}/`,
+		});
+	}
+	if (itens.length > 0) guiasHome.push({ titulo: grupo.titulo, hub: grupo.hub, itens });
+}
+
+/** Autores com texto publicado, do mais ativo para o menos ativo. */
+const [artigosPublicados, autoresColecao] = await Promise.all([
+	getPostsPublicadosOrdenados(),
+	getCollection('autores'),
+]);
+const textosPorAutor = new Map<string, number>();
+for (const post of artigosPublicados) {
+	const idAutor = post.entry.data.autor.id;
+	textosPorAutor.set(idAutor, (textosPorAutor.get(idAutor) ?? 0) + 1);
+}
+const autoresHome = autoresColecao
+	.map((a) => ({
+		id: a.id,
+		nome: a.data.nome,
+		total: textosPorAutor.get(a.id) ?? 0,
+	}))
+	.filter((a) => a.total > 0)
+	.sort((a, b) => b.total - a.total || a.nome.localeCompare(b.nome, 'pt-BR'));
+
 const introducao = home.introducao;
 const seoDescription = `${rotuloEditoriasSite()} com olhar de fã e rigor de crítica. Arte Com Pipoca: no ar desde 2013, com acervo revisado e novidades pela frente.`;
 const seoLen = [...seoDescription].length;
@@ -428,6 +474,42 @@ const linkSection =
 		}
 
 		{
+			guiasHome.length > 0 && (
+				<section class="mt-12 md:mt-14" aria-labelledby="guias-titulo">
+					<h2
+						id="guias-titulo"
+						class="font-display text-3xl tracking-wide text-pipoca md:text-4xl"
+					>
+						Guias e listas de 2026
+					</h2>
+					<div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2">
+						{guiasHome.map((grupo) => (
+							<div>
+								<h3 class="text-lg font-bold text-text">
+									<a href={grupo.hub} class={linkSection}>
+										{grupo.titulo}
+									</a>
+								</h3>
+								<ul class="mt-3 flex flex-col gap-2">
+									{grupo.itens.map((it) => (
+										<li>
+											<a
+												href={it.href}
+												class="text-muted underline-offset-2 transition-colors hover:text-pipoca hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pipoca"
+											>
+												{it.titulo}
+											</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						))}
+					</div>
+				</section>
+			)
+		}
+
+		{
 			criticasRecentes.length > 0 && (
 				<section class="mt-12 md:mt-14" aria-labelledby="criticas-titulo">
 					<div class="flex flex-wrap items-baseline justify-between gap-3">
@@ -503,10 +585,26 @@ const linkSection =
 
 		<section
 			class="mt-14 border-t border-white/10 pt-8 md:mt-16"
-			aria-label="Quem escreve e contato"
+			aria-labelledby="equipe-titulo"
 		>
-			<p class="flex flex-wrap gap-x-8 gap-y-3 text-base text-muted">
-				<a href="/autores/" class={linkSection}>Quem escreve</a>
+			<h2
+				id="equipe-titulo"
+				class="font-display text-3xl tracking-wide text-pipoca md:text-4xl"
+			>
+				Quem escreve
+			</h2>
+			<ul class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-base">
+				{autoresHome.map((a) => (
+					<li>
+						<a href={`/autores/${a.id}/`} class={linkSection}>
+							{a.nome}
+						</a>
+					</li>
+				))}
+			</ul>
+			<p class="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-base text-muted">
+				<a href="/autores/" class={linkSection}>Toda a equipe</a>
+				<a href="/politica-editorial/" class={linkSection}>Política editorial</a>
 				<a href="/contato/" class={linkSection}>Fale com a gente</a>
 			</p>
 		</section>

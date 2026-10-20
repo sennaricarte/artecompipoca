@@ -283,3 +283,20 @@ export function imagensPost(data: {
 		cartazCredito: data.cartazCredito,
 	};
 }
+
+/**
+ * Relacionados "rotativos": devolve os n itens seguintes a idAtual na lista (com volta ao início).
+ * Cada item da lista recebe exatamente n links internos, em vez de todos apontarem
+ * sempre para os mesmos mais recentes.
+ */
+export function relacionadosRotativos<T extends { id: string }>(
+	lista: T[],
+	idAtual: string,
+	n = 3,
+): T[] {
+	const i = lista.findIndex((x) => x.id === idAtual);
+	const outros = lista.length - 1;
+	if (i < 0 || outros <= 0) return lista.filter((x) => x.id !== idAtual).slice(0, n);
+	const qtd = Math.min(n, outros);
+	return Array.from({ length: qtd }, (_, k) => lista[(i + 1 + k) % lista.length]);
+}
