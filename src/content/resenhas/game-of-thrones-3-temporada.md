@@ -57,7 +57,7 @@ ficha:
 anoObra: 2011
 ---
 
-# GAME OF THRONES: Terceira Temporada
+## GAME OF THRONES: Terceira Temporada
 
 ## Cotação: ★★★★★ Excelente
 

@@ -211,10 +211,16 @@ const reviewLd: Record<string, unknown> = {
 	headline: entry.data.title,
 	description: entry.data.description,
 	datePublished: entry.data.pubDate.toISOString(),
+	dateModified: (entry.data.updatedDate ?? entry.data.pubDate).toISOString(),
 	author: {
 		'@type': 'Person',
 		name: autor.nome,
 		url: autorUrl,
+	},
+	publisher: {
+		'@type': 'Organization',
+		name: 'Arte Com Pipoca',
+		url: site.href,
 	},
 	itemReviewed,
 	mainEntityOfPage: {

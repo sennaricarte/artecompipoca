@@ -36,7 +36,11 @@ const canonical = Astro.props.canonical
 	? new URL(Astro.props.canonical, site).href
 	: defaultCanonical;
 
-const pageTitle = title === 'Arte Com Pipoca' ? title : `${title} | Arte Com Pipoca`;
+const MARCA = 'Arte Com Pipoca';
+const comMarca = `${title} | ${MARCA}`;
+// Só acrescenta a marca se ainda não estiver no título e se o total couber (~60 caracteres) no resultado de busca.
+const pageTitle =
+	title.includes(MARCA) || comMarca.length > 60 ? title : comMarca;
 const robots = noindex
 	? 'noindex,follow'
 	: 'index,follow,max-image-preview:large';
