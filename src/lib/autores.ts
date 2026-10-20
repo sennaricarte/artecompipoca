@@ -120,7 +120,12 @@ export async function getResumoAutor(autorId: string, bioBase = '') {
 				: `Colaborou com o Arte Com Pipoca entre ${anoIni} e ${resumo.anoFinal}.`;
 	}
 
-	const bioCompleta = [bioBase.trim(), fraseFactual].filter(Boolean).join(' ');
+	// Evita duplicar a frase quando a bio recebida já é a bio completa (ex.: página -> MetaPost).
+	const base = bioBase.trim();
+	const bioCompleta =
+		fraseFactual && base.includes(fraseFactual)
+			? base
+			: [base, fraseFactual].filter(Boolean).join(' ');
 
 	return {
 		bioCompleta,
