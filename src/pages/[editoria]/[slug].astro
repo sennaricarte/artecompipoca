@@ -12,6 +12,7 @@ import {
 	formatarData,
 	getArtigos,
 	nomeEditoria,
+	relacionadosRotativos,
 	rotuloCapaArtigo,
 } from '../../lib/conteudo';
 import { getStructuredDataImages } from '../../lib/imagens-seo';
@@ -61,12 +62,10 @@ const imageLd = await getStructuredDataImages({
 	site,
 });
 
-const relacionados = (await getArtigos())
-	.filter(
-		(a) =>
-			a.data.editoria === entry.data.editoria && a.id !== entry.id,
-	)
-	.slice(0, 3);
+const relacionados = relacionadosRotativos(
+	(await getArtigos()).filter((a) => a.data.editoria === entry.data.editoria),
+	entry.id,
+);
 
 const blogPosting: Record<string, unknown> = {
 	'@context': 'https://schema.org',
