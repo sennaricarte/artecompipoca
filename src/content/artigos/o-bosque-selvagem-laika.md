@@ -5,6 +5,10 @@ description: "O Bosque Selvagem, nova animação em stop-motion da LAIKA, estrei
 editoria: cinema
 pubDate: 2026-10-22T14:30:00-03:00
 autor: senna-ricarte
+cover: "../../assets/capas/o-bosque-selvagem-laika-cena.jpg"
+coverAlt: "Travis Knight, diretor de O Bosque Selvagem, posa no tapete vermelho do BFI London Film Festival diante do painel com o título Wildwood"
+coverCredito: "Divulgação/Imagem Filmes"
+coverPosicao: "center 30%"
 origem: original
 draft: false
 ---
