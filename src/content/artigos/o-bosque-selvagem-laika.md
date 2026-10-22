@@ -5,9 +5,6 @@ description: "O Bosque Selvagem, nova animação em stop-motion da LAIKA, estrei
 editoria: cinema
 pubDate: 2026-10-22T14:30:00-03:00
 autor: senna-ricarte
-cartaz: "../../assets/capas/o-bosque-selvagem-laika-cartaz.jpg"
-cartazAlt: "Pôster de O Bosque Selvagem: Prue, de bicicleta, e uma mulher de longos cabelos ao fundo, cercadas por corvos, sobre fundo branco, com o título em destaque"
-cartazCredito: "Divulgação/Imagem Filmes"
 origem: original
 draft: false
 ---
@@ -52,6 +49,9 @@ Para Knight, a técnica não é o ponto. "Nosso filme foi feito à mão, um quad
 No Brasil, **Giulia Benite**, de *Turma da Mônica: Laços*, dubla a protagonista Prue. No original em inglês, Prue é interpretada por **Peyton Elizabeth Lee** e Curtis por **Jacob Tremblay**. O estúdio também anunciou, entre outros nomes, **Carey Mulligan**, **Mahershala Ali**, **Awkwafina**, **Angela Bassett**, **Jemaine Clement**, **Richard E. Grant** e **Tom Waits**.
 
 ## Ficha técnica
+
+![Pôster de O Bosque Selvagem: Prue, de bicicleta, e uma mulher de longos cabelos ao fundo, cercadas por corvos, sobre fundo branco, com o título em destaque](../../assets/capas/o-bosque-selvagem-laika-cartaz.jpg)
+*Pôster de O Bosque Selvagem. Divulgação/Imagem Filmes.*
 
 - **Direção:** Travis Knight
 - **Roteiro:** Chris Butler
