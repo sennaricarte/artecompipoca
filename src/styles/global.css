@@ -159,6 +159,28 @@
 	max-width: none;
 }
 
+/* Imagem solta no corpo do texto (ex.: pôster na ficha técnica) + legenda em itálico logo abaixo. */
+.conteudo p > img {
+	display: block;
+	margin: 1.5rem auto 0.5rem;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 26rem;
+	border-radius: 0.75rem;
+	box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+}
+
+.conteudo p > img + em {
+	display: block;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	font-size: 0.75rem;
+	font-style: normal;
+	line-height: 1.4;
+	color: var(--color-muted);
+}
+
 .post-share__sticky {
 	position: sticky;
 	top: calc(var(--altura-header) + 1.5rem);
